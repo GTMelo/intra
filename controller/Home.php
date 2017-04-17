@@ -46,16 +46,31 @@ class Home extends Controller implements IController {
 
     function getCarrossel() {
 
-        $rs = $this->db->select(
-            'lista_carrossel', 
-            array('id', 'imagem', 'titulo', 'tldr', 'data_criacao', 'tipo_artigo', 'url_ref')
+        $rs = $this->db->select('artigo_carrossel', 
+                array(
+                    "[>]artigo" => ["artigo_id" => "id"],
+                    "[>]artigo_metadados" => ["artigo.id" => "artigo_id"],
+                    "[>]tipo_artigo" => ["artigo_metadados.tipo_artigo" => "id"]
+                ), array(
+                    "artigo_carrossel.id",
+                    "artigo_carrossel.imagem",
+                    "artigo.titulo",
+                    "artigo.tldr",
+                    "artigo_metadados.data_criacao",
+                    "tipo_artigo.descricao(tipo_artigo)",
+                    "artigo.id(url_ref)",
+                ), array(
+                    "LIMIT" => 5,
+                    "ORDER" => ['artigo_carrossel.id' => 'DESC'],
+                    "artigo.status" => 1
+                )
         );
 
         $result = array();
 
         foreach ($rs as $item) {
             $a = array(
-                'imagem' => 'assets/image/carrossel/' . $item['imagem'],
+                'imagem' => 'objeto/2017/4/' . $item['imagem'],
                 'titulo' => $item['titulo'],
                 'tldr' => $item['tldr'],
                 'url' => $item['tipo_artigo'] . '/' . $item['url_ref'],
@@ -70,8 +85,26 @@ class Home extends Controller implements IController {
     function getNoticias() {
         
         $rs = $this->db->select(
-            'lista_noticias',
-            array('data_criacao', 'tipo', 'url_ref', 'coordenacao', 'titulo', 'tldr')
+            'artigo_noticia', 
+            array(
+                '[>]artigo' => ['artigo_id' => 'id'],
+                '[>]artigo_metadados' => ['id' => 'artigo_id'],
+                '[>]tipo_artigo' => ['artigo_metadados.tipo_artigo' => 'id'],
+                '[>]unidade' => ['artigo_metadados.coordenacao' => 'id'],
+            ), array(
+                'artigo_metadados.data_criacao',
+                'tipo_artigo.descricao(tipo)',
+                'artigo.id(url_ref)',
+                'unidade.sigla(coordenacao)',
+                'titulo',
+                'tldr',
+                'artigo.status'
+            ), array(
+                'LIMIT' => 8,
+                'ORDER' => ['artigo.id' => 'DESC'],
+                'artigo.status' => 1,
+                'tipo_artigo.id' => 1
+            )
         );
         
         $result = array();
@@ -93,7 +126,10 @@ class Home extends Controller implements IController {
 
     function getAniversariantes() {
         
-        $rs = $this->db->select('lista_aniversariantes', '*');
+        $rs = $this->db->select(
+                'lista_aniversariantes',
+                '*'
+                );
         
         $result = array();
         
@@ -101,7 +137,6 @@ class Home extends Controller implements IController {
             $a = array(
                 'nome' => $pessoa['nome_completo'],
                 'data' => $pessoa['aniv'],
-                'email' => $pessoa['email']
             );
             array_push($result, $a);
         }

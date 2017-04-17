@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/sain_common.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/lib/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/slick/slick-theme.css"/>
+
+  <title>
+    {{ title }}
+  </title>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-light bg-azul border-bottom-thin-blue override-margin">
+    <nav class="navbar-inner">
+      <a class="navbar-brand" href="home.html">
+        <!-- Logotipo em formato SVG para edição livre -->
+        <svg class="d-inline-block align-top logosvg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="54" height="41" viewBox="0 0 241 181" class="undefined"><path d="M142 143.9c-21-10.8-37.3-23.4-50-38.6C77.3 87.6 67.2 69.3 61.8 50.8c-0.5-1.7-1.2-4.4-1.8-7.3C52.5 53.3 47.6 64.4 45.4 75.9c4.3 19.3 18 37.8 38.2 44.7l-10.2 30.4c27.3 21.4 65.6 21.7 93.2 0.8 -0.4 0-0.7-0.1-1.1-0.1C158.5 150.7 149 147.5 142 143.9z"/><path d="M83.6 37c6.5 28 31.8 61 60 78.5 9.3 5.8 24 12.5 34.8 12.5 3.2 0 5.8-0.6 7.7-1.8l3.1-1.9c3-6.1 5.2-12.6 6.4-19.1 -4.3-19.3-18-37.8-38.2-44.7l10.2-30.4c-23.6-18.6-55.7-21.2-81.7-8l-0.1 0.1C83.5 25.5 82.6 33.1 83.6 37z"/><path d="M67.5 16c0.7-0.3 1.2-0.5 1.6-0.6C25.1 27.4-0.3 74.3 1.7 105.4c2 31.8 22.6 58.1 48.1 73.3l15.5-46.2c-28.1-16.8-42.2-58.9-28.3-87.6C44.3 27.6 61.2 18.4 67.5 16z"/><path d="M239.3 75.6c-2-31.8-22.6-58.1-48.1-73.3l-15.5 46.3c28.1 16.8 42.2 58.9 28.4 87.6 -7.4 17.2-24.2 26.4-30.6 28.9 -0.7 0.3-1.3 0.5-1.7 0.6C215.9 153.6 241.3 106.7 239.3 75.6z"/></svg>
+        <span class="font-white  opensans logo_brand light">IntraSAIN</span>
+      </a>
+
+      <nav class="float-right navbar navbar-light">
+          <!-- <form class="form-inline" action="login">
+            <input type="text" name="user" class="form-control input-login" placeholder="CPF" aria-describedby="basic-addon1">
+            <input type="text" name="senha" class="form-control input-login" placeholder="Senha" aria-describedby="basic-addon1">
+            <button class="btn btn-primary input-login">login</button>
+          </form> -->
+          <nav class="navbar-inner">
+            <p class="font-white text-right margin-0">Gustavo Ericson de Melo Alexandre <a href="logout">(sair)</a></p>
+            <!-- <p class="font-white text-right margin-0 font-tiny">Stuff | Stuff | Stuff | Stuff </p> -->
+          </nav>
+        </nav>
+        <!-- <div class="float-right"> <span class="font-white">test</div> -->
+      </nav>
+    </nav>
+
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col">
+          <span class="inline"> Vocês está em: </span>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Página principal</a></li>
+            <li class="breadcrumb-item">{{organizacao}}</li>
+            <li class="breadcrumb-item active">{{noticia.titulo}}</li>
+          </ol>
+        </div>
+
+      </div>
+      <div class="row">
+
+        <div class="col-8 noticia">
+          <section class="container">
+
+            <section class="noticia-header">
+              <div class="margin-0 padding-0 border-bottom-exthin-light">
+                <h1 class="padding-0 margin-0">{{noticia.titulo}}</h1>
+                <span class="font-faded">{{noticia.metadados}}</span>
+              </div>
+            </section>
+
+            <section class="noticia-corpo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent scelerisque pulvinar velit, quis iaculis velit suscipit quis. Praesent libero nulla, aliquam id nisi eu, tempus malesuada tortor. Nulla facilisi. Etiam a tempus odio. Integer tristique malesuada diam. Etiam tellus velit, ornare malesuada dapibus ut, laoreet id mauris. Aenean nec scelerisque mauris.</p>
+
+              <p>Quisque at tincidunt nulla. Nulla auctor nulla est, sit amet viverra orci condimentum dictum. Nullam laoreet eget ipsum non vestibulum. Suspendisse laoreet at purus at iaculis. Aliquam faucibus ornare consectetur. Sed pellentesque pulvinar sem ac posuere. Fusce pharetra risus non lectus aliquam interdum.</p>
+
+              <p>Ut ex velit, aliquam nec molestie a, volutpat sagittis libero. Donec et ligula quis risus maximus pharetra sed et diam. Nam id tincidunt erat, in consectetur odio. Vestibulum vel ultricies odio. Aenean suscipit lorem ut mi cursus pharetra. Cras scelerisque, lectus ut imperdiet porttitor, leo diam varius nulla, id elementum neque sapien eu risus. Nunc facilisis sapien eget fermentum malesuada. Aenean eget felis eget est mattis cursus. Vivamus quis cursus augue. Pellentesque sodales non nisl sed egestas. Nunc nisl sapien, gravida eget ex ut, venenatis maximus mauris. Sed nec urna et ligula placerat consequat sed aliquam velit. Phasellus purus enim, rhoncus at placerat vitae, sagittis a quam. Fusce sodales tortor vitae tellus scelerisque luctus euismod vel arcu.</p>
+
+              <p>Nam viverra libero ac dolor mattis, ac aliquet eros tincidunt. Morbi id placerat neque. In semper nibh et sapien tempus, vel convallis dolor ullamcorper. Phasellus et fringilla massa. Maecenas purus nibh, varius at elementum quis, dignissim eget nisl. Ut varius faucibus sem. Nulla facilisi. Nulla suscipit placerat nibh nec cursus. Integer scelerisque suscipit consectetur. Curabitur molestie, ante at pulvinar commodo, sapien felis eleifend mi, in suscipit nisl dolor quis odio. Praesent aliquet ultricies magna nec tempus. Quisque fermentum tortor ac finibus rhoncus. Suspendisse eget cursus enim, a lacinia est.</p>
+            </section>
+
+            <section class="noticia-footer">
+              <div class="text-center">
+                Botões 1 | Botões 2 | Botões 3 | Botões 4
+              </div>
+            </section>
+
+          </section>
+        </div>
+        <div class="col-4 float-right">
+          <div>
+            <h2 class="text-right">{{coordenacao}}</h2>
+            <ul class="list-group">
+              <li class="list-group-item">Teste 1234</li>
+              <li class="list-group-item">Teste 1234</li>
+              <li class="list-group-item">Teste 1234</li>
+              <li class="list-group-item">Teste 1234</li>
+              <li class="list-group-item">Teste 1234</li>
+            </ul>
+          </div>
+          <br>
+          <div>
+            <h2 class="text-right">{{stuff}}</h2>
+            <ul class="list-group">
+              <li class="list-group-item">Teste 1234</li>
+              <li class="list-group-item">Teste 1234</li>
+              <li class="list-group-item">Teste 1234</li>
+              <li class="list-group-item">Teste 1234</li>
+              <li class="list-group-item">Teste 1234</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <section class="footer">
+      <div class="container">
+        <dir class="row row-width-fix">
+          <div class="col footer-text">
+            <p class="bold">SAIN SEDE</p>
+            <p>Esplanada dos Ministérios</p>
+            <p>Bloco P - 2º Andar</p>
+            <p>Sala 223</p>
+            <p>Brasília/DF - 70048-900</p>
+            <p>(61) 3412-2290/2227</p>
+          </div>
+          <div class="col footer-text">
+            <p class="bold">SAIN ASA SUL</p>
+            <p>SAS Quadra 3 Bloco O</p>
+            <p>10º Andar</p>
+            <p>Ed. Órgãos Regionais/MF</p>
+            <p>Brasília/DF - 70079-900</p>
+            <p>(61) 3412-4014/4077</p>
+          </div>
+        </div>
+      </dir>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  </body>

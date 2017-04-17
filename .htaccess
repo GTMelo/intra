@@ -1,0 +1,10 @@
+allow from 127.0.0.1
+# deny from all
+
+RewriteEngine on
+
+ErrorDocument 404 /sain/v3/404.php
+
+RewriteRule ^noticias$ index.php?pagina=noticia
+RewriteRule ^teste$ index.php?pagina=teste
+RewriteRule ^logout$ index.php?pagina=logout

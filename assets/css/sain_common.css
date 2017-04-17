@@ -1,0 +1,207 @@
+#carrossel {
+padding:10px;
+}
+
+#carrossel-content {
+padding:30px 200px;
+}
+
+.header{
+
+}
+
+.logo-sm{
+	width:  50px;
+	height: 50px;
+}
+
+.fill-gray{
+	fill: #A7A7A7;
+}
+
+#parabens {
+background-color:#50C218;
+color:#FFF;
+font-weight:300;
+padding:9px 9px 0;
+}
+
+* {
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+/* border: 1px solid red; */
+}
+
+.separator{
+	margin-top:  auto;
+	margin-bottom:  auto;
+}
+
+.bg-azul {
+background:#0C3455;
+}
+
+.bold {
+font-weight:700!important;
+}
+
+.border-bottom-exthin-blue {
+border-bottom:1px solid #07253a;
+}
+
+.border-bottom-exthin-light {
+border-bottom:1px solid #919191;
+}
+
+.border-bottom-thin-blue {
+border-bottom:2px solid #07253a;
+}
+
+.carrossel-img {
+border:1px solid #E6E6E6;
+}
+
+.carrossel-info {
+margin:auto;
+text-align:left;
+width:300px;
+}
+
+.carrossel-wrapper {
+background-color:#E6E6E6;
+margin:auto;
+padding:15px 30px;
+}
+
+.container-decor {
+background-color:#FFF;
+padding:20px;
+}
+
+.debug {
+border:1px solid red;
+}
+
+.div-center {
+margin-bottom:auto;
+margin-top:auto;
+}
+
+.fill-white,.logosvg {
+fill:#FFF;
+}
+
+.font-faded {
+color:#A1A1A1;
+}
+
+.font-tiny {
+font-size:.6rem;
+}
+
+.font-white {
+color:#FFF;
+}
+
+.footer {
+background-color:#1D5889;
+border-bottom:1px solid #1D5889;
+border-top:2px solid #47637B;
+color:#FFF;
+margin-bottom:0;
+margin-top:10px;
+padding:10px;
+}
+
+.footer-text>p {
+font-size:1.2rem;
+font-weight:300;
+margin:0;
+}
+
+.height-center {
+height:100%;
+}
+
+.icon {
+height:15px;
+width:15px;
+}
+
+.input-login {
+padding:.3rem .75rem;
+}
+
+.light {
+font-weight:300;
+}
+
+.logo_brand {
+font-size:1.3em;
+}
+
+.margin-bottom {
+margin-bottom:15px;
+}
+
+.noticia-corpo {
+text-align:justify;
+}
+
+.noticia-header {
+margin:0 0 10px;
+padding:0;
+}
+
+.noticia-timestamp {
+color:#919191;
+float:right;
+}
+
+.noticia-titulo {
+clear:left;
+font-size:1.5em;
+}
+
+.noticia-tldr {
+color:#919191;
+}
+
+.noticia-unidade {
+color:#919191;
+float:left;
+}
+
+.opensans {
+font-family:'Open Sans', sans-serif;
+}
+
+.override-margin,.margin-0 {
+margin:0;
+}
+
+.padding-0 {
+padding:0;
+}
+
+.padding-high {
+padding:30px;
+}
+
+.row-width-fix {
+margin-left:0;
+margin-right:0;
+}
+
+.supress-margin {
+margin-bottom:0;
+}
+
+.vertical-center {
+align-items:center;
+display:flex;
+}
+
+.fill-black {
+    fill: black;
+}

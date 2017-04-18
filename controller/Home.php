@@ -18,9 +18,10 @@ class Home extends Controller implements IController {
 
     function __construct() {
 
+        parent::__construct();
         $this->setTemplate('home.phtml');
 
-        parent::__construct();
+        
     }
 
     function run() {
@@ -84,28 +85,7 @@ class Home extends Controller implements IController {
 
     function getNoticias() {
         
-        $rs = $this->db->select(
-            'artigo_noticia', 
-            array(
-                '[>]artigo' => ['artigo_id' => 'id'],
-                '[>]artigo_metadados' => ['id' => 'artigo_id'],
-                '[>]tipo_artigo' => ['artigo_metadados.tipo_artigo' => 'id'],
-                '[>]unidade' => ['artigo_metadados.coordenacao' => 'id'],
-            ), array(
-                'artigo_metadados.data_criacao',
-                'tipo_artigo.descricao(tipo)',
-                'artigo.id(url_ref)',
-                'unidade.sigla(coordenacao)',
-                'titulo',
-                'tldr',
-                'artigo.status'
-            ), array(
-                'LIMIT' => 8,
-                'ORDER' => ['artigo.id' => 'DESC'],
-                'artigo.status' => 1,
-                'tipo_artigo.id' => 1
-            )
-        );
+        $rs = $this->db->select('lista_noticias', '*');
         
         $result = array();
         
@@ -137,6 +117,7 @@ class Home extends Controller implements IController {
             $a = array(
                 'nome' => $pessoa['nome_completo'],
                 'data' => $pessoa['aniv'],
+                'hoje' => $pessoa['hoje'],
             );
             array_push($result, $a);
         }
@@ -148,16 +129,24 @@ class Home extends Controller implements IController {
     function getPaginasEspeciais() {
         return array(
             array(
-                'titulo' => 'exemplo de página',
-                'url' => 'google.com',
+                'titulo' => 'Ações de recrutamento da SAIN',
+                'url' => 'pagina/Placeholder1',
             ),
             array(
-                'titulo' => 'exemplo de página',
-                'url' => 'google.com',
+                'titulo' => 'Conheça a Secretaria',
+                'url' => 'pagina/Placeholder2',
             ),
             array(
-                'titulo' => 'exemplo de página',
-                'url' => 'google.com',
+                'titulo' => 'Gestão Estratégica',
+                'url' => 'pagina/Placeholder3',
+            ),
+            array(
+                'titulo' => 'Ouvidoria da SAIN',
+                'url' => 'pagina/Placeholder4',
+            ),
+            array(
+                'titulo' => 'Lista de Servidores Geral SAIN',
+                'url' => 'pagina/Placeholder5',
             ),
         );
     }

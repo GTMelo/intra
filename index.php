@@ -35,6 +35,10 @@ function main() {
             'classfile' => CONTROLLERPATH . 'Teste.php',
             'class' => 'Teste',
         ),
+        'noticia' => array(
+            'classfile' => CONTROLLERPATH . 'Noticia.php',
+            'class' => 'Noticia',
+        ),
     );
 
     // Validação do $pg
@@ -49,7 +53,7 @@ function main() {
         
         $controller->run();
     } else {
-        echo 'fail.'; // TODO lidar com 404's aqui
+        echo 'ERROR: No controller found (redirecionar pra 404).'; // TODO lidar com 404's aqui
     }
     
 }

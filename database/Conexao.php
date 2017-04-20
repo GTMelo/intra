@@ -25,25 +25,18 @@ class Conexao {
 
         if (!isset(self::$instance)) {
 
-            $config = require CONFIGPATH . 'config.php';
+            require CONFIGPATH . 'config.php';
+            $config = $CONFIGS['db'];
 
             self::$instance = new \Medoo\Medoo(array(
-                'database_type' => 'mysql',
-                'database_name' => $config['db']['database'],
-                'server' => $config['db']['host'],
-                'username' => $config['db']['user'],
-                'password' => $config['db']['pass'],
-                'charset' => 'utf8'
+                'database_type' =>  'mysql',
+                'database_name' =>  $config['database'],
+                'server'        =>  $config['host'],
+                'username'      =>  $config['user'],
+                'password'      =>  $config['pass'],
+                'charset'       =>  'utf8'
             ));
 
-
-//            self::$instance = new PDO(
-//                    'mysql:host=' . $config['db']['host']
-//                    . ';dbname=' . $config['db']['database']
-//                    . ';charset=utf8'
-//                    , $config['db']['user']
-//                    , $config['db']['pass']
-//            );
 //            self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //            self::$instance->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         }

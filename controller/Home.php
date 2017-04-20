@@ -20,19 +20,15 @@ class Home extends Controller implements IController {
 
         parent::__construct();
         $this->setTemplate('home.phtml');
-
-        
     }
 
     function run() {
 
-        $this->params = array(
-            'usuario' => $this->getUsuario(),
-            'carrossel' => $this->getCarrossel(),
-            'noticias' => $this->getNoticias(),
-            'aniversariantes' => $this->getAniversariantes(),
-            'paginasespeciais' => $this->getPaginasEspeciais(),
-        );
+        $this->params['usuario'] = $this->getUsuario();
+        $this->params['carrossel'] = $this->getCarrossel();
+        $this->params['noticias'] = $this->getNoticias();
+        $this->params['aniversariantes'] = $this->getAniversariantes();
+        $this->params['paginasespeciais'] = $this->getPaginasEspeciais();
 
         parent::run();
     }
@@ -47,23 +43,22 @@ class Home extends Controller implements IController {
 
     function getCarrossel() {
 
-        $rs = $this->db->select('artigo_carrossel', 
-                array(
-                    "[>]artigo" => ["artigo_id" => "id"],
-                    "[>]artigo_metadados" => ["artigo.id" => "artigo_id"],
-                    "[>]tipo_artigo" => ["artigo_metadados.tipo_artigo" => "id"]
+        $rs = $this->db->select('artigo_carrossel', array(
+            "[>]artigo" => ["artigo_id" => "id"],
+            "[>]artigo_metadados" => ["artigo.id" => "artigo_id"],
+            "[>]tipo_artigo" => ["artigo_metadados.tipo_artigo" => "id"]
                 ), array(
-                    "artigo_carrossel.id",
-                    "artigo_carrossel.imagem",
-                    "artigo.titulo",
-                    "artigo.tldr",
-                    "artigo_metadados.data_criacao",
-                    "tipo_artigo.descricao(tipo_artigo)",
-                    "artigo.id(url_ref)",
+            "artigo_carrossel.id",
+            "artigo_carrossel.imagem",
+            "artigo.titulo",
+            "artigo.tldr",
+            "artigo_metadados.data_criacao",
+            "tipo_artigo.descricao(tipo_artigo)",
+            "artigo.id(url_ref)",
                 ), array(
-                    "LIMIT" => 5,
-                    "ORDER" => ['artigo_carrossel.id' => 'DESC'],
-                    "artigo.status" => 1
+            "LIMIT" => 5,
+            "ORDER" => ['artigo_carrossel.id' => 'DESC'],
+            "artigo.status" => 1
                 )
         );
 
@@ -84,12 +79,12 @@ class Home extends Controller implements IController {
     }
 
     function getNoticias() {
-        
+
         $rs = $this->db->select('lista_noticias', '*');
-        
+
         $result = array();
-        
-        foreach($rs as $item){
+
+        foreach ($rs as $item) {
             $a = array(
                 'timestamp' => $item['data_criacao'],
                 'timestamprelativo' => 'X (time) atrás',
@@ -100,20 +95,19 @@ class Home extends Controller implements IController {
             );
             array_push($result, $a);
         }
-        
+
         return $result;
     }
 
     function getAniversariantes() {
-        
+
         $rs = $this->db->select(
-                'lista_aniversariantes',
-                '*'
-                );
-        
+                'lista_aniversariantes', '*'
+        );
+
         $result = array();
-        
-        foreach($rs as $pessoa){
+
+        foreach ($rs as $pessoa) {
             $a = array(
                 'nome' => $pessoa['nome_completo'],
                 'data' => $pessoa['aniv'],
@@ -121,9 +115,8 @@ class Home extends Controller implements IController {
             );
             array_push($result, $a);
         }
-        
+
         return $result;
-        
     }
 
     function getPaginasEspeciais() {

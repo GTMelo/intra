@@ -27,9 +27,13 @@ abstract class Controller {
         
         require_once DATABASEPATH . 'Conexao.php';
         require_once ASSETSPATH . 'lib/Twig/Autoloader.php';
+        require_once CONFIGPATH . 'config.php';
         
         $this->template = 'home.phtml';
         $this->db = Conexao::getInstance();
+        
+        $this->params = array();
+        $this->params['basepath'] = $CONFIGS['basepath'];
         
         Twig_Autoloader::register();
 

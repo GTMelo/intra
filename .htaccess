@@ -6,6 +6,6 @@ RewriteEngine on
 ErrorDocument 404 /sain/v3/404.php
 
 RewriteRule ^home$ index.php
-RewriteRule ^noticia/([0-9]+)$ index.php?pagina=noticia&id=1
+RewriteRule ^noticia/([0-9]+)$ index.php?pagina=noticia&id=$1
 RewriteRule ^teste$ index.php?pagina=teste
 RewriteRule ^logout$ index.php?pagina=logout

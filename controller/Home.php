@@ -13,6 +13,8 @@
  */
 require_once 'common/Controller.php';
 require_once 'common/IController.php';
+require_once DATABASEPATH . 'model/Item_carrossel.php';
+
 
 class Home extends Controller implements IController {
 
@@ -26,6 +28,7 @@ class Home extends Controller implements IController {
 
         $this->params['usuario'] = $this->getUsuario();
         $this->params['carrossel'] = $this->getCarrossel();
+//        $this->params['data_carrossel_latest'] = $this->getDataCarrosselLatest($this->params['carrossel']);
         $this->params['noticias'] = $this->getNoticias();
         $this->params['aniversariantes'] = $this->getAniversariantes();
         $this->params['paginasespeciais'] = $this->getPaginasEspeciais();
@@ -43,37 +46,48 @@ class Home extends Controller implements IController {
 
     function getCarrossel() {
 
-        $rs = $this->db->select('artigo_carrossel', array(
-            "[>]artigo" => ["artigo_id" => "id"],
-            "[>]artigo_metadados" => ["artigo.id" => "artigo_id"],
-            "[>]tipo_artigo" => ["artigo_metadados.tipo_artigo" => "id"]
-                ), array(
-            "artigo_carrossel.id",
-            "artigo_carrossel.imagem",
-            "artigo.titulo",
-            "artigo.tldr",
-            "artigo_metadados.data_criacao",
-            "tipo_artigo.descricao(tipo_artigo)",
-            "artigo.id(url_ref)",
-                ), array(
-            "LIMIT" => 5,
-            "ORDER" => ['artigo_carrossel.id' => 'DESC'],
-            "artigo.status" => 1
-                )
-        );
+//        $rs = $this->db->select('item_carrossel', array(
+//            "[>]artigo" => ["artigo_id" => "id"],
+//            "[>]artigo_metadados" => ["artigo.id" => "artigo_id"],
+//            "[>]tipo_artigo" => ["artigo_metadados.tipo_artigo" => "id"]
+//                ), array(
+//            "item_carrossel.id",
+//            "item_carrossel.imagem",
+//            "artigo.titulo",
+//            "artigo.tldr",
+//            "artigo_metadados.data_criacao",
+//            "tipo_artigo.descricao(tipo_artigo)",
+//            "artigo.id(url_ref)",
+//                ), array(
+//            "LIMIT" => 5,
+//            "ORDER" => ['item_carrossel.id' => 'DESC'],
+//            "artigo.status" => 1
+//                )
+//        );
+//        $rs = $this->db->select('lista_carrossel', '*');
+//
+//        $result = array();
+//
+//        foreach ($rs as $item) {
+//            $a = array(
+//                'imagem' => 'objeto/carrossel/' . $item['imagem'],
+//                'titulo' => $item['titulo'],
+//                'tldr' => $item['tldr'],
+//                'url' => $item['tipo'] . '/' . $item['url_ref'],
+//            );
+//
+//            array_push($result, $a);
 
         $result = array();
-
-        foreach ($rs as $item) {
-            $a = array(
-                'imagem' => 'objeto/2017/4/' . $item['imagem'],
-                'titulo' => $item['titulo'],
-                'tldr' => $item['tldr'],
-                'url' => $item['tipo_artigo'] . '/' . $item['url_ref'],
-            );
-
-            array_push($result, $a);
-        }
+        
+            $params = [
+            'conditions' => ['status = ?', 1],
+            'limit' => 5,
+            'order' => 'id desc'
+            ];
+            
+            $item = 
+        
 
         return $result;
     }
@@ -85,8 +99,9 @@ class Home extends Controller implements IController {
         $result = array();
 
         foreach ($rs as $item) {
+
             $a = array(
-                'timestamp' => $item['data_criacao'],
+                'timestamp' => $this->dateFormat('dd/MM/yyyy hh:mm', $item['data_criacao']),
                 'timestamprelativo' => 'X (time) atrás',
                 'coordenacao' => $item['coordenacao'],
                 'url' => $item['tipo'] . '/' . $item['url_ref'],
@@ -97,6 +112,13 @@ class Home extends Controller implements IController {
         }
 
         return $result;
+    }
+
+    function dateFormat($format, $timestamp) {
+        $date = new IntlDateFormatter(
+                'pt_BR', IntlDateFormatter::FULL, IntlDateFormatter::FULL, "America/Sao_Paulo", IntlDateFormatter::GREGORIAN, $format
+        );
+        return $date->format(new DateTime($timestamp));
     }
 
     function getAniversariantes() {

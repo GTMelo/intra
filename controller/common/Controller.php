@@ -25,7 +25,7 @@ abstract class Controller {
     
     function __construct() {
         
-        require_once DATABASEPATH . 'Conexao.php';
+        require_once DATABASEPATH . 'common/Conexao.php';
         require_once ASSETSPATH . 'lib/Twig/Autoloader.php';
         require_once CONFIGPATH . 'config.php';
         

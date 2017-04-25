@@ -10,7 +10,7 @@ class HomeController extends Controller
     function index(){
         
         $params = array(
-            'foo' => 'bar'
+            'title' => 'IntraSAIN'
         );
         
         return view('home', $params);

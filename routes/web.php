@@ -13,5 +13,5 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/teste', 'TesteController@index');
-Route::get('/noticia/{id}', 'NoticiaController@index');
-Route::get('/pagina/{id}', 'PageController@index');
+Route::get('/noticia/{objeto}', 'PageController@noticia');
+Route::get('/pagina/{objeto}', 'PageController@pagina');

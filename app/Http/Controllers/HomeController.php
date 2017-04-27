@@ -15,7 +15,7 @@ class HomeController extends Controller
             'user' => UserDatum::find(1)
         );
         
-        return view('home', $params);
+        return view('home.index', $params);
     }
     
 }

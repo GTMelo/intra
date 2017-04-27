@@ -12,8 +12,9 @@ class TesteController extends Controller
     function index(){
         $title = 'whatever';
         $user = UserDatum::first();
+        $test = 'banana';
         
-        return view('home', compact('title', 'user'));
+        return view('test', compact('title', 'user', 'test'));
     }
     
 }

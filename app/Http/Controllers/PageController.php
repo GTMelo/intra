@@ -13,4 +13,6 @@ class PageController extends Controller
     public function pagina(\App\Models\Objeto $objeto){
         return view('pagina', compact('objeto'));
     }
+
+
 }

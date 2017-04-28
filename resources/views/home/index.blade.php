@@ -27,17 +27,17 @@
                     <div>
                         <div class="row">
                             <div class="col-md float-left">
-                                <img src="{{ $item->imagem }}">
+                                <img src="{{ $item['imagem'] }}">
                             </div>
                             <div class="carrossel_info col-md float-right d-flex flex-column">
                                 <h1>
-                                    {{ $item->titulo }}
+                                    {{ $item['titulo'] }}
                                 </h1>
                                 <p class="text-justify flex-1">
-                                    {{ $item->tldr }}
+                                    {{ $item['tldr'] }}
                                 </p>
                                 <p class="text-center">
-                                    <a class="btn btn-primary" href="{{ $item->url }}">Leia Mais</a>
+                                    <a class="btn btn-primary" href="{{ $item['url'] }}">Leia Mais</a>
                                 </p>
                             </div>
                         </div>
@@ -53,12 +53,12 @@
             @foreach($noticias as $item)
                 <article class="d-flex flex-column">
                     <div class="d-flex justify-content-between">
-                        <span class="">{{ $item->timestamp }} ({{ $item->timestamprelativo }})</span>
-                        <span class="ml-auto">{{ $item->coordenacao }}</span>
+                        <span class="">{{ $item['timestamp'] }} ({{ $item['timestamprelativo'] }})</span>
+                        <span class="ml-auto">{{ $item['coordenacao'] }}</span>
                     </div>
-                    <a href="{{ $item->url }}">
-                        <h2>{{ $item->titulo }}</h2>
-                        <p class="font-light">{{ $item->tldr }}</p>
+                    <a href="{{ $item['url'] }}">
+                        <h2>{{ $item['titulo'] }}</h2>
+                        <p class="font-light">{{ $item['tldr'] }}</p>
                     </a>
                 </article>
             @endforeach
@@ -72,7 +72,7 @@
                 <div class="d-flex flex-column" id="lista_aniversariantes">
                     @foreach($pessoas as $pessoa)
                         <div class="d-flex align-items-center justify-content-between {% if pessoa.hoje == 1%} aniversariante_dia {% endif %}">
-                            <span>{{ $pessoa->nome }} </span><span>{{ $pessoa->data }}</span>
+                            <span>{{ $pessoa['nome'] }} </span><span>{{ $pessoa['data'] }}</span>
                         </div>
                     @endforeach
                 </div>
@@ -83,7 +83,7 @@
                 <div class="d-flex flex-column" id="lista_paginas_especiais">
                     <ul class="list-group flex-column">
                         @foreach($paginasespeciais as $pagina)
-                        <li class="list-group-item"><a href="{{ $pagina->url }}">{{ $pagina->titulo }}</a></li>
+                        <li class="list-group-item"><a href="{{ $pagina['url'] }}">{{ $pagina['titulo'] }}</a></li>
                         @endforeach
                     </ul>
                 </div>

@@ -14,8 +14,12 @@ class CreateItemcarroselTable extends Migration
     public function up()
     {
         Schema::create('carrossel_items', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('objeto_id');
+            $table->integer('img_ref');
+            $table->integer('status');
             $table->timestamps();
+
+
         });
     }
 

@@ -12,14 +12,14 @@ class CargoTableSeeder extends Seeder
     public function run()
     {
         $cargos = [
-            'Assistente Técnico Administrativo',
-            'Chefe de Gabinete',
-            'Chefe de Divisão',
-            'Analista de Finanças e Controle',
-            'Especialista em Políticas Programáticas, Gestão e Governança',
-            'ADMINistrador de SIStemas',
-            'SUBSECretário',
-            'Secretário de Assuntos INternacionais',
+            ['Assistente Técnico Administrativo', 'Administrative Assistant'],
+            ['Chefe de Gabinete', 'Chief of Office'],
+            ['Chefe de Divisão', 'Head of Division'],
+            ['Analista de Finanças e Controle', 'Finance and Control Analyst'],
+            ['Especialista em Políticas Programáticas, Gestão e Governança', 'Expert in PPGG'],
+            ['ADMINistrador de SIStemas', 'Systems Administrator'],
+            ['SUBSECretário', 'Deputy Secretary'],
+            ['Secretário de Assuntos INternacionais', 'Secretary for International Affairs'],
 
         ];
 
@@ -31,26 +31,15 @@ class CargoTableSeeder extends Seeder
     {
         foreach ($cargos as $cargo) {
             \App\Cargo::create([
-                'sigla' => static::criaSigla($cargo),
-                'descricao' => static::criaDescricao($cargo)
+                'sigla' => static::criaSigla($cargo[0]),
+                'descricao_pt' => static::criaDescricao($cargo[0]),
+                'descricao_en' => $cargo[1],
             ]);
         }
     }
 
     public static function criaSigla($name)
     {
-//        $a = explode(' ', $name);
-//
-//        $palavrasRuins = ['e', 'de', 'da', 'do', 'a', 'o', 'para', 'pro', 'pra', 'em'];
-//
-//        $sigla = '';
-//
-//        foreach ($a as $word) {
-//            if (!in_array($word, $palavrasRuins)) {
-//                $letra = substr($word, 0, 1);
-//                $sigla = $sigla . $letra;
-//            }
-//        }
 
         $sigla = preg_replace('/[^A-Z ]/', '', $name);
         $sigla = str_replace(' ', '', $sigla);

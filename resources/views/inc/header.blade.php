@@ -27,9 +27,9 @@
         </form>
         <div class="d-flex" id="header_user">
             <div class="float-left text-right">
-                <div>{{$user->nome_curto}}</div>
+                <div>Nome Curto</div>
                 <div>
-                    <small>{{ $user->nome_completo }}</small>
+                    <small>coordenação</small>
                 </div>
             </div>
             <div class="float-right">

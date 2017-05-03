@@ -82,7 +82,7 @@
                 <h1>Páginas em Destaque</h1>
                 <div class="d-flex flex-column" id="lista_paginas_especiais">
                     <ul class="list-group flex-column">
-                        @foreach($paginasespeciais as $pagina)
+                        @foreach($paginasEspeciais as $pagina)
                         <li class="list-group-item"><a href="{{ $pagina['url'] }}">{{ $pagina['titulo'] }}</a></li>
                         @endforeach
                     </ul>

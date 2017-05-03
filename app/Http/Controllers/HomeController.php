@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\UserDatum;
 
 class HomeController extends Controller
 {
@@ -16,7 +15,7 @@ class HomeController extends Controller
             'user' => UserDatum::find(1)
         );
 
-        $carrossel  = [
+        $carrossel = [
             [
                 'imagem' => 'teste1.png',
                 'titulo' => 'teste1',
@@ -49,7 +48,44 @@ class HomeController extends Controller
             ],
         ];
 
-        return view('home.index', compact('carrossel'));
+        $noticias = [
+            [
+                'timestamp' => 'xx/xx/xxxx',
+                'timestamprelativo' => 'xx segundos atrás',
+                'coordenacao' => 'DILID',
+                'url' => 'google.com',
+                'titulo' => 'lorem ipsum',
+                'tldr' => 'asdf adsf sdf asdfa sdf'
+            ],
+            [
+                'timestamp' => 'xx/xx/xxxx',
+                'timestamprelativo' => 'xx segundos atrás',
+                'coordenacao' => 'DILID',
+                'url' => 'google.com',
+                'titulo' => 'lorem ipsum',
+                'tldr' => 'asdf adsf sdf asdfa sdf'
+            ],
+        ];
+
+        $pessoas = [
+            [
+                'nome' => 'Gustavo Ericson',
+                'data' => '22/05',
+            ],
+            [
+                'nome' => 'Gustavo Ericson',
+                'data' => '22/05',
+            ],
+        ];
+
+        $paginasEspeciais = [
+            [
+                'url' => 'google.com',
+                'titulo' => 'titulo'
+            ],
+        ];
+
+        return view('home.index', compact('carrossel', 'noticias', 'pessoas', 'paginasEspeciais'));
     }
 
 }

@@ -9,7 +9,6 @@
     @section('stylesheets')
         <link rel="stylesheet" href="{!! URL::asset('lib/bootstrap-4.0.0-alpha6/css/bootstrap.min.css') !!}"/>
         <link rel="stylesheet" href="{{ URL::asset('css/style.css')}}"/>
-
     @endsection
 
 
@@ -20,7 +19,7 @@
 </head>
 <body>
 <header>
-    @yield('inc.header')
+    @include('inc.header')
 </header>
 
 <main>
@@ -28,7 +27,7 @@
 </main>
 
 <footer>
-    @yield('inc.footer')
+    @include('inc.footer')
 </footer>
 
 @section('scripts')

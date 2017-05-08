@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsuariosTable extends Migration
+class CreateObjetoTiposTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,11 @@ class CreateUsuariosTable extends Migration
      */
     public function up()
     {
-        Schema::create('usuarios', function (Blueprint $table) {
+        Schema::create('objeto_tipos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cpf', 11);
             $table->timestamps();
-            $table->string('nome_completo');
-            $table->string('nome_curto');
-            $table->string('password');
-            $table->rememberToken();;
-            $table->timestamp('last_access');
-
-
+            $table->string('descricao');
+            $table->string('icone');
         });
     }
 
@@ -34,6 +28,6 @@ class CreateUsuariosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuarios');
+        Schema::dropIfExists('objeto_tipos');
     }
 }

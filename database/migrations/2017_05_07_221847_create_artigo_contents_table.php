@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRhDatasTable extends Migration
+class CreateArtigoContentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateRhDatasTable extends Migration
      */
     public function up()
     {
-        Schema::create('rh_datas', function (Blueprint $table) {
+        Schema::create('artigo_contents', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('cargo_id');
-            $table->integer('escolaridade_id');
-            $table->integer('unidade_id');
-            $table->string('siape', 10);
-            $table->date('data_nascimento');
-            $table->string('sexo', 1);
+            $table->integer('artigo_id');
+            $table->longText('conteudo');
         });
     }
 
@@ -31,6 +27,6 @@ class CreateRhDatasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rh_datas');
+        Schema::dropIfExists('artigo_contents');
     }
 }

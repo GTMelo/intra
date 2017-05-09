@@ -21,7 +21,7 @@ class CreateUsuariosTable extends Migration
             $table->string('nome_curto');
             $table->string('password');
             $table->rememberToken();;
-            $table->timestamp('last_access');
+            $table->timestamp('last_access')->nullable();
 
 
         });

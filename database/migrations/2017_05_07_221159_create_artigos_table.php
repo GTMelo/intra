@@ -13,7 +13,7 @@ class CreateArtigosTable extends Migration
      */
     public function up()
     {
-        Schema::create('noticias', function (Blueprint $table) {
+        Schema::create('artigos', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->integer('autor_id');

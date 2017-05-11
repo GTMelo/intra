@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ArtigoTableSeeder extends Seeder
+class UsuarioTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,11 +12,12 @@ class ArtigoTableSeeder extends Seeder
     public function run()
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-        \App\Models\Artigo::truncate();
+        \App\Models\Usuario::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        (new Faker\Generator)->seed(123);
+        (new Faker\Generator())->seed(123);
 
-        factory(App\Models\Artigo::class, 1000)->create();
+        factory(App\Models\Usuario::class, 200)->create();
+
     }
 }

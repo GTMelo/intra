@@ -11,7 +11,9 @@ class CargoTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         \App\Models\Cargo::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         $cargos = [
             ['Assistente Técnico Administrativo', 'Administrative Assistant'],

@@ -16,16 +16,16 @@ class CreateArtigosTable extends Migration
         Schema::create('artigos', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('autor_id');
+            $table->integer('autor_id')->unsigned()->nullable();
             $table->integer('tipo_artigo_id');
             $table->string('titulo');
             $table->string('tldr', 140);
             $table->integer('status');
         });
 
-//        Schema::table('artigos', function($table) {
-//            $table->foreign('autor_id')->references('id')->on('usuarios')->onDelete('set null');
-//        });
+        Schema::table('artigos', function($table) {
+            $table->foreign('autor_id')->references('id')->on('usuarios')->onDelete('set null');
+        });
     }
 
     /**

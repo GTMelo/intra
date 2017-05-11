@@ -11,6 +11,8 @@ class CargoTableSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\Cargo::truncate();
+
         $cargos = [
             ['Assistente Técnico Administrativo', 'Administrative Assistant'],
             ['Chefe de Gabinete', 'Chief of Office'],
@@ -30,7 +32,7 @@ class CargoTableSeeder extends Seeder
     public static function criaCargo($cargos)
     {
         foreach ($cargos as $cargo) {
-            \App\Cargo::create([
+            \App\Models\Cargo::create([
                 'sigla' => static::criaSigla($cargo[0]),
                 'descricao_pt' => static::criaDescricao($cargo[0]),
                 'descricao_en' => $cargo[1],

@@ -22,6 +22,10 @@ class CreateArtigosTable extends Migration
             $table->string('tldr', 140);
             $table->integer('status');
         });
+
+//        Schema::table('artigos', function($table) {
+//            $table->foreign('autor_id')->references('id')->on('usuarios')->onDelete('set null');
+//        });
     }
 
     /**
@@ -31,6 +35,6 @@ class CreateArtigosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('noticias');
+        Schema::dropIfExists('artigos');
     }
 }

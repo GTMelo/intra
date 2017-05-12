@@ -15,11 +15,12 @@ class CreateUnidadesTable extends Migration
     {
         Schema::create('unidades', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->integer('unidade_superior');
             $table->string('sigla', 10);
             $table->string('descricao');
             $table->integer('status');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

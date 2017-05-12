@@ -19,6 +19,8 @@ class CreateTelefonesTable extends Migration
             $table->integer('ddd');
             $table->integer('prefixo');
             $table->integer('ramal');
+            $table->timestamps();
+            $table->softDeletes();
 
         });
     }

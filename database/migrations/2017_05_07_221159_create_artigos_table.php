@@ -15,12 +15,13 @@ class CreateArtigosTable extends Migration
     {
         Schema::create('artigos', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->integer('autor_id')->unsigned()->nullable();
             $table->integer('tipo_artigo_id');
             $table->string('titulo');
             $table->string('tldr', 140);
             $table->integer('status');
+            $table->timestamps();
+            $table->softDeletes();
         });
 
         Schema::table('artigos', function($table) {

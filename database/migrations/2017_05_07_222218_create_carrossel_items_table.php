@@ -15,9 +15,10 @@ class CreateCarrosselItemsTable extends Migration
     {
         Schema::create('carrossel_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->integer(' artigo_id');
             $table->integer('imagem_id');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

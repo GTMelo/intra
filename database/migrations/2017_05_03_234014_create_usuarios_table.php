@@ -16,12 +16,13 @@ class CreateUsuariosTable extends Migration
         Schema::create('usuarios', function (Blueprint $table) {
             $table->increments('id');
             $table->string('cpf', 11);
-            $table->timestamps();
             $table->string('nome_completo');
             $table->string('nome_curto');
             $table->string('password');
-            $table->rememberToken();;
+            $table->rememberToken();
+            $table->timestamps();
             $table->timestamp('last_access')->nullable();
+            $table->softDeletes();
 
 
         });

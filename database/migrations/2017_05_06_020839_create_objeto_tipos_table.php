@@ -15,9 +15,10 @@ class CreateObjetoTiposTable extends Migration
     {
         Schema::create('objeto_tipos', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('descricao');
             $table->string('icone');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

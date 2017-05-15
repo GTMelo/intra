@@ -34,15 +34,15 @@ class AddFksToCidadeEstadoPaisTable extends Migration
     public function down()
     {
         Schema::table('cidades', function (Blueprint $table) {
-            $table->dropForeign('estado_id');
+            $table->dropForeign('cidades_estado_id_foreign');
         });
         Schema::table('estados', function (Blueprint $table) {
-            $table->dropForeign('capital_id');
-            $table->dropForeign('pais_id');
+            $table->dropForeign('estados_capital_id_foreign');
+            $table->dropForeign('estados_pais_id_foreign');
 
         });
         Schema::table('paises', function (Blueprint $table) {
-            $table->dropForeign('capital_id');
+            $table->dropForeign('paises_capital_id_foreign');
         });
 
     }

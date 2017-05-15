@@ -16,6 +16,7 @@ class CreateCarrosselItemsTable extends Migration
         Schema::create('carrossel_items', function (Blueprint $table) {
             $table->integer('artigo_id')->unsigned();
             $table->integer('imagem_id')->unsigned();
+            $table->boolean('ativo');
             $table->timestamps();
             $table->softDeletes();
         });

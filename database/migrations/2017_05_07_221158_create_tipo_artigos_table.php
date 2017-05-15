@@ -15,7 +15,7 @@ class CreateTipoArtigosTable extends Migration
     {
         Schema::create('tipo_artigos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string(' descricao');
+            $table->string('descricao');
             $table->timestamps();
             $table->softDeletes();
         });

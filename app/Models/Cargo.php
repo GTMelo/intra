@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 
-class Cargo extends BaseModel
+class Cargo extends Model
 {
 
 

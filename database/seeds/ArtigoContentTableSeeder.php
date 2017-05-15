@@ -11,6 +11,9 @@ class ArtigoContentTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        \App\Models\ArtigoContent::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         //
     }
 }

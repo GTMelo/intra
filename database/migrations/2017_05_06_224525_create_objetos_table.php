@@ -18,8 +18,10 @@ class CreateObjetosTable extends Migration
             $table->integer('objeto_tipo_id')->unsigned();
             $table->string('descricao');
             $table->string('tldr');
+            $table->boolean('ativo');
             $table->timestamps();
             $table->softDeletes();
+
         });
 
         Schema::table('objetos', function (Blueprint $table) {

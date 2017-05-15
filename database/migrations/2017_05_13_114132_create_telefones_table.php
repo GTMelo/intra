@@ -18,6 +18,7 @@ class CreateTelefonesTable extends Migration
             $table->integer('cidade_id')->unsigned();
             $table->integer('prefixo');
             $table->integer('ramal');
+            $table->boolean('ativo');
             $table->timestamps();
             $table->softDeletes();
         });

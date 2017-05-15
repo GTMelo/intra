@@ -20,9 +20,11 @@ class CreateUsuariosTable extends Migration
             $table->string('nome_curto');
             $table->string('password');
             $table->rememberToken();
+            $table->boolean('ativo');
             $table->timestamps();
             $table->timestamp('last_access')->nullable();
             $table->softDeletes();
+
 
 
         });

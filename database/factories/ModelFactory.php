@@ -28,10 +28,10 @@ $factory->define(App\Models\Artigo::class, function (Faker\Generator $faker) {
     $userCount = (array) \DB::table('usuarios')->count();
     return [
         'autor_id' => $faker->numberBetween(1, $userCount[0]),
-        'tipo_artigo_id' => $faker->numberBetween(1, 3),
+        'tipo_artigo_id' => $faker->numberBetween(1, 2),
         'titulo' => $faker->sentence(9, true),
         'tldr' => $faker->sentence(10, true),
-        'status' => $faker->numberBetween(0, 1),
+        'ativo' => true
     ];
 
 });
@@ -49,5 +49,6 @@ $factory->define(App\Models\Usuario::class, function (Faker\Generator $faker){
         'nome_curto' => $firstName . ' ' . $lastName,
         'password' => bcrypt($faker->password),
         'remember_token' => str_random(10),
+        'ativo' => true,
     ];
 });

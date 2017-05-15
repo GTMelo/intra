@@ -19,7 +19,7 @@ class CreateArtigosTable extends Migration
             $table->integer('tipo_artigo_id')->unsigned()->nullable();
             $table->string('titulo');
             $table->string('tldr', 140);
-            $table->integer('status');
+            $table->boolean('ativo');
             $table->timestamps();
             $table->softDeletes();
         });

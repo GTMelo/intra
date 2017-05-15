@@ -14,9 +14,13 @@ class CreateArtigoContentsTable extends Migration
     public function up()
     {
         Schema::create('artigo_contents', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('artigo_id');
+            $table->integer('artigo_id')->unsigned();
             $table->longText('conteudo');
+        });
+
+        Schema::table('artigo_contents', function (Blueprint $table) {
+            $table->primary('artigo_id');
+            $table->foreign('artigo_id')->references('id')->on('artigos')->onDelete('cascade');
         });
     }
 

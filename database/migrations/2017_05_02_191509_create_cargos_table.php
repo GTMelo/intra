@@ -17,7 +17,7 @@ class CreateCargosTable extends Migration
             $table->increments('id');
             $table->string('sigla');
             $table->string('descricao');
-//            $table->string('descricao_en'); TODO Criar tabela com dados específicos para as assinaturas
+            $table->string('descricao_en'); // TODO Criar tabela com dados específicos para as assinaturas
             $table->timestamps();
             $table->softDeletes();
         });

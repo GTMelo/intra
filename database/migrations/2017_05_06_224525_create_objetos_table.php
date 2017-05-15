@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTelefonesTable extends Migration
+class CreateObjetosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,17 @@ class CreateTelefonesTable extends Migration
      */
     public function up()
     {
-        Schema::create('telefones', function (Blueprint $table) {
+        Schema::create('objetos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('ddi');
-            $table->integer('ddd');
-            $table->integer('prefixo');
-            $table->integer('ramal');
+            $table->integer('objeto_tipo_id')->unsigned();
+            $table->string('descricao');
+            $table->string('tldr');
             $table->timestamps();
             $table->softDeletes();
+        });
 
+        Schema::table('objetos', function (Blueprint $table) {
+            $table->foreign('objeto_tipo_id')->references('id')->on('objeto_tipos');
         });
     }
 
@@ -32,6 +34,6 @@ class CreateTelefonesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('telefones');
+        Schema::dropIfExists('objetos');
     }
 }

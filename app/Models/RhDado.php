@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RhData extends Model
+class RhDado extends Model
 {
     //
 }

@@ -14,11 +14,16 @@ class CreateCarrosselItemsTable extends Migration
     public function up()
     {
         Schema::create('carrossel_items', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer(' artigo_id');
-            $table->integer('imagem_id');
+            $table->integer('artigo_id')->unsigned();
+            $table->integer('imagem_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
+        });
+
+        Schema::table('carrossel_items', function (Blueprint $table) {
+            $table->primary(['artigo_id', 'imagem_id']);
+            $table->foreign('artigo_id')->references('id')->on('artigos');
+            $table->foreign('imagem_id')->references('id')->on('objetos');
         });
     }
 

@@ -36,7 +36,7 @@ class CargoTableSeeder extends Seeder
         foreach ($cargos as $cargo) {
             \App\Models\Cargo::create([
                 'sigla' => static::criaSigla($cargo[0]),
-                'descricao_pt' => static::criaDescricao($cargo[0]),
+                'descricao' => static::criaDescricao($cargo[0]),
                 'descricao_en' => $cargo[1],
             ]);
         }

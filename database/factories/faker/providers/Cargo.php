@@ -85,11 +85,11 @@ class Cargo extends \Faker\Provider\Base {
             'internacionais'
         ];
 
-        $cargR = self::pickChoice($prefixo) . self::pickChoice($radical) . self::pickChoice($sufixo);
-        $prepR = self::pickChoice($preposicao);
-        $objeR = self::pickChoice($objeto);
-        $escoR = self::pickChoice($escopo);
-        $cobeR = self::pickChoice($prefixo) . self::pickChoice($cobertura);
+        $cargR = self::opt($prefixo) . self::opt($radical) . self::opt($sufixo);
+        $prepR = self::opt($preposicao);
+        $objeR = self::opt($objeto);
+        $escoR = self::opt($escopo);
+        $cobeR = self::opt($prefixo) . self::opt($cobertura);
 
         $array = [$cargR, $prepR, $objeR, $escoR, $cobeR];
         $result = implode(' ', $array);
@@ -99,7 +99,9 @@ class Cargo extends \Faker\Provider\Base {
 
     }
 
-    static function pickChoice($array){
+    static function opt
+    ($array)
+    {
         return $array[mt_rand(0,count($array))];
     }
 

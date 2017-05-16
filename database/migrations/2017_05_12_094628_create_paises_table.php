@@ -16,7 +16,6 @@ class CreatePaisesTable extends Migration
         Schema::create('paises', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->integer('capital_id')->unsigned();
             $table->integer('codigo_ddi');
             $table->timestamps();
             $table->softDeletes();

@@ -11,14 +11,19 @@ class Artigo extends Model
 
     public function autor()
     {
-
         return $this->belongsTo(\App\Models\Usuario::class, 'autor_id');
-
     }
 
     public function content() {
-
         return $this->hasOne(ArtigoContent::class);
-
     }
+
+    public function tipo_artigo()
+    {
+        return $this->belongsTo(TipoArtigo::class);
+    }
+
+//    public function noticia(){
+//        return Artigo::where()
+//    }
 }

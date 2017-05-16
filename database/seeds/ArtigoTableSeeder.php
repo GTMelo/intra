@@ -17,6 +17,6 @@ class ArtigoTableSeeder extends Seeder
 
         (new Faker\Generator)->seed(123);
 
-        factory(App\Models\Artigo::class, 200)->create();
+        factory(App\Models\Artigo::class, 1000)->create();
     }
 }

@@ -28,17 +28,17 @@ class UnidadeTableSeeder extends Seeder
             \App\Models\Unidade::create([
                     'sigla' => $unidade[0],
                     'descricao' => $unidade[1],
-                    'unidade_superior_id' => $unidade[3],
+                    'unidade_superior_id' => $unidade[2],
                     'ativo' => true
                 ]
             );
         }
     }
 
-    public static function getSuperior($unidade)
+    public static function getSuperior($unidade = 0)
     {
 
-        if (!isset($unidade)) {
+        if ($unidade == 0) {
             return null;
         }
 

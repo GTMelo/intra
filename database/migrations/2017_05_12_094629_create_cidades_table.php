@@ -16,9 +16,15 @@ class CreateCidadesTable extends Migration
         Schema::create('cidades', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->integer('estado_id')->unsigned();
+            $table->integer('pais_id')->unsigned();
+            $table->string('area_code')->nullable();
+            $table->boolean('is_capital')->default(false);
             $table->timestamps();
             $table->softDeletes();
+        });
+
+        Schema::table('cidades', function (Blueprint $table) {
+            $table->foreign('pais_id')->references('id')->on('paises');
         });
     }
 

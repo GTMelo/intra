@@ -16,7 +16,8 @@ class CreatePaisesTable extends Migration
         Schema::create('paises', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->integer('codigo_ddi');
+            $table->string('nome_nativo');
+            $table->integer('calling_code');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -29,6 +30,6 @@ class CreatePaisesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pais');
+        Schema::dropIfExists('paises');
     }
 }

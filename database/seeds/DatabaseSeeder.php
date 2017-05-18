@@ -23,5 +23,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CidadeTableSeeder::class);
         $this->call(UnidadeTableSeeder::class);
         $this->call(EmailTableSeeder::class);
+        $this->call(ObjetoTableSeeder::class);
     }
 }

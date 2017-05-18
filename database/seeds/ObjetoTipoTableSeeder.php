@@ -18,8 +18,8 @@ class ObjetoTipoTableSeeder extends Seeder
         $objs = [
             ['imagem', 'imagem'],
             ['pdf', 'pdf'],
-            ['planilha excel', 'planilha'],
-            ['documento word', 'docword'],
+            ['planilha', 'planilha'],
+            ['documento', 'docword'],
             ['link', 'link'],
         ];
 

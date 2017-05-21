@@ -53,3 +53,17 @@ $factory->define(App\Models\Usuario::class, function (Faker\Generator $faker){
         'ativo' => true,
     ];
 });
+
+$factory->define(\App\Models\Objeto::class, function (Faker\Generator $faker) {
+
+    $faker->addProvider(new \Faker\Provider\Lorem($faker));
+    $faker->addProvider(new \Faker\Provider\Miscellaneous($faker));
+    $faker->addProvider(new \Faker\Provider\File($faker));
+
+    return [
+        'objeto_tipo_id' => 1,
+        'descricao' => $faker->word() . '.' . $faker->fileExtension(),
+        'tldr' => $faker->text(140),
+        'ativo' => $faker->boolean(60),
+    ];
+});

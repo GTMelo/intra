@@ -9,4 +9,6 @@ class Usuario extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $dates = ['last_access'];
 }

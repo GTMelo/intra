@@ -8,9 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ObjetoTipo extends Model
 {
 
-
-    public static function findByTipo($tipo)
+    public static function idOf($tipo)
     {
-        return ObjetoTipo::where('descricao', $tipo);
+        return ObjetoTipo::where('descricao', $tipo)->first()->id;
     }
 }

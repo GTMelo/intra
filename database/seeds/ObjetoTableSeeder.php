@@ -15,26 +15,17 @@ class ObjetoTableSeeder extends Seeder
         \App\Models\Objeto::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        $tipoImagem = \App\Models\ObjetoTipo::findByTipo('imagem')->pluck('id')->first();
         $faker = new Faker\Generator();
-        $faker->addProvider(new \Faker\Provider\Lorem($faker));
+        $faker->seed(123);
+        $faker->addProvider(new Faker\Provider\Base($faker));
 
-        $objetos = [
-            [$tipoImagem, 'banner1.png', $faker->text(140)],
-            [$tipoImagem, 'banner2.png', $faker->text(140)],
-            [$tipoImagem, 'banner3.png', $faker->text(140)],
-            [$tipoImagem, 'banner4.png', $faker->text(140)],
-            [$tipoImagem, 'banner5.png', $faker->text(140)],
-        ];
+        $img = \App\Models\ObjetoTipo::idOf('imagem');
+        $link = \App\Models\ObjetoTipo::idOf('link');
+        $pdf = \App\Models\ObjetoTipo::idOf('pdf');
 
-        foreach ($objetos as $objeto) {
-            \App\Models\Objeto::create([
-                'objeto_tipo_id' => $objeto[0],
-                'descricao' => $objeto[1],
-                'tldr' => $objeto[2],
-                'ativo' => true,
-            ]);
-        }
+        factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $img]);
+        factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $link]);
+        factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $pdf]);
 
     }
 }

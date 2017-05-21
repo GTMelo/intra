@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CarrosselItem;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,41 +14,43 @@ class HomeController extends Controller
 
         $params = array(
             'title' => 'IntraSAIN',
-            'user' => UserDatum::find(1)
+            'user' => Usuario::find(1),
         );
 
-        $carrossel = [
-            [
-                'imagem' => 'teste1.png',
-                'titulo' => 'teste1',
-                'tldr' => 'teste tldr',
-                'url' => 'google.com'
-            ],
-            [
-                'imagem' => 'teste2.png',
-                'titulo' => 'teste2',
-                'tldr' => 'teste tldr',
-                'url' => 'google.com'
-            ],
-            [
-                'imagem' => 'teste2.png',
-                'titulo' => 'teste2',
-                'tldr' => 'teste tldr',
-                'url' => 'google.com'
-            ],
-            [
-                'imagem' => 'teste4.png',
-                'titulo' => 'teste4',
-                'tldr' => 'teste tldr',
-                'url' => 'google.com'
-            ],
-            [
-                'imagem' => 'teste5.png',
-                'titulo' => 'teste5',
-                'tldr' => 'teste tldr',
-                'url' => 'google.com'
-            ],
-        ];
+//        $carrossel = [
+//            [
+//                'imagem' => 'teste1.png',
+//                'titulo' => 'teste1',
+//                'tldr' => 'teste tldr',
+//                'url' => 'google.com'
+//            ],
+//            [
+//                'imagem' => 'teste2.png',
+//                'titulo' => 'teste2',
+//                'tldr' => 'teste tldr',
+//                'url' => 'google.com'
+//            ],
+//            [
+//                'imagem' => 'teste2.png',
+//                'titulo' => 'teste2',
+//                'tldr' => 'teste tldr',
+//                'url' => 'google.com'
+//            ],
+//            [
+//                'imagem' => 'teste4.png',
+//                'titulo' => 'teste4',
+//                'tldr' => 'teste tldr',
+//                'url' => 'google.com'
+//            ],
+//            [
+//                'imagem' => 'teste5.png',
+//                'titulo' => 'teste5',
+//                'tldr' => 'teste tldr',
+//                'url' => 'google.com'
+//            ],
+//        ];
+
+        $carrossel = CarrosselItem::withRels();
 
         $noticias = [
             [

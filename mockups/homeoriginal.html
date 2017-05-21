@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/sain_common.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/tooltipster/css/tooltipster.bundle.min.css"/>
+
+    <title>
+        {{ title }}
+    </title>
+
+</head>
+
+<body>
+
+<header class="navbar navbar-light bg-azul border-bottom-thin-blue override-margin">
+    <nav class="navbar-inner">
+        <a class="navbar-brand" href="home">
+            <!-- Logotipo em formato SVG para edição livre -->
+            <svg class="d-inline-block align-top logosvg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="54"
+                 height="41" viewBox="0 0 241 181" class="undefined">
+                <path d="M142 143.9c-21-10.8-37.3-23.4-50-38.6C77.3 87.6 67.2 69.3 61.8 50.8c-0.5-1.7-1.2-4.4-1.8-7.3C52.5 53.3 47.6 64.4 45.4 75.9c4.3 19.3 18 37.8 38.2 44.7l-10.2 30.4c27.3 21.4 65.6 21.7 93.2 0.8 -0.4 0-0.7-0.1-1.1-0.1C158.5 150.7 149 147.5 142 143.9z"/>
+                <path d="M83.6 37c6.5 28 31.8 61 60 78.5 9.3 5.8 24 12.5 34.8 12.5 3.2 0 5.8-0.6 7.7-1.8l3.1-1.9c3-6.1 5.2-12.6 6.4-19.1 -4.3-19.3-18-37.8-38.2-44.7l10.2-30.4c-23.6-18.6-55.7-21.2-81.7-8l-0.1 0.1C83.5 25.5 82.6 33.1 83.6 37z"/>
+                <path d="M67.5 16c0.7-0.3 1.2-0.5 1.6-0.6C25.1 27.4-0.3 74.3 1.7 105.4c2 31.8 22.6 58.1 48.1 73.3l15.5-46.2c-28.1-16.8-42.2-58.9-28.3-87.6C44.3 27.6 61.2 18.4 67.5 16z"/>
+                <path d="M239.3 75.6c-2-31.8-22.6-58.1-48.1-73.3l-15.5 46.3c28.1 16.8 42.2 58.9 28.4 87.6 -7.4 17.2-24.2 26.4-30.6 28.9 -0.7 0.3-1.3 0.5-1.7 0.6C215.9 153.6 241.3 106.7 239.3 75.6z"/>
+            </svg>
+            <span class="font-white opensans logo_brand light">IntraSAIN</span>
+        </a>
+
+        <nav class="float-right navbar navbar-light">
+            <!-- <form class="form-inline" action="login">
+              <input type="text" name="user" class="form-control input-login" placeholder="CPF" aria-describedby="basic-addon1">
+              <input type="text" name="senha" class="form-control input-login" placeholder="Senha" aria-describedby="basic-addon1">
+              <button class="btn btn-primary input-login">login</button>
+          </form> -->
+            <nav class="navbar-inner">
+                <p class="font-white text-right margin-0">Gustavo Ericson de Melo Alexandre <a href="logout">(sair)</a>
+                </p>
+                <p class="font-white text-right margin-0 font-tiny">NTIC/DILID/SAIN</p>
+            </nav>
+        </nav>
+    </nav>
+</header>
+<!--   <div class="row">
+    <div class="col" id="parabens">
+      <p class="text-center supress-margin">
+        Parabéns aos aniversariantes de hoje!
+      </p>
+      <ul class="text-center">
+        {% for pessoa in aniversariantes %}
+        <li>{{pessoa.nome}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+</div> -->
+
+<br>
+
+<div class="container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5">
+                <hr class="separator">
+            </div>
+            <div class="col-2 text-center">
+                <!-- <img class="logo-sm has-tooltip" src="assets/image/logo.svg" title="Não há novas notícias no carrossel. Clique para ver." /> -->
+                <svg class="logo-sm has-tooltip d-inline-block align-top fill-gray" id="Layer_2"
+                     title="Não há novas notícias no carrossel. Clique para ver." xmlns="http://www.w3.org/2000/svg"
+                     width="54" height="41" viewBox="0 0 241 181" class="undefined">
+                    <path d="M142 143.9c-21-10.8-37.3-23.4-50-38.6C77.3 87.6 67.2 69.3 61.8 50.8c-0.5-1.7-1.2-4.4-1.8-7.3C52.5 53.3 47.6 64.4 45.4 75.9c4.3 19.3 18 37.8 38.2 44.7l-10.2 30.4c27.3 21.4 65.6 21.7 93.2 0.8 -0.4 0-0.7-0.1-1.1-0.1C158.5 150.7 149 147.5 142 143.9z"/>
+                    <path d="M83.6 37c6.5 28 31.8 61 60 78.5 9.3 5.8 24 12.5 34.8 12.5 3.2 0 5.8-0.6 7.7-1.8l3.1-1.9c3-6.1 5.2-12.6 6.4-19.1 -4.3-19.3-18-37.8-38.2-44.7l10.2-30.4c-23.6-18.6-55.7-21.2-81.7-8l-0.1 0.1C83.5 25.5 82.6 33.1 83.6 37z"/>
+                    <path d="M67.5 16c0.7-0.3 1.2-0.5 1.6-0.6C25.1 27.4-0.3 74.3 1.7 105.4c2 31.8 22.6 58.1 48.1 73.3l15.5-46.2c-28.1-16.8-42.2-58.9-28.3-87.6C44.3 27.6 61.2 18.4 67.5 16z"/>
+                    <path d="M239.3 75.6c-2-31.8-22.6-58.1-48.1-73.3l-15.5 46.3c28.1 16.8 42.2 58.9 28.4 87.6 -7.4 17.2-24.2 26.4-30.6 28.9 -0.7 0.3-1.3 0.5-1.7 0.6C215.9 153.6 241.3 106.7 239.3 75.6z"/>
+                </svg>
+            </div>
+            <div class="col-5">
+                <hr class="separator">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="row row-width-fix carrossel-wrapper" id="area_carrossel">
+    <div class="container slick_script container-decor">
+        {% for item in carrossel %}
+
+        <div class="carrossel-item">
+            <div class="row">
+                <div class="col">
+                    <img class="carrossel-img img-responsive" src="assets/image/banner.png">
+                </div>
+                <div class="col div-center">
+                    <h3>{{item.destaque}}</h3>
+                    <p class="text-justify">{{item.tldr}}</p>
+                    <p class="text-center"><a href="{{item.url}}" class="btn btn-primary">LEIA MAIS</a></p>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</section>
+
+
+<br>
+
+<section class="container" id='area_noticias'>
+    <h1 class="border-bottom-exthin-light margin-bottom">Notícias</h1>
+    <div class="row border-bottom-exthin-light margin-bottom">
+
+        <!-- {% for noticia in noticias%} -->
+
+        <article class="col">
+            <a href="noticia.html">
+                <span class="noticia-unidade">{{noticia.unidade}}</span>
+                <span class="noticia-timestamp">{{noticia.timestamp}}</span>
+                <h2 class="noticia-titulo">{{noticia.titulo}}</h2>
+                <p class="noticia-tldr text-justify">
+                    {{noticia.tldr}}
+                </p>
+            </a>
+        </article>
+
+        <!-- {% endfor %} -->
+
+        <article class="col">
+            <a href="{{noticia.url}}">
+                <span class="noticia-unidade">{{noticia.unidade}}</span>
+                <span class="noticia-timestamp">{{noticia.timestamp}}</span>
+                <h2 class="noticia-titulo">{{noticia.titulo}}</h2>
+                <p class="noticia-tldr text-justify">
+                    {{noticia.tldr}}
+                </p>
+            </a>
+        </article>
+
+        <div class="w-100 border-bottom-exthin-light margin-bottom"></div>
+
+        <article class="col">
+            <a href="{{noticia.url}}">
+                <span class="noticia-unidade">{{noticia.unidade}}</span>
+                <span class="noticia-timestamp">{{noticia.timestamp}}</span>
+                <h2 class="noticia-titulo">{{noticia.titulo}}</h2>
+                <p class="noticia-tldr text-justify">
+                    {{noticia.tldr}}
+                </p>
+            </a>
+        </article>
+
+        <article class="col">
+            <a href="{{noticia.url}}">
+                <span class="noticia-unidade">{{noticia.unidade}}</span>
+                <span class="noticia-timestamp">{{noticia.timestamp}}</span>
+                <h2 class="noticia-titulo">{{noticia.titulo}}</h2>
+                <p class="noticia-tldr text-justify">
+                    {{noticia.tldr}}
+                </p>
+            </a>
+        </article>
+    </div>
+</section>
+
+<section class="container" id="area_utilidades">
+    <div class="row">
+        <div class="col">
+            <h1 class="border-bottom-exthin-light margin-bottom">Aniversários</h1>
+            <ul class="list-group">
+                <li class="list-group-item justify-content-between">{{pessoa.nome}} <span
+                        class="badge badge-default badge-pill">{{pessoa.aniversarioDia}}/{{pessoa.aniversarioMes}}</span>
+                </li>
+                <li class="list-group-item justify-content-between">Pessoa 2 <span
+                        class="badge badge-default badge-pill">03/01</span></li>
+                <li class="list-group-item justify-content-between">Pessoa 3 <span
+                        class="badge badge-default badge-pill">12/01</span></li>
+                <li class="list-group-item justify-content-between">Pessoa 4 <span
+                        class="badge badge-default badge-pill">30/01</span></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1 class="border-bottom-exthin-light margin-bottom">Páginas especiais</h1>
+            <ul class="list-group">
+                {% for paginaEspecial in paginasEspeciais %}
+                <li class="list-group-item justify-content-between">
+                    <a href="{{paginaEspecial.url}}">{{paginaEspecial.titulo}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/lib/slick/slick.min.js"></script>
+<script type="text/javascript" src="assets/lib/tooltipster/js/tooltipster.bundle.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.slick_script').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            arrows: true,
+            draggable: false,
+        });
+    });
+
+    $('.has-tooltip').tooltipster();
+</script>
+
+
+</body>

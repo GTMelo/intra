@@ -1,1 +1,0 @@
-@extends('pages.basepage')

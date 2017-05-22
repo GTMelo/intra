@@ -18,12 +18,13 @@ class Artigo extends Model
         return $this->hasOne(ArtigoContent::class);
     }
 
-    public function tipo_artigo()
+    public function artigo_tipo()
     {
-        return $this->belongsTo(TipoArtigo::class);
+        return $this->belongsTo(ArtigoTipo::class);
     }
 
-//    public function noticia(){
-//        return Artigo::where()
-//    }
+    public function scopeTipo($query, $tipo)
+    {
+        return Artigo::where('artigo_tipo', $tipo);
+    }
 }

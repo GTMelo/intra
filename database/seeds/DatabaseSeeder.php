@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CargoTableSeeder::class);
         $this->call(EscolaridadeTableSeeder::class);
         $this->call(ObjetoTipoTableSeeder::class);
-        $this->call(TipoArtigoTableSeeder::class);
+        $this->call(ArtigoTipoTableSeeder::class);
         $this->call(UsuarioTableSeeder::class);
         $this->call(ArtigoTableSeeder::class);
         $this->call(ArtigoContentTableSeeder::class);

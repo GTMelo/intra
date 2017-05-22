@@ -26,10 +26,10 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Models\Artigo::class, function (Faker\Generator $faker) {
 
     $userCount = (array) \DB::table('usuarios')->count();
-    $tipoArtcount = (array)\DB::table('tipo_artigos')->count();
+    $tipoArtcount = (array)\DB::table('artigo_tipos')->count();
     return [
         'autor_id' => $faker->numberBetween(1, $userCount[0]),
-        'tipo_artigo_id' => $faker->numberBetween(1, $tipoArtcount[0]),
+        'artigo_tipo_id' => $faker->numberBetween(1, $tipoArtcount[0]),
         'titulo' => $faker->sentence(9, true),
         'tldr' => $faker->sentence(10, true),
         'ativo' => true

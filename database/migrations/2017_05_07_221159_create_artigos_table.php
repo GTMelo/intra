@@ -16,7 +16,7 @@ class CreateArtigosTable extends Migration
         Schema::create('artigos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('autor_id')->unsigned()->nullable();
-            $table->integer('tipo_artigo_id')->unsigned()->nullable();
+            $table->integer('artigo_tipo_id')->unsigned()->nullable();
             $table->string('titulo');
             $table->string('tldr', 140);
             $table->boolean('ativo');
@@ -26,7 +26,7 @@ class CreateArtigosTable extends Migration
 
         Schema::table('artigos', function($table) {
             $table->foreign('autor_id')->references('id')->on('usuarios')->onDelete('set null');
-            $table->foreign('tipo_artigo_id')->references('id')->on('tipo_artigos')->onDelete('set null');
+            $table->foreign('artigo_tipo_id')->references('id')->on('artigo_tipos')->onDelete('set null');
         });
     }
 

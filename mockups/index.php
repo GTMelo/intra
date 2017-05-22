@@ -86,7 +86,7 @@ require_once './core/data/db.php';
 
 
 // Inicia o template engine
-require_once './core/view/.twig/lib/Twig/Autoloader.php';
+require_once './core/view/.twig/vendor/Twig/Autoloader.php';
 Twig_Autoloader::register();
 $loader = new Twig_Loader_Filesystem('./core/view/templates');
 $twig = new Twig_Environment($loader, array('debug' => true));

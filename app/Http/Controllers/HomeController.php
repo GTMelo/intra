@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artigo;
 use App\Models\CarrosselItem;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
@@ -12,10 +13,12 @@ class HomeController extends Controller
     function index()
     {
 
-        $params = array(
-            'title' => 'IntraSAIN',
-            'user' => Usuario::find(1),
-        );
+        $title = 'IntraSAIN';
+
+        $user = [
+            'nome_curto' => Usuario::find(1)->nome_curto,
+            'unidade' => Usuario::find(1)->rhDados->unidade->sigla
+        ];
 
 //        $carrossel = [
 //            [
@@ -48,28 +51,30 @@ class HomeController extends Controller
 //                'tldr' => 'teste tldr',
 //                'url' => 'google.com'
 //            ],
+//
+
+        $carrossel = CarrosselItem::getItems()->get();
+
+        $noticias = Artigo::list
+
+//        $noticias = [
+//            [
+//                'timestamp' => 'xx/xx/xxxx',
+//                'timestamprelativo' => 'xx segundos atrás',
+//                'coordenacao' => 'DILID',
+//                'url' => 'google.com',
+//                'titulo' => 'lorem ipsum',
+//                'tldr' => 'asdf adsf sdf asdfa sdf'
+//            ],
+//            [
+//                'timestamp' => 'xx/xx/xxxx',
+//                'timestamprelativo' => 'xx segundos atrás',
+//                'coordenacao' => 'DILID',
+//                'url' => 'google.com',
+//                'titulo' => 'lorem ipsum',
+//                'tldr' => 'asdf adsf sdf asdfa sdf'
+//            ],
 //        ];
-
-        $carrossel = CarrosselItem::withRels();
-
-        $noticias = [
-            [
-                'timestamp' => 'xx/xx/xxxx',
-                'timestamprelativo' => 'xx segundos atrás',
-                'coordenacao' => 'DILID',
-                'url' => 'google.com',
-                'titulo' => 'lorem ipsum',
-                'tldr' => 'asdf adsf sdf asdfa sdf'
-            ],
-            [
-                'timestamp' => 'xx/xx/xxxx',
-                'timestamprelativo' => 'xx segundos atrás',
-                'coordenacao' => 'DILID',
-                'url' => 'google.com',
-                'titulo' => 'lorem ipsum',
-                'tldr' => 'asdf adsf sdf asdfa sdf'
-            ],
-        ];
 
         $pessoas = [
             [
@@ -88,6 +93,10 @@ class HomeController extends Controller
                 'titulo' => 'titulo'
             ],
         ];
+
+        $params = compact('title', 'user', 'carrossel', 'noticias', 'pessoas', 'paginasEspeciais');
+
+        dd($params);
 
         return view('home.index', compact('carrossel', 'noticias', 'pessoas', 'paginasEspeciais'));
     }

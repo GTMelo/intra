@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UnidadeTableSeeder::class);
         $this->call(EmailTableSeeder::class);
         $this->call(ObjetoTableSeeder::class);
+        $this->call(CarrosselItemTableSeeder::class);
     }
 }

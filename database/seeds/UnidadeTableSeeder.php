@@ -16,12 +16,12 @@ class UnidadeTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         $unds = [
-            ['SAIN', 'Secretaria de Assuntos Internacionais', static::getSuperior()],
-            ['CGAB', 'Chefia de Gabinete', static::getSuperior('SAIN')],
-            ['DILID', 'Divisão de Logística, Informática e Documentação', static::getSuperior('CGAB')],
-            ['NTIC', 'Núcleo de Tecnologia da Informação e Comunicação', static::getSuperior('DILID')],
-            ['NDI', 'Núcleo de Documentação da Informação', static::getSuperior('DILID')],
-            ['NLOG', 'Núcleo de Logística e Gestão', static::getSuperior('DILID')]
+            ['SAIN', 'Secretaria de Assuntos Internacionais', null],
+            ['CGAB', 'Chefia de Gabinete', 1],
+            ['DILID', 'Divisão de Logística, Informática e Documentação', 2],
+            ['NTIC', 'Núcleo de Tecnologia da Informação e Comunicação', 3],
+            ['NDI', 'Núcleo de Documentação da Informação', 3],
+            ['NLOG', 'Núcleo de Logística e Gestão', 3],
         ];
 
         foreach ($unds as $unidade) {
@@ -35,15 +35,14 @@ class UnidadeTableSeeder extends Seeder
         }
     }
 
-    public static function getSuperior($unidade = 0)
+    public static function getSuperior($unidade = false)
     {
 
-        if ($unidade == 0) {
+        if ($unidade == false) {
             return null;
         }
 
-        return \App\Models\Unidade::where('sigla', 'LIKE', $unidade)->first()->id;
-
+        return \App\Models\Unidade::where('sigla', $unidade)->first()->id;
 
     }
 

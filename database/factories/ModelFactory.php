@@ -67,3 +67,16 @@ $factory->define(\App\Models\Objeto::class, function (Faker\Generator $faker) {
         'ativo' => $faker->boolean(60),
     ];
 });
+
+$factory->define(\App\Models\CarrosselItem::class, function (\Faker\Generator $faker){
+
+    $maxArtigos = \App\Models\Artigo::all()->count();
+    $maxImagens = \App\Models\Objeto::tipo('imagem')->count();
+
+    return [
+        'artigo_id' => $faker->numberBetween(1, $maxArtigos),
+        'imagem_id' => $faker->numberBetween(1, $maxImagens),
+        'ativo' => true,
+    ];
+
+});

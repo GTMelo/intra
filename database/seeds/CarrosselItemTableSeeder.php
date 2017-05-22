@@ -11,6 +11,12 @@ class CarrosselItemTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        \App\Models\CarrosselItem::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
+        (new Faker\Generator())->seed(123);
+
+        factory(App\Models\CarrosselItem::class, 30)->create();
     }
 }

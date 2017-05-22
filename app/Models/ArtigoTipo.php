@@ -13,9 +13,9 @@ class ArtigoTipo extends Model
         return $this->hasMany(Artigo::class);
     }
 
-    public static function findByTipo($tipo)
+    public function scopeTipo($query, $tipo)
     {
-        return static::where('descricao', $tipo)->first()->artigo;
+        return $this->where('descricao', $tipo)->first();
     }
 
 }

@@ -23,7 +23,7 @@ class ObjetoTableSeeder extends Seeder
         $link = \App\Models\ObjetoTipo::idOf('link');
         $pdf = \App\Models\ObjetoTipo::idOf('pdf');
 
-        factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $img]);
+        factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $img, 'descricao' => 'banner1.png']);
         factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $link]);
         factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $pdf]);
 

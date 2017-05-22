@@ -22,28 +22,27 @@
         </div>
         <div class="row" id="carrossel_items">
             <div class="container slick">
-                <div>
-                    <div class="row">
-                        <div class="col-md float-left">
-                            <img src="http://dummyimage.com/700x350/4d494d/686a82.gif&text=placeholder+image"
-                                 alt="placeholder+image">
-                        </div>
-                        <div class="carrossel_info col-md float-right d-flex flex-column">
-                            <h1>
-                                Lorem Ipsum Color dot Sit Amet
-                            </h1>
-                            <p class="text-justify flex-1">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                                dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-                                sem. Nulla consequat massa quis enim.
-                            </p>
-                            <p class="text-center">
-                                <a class="btn btn-primary" href="#">Leia Mais</a>
-                            </p>
+                @foreach($carrossel as $item)
+                    <div>
+                        <div class="row">
+                            <div class="col-md float-left">
+                                <img src="http://dummyimage.com/700x350/4d494d/686a82.gif&text=placeholder+image"
+                                     alt="placeholder+image">
+                            </div>
+                            <div class="carrossel_info col-md float-right d-flex flex-column">
+                                <h1>
+                                    {{$item->artigo->titulo}}
+                                </h1>
+                                <p class="text-justify flex-1">
+                                    {{$item->artigo->tldr}}
+                                </p>
+                                <p class="text-center">
+                                    <a class="btn btn-primary" href="{{$item->artigo->url()}}">Leia Mais</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
             </div>
         </div>
@@ -52,50 +51,20 @@
     <section id="area_noticias" class="container">
         <h1>Notícias</h1>
         <div class="d-flex flex-wrap justify-content-between">
-            <article class="d-flex flex-column">
-                <div class="d-flex justify-content-between">
-                    <span class="">00/00/0000 00:00 (Segundos atrás)</span>
-                    <span class="ml-auto">DILID</span>
-                </div>
-                <a href="#">
-                    <h2>Publicada a intranet V3 da SAIN</h2>
-                    <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis, velit
-                        sed suscipit iaculis, lacus velit fermentum orci, id cras amet.</p>
-                </a>
-            </article>
-            <article class="d-flex flex-column">
-                <div class="d-flex justify-content-between">
-                    <span class="">00/00/0000 00:00 (Segundos atrás)</span>
-                    <span class="ml-auto">DILID</span>
-                </div>
-                <a href="#">
-                    <h2>Publicada a intranet V3 da SAIN</h2>
-                    <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis, velit
-                        sed suscipit iaculis, lacus velit fermentum orci, id cras amet.</p>
-                </a>
-            </article>
-            <article class="d-flex flex-column">
-                <div class="d-flex justify-content-between">
-                    <span class="">00/00/0000 00:00 (Segundos atrás)</span>
-                    <span class="ml-auto">DILID</span>
-                </div>
-                <a href="#">
-                    <h2>Publicada a intranet V3 da SAIN</h2>
-                    <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis, velit
-                        sed suscipit iaculis, lacus velit fermentum orci, id cras amet.</p>
-                </a>
-            </article>
-            <article class="d-flex flex-column">
-                <div class="d-flex justify-content-between">
-                    <span class="">00/00/0000 00:00 (Segundos atrás)</span>
-                    <span class="ml-auto">DILID</span>
-                </div>
-                <a href="#">
-                    <h2>Publicada a intranet V3 da SAIN</h2>
-                    <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis, velit
-                        sed suscipit iaculis, lacus velit fermentum orci, id cras amet.</p>
-                </a>
-            </article>
+            @foreach($artigos as $artigo)
+                <article class="d-flex flex-column">
+                    <div class="d-flex justify-content-between">
+                        <span class="">00/00/0000 00:00 (Segundos atrás)</span>
+                        <span class="ml-auto">DILID</span>
+                    </div>
+                    <a href="#">
+                        <h2>Publicada a intranet V3 da SAIN</h2>
+                        <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis,
+                            velit
+                            sed suscipit iaculis, lacus velit fermentum orci, id cras amet.</p>
+                    </a>
+                </article>
+            @endforeach
         </div>
     </section>
 

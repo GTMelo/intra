@@ -17,13 +17,15 @@ class DatabaseSeeder extends Seeder
         $this->call(ObjetoTipoTableSeeder::class);
         $this->call(ArtigoTipoTableSeeder::class);
         $this->call(UsuarioTableSeeder::class);
+        $this->call(UnidadeTableSeeder::class);
         $this->call(ArtigoTableSeeder::class);
         $this->call(ArtigoContentTableSeeder::class);
         $this->call(PaisTableSeeder::class);
         $this->call(CidadeTableSeeder::class);
-        $this->call(UnidadeTableSeeder::class);
         $this->call(EmailTableSeeder::class);
         $this->call(ObjetoTableSeeder::class);
         $this->call(CarrosselItemTableSeeder::class);
+        $this->call(RhDadoTableSeeder::class);
+        $this->call(TelefoneTableSeeder::class);
     }
 }

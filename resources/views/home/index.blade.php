@@ -54,14 +54,13 @@
             @foreach($artigos as $artigo)
                 <article class="d-flex flex-column">
                     <div class="d-flex justify-content-between">
-                        <span class="">00/00/0000 00:00 (Segundos atrás)</span>
-                        <span class="ml-auto">DILID</span>
+                        <span class="">{{$artigo->created_at->format('d/m/Y')}}
+                            ({{$artigo->created_at->diffForHumans()}})</span>
+                        <span class="ml-auto">{{$artigo->unidade->sigla}}</span>
                     </div>
-                    <a href="#">
-                        <h2>Publicada a intranet V3 da SAIN</h2>
-                        <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis,
-                            velit
-                            sed suscipit iaculis, lacus velit fermentum orci, id cras amet.</p>
+                    <a href="{{$artigo->url()}}">
+                        <h2>{{$artigo->titulo}}</h2>
+                        <p class="font-light"> {{$artigo->tldr}}</p>
                     </a>
                 </article>
             @endforeach
@@ -73,18 +72,11 @@
             <div class="col" id="area_aniversariantes">
                 <h1>Aniversariantes</h1>
                 <div class="d-flex flex-column" id="lista_aniversariantes">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <span>Gustavo Ericson de Melo Alexandre</span><span>00/00</span>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <span>A b c</span><span>00/00</span>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <span>A b c</span><span>00/00</span>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <span>A b c</span><span>00/00</span>
-                    </div>
+                    @foreach($pessoas as $pessoa)
+                        <div class="d-flex align-items-center justify-content-between @if($pessoa->rh_dados->data_nascimento->isBirthday()) aniversariante_dia @endif">
+                            <span>{{$pessoa->nome_curto }}</span><span>{{$pessoa->rh_dados->data_nascimento->format('d/m')}}</span>
+                        </div>
+                    @endforeach
                 </div>
 
             </div>
@@ -92,11 +84,9 @@
                 <h1>Páginas em Destaque</h1>
                 <div class="d-flex flex-column" id="lista_paginas_especiais">
                     <ul class="list-group flex-column">
-                        <li class="list-group-item"><a href="#">Página 1</a></li>
-                        <li class="list-group-item"><a href="#">Página 1</a></li>
-                        <li class="list-group-item"><a href="#">Página 1</a></li>
-                        <li class="list-group-item"><a href="#">Página 1</a></li>
-                        <li class="list-group-item"><a href="#">Página 1</a></li>
+                        @foreach($paginasEspeciais as $pagina)
+                            <li class="list-group-item"><a href="{{$pagina->url()}}">{{$pagina->titulo}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

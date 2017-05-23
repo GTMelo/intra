@@ -17,7 +17,7 @@ class ArtigoContentTableSeeder extends Seeder
         //
 
         $noticias = \App\Models\ArtigoTipo::tipo('noticia');
-        $ct = $noticias->pluck('id');
+        $ct = $noticias->artigo->pluck('id');
 
         $faker = new Faker\Generator();
         $faker->addProvider(new Faker\Provider\en_US\Text($faker));

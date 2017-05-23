@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class RhDado extends Model
 {
+    public $timestamps = false;
+
+    protected $dates = ['data_nascimento'];
+
     public function usuario(){
         return $this->belongsTo(Usuario::class);
     }

@@ -25,11 +25,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Models\Artigo::class, function (Faker\Generator $faker) {
 
-    $userCount = (array) \DB::table('usuarios')->count();
-    $tipoArtcount = (array)\DB::table('artigo_tipos')->count();
+    $maxUser = \App\Models\Usuario::all()->count();
+    $maxTipoArt = \App\Models\ArtigoTipo::all()->count();
+    $maxUnidade = \App\Models\Unidade::all()->count();
     return [
-        'autor_id' => $faker->numberBetween(1, $userCount[0]),
-        'artigo_tipo_id' => $faker->numberBetween(1, $tipoArtcount[0]),
+        'autor_id' => $faker->numberBetween(1, $maxUser),
+        'artigo_tipo_id' => $faker->numberBetween(1, $maxTipoArt),
+        'unidade_id' => $faker->numberBetween(1, $maxUnidade),
         'titulo' => $faker->sentence(9, true),
         'tldr' => $faker->sentence(10, true),
         'ativo' => true
@@ -79,4 +81,43 @@ $factory->define(\App\Models\CarrosselItem::class, function (\Faker\Generator $f
         'ativo' => true,
     ];
 
+});
+
+$factory->define(\App\Models\RhDado::class, function (\Faker\Generator $faker) {
+
+    $maxUsuarios = \App\Models\Usuario::all()->count();
+    $maxCargos = \App\Models\Cargo::all()->count();
+    $maxEscolaridades = \App\Models\Escolaridade::all()->count();
+    $maxUnidades = \App\Models\Unidade::all()->count();
+
+    $randomDays = mt_rand(-31, 31);
+    $randomMonths = mt_rand(-12, 12);
+    $randomYears = mt_rand(-25, 25);
+    $date = \Carbon\Carbon::createFromDate(1970, 5, 15);
+    $date->addDays($randomDays);
+    $date->addMonths($randomMonths);
+    $date->addYears($randomYears);
+
+    return [
+        'usuario_id' => $faker->unique()->numberBetween(1, $maxUsuarios),
+        'cargo_id' => $faker->numberBetween(1, $maxCargos),
+        'escolaridade_id' => $faker->numberBetween(1, $maxEscolaridades),
+        'unidade_id' => $faker->numberBetween(1, $maxUnidades),
+        'siape' => $faker->randomNumber(7),
+        'data_nascimento' => $date,
+        'sexo' => $faker->randomElement(['m', 'f']),
+    ];
+
+});
+
+$factory->define(\App\Models\Telefone::class, function (\Faker\Generator $faker) {
+
+    $maxCidades = \App\Models\Cidade::all()->count();
+
+    return [
+        'cidade_id' => $faker->numberBetween(1, $maxCidades),
+        'prefixo' => $faker->randomNumber(4, true),
+        'ramal' => $faker->randomNumber(4, true),
+        'ativo' => $faker->numberBetween(0, 1),
+    ];
 });

@@ -24,9 +24,14 @@ class Artigo extends Model implements UrlInterface
         return $this->belongsTo(ArtigoTipo::class);
     }
 
+    public function unidade()
+    {
+        return $this->belongsTo(Unidade::class);
+    }
+
     public function scopeTipo($query, $tipo)
     {
-        return Artigo::where('artigo_tipo', $tipo);
+        return Artigo::where('artigo_tipo_id', ArtigoTipo::tipo($tipo));
     }
 
     public function scopeUrl($query)

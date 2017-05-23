@@ -11,6 +11,10 @@ class CidadeTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        \App\Models\Cidade::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
         $cidades = [
             ['Brasília', 1, '61', true],
             ['São Paulo', 1, '11', false],

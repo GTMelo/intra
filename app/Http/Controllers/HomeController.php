@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Artigo;
 use App\Models\CarrosselItem;
+use App\Models\RhDado;
 use App\Models\Usuario;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -12,20 +14,23 @@ class HomeController extends Controller
     function index()
     {
 
-        \Carbon\Carbon::setLocale('pt_BR'); // TODO colocar isto em um local mais correto
+        \Carbon\Carbon::setLocale('pt_BR'); // TODO colocar isto em um local mais melhor de bom
+        $hoje = new Carbon();
 
         $title = 'IntraSAIN';
 
         $user = [
             'nome_curto' => Usuario::find(1)->nome_curto,
-            'unidade' => Usuario::find(1)->rh_dados->unidade->sigla . '/' . Usuario::find(1)->rh_dados->unidade->hierarquia()[0]->sigla,
+            'unidade' => Usuario::find(1)->rh_dados->unidade->sigla
+                         . '/'
+                         . Usuario::find(1)->rh_dados->unidade->hierarquia()[0]->sigla,
         ];
 
         $carrossel = CarrosselItem::getItems()->get();
 
         $artigos = Artigo::latest()->take(8)->get();
 
-        $pessoas = Usuario::latest()->take(5)->get(); // TODO Método pra conseguir upcoming aniversários
+        $pessoas = RhDado::getListaAniversariantes();
 
         $paginasEspeciais = Artigo::all()->take(5); // TODO Método pra conseguir páginas especiais
 

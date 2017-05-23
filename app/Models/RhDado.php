@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class RhDado extends Model
 {
@@ -23,7 +24,20 @@ class RhDado extends Model
         return $this->belongsTo(Cargo::class);
     }
 
-    public function escolaridade(){
+    public function escolaridade()
+    {
         return $this->belongsTo(Escolaridade::class);
+    }
+
+    public static function getListaAniversariantes()
+    {
+        $result = [];
+        $viewData = DB::table('view_aniversariantes')->pluck('usuario_id');
+
+        foreach ($viewData as $usuario) {
+            array_push($result, Usuario::find($usuario));
+        }
+
+        return $result;
     }
 }

@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 
 class RhDado extends Model
 {
@@ -11,7 +11,8 @@ class RhDado extends Model
 
     protected $dates = ['data_nascimento'];
 
-    public function usuario(){
+    public function usuario()
+    {
         return $this->belongsTo(Usuario::class);
     }
 
@@ -20,7 +21,8 @@ class RhDado extends Model
         return $this->belongsTo(Unidade::class);
     }
 
-    public function cargo(){
+    public function cargo()
+    {
         return $this->belongsTo(Cargo::class);
     }
 
@@ -29,13 +31,48 @@ class RhDado extends Model
         return $this->belongsTo(Escolaridade::class);
     }
 
-    public static function getListaAniversariantes()
+    /**
+     * Retorna se o aniversário do usuário cai dentro das datas
+     *
+     * @param $rangeStart Int negativo quantos dias no passado
+     * @param $rangeStop Int positivo quantos dias no futuro
+     * @return boolean
+     */
+    public function isAniversarioInRange($rangeStart, $rangeStop)
+       //TODO mover este método pra uma classe Helper. Algo como DateHelper ou coisa assim
+    {
+
+        $date = $this->data_nascimento;
+
+        $range = [
+            'start' => (new Carbon())->addDays($rangeStart),
+            'end' => (new Carbon())->addDays($rangeStop)
+        ];
+
+        $loop = $range['start'];
+
+        while ($loop->diffInDays($range['end']) != 0) {
+
+            if ($date->isBirthday($loop)) {
+                return true;
+            }
+            $loop->addDay();
+
+        }
+
+        return false;
+    }
+
+    public static function getListaAniversariantes($rangeStart, $rangeStop)
     {
         $result = [];
-        $viewData = DB::table('view_aniversariantes')->pluck('usuario_id');
 
-        foreach ($viewData as $usuario) {
-            array_push($result, Usuario::find($usuario));
+        $usuarios = RhDado::orderByRaw('MONTH(rh_dados.data_nascimento),DAY(rh_dados.data_nascimento)')->get();
+
+        foreach ($usuarios as $usuario) {
+            if($usuario->isAniversarioInRange($rangeStart, $rangeStop)){
+                array_push($result, $usuario);
+            };
         }
 
         return $result;

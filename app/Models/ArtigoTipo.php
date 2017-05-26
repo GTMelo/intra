@@ -15,7 +15,7 @@ class ArtigoTipo extends Model
 
     public function scopeTipo($query, $tipo)
     {
-        return $this->where('descricao', $tipo)->first();
+        return $this->where('internal_code', $tipo)->first();
     }
 
 }

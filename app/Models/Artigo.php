@@ -36,6 +36,6 @@ class Artigo extends Model implements UrlInterface
 
     public function scopeUrl($query)
     {
-        return $this->artigo_tipo->descricao . '/' . $this->id;
+        return $this->artigo_tipo->internal_code . '/' . $this->id;
     }
 }

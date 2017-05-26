@@ -16,15 +16,18 @@ class ArtigoTipoTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         \App\Models\ArtigoTipo::create([
-            'descricao' => 'pagina',
+            'internal_code' => 'pagina',
+            'human_code' => 'Páginas'
         ]);
 
         \App\Models\ArtigoTipo::create([
-            'descricao' => 'noticia',
+            'internal_code' => 'noticia',
+            'human_code' => 'Notícias'
         ]);
 
         \App\Models\ArtigoTipo::create([
-            'descricao' => 'legislacao',
+            'internal_code' => 'legislacao',
+            'human_code' => 'Legislação'
         ]);
     }
 }

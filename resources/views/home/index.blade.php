@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('css')
-    <link rel="stylesheet" href="{!! asset('css/style.css') !!}">
     <link rel="stylesheet" type="text/css" href="{!! asset('vendor/slick/slick.css') !!}"/>
     <link rel="stylesheet" type="text/css" href="{!! asset('/vendor/slick/slick-theme.css') !!}"/>
 @endsection
@@ -73,8 +72,8 @@
                 <h1>Aniversariantes</h1>
                 <div class="d-flex flex-column" id="lista_aniversariantes">
                     @foreach($pessoas as $pessoa)
-                        <div class="d-flex align-items-center justify-content-between @if($pessoa->rh_dados->data_nascimento->isBirthday()) aniversariante_dia @endif">
-                            <span>{{$pessoa->nome_curto }}</span><span>{{$pessoa->rh_dados->data_nascimento->format('d/m')}}</span>
+                        <div class="d-flex align-items-center justify-content-between @if($pessoa->data_nascimento->isBirthday()) aniversariante_dia @endif">
+                            <span>{{$pessoa->usuario->nome_curto }}</span><span>{{$pessoa->data_nascimento->format('d/m')}}</span>
                         </div>
                     @endforeach
                 </div>

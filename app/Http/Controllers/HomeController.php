@@ -15,7 +15,6 @@ class HomeController extends Controller
     {
 
         \Carbon\Carbon::setLocale('pt_BR'); // TODO colocar isto em um local mais melhor de bom
-        $hoje = new Carbon();
 
         $title = 'IntraSAIN';
 
@@ -30,7 +29,7 @@ class HomeController extends Controller
 
         $artigos = Artigo::latest()->take(8)->get();
 
-        $pessoas = RhDado::getListaAniversariantes();
+        $pessoas = RhDado::getListaAniversariantes(-7, 15); // TODO mover método pra um helper e tornar mais genérico (tipo isDayAndMonthWithinRange
 
         $paginasEspeciais = Artigo::all()->take(5); // TODO Método pra conseguir páginas especiais
 

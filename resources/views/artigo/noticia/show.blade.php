@@ -30,45 +30,7 @@
                     </section>
 
                     <section class="noticia-corpo">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent scelerisque pulvinar velit,
-                            quis iaculis velit suscipit quis. Praesent libero nulla, aliquam id nisi eu, tempus
-                            malesuada
-                            tortor. Nulla facilisi. Etiam a tempus odio. Integer tristique malesuada diam. Etiam tellus
-                            velit, ornare malesuada dapibus ut, laoreet id mauris. Aenean nec scelerisque mauris.</p>
-
-                        <p>Quisque at tincidunt nulla. Nulla auctor nulla est, sit amet viverra orci condimentum dictum.
-                            Nullam laoreet eget ipsum non vestibulum. Suspendisse laoreet at purus at iaculis. Aliquam
-                            faucibus ornare consectetur. Sed pellentesque pulvinar sem ac posuere. Fusce pharetra risus
-                            non
-                            lectus aliquam interdum.</p>
-
-                        <p>Ut ex velit, aliquam nec molestie a, volutpat sagittis libero. Donec et ligula quis risus
-                            maximus
-                            pharetra sed et diam. Nam id tincidunt erat, in consectetur odio. Vestibulum vel ultricies
-                            odio.
-                            Aenean suscipit lorem ut mi cursus pharetra. Cras scelerisque, lectus ut imperdiet
-                            porttitor,
-                            leo diam varius nulla, id elementum neque sapien eu risus. Nunc facilisis sapien eget
-                            fermentum
-                            malesuada. Aenean eget felis eget est mattis cursus. Vivamus quis cursus augue. Pellentesque
-                            sodales non nisl sed egestas. Nunc nisl sapien, gravida eget ex ut, venenatis maximus
-                            mauris.
-                            Sed nec urna et ligula placerat consequat sed aliquam velit. Phasellus purus enim, rhoncus
-                            at
-                            placerat vitae, sagittis a quam. Fusce sodales tortor vitae tellus scelerisque luctus
-                            euismod
-                            vel arcu.</p>
-
-                        <p>Nam viverra libero ac dolor mattis, ac aliquet eros tincidunt. Morbi id placerat neque. In
-                            semper
-                            nibh et sapien tempus, vel convallis dolor ullamcorper. Phasellus et fringilla massa.
-                            Maecenas
-                            purus nibh, varius at elementum quis, dignissim eget nisl. Ut varius faucibus sem. Nulla
-                            facilisi. Nulla suscipit placerat nibh nec cursus. Integer scelerisque suscipit consectetur.
-                            Curabitur molestie, ante at pulvinar commodo, sapien felis eleifend mi, in suscipit nisl
-                            dolor
-                            quis odio. Praesent aliquet ultricies magna nec tempus. Quisque fermentum tortor ac finibus
-                            rhoncus. Suspendisse eget cursus enim, a lacinia est.</p>
+                        {{$artigo->content->conteudo}}
                     </section>
 
                     <section class="noticia-footer">

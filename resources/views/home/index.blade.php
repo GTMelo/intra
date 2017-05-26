@@ -25,7 +25,7 @@
                     <div>
                         <div class="row">
                             <div class="col-md float-left">
-                                <img src="http://dummyimage.com/700x350/4d494d/686a82.gif&text=placeholder+image"
+                                <img src="{!! asset($item->imagem->url()) !!}"
                                      alt="placeholder+image">
                             </div>
                             <div class="carrossel_info col-md float-right d-flex flex-column">

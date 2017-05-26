@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateObjetosTable extends Migration
 {
@@ -18,6 +18,7 @@ class CreateObjetosTable extends Migration
             $table->integer('objeto_tipo_id')->unsigned();
             $table->string('descricao');
             $table->string('tldr');
+            $table->string('filename')->nullable();
             $table->boolean('ativo');
             $table->timestamps();
             $table->softDeletes();

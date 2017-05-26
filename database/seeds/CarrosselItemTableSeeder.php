@@ -17,6 +17,6 @@ class CarrosselItemTableSeeder extends Seeder
 
         (new Faker\Generator())->seed(123);
 
-        factory(App\Models\CarrosselItem::class, 30)->create();
+        factory(App\Models\CarrosselItem::class, 5)->create();
     }
 }

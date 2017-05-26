@@ -12,6 +12,8 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
+use Carbon\Carbon;
+
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
@@ -61,11 +63,14 @@ $factory->define(\App\Models\Objeto::class, function (Faker\Generator $faker) {
     $faker->addProvider(new \Faker\Provider\Lorem($faker));
     $faker->addProvider(new \Faker\Provider\Miscellaneous($faker));
     $faker->addProvider(new \Faker\Provider\File($faker));
+    $created_at = Carbon::now();
+    $filenamePath = 'public/storage/' . $created_at->format('Y/m');
 
     return [
         'objeto_tipo_id' => 1,
-        'descricao' => $faker->word() . '.' . $faker->fileExtension(),
+        'descricao' => $faker->word(),
         'tldr' => $faker->text(140),
+        'filename' => $faker->image($filenamePath, 700, 350, null, false),
         'ativo' => $faker->boolean(60),
     ];
 });

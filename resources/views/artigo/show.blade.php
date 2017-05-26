@@ -1,17 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="container">
+    <main class="container">
         <br>
         <div class="row">
             <div class="col">
                 <span class="inline"> Vocês está em: </span>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Página principal</a></li>
-                    @foreach($artigo->unidade->hierarquia() as $org)
-                        <li class="breadcrumb-item">{{$org->sigla}}</li>
-                    @endforeach
-                    <li class="breadcrumb-item">{{$artigo->unidade->sigla}}</li>
+                    <li class="breadcrumb-item"><a href="/">Página principal</a></li>
+                    <li class="breadcrumb-item">{{$artigo->artigo_tipo->human_code}}</li>
                     <li class="breadcrumb-item active">{{$artigo->titulo}}</li>
                 </ol>
             </div>
@@ -65,5 +62,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 @endsection

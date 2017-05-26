@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artigo;
-use Illuminate\Http\Request;
 
 class NoticiaController extends Controller
 {
@@ -11,7 +10,7 @@ class NoticiaController extends Controller
     {
 
         $params = compact('artigo');
+        return view('artigo.show', $params);
 
-        return view('artigo.noticia.show', $params);
     }
 }

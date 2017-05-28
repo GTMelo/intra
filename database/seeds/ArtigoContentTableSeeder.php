@@ -16,7 +16,7 @@ class ArtigoContentTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         //
 
-        $noticias = \App\Models\ArtigoTipo::tipo('noticia');
+        $noticias = \App\Models\ArtigoTipo::tipo('noticia')->first();
         $ct = $noticias->artigo->pluck('id');
 
         $faker = new Faker\Generator();

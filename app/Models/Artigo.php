@@ -3,12 +3,19 @@
 namespace App\Models;
 
 use App\Models\Interfaces\UrlInterface;
+use App\Models\Scopes\AtivoScope;
 use Illuminate\Database\Eloquent\Model;
 
 class Artigo extends Model implements UrlInterface
 {
-    protected $guarded = ['id', 'created_at', 'updated_at'];
 
+    protected static function boot()
+    {
+        static::addGlobalScope(new AtivoScope());
+        parent::boot();
+    }
+
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function autor()
     {
@@ -31,11 +38,16 @@ class Artigo extends Model implements UrlInterface
 
     public function scopeTipo($query, $tipo)
     {
-        return Artigo::where('artigo_tipo_id', ArtigoTipo::tipo($tipo));
+        return Artigo::where('artigo_tipo_id', ArtigoTipo::tipo($tipo)->first());
     }
 
     public function scopeUrl($query)
     {
         return $this->artigo_tipo->internal_code . '/' . $this->id;
+    }
+
+    public function scopeInativo($query)
+    {
+        return $this->withoutGlobalScope(AtivoScope::class)->where('ativo', 0);
     }
 }

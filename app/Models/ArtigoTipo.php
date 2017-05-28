@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ArtigoTipo extends Model
 {
-    protected $fillable = ['descricao'];
+    protected $fillable = ['internal_code', 'human_code'];
 
     public function artigo()
     {
@@ -15,7 +15,7 @@ class ArtigoTipo extends Model
 
     public function scopeTipo($query, $tipo)
     {
-        return $this->where('internal_code', $tipo)->first();
+        return $this->where('internal_code', $tipo);
     }
 
 }

@@ -17,7 +17,10 @@ class CreateCarrosselItemsTable extends Migration
             $table->increments('id');
             $table->integer('artigo_id')->unsigned();
             $table->integer('imagem_id')->unsigned();
+            $table->string('custom_titulo')->nullable();
+            $table->string('custom_tldr')->nullable();
             $table->boolean('ativo');
+            $table->dateTime('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

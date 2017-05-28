@@ -29,7 +29,7 @@ class HomeController extends Controller
 
         $daysSinceLastCarrossel = (new Carbon())->diffInDays($carrossel[0]->published_at);
 
-        $artigos = Artigo::latest()->take(8)->get();
+        $artigos = Artigo::tipo('noticia')->latest()->take(8)->get();
 
         $pessoas = RhDado::getListaAniversariantes(-7, 15); // TODO mover método pra um helper e tornar mais genérico (tipo isDayAndMonthWithinRange
 

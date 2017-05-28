@@ -12,7 +12,7 @@
         </a>
     </div>
     <div id="header_menu">
-        <a href="#">Página Principal</a>
+        <a href="#" class="active">Página Principal</a>
         <a href="#">Áreas da SAIN</a>
         <a href="#">Sain na Internet</a>
         <a href="#">Ferramentas</a>

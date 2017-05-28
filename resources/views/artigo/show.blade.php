@@ -8,7 +8,9 @@
                 <span class="inline"> Vocês está em: </span>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Página principal</a></li>
-                    <li class="breadcrumb-item">{{$artigo->artigo_tipo->human_code}}</li>
+                    <li class="breadcrumb-item"><a
+                                href="/{{$artigo->artigo_tipo->internal_code}}">{{$artigo->artigo_tipo->human_code}}</a>
+                    </li>
                     <li class="breadcrumb-item active">{{$artigo->titulo}}</li>
                 </ol>
             </div>
@@ -32,7 +34,7 @@
 
                     <section class="noticia-footer">
                         <div class="text-center">
-                            Botões 1 | Botões 2 | Botões 3 | Botões 4
+                            Botões 1 &#8226 Botões 2 &#8226 Botões 3 &#8226 Botões 4
                         </div>
                     </section>
 

@@ -11,8 +11,10 @@ class Artigo extends Model implements UrlInterface
 
     protected static function boot()
     {
+
         static::addGlobalScope(new AtivoScope());
         parent::boot();
+
     }
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
@@ -38,7 +40,7 @@ class Artigo extends Model implements UrlInterface
 
     public function scopeTipo($query, $tipo)
     {
-        return Artigo::where('artigo_tipo_id', ArtigoTipo::tipo($tipo)->first());
+        return Artigo::where('artigo_tipo_id', ArtigoTipo::tipo($tipo)->first()->id);
     }
 
     public function scopeUrl($query)

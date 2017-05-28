@@ -11,6 +11,8 @@ class RhDado extends Model
 
     protected $dates = ['data_nascimento'];
 
+    protected $with = ['usuario', 'cargo', 'unidade'];
+
     public function usuario()
     {
         return $this->belongsTo(Usuario::class);
@@ -43,12 +45,10 @@ class RhDado extends Model
     {
 
         $date = $this->data_nascimento;
-
         $range = [
             'start' => (new Carbon())->addDays($rangeStart),
             'end' => (new Carbon())->addDays($rangeStop)
         ];
-
         $loop = $range['start'];
 
         while ($loop->diffInDays($range['end']) != 0) {
@@ -65,8 +65,8 @@ class RhDado extends Model
 
     public static function getListaAniversariantes($rangeStart, $rangeStop)
     {
-        $result = [];
 
+        $result = [];
         $usuarios = RhDado::orderByRaw('MONTH(rh_dados.data_nascimento),DAY(rh_dados.data_nascimento)')->get();
 
         foreach ($usuarios as $usuario) {
@@ -76,5 +76,6 @@ class RhDado extends Model
         }
 
         return $result;
+
     }
 }

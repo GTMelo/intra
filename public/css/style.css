@@ -219,7 +219,7 @@ main section:last-child{
     background-color: #E6E6E6;
 }
 
-#carrossel_items{
+.hidden {
     display: none;
 }
 
@@ -297,7 +297,7 @@ article {
 article div {
     border-bottom: 1px solid #e6e6e6;
     padding: 3px 10px;
-    background-color: #e6e6e6;
+    background-color: #f5f5f5;
     border-radius: 5px;
     margin-bottom: 5px;
 }

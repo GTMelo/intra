@@ -27,13 +27,15 @@ class HomeController extends Controller
 
         $carrossel = CarrosselItem::getItems()->get();
 
+        $daysSinceLastCarrossel = (new Carbon())->diffInDays($carrossel[0]->published_at);
+
         $artigos = Artigo::latest()->take(8)->get();
 
         $pessoas = RhDado::getListaAniversariantes(-7, 15); // TODO mover método pra um helper e tornar mais genérico (tipo isDayAndMonthWithinRange
 
         $paginasEspeciais = Artigo::all()->take(5); // TODO Método pra conseguir páginas especiais
 
-        $params = compact('title', 'user', 'carrossel', 'artigos', 'pessoas', 'paginasEspeciais');
+        $params = compact('title', 'user', 'carrossel', 'daysSinceLastCarrossel', 'artigos', 'pessoas', 'paginasEspeciais');
 
         return view('home.index', $params);
     }

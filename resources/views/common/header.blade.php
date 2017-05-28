@@ -18,9 +18,9 @@
         <a href="#">Ferramentas</a>
         <a href="#">Legislação</a>
     </div>
-    <form id="header_search">
+    <form method="get" id="header_search" action="/pesquisa">
         <div class="form-group padding-0 margin-0">
-            <input type="search"/>
+            <input type="search" name="q"/>
             <input type="submit" value=""/>
         </div>
     </form>

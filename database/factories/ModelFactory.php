@@ -62,15 +62,12 @@ $factory->define(\App\Models\Objeto::class, function (Faker\Generator $faker) {
 
     $faker->addProvider(new \Faker\Provider\Lorem($faker));
     $faker->addProvider(new \Faker\Provider\Miscellaneous($faker));
-    $faker->addProvider(new \Faker\Provider\File($faker));
-    $created_at = Carbon::now();
-    $filenamePath = 'public/storage/' . $created_at->format('Y/m');
 
     return [
         'objeto_tipo_id' => 1,
         'descricao' => $faker->word(),
         'tldr' => $faker->text(140),
-        'filename' => $faker->image($filenamePath, 700, 350, null, false),
+        'filename' => null,
         'ativo' => $faker->boolean(60),
     ];
 });
@@ -83,6 +80,7 @@ $factory->define(\App\Models\CarrosselItem::class, function (\Faker\Generator $f
     return [
         'artigo_id' => $faker->numberBetween(1, $maxArtigos),
         'imagem_id' => $faker->numberBetween(1, $maxImagens),
+        'published_at' => $faker->dateTimeThisMonth(),
         'ativo' => true,
     ];
 

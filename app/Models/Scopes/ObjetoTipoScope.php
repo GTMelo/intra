@@ -20,7 +20,7 @@ class ObjetoTipoScope implements Scope
 
     public function __construct($tipo)
     {
-        parent::__construct();
+//        parent::__construct();
         $this->tipo = ObjetoTipo::idOf($tipo);
     }
 
@@ -34,6 +34,6 @@ class ObjetoTipoScope implements Scope
      */
     public function apply(Builder $builder, Model $model)
     {
-        return $builder->where('id', $this->tipo);
+        return $builder->where('objeto_tipo_id', $this->tipo);
     }
 }

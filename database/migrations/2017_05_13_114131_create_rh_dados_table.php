@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateRhDadosTable extends Migration
 {
@@ -14,7 +14,6 @@ class CreateRhDadosTable extends Migration
     public function up()
     {
         Schema::create('rh_dados', function (Blueprint $table) {
-            $table->increments('id');
             $table->integer('usuario_id')->unsigned();
             $table->integer('cargo_id');
             $table->integer('escolaridade_id')->unsigned()->nullable();
@@ -25,6 +24,7 @@ class CreateRhDadosTable extends Migration
         });
 
         Schema::table('rh_dados', function (Blueprint $table) {
+            $table->primary('usuario_id');
             $table->foreign('usuario_id')->references('id')->on('usuarios');
         });
 

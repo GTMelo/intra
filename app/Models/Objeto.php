@@ -20,6 +20,9 @@ class Objeto extends Model implements UrlInterface
         return static::where('objeto_tipo_id', ObjetoTipo::idOf($tipo));
     }
 
+    public function colecoes(){
+        return $this->belongsToMany(Colecao::class);
+    }
 
     public function scopeUrl($query)
     {

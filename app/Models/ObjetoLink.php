@@ -7,6 +7,8 @@ use App\Models\Scopes\ObjetoTipoScope;
 class ObjetoLink extends Objeto
 {
 
+    protected $table = 'objetos';
+
     protected static function boot()
     {
 
@@ -19,6 +21,8 @@ class ObjetoLink extends Objeto
     {
         return $this->conteudo;
     }
+
+
 
 
 }

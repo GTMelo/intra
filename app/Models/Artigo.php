@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class Artigo extends Model implements UrlInterface
 {
 
+    protected $guarded = ['id', 'created_at', 'updated_at'];
+
     protected static function boot()
     {
 
@@ -17,11 +19,9 @@ class Artigo extends Model implements UrlInterface
 
     }
 
-    protected $guarded = ['id', 'created_at', 'updated_at'];
-
     public function autor()
     {
-        return $this->belongsTo(\App\Models\Usuario::class, 'autor_id');
+        return $this->belongsTo(Usuario::class, 'autor_id');
     }
 
     public function content() {

@@ -28,8 +28,10 @@ class ObjetoTableSeeder extends Seeder
         $created_at = Carbon::now();
         $filenamePath = 'public/storage/' . $created_at->format('Y/m');
 
-        factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $img, 'ativo' => 1, 'descricao' => 'banner1', 'filename' => $faker->image($filenamePath, 700, 350, null, false)]);
-        factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $link]);
+        createPath($filenamePath);
+
+        factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $img, 'ativo' => 1, 'conteudo' => $faker->image($filenamePath, 700, 350, null, false)]);
+        factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $link, 'conteudo' => 'http://google.com']);
         factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $pdf]);
 
     }

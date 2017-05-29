@@ -25,6 +25,6 @@ class Objeto extends Model implements UrlInterface
     {
         $created_at = $this->created_at;
 
-        return 'storage/' . $created_at->format('Y/m/') . $this->filename;
+        return 'storage/' . $created_at->format('Y/m/') . $this->conteudo;
     }
 }

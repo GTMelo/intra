@@ -16,9 +16,8 @@ class CreateObjetosTable extends Migration
         Schema::create('objetos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('objeto_tipo_id')->unsigned();
-            $table->string('descricao');
             $table->string('tldr');
-            $table->string('filename')->nullable();
+            $table->string('conteudo')->nullable();
             $table->boolean('ativo');
             $table->timestamps();
             $table->softDeletes();

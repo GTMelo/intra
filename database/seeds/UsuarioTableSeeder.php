@@ -17,7 +17,7 @@ class UsuarioTableSeeder extends Seeder
 
         (new Faker\Generator())->seed(123);
 
-        factory(App\Models\Usuario::class, 200)->create(['ativo' => 1]);
+        factory(App\Models\Usuario::class, 200)->create();
 
     }
 }

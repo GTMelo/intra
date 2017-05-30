@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
@@ -13,7 +12,7 @@ class UsuarioRH extends Model
     public $incrementing = false;
     public $timestamps = false;
     protected $dates = ['data_nascimento'];
-    protected $with = ['usuario', 'cargo', 'unidade'];
+    protected $with = ['cargo', 'unidade'];
 
     protected static function boot()
     {
@@ -58,19 +57,19 @@ class UsuarioRH extends Model
         return isDayMonthInRange($date, $rangeStart, $rangeStop);
     }
 
-//    public static function getListaAniversariantes($rangeStart, $rangeStop)
-//    {
-//
-//        $result = new Collection([]);
-//        $usuarios = UsuarioRH::orderByRaw('MONTH(usuarios_rh.data_nascimento),DAY(usuarios_rh.data_nascimento)')->get();
-//
-//        foreach ($usuarios as $usuario) {
-//            if($usuario->isAniversarioInRange($rangeStart, $rangeStop)){
-//                $result->push($usuario);
-//            };
-//        }
-//
-//        return $result;
-//
-//    }
+    public static function getListaAniversariantes($rangeStart, $rangeStop)
+    {
+
+        $result = new Collection([]);
+        $usuarios = UsuarioRH::orderByRaw('MONTH(usuarios_rh.data_nascimento),DAY(usuarios_rh.data_nascimento)')->get();
+
+        foreach ($usuarios as $item) {
+            if($item->isAniversarioInRange($rangeStart, $rangeStop) && isset($item->usuario)){
+                $result->push($item);
+            };
+        }
+
+        return $result;
+
+    }
 }

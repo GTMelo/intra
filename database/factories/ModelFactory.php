@@ -54,7 +54,7 @@ $factory->define(App\Models\Usuario::class, function (Faker\Generator $faker){
         'nome_curto' => $firstName . ' ' . $lastName,
         'password' => bcrypt($faker->password),
         'remember_token' => str_random(10),
-        'ativo' => true,
+        'ativo' => $faker->boolean(60),
     ];
 });
 

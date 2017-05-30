@@ -29,7 +29,7 @@
                     </section>
 
                     <section class="noticia-corpo">
-                        {{$artigo->content->conteudo}}
+                        {!! \GrahamCampbell\Markdown\Facades\Markdown::convertToHtml($artigo->content->conteudo) !!}
                     </section>
 
                     <section class="noticia-footer">

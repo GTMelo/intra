@@ -19,8 +19,8 @@ class Usuario extends Model
 
     protected $dates = ['last_access'];
 
-    public function rh_dados()
+    public function rh()
     {
-        return $this->hasOne(RhDado::class, 'usuario_id', 'id');
+        return $this->hasOne(UsuarioRH::class, 'usuario_id', 'id');
     }
 }

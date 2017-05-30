@@ -6,8 +6,9 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
-class RhDado extends Model
+class UsuarioRH extends Model
 {
+    protected $table = 'usuarios_rh';
     protected $primaryKey = 'usuario_id';
     public $incrementing = false;
     public $timestamps = false;
@@ -53,39 +54,23 @@ class RhDado extends Model
     public function isAniversarioInRange($rangeStart, $rangeStop)
        //TODO mover este método pra uma classe Helper. Algo como DateHelper ou coisa assim
     {
-
         $date = $this->data_nascimento;
-        $range = [
-            'start' => (new Carbon())->addDays($rangeStart),
-            'end' => (new Carbon())->addDays($rangeStop)
-        ];
-        $loop = $range['start'];
-
-        while ($loop->diffInDays($range['end']) != 0) {
-
-            if ($date->isBirthday($loop)) {
-                return true;
-            }
-            $loop->addDay();
-
-        }
-
-        return false;
+        return isDayMonthInRange($date, $rangeStart, $rangeStop);
     }
 
-    public static function getListaAniversariantes($rangeStart, $rangeStop)
-    {
-
-        $result = new Collection([]);
-        $usuarios = RhDado::orderByRaw('MONTH(rh_dados.data_nascimento),DAY(rh_dados.data_nascimento)')->get();
-
-        foreach ($usuarios as $usuario) {
-            if($usuario->isAniversarioInRange($rangeStart, $rangeStop)){
-                $result->push($usuario);
-            };
-        }
-
-        return $result;
-
-    }
+//    public static function getListaAniversariantes($rangeStart, $rangeStop)
+//    {
+//
+//        $result = new Collection([]);
+//        $usuarios = UsuarioRH::orderByRaw('MONTH(usuarios_rh.data_nascimento),DAY(usuarios_rh.data_nascimento)')->get();
+//
+//        foreach ($usuarios as $usuario) {
+//            if($usuario->isAniversarioInRange($rangeStart, $rangeStop)){
+//                $result->push($usuario);
+//            };
+//        }
+//
+//        return $result;
+//
+//    }
 }

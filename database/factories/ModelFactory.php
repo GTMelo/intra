@@ -12,7 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-use Carbon\Carbon;
+
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
@@ -85,7 +85,7 @@ $factory->define(\App\Models\CarrosselItem::class, function (\Faker\Generator $f
 
 });
 
-$factory->define(\App\Models\RhDado::class, function (\Faker\Generator $faker) {
+$factory->define(\App\Models\UsuarioRH::class, function (\Faker\Generator $faker) {
 
     $maxUsuarios = \App\Models\Usuario::all()->count();
     $maxCargos = \App\Models\Cargo::all()->count();
@@ -122,4 +122,15 @@ $factory->define(\App\Models\Telefone::class, function (\Faker\Generator $faker)
         'ramal' => $faker->randomNumber(4, true),
         'ativo' => $faker->numberBetween(0, 1),
     ];
+});
+
+$factory->define(\App\Models\Colecao::class, function (\Faker\Generator $faker) {
+
+    $faker->addProvider(new \Faker\Provider\Lorem($faker));
+
+    return [
+        'label' => $faker->unique()->word(),
+        'ativo' => 1,
+    ];
+
 });

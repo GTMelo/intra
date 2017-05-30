@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artigo;
 use App\Models\CarrosselItem;
-use App\Models\RhDado;
+use App\Models\UsuarioRH;
 use App\Models\Usuario;
 use Carbon\Carbon;
 
@@ -22,9 +22,9 @@ class HomeController extends Controller
 
         $user = [
             'nome_curto' => Usuario::find(1)->nome_curto,
-            'unidade' => Usuario::find(1)->rh_dados->unidade->sigla
+            'unidade' => Usuario::find(1)->rh->unidade->sigla
                          . '/'
-                         . Usuario::find(1)->rh_dados->unidade->hierarquia()[0]->sigla,
+                . Usuario::find(1)->rh->unidade->hierarquia()[0]->sigla,
         ];
 
         $carrossel = CarrosselItem::getItems()->get();
@@ -33,7 +33,7 @@ class HomeController extends Controller
 
         $artigos = Artigo::tipo('noticia')->latest()->take(8)->get();
 
-        $pessoas = RhDado::getListaAniversariantes(-7, 15); // TODO mover método pra um helper e tornar mais genérico (tipo isDayAndMonthWithinRange
+        $pessoas = UsuarioRH::getListaAniversariantes(-7, 15);
 
         $paginasEspeciais = Artigo::all()->take(5); // TODO Método pra conseguir páginas especiais
 

@@ -34,5 +34,6 @@ class ObjetoTableSeeder extends Seeder
         factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $link, 'conteudo' => 'http://google.com']);
         factory(App\Models\Objeto::class, 30)->create(['objeto_tipo_id' => $pdf]);
 
+
     }
 }

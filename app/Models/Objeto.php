@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class Objeto extends Model implements UrlInterface
 {
 
+    protected $with = ['objeto_tipo'];
+
     protected static function boot()
     {
         static::addGlobalScope(new AtivoScope());
@@ -20,14 +22,33 @@ class Objeto extends Model implements UrlInterface
         return static::where('objeto_tipo_id', ObjetoTipo::idOf($tipo));
     }
 
-    public function colecoes(){
-        return $this->belongsToMany(Colecao::class);
+    public function objeto_tipo(){
+        return $this->belongsTo(ObjetoTipo::class);
+    }
+
+    public function colecoes()
+    {
+        return $this->belongsToMany(
+            Objeto::class,
+            'objeto_objeto',
+            'owned_id',
+            'owner_id');
+    }
+
+    public function objetos()
+    {
+        if($this->objeto_tipo)
+
+        return $this->belongsToMany(
+            Objeto::class,
+            'objeto_objeto',
+            'owner_id',
+            'owned_id');
     }
 
     public function scopeUrl($query)
     {
         $created_at = $this->created_at;
-
         return 'storage/' . $created_at->format('Y/m/') . $this->conteudo;
     }
 }

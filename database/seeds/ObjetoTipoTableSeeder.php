@@ -21,6 +21,7 @@ class ObjetoTipoTableSeeder extends Seeder
             ['planilha', 'planilha'],
             ['documento', 'docword'],
             ['link', 'link'],
+            ['colecao','colecao']
         ];
 
         foreach ($objs as $o){

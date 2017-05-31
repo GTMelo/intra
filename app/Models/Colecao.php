@@ -14,5 +14,4 @@ class Colecao extends Model
         return $this->belongsToMany(Objeto::class);
     }
 
-
 }

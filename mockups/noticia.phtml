@@ -14,6 +14,24 @@
         {{ title }}
     </title>
 
+    <style>
+        .itemsAfterDescricao {
+            display: flex;
+            list-style-type: none;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .itemsAfterDescricao li {
+            margin-bottom: 5px;
+            padding: 5px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            color: #636c72;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -112,7 +130,20 @@
         </div>
         <div class="col-4 float-right">
             <div>
-                <h2 class="text-right">{{coordenacao}}</h2>
+                <h2 class="text-center">NTIC/DILID</h2>
+                <p class="font-faded" align="center">A {{coordenação}} é responsável por Nam viverra libero ac dolor
+                    mattis, ac aliquet eros tincidunt. Morbi id placerat neque. </p>
+                <ul class="itemsAfterDescricao">
+                    <li>Contatos</li>
+                    <li>Atribuições</li>
+                    <li>Legislação</li>
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Color</li>
+                    <li>Dot</li>
+                    <li>Amet</li>
+                    <li>Another thang</li>
+                </ul>
                 <ul class="list-group">
                     <li class="list-group-item">Teste 1234</li>
                     <li class="list-group-item">Teste 1234</li>

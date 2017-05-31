@@ -42,7 +42,7 @@
             </div>
             <div class="col-4 float-right">
                 <div>
-                    <h2 class="text-right">{{$artigo->unidade->sigla}}/{{$artigo->unidade->hierarquia()[0]->sigla}}</h2>
+                    <h2 class="text-right">{{$artigo->unidade->sigla}}</h2>
                     <ul class="list-group">
                         <li class="list-group-item">Teste 1234</li>
                         <li class="list-group-item">Teste 1234</li>

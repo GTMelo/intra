@@ -24,7 +24,7 @@ class HomeController extends Controller
             'nome_curto' => Usuario::find(1)->nome_curto,
             'unidade' => Usuario::find(1)->rh->unidade->sigla
                          . '/'
-                . Usuario::find(1)->rh->unidade->hierarquia()[0]->sigla,
+                . Usuario::first()->rh->unidade->descricao,
         ];
 
         $carrossel = CarrosselItem::getItems()->get();

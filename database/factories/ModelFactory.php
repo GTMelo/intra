@@ -87,10 +87,10 @@ $factory->define(\App\Models\CarrosselItem::class, function (\Faker\Generator $f
 
 $factory->define(\App\Models\UsuarioRH::class, function (\Faker\Generator $faker) {
 
-    $maxUsuarios = \App\Models\Usuario::all()->count();
-    $maxCargos = \App\Models\Cargo::all()->count();
+    $maxUsuarios = \App\Models\Usuario::withoutGlobalScopes()->count();
+    $maxCargos = \App\Models\Cargo::withoutGlobalScopes()->count();
     $maxEscolaridades = \App\Models\Escolaridade::all()->count();
-    $maxUnidades = \App\Models\Unidade::all()->count();
+    $maxUnidades = \App\Models\Unidade::withoutGlobalScopes()->count();
 
     $randomDays = mt_rand(-31, 31);
     $randomMonths = mt_rand(-12, 12);

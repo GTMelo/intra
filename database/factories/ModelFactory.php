@@ -65,7 +65,8 @@ $factory->define(\App\Models\Objeto::class, function (Faker\Generator $faker) {
 
     return [
         'objeto_tipo_id' => 1,
-        'tldr' => $faker->text(140),
+        'identifier' => null,
+        'descricao' => $faker->text(140),
         'conteudo' => null,
         'ativo' => $faker->boolean(60),
     ];

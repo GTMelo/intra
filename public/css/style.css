@@ -274,14 +274,12 @@ main section:last-child{
     color: white !important;
 }
 
-#paginas_especiais div {
-    padding: 3px 5px;
-    border-radius: 5px;
+#paginas_especiais div{
+    margin-bottom: 0.7rem;
 }
-
-#paginas_especiais div span {
-    padding: 2px 5px;
-    border-radius: 5px;
+#paginas_especiais small{
+    padding-left: 1.2rem;
+    color: #9BA2AB;
 }
 
 h1{

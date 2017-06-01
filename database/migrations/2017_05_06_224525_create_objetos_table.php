@@ -18,6 +18,7 @@ class CreateObjetosTable extends Migration
             $table->integer('objeto_tipo_id')->unsigned();
             $table->string('identifier')->nullable()->index();
             $table->string('descricao');
+            $table->string('tldr')->nullable();
             $table->string('conteudo')->nullable();
             $table->boolean('ativo');
             $table->timestamps();

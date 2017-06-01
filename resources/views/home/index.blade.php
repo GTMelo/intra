@@ -88,12 +88,21 @@
             </div>
             <div class="col">
                 <h1>Páginas em Destaque</h1>
-                <div class="d-flex flex-column" id="lista_paginas_especiais">
-                    <ul class="list-group flex-column">
-                        @foreach($paginasEspeciais as $pagina)
-                            <li class="list-group-item"><a href="{{$pagina->url()}}">{{$pagina->titulo}}</a></li>
-                        @endforeach
-                    </ul>
+                <div class="d-flex flex-column" id="paginas_especiais">
+                    @foreach($paginasEspeciais as $pagina)
+                        <div class="colecao_link">
+                            <a href="{{ $pagina->url() }}">{{ $pagina->descricao }}</a><br>
+                            <small>{{ $pagina->descricao }}</small>
+                        </div>
+                    @endforeach
+                    {{--<ul class="list-group flex-column">--}}
+                    {{--@foreach($paginasEspeciais as $pagina)--}}
+                    {{--<li class="list-group-item">--}}
+                    {{--<a href="{{ $pagina->url() }}">{{ $pagina->descricao }}</a>--}}
+                    {{--<small class="text-faded">{{ $pagina->descricao }}</small>--}}
+                    {{--</li>--}}
+                    {{--@endforeach--}}
+                    {{--</ul>--}}
                 </div>
             </div>
         </div>

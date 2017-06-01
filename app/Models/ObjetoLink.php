@@ -17,7 +17,7 @@ class ObjetoLink extends Objeto
 
     }
 
-    public function url($query)
+    public function url()
     {
         return $this->conteudo;
     }

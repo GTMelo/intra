@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Artigo;
 use App\Models\CarrosselItem;
-use App\Models\UsuarioRH;
+use App\Models\ObjetoColecao;
 use App\Models\Usuario;
+use App\Models\UsuarioRH;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -35,7 +36,7 @@ class HomeController extends Controller
 
         $pessoas = UsuarioRH::getListaAniversariantes(-7, 15);
 
-        $paginasEspeciais = Artigo::all()->take(5); // TODO Método pra conseguir páginas especiais
+        $paginasEspeciais = ObjetoColecao::ofIdentifier('home_paginas_especiais')->objetos(true);
 
         $params = compact('title', 'user', 'carrossel', 'daysSinceLastCarrossel', 'artigos', 'pessoas', 'paginasEspeciais');
 

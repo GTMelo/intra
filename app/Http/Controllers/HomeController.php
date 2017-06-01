@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artigo;
+use App\Models\ArtigoTipo;
 use App\Models\CarrosselItem;
 use App\Models\ObjetoColecao;
 use App\Models\Usuario;
@@ -19,18 +20,19 @@ class HomeController extends Controller
 
         $title = 'IntraSAIN';
 
+        $currentUser = Usuario::find(1);
         $user = [
-            'nome_curto' => Usuario::find(1)->nome_curto,
-            'unidade' => Usuario::find(1)->rh->unidade->sigla
+            'nome_curto' => $currentUser->nome_curto,
+            'unidade' => $currentUser->rh->unidade->sigla
                          . '/'
-                . Usuario::first()->rh->unidade->descricao,
+                . $currentUser->rh->unidade->descricao,
         ];
 
         $carrossel = CarrosselItem::getItems()->get();
-
         $daysSinceLastCarrossel = (new Carbon())->diffInDays($carrossel[0]->published_at);
 
-        $artigos = Artigo::tipo('noticia')->latest()->take(8)->get();
+        $noticia_id = ArtigoTipo::tipo('noticia')->first()->id;
+        $artigos = Artigo::tipo($noticia_id)->latest()->take(8)->get();
 
         $pessoas = UsuarioRH::getListaAniversariantes(-7, 15);
 

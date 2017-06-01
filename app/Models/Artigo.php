@@ -40,7 +40,7 @@ class Artigo extends Model implements UrlInterface
 
     public function scopeTipo($query, $tipo)
     {
-        return Artigo::where('artigo_tipo_id', ArtigoTipo::tipo($tipo)->first()->id);
+        return Artigo::where('artigo_tipo_id', $tipo);
     }
 
     public function url()

@@ -43,7 +43,7 @@ class Artigo extends Model implements UrlInterface
         return Artigo::where('artigo_tipo_id', ArtigoTipo::tipo($tipo)->first()->id);
     }
 
-    public function scopeUrl($query)
+    public function url()
     {
         return $this->artigo_tipo->internal_code . '/' . $this->id;
     }

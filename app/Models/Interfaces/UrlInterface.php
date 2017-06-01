@@ -11,5 +11,5 @@ namespace App\Models\Interfaces;
 
 interface UrlInterface
 {
-    public function scopeUrl($query);
+    public function url();
 }

@@ -35,7 +35,7 @@ class CarrosselItem extends Model implements UrlInterface
         return static::latest('published_at')->take($numberOfItems);
     }
 
-    public function scopeUrl($query)
+    public function url()
     {
         return $this->artigo->tipo_artigo->descricao . '/' . $this->artigo->id;
     }

@@ -15,8 +15,6 @@ class HomeController extends Controller
     function index()
     {
 
-        createPath('public/storage/2018/01');
-
         \Carbon\Carbon::setLocale('pt_BR'); // TODO colocar isto em um local mais melhor de bom
 
         $title = 'IntraSAIN';

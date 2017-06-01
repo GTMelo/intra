@@ -12,6 +12,7 @@
     },
     "require-dev": {
       "barryvdh/laravel-ide-helper": "^2.3",
+        "barryvdh/laravel-debugbar": "^2.4",
         "fzaninotto/faker": "~1.4",
         "ignasbernotas/laravel-model-generator": "^1.2",
         "laracasts/generators": "dev-master as 1.1.4",

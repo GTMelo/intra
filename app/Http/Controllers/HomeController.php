@@ -41,6 +41,7 @@ class HomeController extends Controller
         $params = compact('title', 'user', 'carrossel', 'daysSinceLastCarrossel', 'artigos', 'pessoas', 'paginasEspeciais');
 
         return view('home.index', $params);
+
     }
 
 }

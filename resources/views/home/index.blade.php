@@ -25,7 +25,7 @@
                 <hr/>
             </div>
         @endif
-        <div class="row @if($carrosselTooOld) hidden @endif" id="carrossel_items">
+        <div class="row hidden" id="carrossel_items">
             <div class="container slick">
                 @foreach($carrossel as $item)
                     <div>
@@ -92,17 +92,9 @@
                     @foreach($paginasEspeciais as $pagina)
                         <div class="colecao_link">
                             <a href="{{ $pagina->url() }}">{{ $pagina->descricao }}</a><br>
-                            <small>{{ $pagina->descricao }}</small>
+                            <small>{{ $pagina->tldr }}</small>
                         </div>
                     @endforeach
-                    {{--<ul class="list-group flex-column">--}}
-                    {{--@foreach($paginasEspeciais as $pagina)--}}
-                    {{--<li class="list-group-item">--}}
-                    {{--<a href="{{ $pagina->url() }}">{{ $pagina->descricao }}</a>--}}
-                    {{--<small class="text-faded">{{ $pagina->descricao }}</small>--}}
-                    {{--</li>--}}
-                    {{--@endforeach--}}
-                    {{--</ul>--}}
                 </div>
             </div>
         </div>
@@ -125,6 +117,14 @@
                         $(".slick").slick('setPosition');
                     }, 200);
                 });
+            });
+        </script>
+    @endif
+
+    @if(!$carrosselTooOld)
+        <script>
+            $(document).ready(function () {
+                $("#carrossel_items").fadeIn(500);
             });
         </script>
     @endif

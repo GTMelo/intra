@@ -70,6 +70,7 @@ class Objeto extends Model implements UrlInterface
         $result->objeto_tipo_id = $this->objeto_tipo_id;
         $result->identifier = $this->identifier;
         $result->descricao = $this->descricao;
+        $result->tldr = $this->tldr;
         $result->conteudo = $this->conteudo;
         $result->ativo = $this->ativo;
         $result->created_at = $this->created_at;

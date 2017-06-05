@@ -22,6 +22,10 @@ class Unidade extends Model
 
     }
 
+    public function colecao(){
+        return ObjetoColecao::ofIdentifier('unidade_sidebar_' . $this->id);
+    }
+
     public function hierarquia(){
 
         $result = [];

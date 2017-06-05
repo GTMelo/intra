@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateUnidadesTable extends Migration
 {
@@ -18,6 +18,7 @@ class CreateUnidadesTable extends Migration
             $table->integer('unidade_superior_id')->unsigned()->nullable();
             $table->string('sigla', 10);
             $table->string('descricao');
+            $table->string('tldr');
             $table->boolean('ativo');
             $table->timestamps();
             $table->softDeletes();

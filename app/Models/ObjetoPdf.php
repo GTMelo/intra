@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 class ObjetoPdf extends Objeto
 {
+
+    protected $table = 'objetos';
+
+
 
 }

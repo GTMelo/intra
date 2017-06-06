@@ -12,6 +12,10 @@ class ArtigoController extends Controller
         return wryyyy();
     }
 
+    function create(){
+        return view('artigo.create');
+    }
+
     function show(Artigo $artigo)
     {
         $params = compact('artigo');

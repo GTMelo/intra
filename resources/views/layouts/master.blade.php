@@ -12,13 +12,13 @@
 
 @include('common.header')
 
-@section('navigation')
-    <nav class="container">
-        @include('common.breadcrumb')
-    </nav>
-@endsection
+{{--@section('navigation')--}}
+    {{--<nav class="container">--}}
+        {{--@include('common.breadcrumb')--}}
+    {{--</nav>--}}
+{{--@endsection--}}
 
-@yield('navigation')
+{{--@yield('navigation')--}}
 
 @yield('content')
 

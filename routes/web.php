@@ -13,6 +13,18 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/teste', 'TesteController@index');
-Route::get('/noticia/{artigo}', 'NoticiaController@show');
-Route::get('/pagina/{artigo}', 'PaginaController@show');
+
+Route::get('/artigo', 'ArtigoController@index');
+Route::get('/artigo/novo', 'ArtigoController@create');
+Route::get('/artigo/{artigo}', 'ArtigoController@show');
+Route::get('/artigo/{artigo}/editar', 'ArtigoController@patch');
+Route::get('/artigo/{artigo}/apagar', 'ArtigoController@delete');
+
+Route::get('/unidade', 'UnidadeController@index');
+Route::get('/unidade/novo', 'UnidadeController@create');
+Route::get('/unidade/{unidade}', 'UnidadeController@show');
+Route::get('/unidade/{unidade}/editar', 'UnidadeController@patch');
+Route::get('/unidade/{unidade}/apagar', 'UnidadeController@delete');
+
+Route::get('/usuario', 'UsuarioController@index');
 Route::get('/usuario/{usuario}', 'UsuarioController@show');

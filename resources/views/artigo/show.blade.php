@@ -1,72 +1,35 @@
 @extends('layouts.master')
 
 @section('content')
-    <main class="container">
-        <br>
-        <div class="row">
-            <div class="col">
-                <span class="inline"> Vocês está em: </span>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Página principal</a></li>
-                    <li class="breadcrumb-item"><a
-                                href="/{{$artigo->artigo_tipo->internal_code}}">{{$artigo->artigo_tipo->human_code}}</a>
-                    </li>
-                    <li class="breadcrumb-item active">{{$artigo->titulo}}</li>
-                </ol>
-            </div>
-
-        </div>
-        <div class="row">
-
-            <section class="col-8 noticia">
-                <section class="container">
-
-                    <section class="noticia-header">
-                        <div class="margin-0 padding-0 border-bottom-exthin-light">
-                            <h1 class="padding-0 margin-0">{{$artigo->titulo}}</h1>
-                            <span class="font-faded">{{$artigo->tldr}}</span>
+        <main class="container">
+            <div class="row">
+                <section class="col-lg-8 float-left">
+                    <nav id="artigo_header">
+                        <h1>{{$artigo->titulo}}</h1>
+                        <div id="artigo_header_metadata">
+                            <span>Publicado em: {{$artigo->created_at->format('d/m/Y')}}</span>
+                            <span>Por: {{ $artigo->autor->nome_completo }}</span>
+                            <span>Em: {{ $artigo->unidade->sigla }}</span>
                         </div>
-                    </section>
+                    </nav>
 
-                    <section class="noticia-corpo">
-                        {!! \GrahamCampbell\Markdown\Facades\Markdown::convertToHtml($artigo->content->conteudo) !!}
-                    </section>
+                    <article id="artigo_body">
+                        <p>Paragrafo 1</p>
+                        <p>Paragrafo 2</p>
+                        <p>Paragrafo 3</p>
+                        <p>Paragrafo 4</p>
+                    </article>
 
-                    <section class="noticia-footer">
+                    <nav id="artigo_footer">
                         <div class="text-center">
-                            Botões 1 &#8226 Botões 2 &#8226 Botões 3 &#8226 Botões 4
+                            Botões 1 | Botões 2 | Botões 3 | Botões 4
                         </div>
-                    </section>
-
+                    </nav>
                 </section>
-            </section>
-            <section class="col-4 float-right">
-                <div>
-                    <div class="unidade_tag">
-                        <h2 class="text-center">{{ $artigo->unidade->sigla }}</h2>
-                        <p class="text-center descricao-unidade">{{$artigo->unidade->descricao}}</p>
-                    </div>
-                    <div class="unidade_tldr">
-                        <span>
-                            {{$artigo->unidade->tldr}}
-                        </span>
-                    </div>
-                    <br>
-                    <ul class="itemsAfterDescricao">
-                        <li>Contatos</li>
-                        <li>Atribuições</li>
-                        <li>Legislação</li>
-                        <li>Processos</li>
-                    </ul>
-                    <ul class="list-group">
-                        @foreach($artigo->unidade->colecao()->objetos(true) as $item)
-                            <li class="list-group-item">
-                                <a href="{{ $item->url() }}">{{ $item->descricao }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </main>
+
+                <aside class="col-lg-4 float-right">
+                    @include('artigo.sidebar')
+                </aside>
+            </div>
+        </main>
 @endsection

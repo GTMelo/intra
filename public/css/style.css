@@ -441,6 +441,16 @@ article {
     transition: all 200ms cubic-bezier(0.050, 0.400, 0.570, 0.930); /* custom */
 }
 
+#artigo_header_metadata{
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    color: #a4a3a4;
+    font-weight: 300
+}
+
 #noticia_footer{
     text-align: center;
 }

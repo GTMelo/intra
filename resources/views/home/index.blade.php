@@ -7,6 +7,9 @@
 
 <?php $carrosselTooOld = $daysSinceLastCarrossel >= 14 ?>
 
+@section('navigation')
+@endsection
+
 @section('content')
     <section id="area_carrossel">
         @if($carrosselTooOld)

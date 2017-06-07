@@ -9,7 +9,6 @@
                     <div id="artigo_header_metadata">
                         <span>Publicado em: {{$artigo->created_at->format('d/m/Y')}}</span>
                         <span>Por: {{ $artigo->autor->nome_completo }}</span>
-                        {{--<span>Em: {{ $artigo->unidade->sigla }}</span>--}}
                     </div>
                 </nav>
 

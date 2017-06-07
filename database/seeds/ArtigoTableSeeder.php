@@ -16,6 +16,7 @@ class ArtigoTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         (new Faker\Generator)->seed(123);
+        $today = new Carbon\Carbon();
 
         factory(App\Models\Artigo::class, 1000)->create();
     }

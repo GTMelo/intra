@@ -10,6 +10,7 @@ class Artigo extends Model implements UrlInterface
 {
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
+    protected $dates = ['published_at'];
 
     protected static function boot()
     {
@@ -24,7 +25,7 @@ class Artigo extends Model implements UrlInterface
         return $this->belongsTo(Usuario::class, 'autor_id');
     }
 
-    public function content() {
+    public function contents() {
         return $this->hasOne(ArtigoContent::class);
     }
 
@@ -45,7 +46,7 @@ class Artigo extends Model implements UrlInterface
 
     public function url()
     {
-        return 'artigo/' . $this->id;
+        return 'artigos/' . $this->id;
     }
 
     public function scopeInativo($query)

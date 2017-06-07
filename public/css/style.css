@@ -451,11 +451,19 @@ article {
     font-weight: 300
 }
 
-#novo_artigo input[type="text"]{
+#novo_artigo .fillable{
+    color: #2aabd2;
+}
+
+#novo_artigo input[name="titulo"]{
     font-size: 2.5rem;
     border: 0;
     border-bottom: 1px solid #e6e6e6;
     width: 100%;
+}
+
+#novo_artigo input[name="published_at"]{
+    border: 0;
 }
 
 #noticia_footer{

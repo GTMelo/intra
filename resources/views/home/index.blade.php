@@ -8,9 +8,9 @@
 <?php $carrosselTooOld = $daysSinceLastCarrossel >= 14 ?>
 
 @section('content')
-    <section id="area_carrossel">
-        @if($carrosselTooOld)
-            <div id="carrossel_shrink" class="container d-flex align-items-between" data-toggle="tooltip"
+    <section id="area_carrossel" class="area_carrossel">
+        {{--@if($carrosselTooOld)--}}
+        <div id="carrossel_shrink" class="container carrossel_shrink" data-toggle="tooltip"
                  data-placement="bottom"
                  title="Não há atualizações recentes no carrossel. Clique para exibir mesmo assim">
                 <hr/>
@@ -24,7 +24,7 @@
                 </svg>
                 <hr/>
             </div>
-        @endif
+        {{--@endif--}}
         <div class="row hidden" id="carrossel_items">
             <div class="container slick">
                 @foreach($carrossel as $item)
@@ -84,7 +84,6 @@
                         </div>
                     @endforeach
                 </div>
-
             </div>
             <div class="col">
                 <h1>Páginas em Destaque</h1>

@@ -1,0 +1,33 @@
+@font-face {
+  font-family: OpenSansLocal;
+  src: url('../public/font/opensans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: OpenSansLocal;
+  src: url('../public/font/opensans/OpenSans-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: OpenSansLocal;
+  src: url('../public/font/opensans/OpenSans-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: FjallaoneLocal;
+  src: url('../public/font/fjallaone/FjallaOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: AverageRegularLocal;
+  src: url('../public/font/average/Average-Regular.ttf');
+}
+
+$font_heading: 'FjallaoneLocal';
+$font_subheading: 'OpenSansLocal';
+$font_body: 'AverageRegularLocal';
+$font-base: 'OpenSansLocal';
+
+$text-big: 2rem;

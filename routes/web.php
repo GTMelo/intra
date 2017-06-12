@@ -13,6 +13,10 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/teste', 'TesteController@index');
-Route::get('/noticia/{artigo}', 'NoticiaController@show');
-Route::get('/pagina/{artigo}', 'PaginaController@show');
+
+Route::get('/artigo', 'ArtigoController@index');
+Route::get('/artigo/novo', 'ArtigoController@create');
+Route::get('/artigo/{artigo}', 'ArtigoController@show');
+Route::get('/artigo/{artigo}/editar', 'ArtigoController@edit');
+
 Route::get('/usuario/{usuario}', 'UsuarioController@show');

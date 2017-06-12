@@ -1,9 +1,138 @@
-
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
+//@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import "partials/typography";
 // Variables
 /*@import "variables";*/
-
 // Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+// Colors
+@import "partials/color";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-base;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+#page_header {
+  display: flex;
+  background-color: $sain-azul;
+  padding: 0px 10px;
+  height: 50px;
+  * {
+    display: flex;
+    align-items: center;
+    fill: white;
+    color: white;
+  }
+  & > * {
+    justify-content: space-between;
+    height: 100%;
+  }
+  span {
+    float: right;
+    margin-left: 8px;
+    font-size: 1.4rem;
+  }
+  #header_menu {
+    a {
+      padding: 0 5px;
+      height: 100%;
+      margin-right: 10px;
+      &:hover {
+        background-color: $sain-azul-light;
+      }
+      &:before {
+      }
+      &:after {
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  #header_search {
+    * {
+      border: 0;
+    }
+    input[type="search"] {
+      border-radius: 5px 0 0 5px;
+      padding: 3px 5px;
+      color: black;
+    }
+    input[type="submit"] {
+      height: 30px;
+      width: 30px;
+      border-radius: 0 5px 5px 0;
+      background-color: $sain-azul-light;
+      background-position: left 50% top 50%;
+      background-repeat: no-repeat;
+      //background-image: url(""); TODO adicionar ícone de pesquisa
+      &:hover {
+        background-color: $sain-azul-lightest;
+      }
+    }
+  }
+  #header_user {
+    div {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    #header_user_data {
+      margin-right: 5px;
+      span:last-child {
+        font-size: 0.6rem;
+      }
+    }
+    span {
+      font-size: 1rem;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.area_carrossel {
+  background-color: $gray;
+  h1 {
+    font-size: $text-big;
+  }
+  .carrossel_shrink {
+    display: flex;
+    align-items: center;
+    hr {
+      width: 45%;
+      border-color: $gray-dark;
+    }
+    svg {
+      width: 100px !important;
+      height: 41px !important;
+      fill: $gray-dark;
+    }
+  }
+
+}
+

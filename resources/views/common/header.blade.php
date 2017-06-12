@@ -1,4 +1,4 @@
-<header class="margin-0 align-items-center d-flex justify-content-between">
+<header id="page_header" class="margin-0 align-items-center d-flex justify-content-between">
     <div id="brand">
         <a href="/">
             <svg class="d-inline-block align-top" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="54" height="41"
@@ -8,8 +8,11 @@
                 <path d="M67.5 16c0.7-0.3 1.2-0.5 1.6-0.6C25.1 27.4-0.3 74.3 1.7 105.4c2 31.8 22.6 58.1 48.1 73.3l15.5-46.2c-28.1-16.8-42.2-58.9-28.3-87.6C44.3 27.6 61.2 18.4 67.5 16z"/>
                 <path d="M239.3 75.6c-2-31.8-22.6-58.1-48.1-73.3l-15.5 46.3c28.1 16.8 42.2 58.9 28.4 87.6 -7.4 17.2-24.2 26.4-30.6 28.9 -0.7 0.3-1.3 0.5-1.7 0.6C215.9 153.6 241.3 106.7 239.3 75.6z"/>
             </svg>
-            <nav class="navbar-brand opensans">IntraSAIN</nav>
         </a>
+        <a href="/">
+            <span>IntraSAIN</span>
+        </a>
+
     </div>
     <div id="header_menu">
         <a href="#" class="active">Página Principal</a>
@@ -18,20 +21,18 @@
         <a href="#">Ferramentas</a>
         <a href="#">Legislação</a>
     </div>
-    <form method="get" id="header_search" action="/pesquisa">
-        <div class="form-group padding-0 margin-0">
+    <div id="header_search">
+        <form method="get" id="header_search_form" action="/pesquisa">
             <input type="search" name="q"/>
             <input type="submit" value=""/>
+        </form>
+    </div>
+    <div id="header_user">
+        <div id="header_user_data">
+            <span>Gustavo Ericson</span>
+            <span>DILID/SAIN</span>
         </div>
-    </form>
-    <div class="d-flex" id="header_user">
-        <div class="float-left text-right">
-            <div>Gustavo Ericson</div>
-            <div>
-                <small>DILID</small>
-            </div>
-        </div>
-        <div class="float-right">
+        <div id="header_user_avatar">
             <img class="avatar" src="{!! asset('image/avatar-default.png') !!}"/>
         </div>
     </div>

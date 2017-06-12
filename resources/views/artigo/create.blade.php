@@ -9,27 +9,25 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Página principal</a></li>
                     <li class="breadcrumb-item"><a
-                                href="/{{$artigo->artigo_tipo->internal_code}}">{{$artigo->artigo_tipo->human_code}}</a>
+                                href="/">Area</a>
                     </li>
-                    <li class="breadcrumb-item active">{{$artigo->titulo}}</li>
+                    <li class="breadcrumb-item active"></li>
                 </ol>
             </div>
 
         </div>
         <div class="row">
-
             <section class="col-8 noticia">
                 <section class="container">
-
                     <section class="noticia-header">
                         <div class="margin-0 padding-0 border-bottom-exthin-light">
-                            <h1 class="padding-0 margin-0">{{$artigo->titulo}}</h1>
-                            <span class="font-faded">{{$artigo->tldr}}</span>
+                            <h1 class="padding-0 margin-0">Titulo</h1>
+                            <span class="font-faded">TLDR</span>
                         </div>
                     </section>
 
                     <section class="noticia-corpo">
-                        {!! \GrahamCampbell\Markdown\Facades\Markdown::convertToHtml($artigo->content->conteudo) !!}
+                        TextArea
                     </section>
 
                     <section class="noticia-footer">
@@ -43,12 +41,12 @@
             <section class="col-4 float-right">
                 <div>
                     <div class="unidade_tag">
-                        <h2 class="text-center">{{ $artigo->unidade->sigla }}</h2>
-                        <p class="text-center descricao-unidade">{{$artigo->unidade->descricao}}</p>
+                        <h2 class="text-center">Unid</h2>
+                        <p class="text-center descricao-unidade">Unidade</p>
                     </div>
                     <div class="unidade_tldr">
                         <span>
-                            {{ $artigo->unidade->tldr }}
+                            Something, something
                         </span>
                     </div>
                     <br>
@@ -59,11 +57,9 @@
                         <li>Processos</li>
                     </ul>
                     <ul class="list-group">
-                        @foreach($artigo->unidade->colecao()->objetos(true) as $item)
-                            <li class="list-group-item">
-                                <a href="{{ $item->url() }}">{{ $item->descricao }}</a>
-                            </li>
-                        @endforeach
+                        <li class="list-group-item">
+                            <a href="unid">thing</a>
+                        </li>
                     </ul>
                 </div>
             </section>

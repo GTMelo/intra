@@ -1,0 +1,17 @@
+$sain-azul: #0C3455;
+$sain-azul-light: lighten($sain-azul, 15%);
+$sain-azul-lightest: lighten($sain-azul-light, 15%);
+
+$sain-verde: #024F27;
+$sain-verde-light: lighten($sain-verde, 15%);
+$sain-verde-lightest: lighten($sain-verde-light, 15%);
+
+$sain-amarelo: #F2BE1A;
+$sain-amarelo-light: lighten($sain-amarelo, 15%);
+$sain-amarelo-lightest: lighten($sain-amarelo-light, 15%);
+
+$gray: #f5f5f5;
+$gray-dark: darken($gray, 30%);
+
+//$gray-lightest: #f5f5f5;
+//$gray-light: #e6e6e6;

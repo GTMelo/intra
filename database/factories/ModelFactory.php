@@ -30,13 +30,15 @@ $factory->define(App\Models\Artigo::class, function (Faker\Generator $faker) {
     $maxUser = \App\Models\Usuario::all()->count();
     $maxTipoArt = \App\Models\ArtigoTipo::all()->count();
     $maxUnidade = \App\Models\Unidade::all()->count();
+    $today = new \Carbon\Carbon();
     return [
         'autor_id' => $faker->numberBetween(1, $maxUser),
         'artigo_tipo_id' => $faker->numberBetween(1, $maxTipoArt),
         'unidade_id' => $faker->numberBetween(1, $maxUnidade),
         'titulo' => $faker->sentence(9, true),
         'tldr' => $faker->sentence(10, true),
-        'ativo' => true
+        'ativo' => true,
+        'published_at' => $today,
     ];
 
 });

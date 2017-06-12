@@ -14,9 +14,15 @@
 
 @include('common.header')
 
-<main>
-    @yield('content')
-</main>
+{{--@section('navigation')--}}
+    {{--<nav class="container">--}}
+        {{--@include('common.breadcrumb')--}}
+    {{--</nav>--}}
+{{--@endsection--}}
+
+{{--@yield('navigation')--}}
+
+@yield('content')
 
 @include('common.footer')
 

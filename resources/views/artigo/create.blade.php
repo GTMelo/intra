@@ -1,68 +1,75 @@
 @extends('layouts.master')
 
+@section('css')
+    <link rel="stylesheet" href="{!! asset('vendor/flatpickr/style/flatpickr.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('vendor/summernote/summernote.css') !!}">
+@endsection
+
 @section('content')
     <main class="container">
-        <br>
         <div class="row">
-            <div class="col">
-                <span class="inline"> Vocês está em: </span>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Página principal</a></li>
-                    <li class="breadcrumb-item"><a
-                                href="/">Area</a>
-                    </li>
-                    <li class="breadcrumb-item active"></li>
-                </ol>
-            </div>
-
-        </div>
-        <div class="row">
-            <section class="col-8 noticia">
-                <section class="container">
-                    <section class="noticia-header">
-                        <div class="margin-0 padding-0 border-bottom-exthin-light">
-                            <h1 class="padding-0 margin-0">Titulo</h1>
-                            <span class="font-faded">TLDR</span>
+            <form id="novo_artigo" method="post" action="/artigos">
+                <section class="col-lg-8 float-left">
+                    {{ csrf_field() }}
+                    <nav id="artigo_header">
+                        <input class="fillable" type="text" placeholder="Digite o título do artigo" name="titulo">
+                        <div id="artigo_header_metadata">
+                            <span>Publicar em: <input type="datetime"
+                                                      value="{{ (new \Carbon\Carbon())->format('Y-m-d') }}"
+                                                      name="published_at" class="datepicker fillable"></span>
+                            {{--<span>Por: FIXED: usuário atual</span>--}}
+                            <span>Em: FIXED/INPUT: Unidade do usuário</span>
                         </div>
-                    </section>
+                        <input type="text" class="fillable" name="tldr">
+                        <input type="hidden" name="ativo" value="1">
+                        <input type="hidden" name="contents" value="">
+                    </nav>
 
-                    <section class="noticia-corpo">
-                        TextArea
-                    </section>
+                    <div id="artigo_body">
+                        <div id="summernote"></div>
+                        {{--<textarea name="Digite o texto do artigo" width="500px"></textarea>--}}
+                    </div>
 
-                    <section class="noticia-footer">
-                        <div class="text-center">
-                            Botões 1 &#8226 Botões 2 &#8226 Botões 3 &#8226 Botões 4
-                        </div>
-                    </section>
+                    <nav id="artigo_footer">
 
+                    </nav>
                 </section>
-            </section>
-            <section class="col-4 float-right">
-                <div>
-                    <div class="unidade_tag">
-                        <h2 class="text-center">Unid</h2>
-                        <p class="text-center descricao-unidade">Unidade</p>
+
+                <aside class="col-lg-4 float-right">
+                    <div class="text-center">
+                        <input type="submit" value="Salvar" class="btn btn-primary">
                     </div>
-                    <div class="unidade_tldr">
-                        <span>
-                            Something, something
-                        </span>
-                    </div>
-                    <br>
-                    <ul class="itemsAfterDescricao">
-                        <li>Contatos</li>
-                        <li>Atribuições</li>
-                        <li>Legislação</li>
-                        <li>Processos</li>
-                    </ul>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="unid">thing</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                    {{--@include('artigo.sidebar')--}}
+                </aside>
+            </form>
         </div>
     </main>
+@endsection
+
+@section('scripts')
+    <script src="{!! asset('vendor/flatpickr/flatpickr.js') !!}"></script>
+    <script src="{!! asset('vendor/summernote/summernote.min.js') !!}"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".datepicker").flatpickr({
+                enableTime: true,
+                time_24hr: true,
+                dateFormat: "d/m/Y H:i"
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#summernote').summernote({
+                height: 550,
+                callbacks: {
+                    onKeyup: function() {
+                        $("input[name=contents]").val($('#summernote').summernote('code'));
+                    }
+                }
+            });
+        });
+    </script>
 @endsection

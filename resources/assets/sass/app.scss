@@ -55,12 +55,20 @@ main {
     font-size: 1.4rem;
   }
   #header_menu {
-    a {
+    nav {
       padding: 0 5px;
       height: 100%;
       margin-right: 10px;
+      span{
+        font-size: 1rem;
+      }
       &:hover {
         background-color: $sain-azul-light;
+        -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+        -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 2s;
       }
       &:before {
       }
@@ -71,6 +79,53 @@ main {
       }
     }
   }
+
+  .dropdown{
+    display: flex;
+    position: relative;
+    &:hover{
+      display: flex;
+      background-color: $sain-azul !important;
+    }
+  }
+  .dropdown-content{
+    padding: 0 !important;
+    display:none;
+    position: absolute;
+    flex-direction: column;
+    align-items: left;
+    min-width: 100%;
+    height:auto !important;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color: $sain-azul !important;
+    &:hover{
+      display:flex;
+      background-color: $sain-azul !important;
+    }
+    a{
+      padding: 0 !important;
+      width: 100%;
+      padding: 4px 8px 4px 8px !important;
+      &:hover{
+        background-color: $sain-azul-light;
+      }
+    }
+  }
+
+  // TODO NO NO NO NO UGLY UGLY AH!
+  .wider{
+      width: 120% !important;
+  }
+
+  .dropbtn{
+    margin-left: 0;
+  }
+  .dropdown:hover .dropdown-content{
+    display: flex;
+  }
+
   #header_search {
     * {
       border: 0;

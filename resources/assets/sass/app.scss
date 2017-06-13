@@ -59,6 +59,9 @@ main {
       padding: 0 5px;
       height: 100%;
       margin-right: 10px;
+      a {
+        height: 100%;
+      }
       span{
         font-size: 1rem;
       }
@@ -99,17 +102,28 @@ main {
     z-index: 1;
     top: 50px;
     left: 0;
-    background-color: $sain-azul !important;
+    background-color: $sain-azul-light !important;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: calc(50% - 6px);
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-color: transparent transparent $sain-azul-light transparent;
+      border-width: 0 10px 12px 10px;
+    }
     &:hover{
       display:flex;
-      background-color: $sain-azul !important;
+      background-color: $sain-azul-light !important;
     }
     a{
       padding: 0 !important;
       width: 100%;
       padding: 4px 8px 4px 8px !important;
       &:hover{
-        background-color: $sain-azul-light;
+        background-color: $sain-azul-lightest;
       }
     }
   }

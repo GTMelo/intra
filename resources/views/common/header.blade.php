@@ -34,7 +34,7 @@
             </nav>
         </nav>
         <nav>Ferramentas</nav>
-        <nav>Legislação</nav>
+        <nav><a href="/legislacao">Legislação</a></nav>
     </div>
     <div id="header_search">
         <form method="get" id="header_search_form" action="/pesquisa">

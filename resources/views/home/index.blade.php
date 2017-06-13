@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <main>
+    <main class="home_main">
         <section id="area_carrossel" class="area_carrossel">
             @if($carrosselTooOld)
                 <div id="carrossel_shrink" class="container carrossel_shrink" data-toggle="tooltip"
@@ -29,32 +29,22 @@
                     <hr/>
                 </div>
             @endif
-            <div class="row hidden" id="carrossel_items">
-                <div class="container slick">
-                    @foreach($carrossel as $item)
-                        <div>
-                            <div class="row">
-                                <div class="col-md float-left">
-                                    <img src="{!! asset($item->imagem->url()) !!}"
-                                         alt="placeholder+image">
+                <div class="hidden" id="carrossel_items">
+                    <div class="container slick">
+                        @foreach($carrossel as $item)
+                            <article>
+                                <div class="carrossel_items_img">
+                                    <img src="{!! asset($item->imagem->url()) !!}">
                                 </div>
-                                <div class="carrossel_info col-md float-right d-flex flex-column">
-                                    <h1>
-                                        {{$item->artigo->titulo}}
-                                    </h1>
-                                    <p class="text-justify flex-1">
-                                        {{$item->artigo->tldr}}
-                                    </p>
-                                    <p class="text-center">
-                                        <a class="btn btn-primary" href="{{$item->artigo->url()}}">Leia Mais</a>
-                                    </p>
+                                <div class="carrossel_items_data">
+                                    <h1>{{ $item->artigo->titulo }}</h1>
+                                    <span>{{ $item->artigo->tldr }}</span>
+                                    <a href="{{ $item->artigo->url() }}">Leia mais</a>
                                 </div>
-                            </div>
-                        </div>
-                    @endforeach
-
+                            </article>
+                        @endforeach
+                    </div>
                 </div>
-            </div>
         </section>
 
         <section id="area_noticias" class="container">

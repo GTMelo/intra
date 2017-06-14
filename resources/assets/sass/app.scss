@@ -36,6 +36,7 @@ h1{
   font-family: $font_heading;
   border-bottom: 1px solid $gray-dark;
   padding-bottom: 0.5rem;
+  line-height: 2.3rem;
 }
 
 body {
@@ -66,11 +67,19 @@ main {
     justify-content: space-between;
     height: 100%;
   }
+
   span {
     float: right;
     margin-left: 8px;
     font-size: 1.4rem;
   }
+
+  #brand{
+    span{
+      font-family: $font_heading;
+    }
+  }
+
   #header_menu {
     nav {
       padding: 0 5px;
@@ -108,6 +117,7 @@ main {
       background-color: $sain-azul !important;
     }
   }
+
   .dropdown-content{
     padding: 0 !important;
     display:none;
@@ -180,6 +190,7 @@ main {
       }
     }
   }
+
   #header_user {
     div {
       flex-direction: column;
@@ -187,7 +198,11 @@ main {
     }
     #header_user_data {
       margin-right: 5px;
+      span:first-child{
+        font-family: $font_heading;
+      }
       span:last-child {
+        font-family: $font-base;
         font-size: 0.6rem;
       }
     }
@@ -202,7 +217,7 @@ main {
   }
 }
 
-.area_carrossel {
+#area_carrossel {
   h1 {
     font-size: $text-big;
   }
@@ -233,6 +248,7 @@ main {
         background-color: $gray-darkest;
         padding-top: 1rem;
         padding-right: 1rem;
+        border-radius: 0 5px 5px 0;
         &::before{
           content: "";
           position: absolute;
@@ -251,6 +267,7 @@ main {
         h1{
           font-size: 1.8rem;
           margin-bottom: 1rem;
+          border-bottom: 0;
         }
         span{
           flex: 1;
@@ -275,5 +292,20 @@ main {
   }
 
 
+}
+
+#area_noticias{
+  div{
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    article{
+      border: 1px solid red;
+      box-sizing: border-box;
+      flex: 1 0 50%;
+      padding: 0 0.5rem 1rem;
+    }
+  }
 }
 

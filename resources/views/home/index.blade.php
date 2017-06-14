@@ -29,38 +29,44 @@
                     <hr/>
                 </div>
             @endif
-                <div class="hidden" id="carrossel_items">
-                    <div class="container slick">
-                        @foreach($carrossel as $item)
-                            <article>
-                                <div class="carrossel_items_img">
-                                    <img src="{!! asset($item->imagem->url()) !!}">
-                                </div>
-                                <div class="carrossel_items_data">
-                                    <h1>{{ $item->artigo->titulo }}</h1>
-                                    <span>{{ $item->artigo->tldr }}</span>
-                                    <a href="{{ $item->artigo->url() }}">Leia mais</a>
-                                </div>
-                            </article>
-                        @endforeach
-                    </div>
+            <div class="hidden" id="carrossel_items">
+                <div class="container slick">
+                    @foreach($carrossel as $item)
+                        <article>
+                            <div class="carrossel_items_img">
+                                <img src="{!! asset($item->imagem->url()) !!}">
+                            </div>
+                            <div class="carrossel_items_data">
+                                <h1>{{ $item->artigo->titulo }}</h1>
+                                <span>{{ $item->artigo->tldr }}</span>
+                                <a href="{{ $item->artigo->url() }}">Leia mais</a>
+                            </div>
+                        </article>
+                    @endforeach
                 </div>
+            </div>
         </section>
 
         <section id="area_noticias" class="container">
             <h1>Notícias</h1>
-            <div class="d-flex flex-wrap justify-content-between">
+            <div>
                 @foreach($artigos as $artigo)
-                    <article class="d-flex flex-column">
-                        <div class="d-flex justify-content-between">
-                        <span class="">{{$artigo->created_at->format('d/m/Y')}}
-                            ({{$artigo->created_at->diffForHumans()}})</span>
-                            <span class="ml-auto">{{$artigo->unidade->sigla}}</span>
+                    <article>
+                        <div>
+                            <span>
+                                {{$artigo->created_at->format('d/m/Y')}}
+                                ({{$artigo->created_at->diffForHumans()}})
+                            </span>
+                            <span>
+                                {{$artigo->unidade->sigla}}
+                            </span>
                         </div>
-                        <a href="{{$artigo->url()}}">
-                            <h2>{{$artigo->titulo}}</h2>
-                            <p class="font-light"> {{$artigo->tldr}}</p>
-                        </a>
+                        <div>
+                            <a href="{{$artigo->url()}}">
+                                <h2>{{$artigo->titulo}}</h2>
+                                <p class="font-light"> {{$artigo->tldr}}</p>
+                            </a>
+                        </div>
                     </article>
                 @endforeach
             </div>

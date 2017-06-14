@@ -34,6 +34,8 @@ a {
 h1{
   font-size: 2rem;
   font-family: $font_heading;
+  border-bottom: 1px solid $gray-dark;
+  padding-bottom: 0.5rem;
 }
 
 body {
@@ -45,7 +47,8 @@ body {
 main {
   flex: 1;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem
+
 }
 
 #page_header {

@@ -52,7 +52,7 @@
             <div>
                 @foreach($artigos as $artigo)
                     <article>
-                        <div>
+                        <div class="area_noticias_article_prefix">
                             <span>
                                 {{$artigo->created_at->format('d/m/Y')}}
                                 ({{$artigo->created_at->diffForHumans()}})
@@ -61,10 +61,15 @@
                                 {{$artigo->unidade->sigla}}
                             </span>
                         </div>
-                        <div>
+                        <div class="area_noticias_article_content">
                             <a href="{{$artigo->url()}}">
-                                <h2>{{$artigo->titulo}}</h2>
-                                <p class="font-light"> {{$artigo->tldr}}</p>
+                                <div>
+                                    <img src="{!! asset('icon/' . $artigo->artigo_tipo->internal_code . '.png') !!}">
+                                </div>
+                                <div>
+                                    <h2>{{$artigo->titulo}}</h2>
+                                    <p class="font-light"> {{$artigo->tldr}}</p>
+                                </div>
                             </a>
                         </div>
                     </article>

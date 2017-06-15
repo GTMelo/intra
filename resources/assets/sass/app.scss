@@ -354,8 +354,43 @@ main {
           color: lighten(black, 30%);
         }
       }
-
     }
   }
 }
 
+#areas_especiais {
+  #section_aniversariantes {
+    width: 50%;
+    float: left;
+    font-weight: 300;
+    div {
+      border-radius: 5px;
+      margin-right: 1rem;
+      article {
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        padding-right: 1rem;
+        font-size: 1.3rem;
+        span {
+          border-radius: 5px;
+          &:last-child {
+            background-color: $gray;
+            color: $gray-dark;
+            padding: 3px 5px;
+          }
+        }
+      }
+    }
+  }
+  #section_paginas {
+    width: 50%;
+    float: right;
+  }
+}
+
+footer {
+  background-color: $sain-azul-light;
+  padding: 1rem;
+}

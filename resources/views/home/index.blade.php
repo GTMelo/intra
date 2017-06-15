@@ -78,30 +78,28 @@
         </section>
 
         <section id="areas_especiais" class="container">
-            <div class="row">
-                <div class="col" id="area_aniversariantes">
-                    <h1>Aniversariantes</h1>
-                    <div class="d-flex flex-column" id="lista_aniversariantes">
-                        @foreach($pessoas as $pessoa)
-                            <div class="d-flex align-items-center justify-content-between @if($pessoa->data_nascimento->isBirthday()) aniversariante_dia @endif">
-                                <span>{{$pessoa->usuario->nome_curto }}</span>
-                                <span>{{$pessoa->data_nascimento->format('d/m')}}</span>
-                            </div>
-                        @endforeach
-                    </div>
+            <section id="section_aniversariantes">
+                <h1>Aniversariantes</h1>
+                <div id="lista_pessoas">
+                    @foreach($pessoas as $pessoa)
+                        <article class="@if($pessoa->data_nascimento->isBirthday()) aniversariante_dia @endif">
+                            <span>{{$pessoa->usuario->nome_curto }}</span>
+                            <span>{{$pessoa->data_nascimento->format('d/m')}}</span>
+                        </article>
+                    @endforeach
                 </div>
-                <div class="col">
-                    <h1>Páginas em Destaque</h1>
-                    <div class="d-flex flex-column" id="paginas_especiais">
-                        @foreach($paginasEspeciais as $pagina)
-                            <div class="colecao_link">
-                                <a href="{{ $pagina->url() }}">{{ $pagina->descricao }}</a><br>
-                                <small>{{ $pagina->tldr }}</small>
-                            </div>
-                        @endforeach
-                    </div>
+            </section>
+            <section id="section_paginas">
+                <h1>Páginas em Destaque</h1>
+                <div id="area_paginas">
+                    @foreach($paginasEspeciais as $pagina)
+                        <div>
+                            <a href="{{ $pagina->url() }}">{{ $pagina->descricao }}</a><br>
+                            <small>{{ $pagina->tldr }}</small>
+                        </div>
+                    @endforeach
                 </div>
-            </div>
+            </section>
         </section>
     </main>
 

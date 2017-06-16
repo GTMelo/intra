@@ -387,6 +387,19 @@ main {
   #section_paginas {
     width: 50%;
     float: right;
+    div {
+      margin-bottom: 1rem;
+      h3 {
+        font-size: 1.3rem;
+        color: $sain-azul;
+        margin-bottom: 0;
+      }
+      span {
+        font-weight: 300;
+        font-size: 0.8rem;
+        color: black;
+      }
+    }
   }
 }
 

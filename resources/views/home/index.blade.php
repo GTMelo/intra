@@ -68,7 +68,7 @@
                                 </div>
                                 <div>
                                     <h2>{{$artigo->titulo}}</h2>
-                                    <p class="font-light"> {{$artigo->tldr}}</p>
+                                    <p> {{$artigo->tldr}}</p>
                                 </div>
                             </a>
                         </div>
@@ -94,8 +94,10 @@
                 <div id="area_paginas">
                     @foreach($paginasEspeciais as $pagina)
                         <div>
-                            <a href="{{ $pagina->url() }}">{{ $pagina->descricao }}</a><br>
-                            <small>{{ $pagina->tldr }}</small>
+                            <a href="{{ $pagina->url() }}">
+                                <h3>{{ $pagina->descricao }}</h3>
+                                <span>{{ $pagina->tldr }}</span>
+                            </a>
                         </div>
                     @endforeach
                 </div>

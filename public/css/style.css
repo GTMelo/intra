@@ -261,8 +261,8 @@ main section:last-child{
 }
 
 .aniversariante_dia {
-    background:  url('../image/exemplo.jpg');
-    background-size: 70%;
+    /*background:  url('../image/exemplo.jpg');*/
+    /*background-size: 70%;*/
 }
 
 .aniversariante_dia span:first-child{

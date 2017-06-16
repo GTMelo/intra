@@ -23,18 +23,17 @@
 
 a {
   text-decoration: none;
-  &:hover {
+  color: $sain-azul-light;
+  &:hover, &:focus {
     text-decoration: none;
-  }
-  &:focus {
-    text-decoration: none;
+    color: $sain-amarelo;
   }
 }
 
 h1{
   font-size: 2rem;
   font-family: $font_heading;
-  border-bottom: 1px solid $gray-dark;
+  border-bottom: 1px solid $cinza-dark;
   padding-bottom: 0.5rem;
   line-height: 2.3rem;
 }
@@ -93,11 +92,6 @@ main {
       }
       &:hover {
         background-color: $sain-azul-light;
-        -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-        -o-animation: fadein 2s; /* Opera < 12.1 */
-        animation: fadein 2s;
       }
       &:before {
       }
@@ -226,17 +220,17 @@ main {
     align-items: center;
     hr {
       width: 45%;
-      border-color: $gray-dark;
+      border-color: $cinza-dark;
     }
     svg {
       width: 100px !important;
       height: 41px !important;
-      fill: $gray-dark;
+      fill: $cinza-dark;
     }
   }
   #carrossel_items {
     padding: 1rem 0;
-    background-color: $gray;
+    background-color: $cinza;
     justify-content: space-between;
     margin-bottom: 1rem;
     article{
@@ -245,7 +239,7 @@ main {
         display: flex;
         position: relative;
         flex-flow: column;
-        background-color: $gray-darkest;
+        background-color: $cinza-darkest;
         padding-top: 1rem;
         padding-right: 1rem;
         border-radius: 0 5px 5px 0;
@@ -258,7 +252,7 @@ main {
           height: 0;
           border-style: solid;
           border-width: 20px 20px 20px 0;
-          border-color: transparent $gray-darkest transparent transparent;
+          border-color: transparent $cinza-darkest transparent transparent;
         }
         & > * {
           margin: 0 0 0 15px;
@@ -277,7 +271,7 @@ main {
           //align-items: center;
           //justify-content: center;
           text-align: center;
-          background-color: $gray-dark;
+          background-color: $cinza-dark;
           margin: 0 auto;
           padding: 5px 30px;
           color: white;
@@ -309,7 +303,7 @@ main {
       margin-bottom: 0.5rem;
       .area_noticias_article_prefix {
         padding: 0.25rem .5rem;
-        background-color: $gray;
+        background-color: $cinza;
         position: relative;
         margin-bottom: 0.75rem;
         font-weight: 300;
@@ -322,7 +316,7 @@ main {
           height: 0;
           border-style: solid;
           border-width: 12px 12.5px 0 12.5px;
-          border-color: $gray transparent transparent transparent;
+          border-color: $cinza transparent transparent transparent;
           bottom: -12px;
           left: 3%;
         }
@@ -376,11 +370,22 @@ main {
         span {
           border-radius: 5px;
           &:last-child {
-            background-color: $gray;
-            color: $gray-dark;
+            background-color: $cinza;
+            color: $cinza-dark;
             padding: 3px 5px;
           }
         }
+      }
+    }
+    .aniversariante_dia{
+      //background:  url('../image/exemplo.jpg');
+      //background-size: 70%;
+      span:first-child{
+        background-color: rgba(255,255,255,0.8) !important;
+      }
+      span:last-child{
+        background-color: $vermelho-aniversario !important;
+        color: white !important;
       }
     }
   }

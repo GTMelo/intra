@@ -9,10 +9,14 @@ $sain-verde-lightest: lighten($sain-verde-light, 15%);
 $sain-amarelo: #F2BE1A;
 $sain-amarelo-light: lighten($sain-amarelo, 15%);
 $sain-amarelo-lightest: lighten($sain-amarelo-light, 15%);
+$sain-amarelo-dark: darken($sain-amarelo, 15%);
+$sain-amarelo-darkest: darken($sain-amarelo-dark, 15%);
 
-$gray: #f5f5f5;
-$gray-dark: darken($gray, 30%);
-$gray-darkest: darken($gray-dark, 30%);
+$cinza: #f5f5f5;
+$cinza-dark: darken($cinza, 30%);
+$cinza-darkest: darken($cinza-dark, 30%);
+
+$vermelho-aniversario: #f36a64;
 
 //$gray-lightest: #f5f5f5;
 //$gray-light: #e6e6e6;

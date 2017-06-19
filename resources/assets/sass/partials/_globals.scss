@@ -1,0 +1,39 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-base;
+}
+
+a {
+  text-decoration: none;
+  color: $sain-azul-light;
+  &:hover, &:focus {
+    text-decoration: none;
+    color: $sain-amarelo;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: $font_heading;
+  border-bottom: 1px solid $cinza-dark;
+  padding-bottom: 0.5rem;
+  line-height: 2.3rem;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.hidden {
+  display: none;
+}

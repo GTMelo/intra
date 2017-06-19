@@ -1,0 +1,76 @@
+#areas_especiais {
+  display: flex;
+  article {
+    padding: 0 1rem;
+  }
+  //*{
+  //  display: flex;
+  //}
+  #section_aniversariantes {
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    padding-right: 0.5rem;
+    font-weight: 300;
+    div {
+      flex-direction: column;
+      border-radius: 5px;
+      padding: 0 1rem;
+      article {
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+        margin-bottom: 0.5rem;
+        padding: 3px;
+        span {
+          border-radius: 5px;
+          padding: 5px 8px;
+          background-color: rgba(255, 255, 255, 0.8);
+          &:first-child {
+          }
+          &:last-child {
+            background-color: $cinza;
+            color: $cinza-dark;
+          }
+        }
+      }
+    }
+    .aniversariante_dia {
+      background: url('/images/exemplo.jpg');
+      background-size: 70%;
+      span:first-child {
+        background-color: rgba(255, 255, 255, 0.8) !important;
+      }
+      span:last-child {
+        background-color: rgba($vermelho-aniversario, 0.8) !important;
+        color: white !important;
+      }
+    }
+  }
+  #section_paginas {
+    flex-direction: column;
+    flex: 1;
+    padding-left: 0.5rem;
+    div {
+      padding: 0 1rem;
+      article {
+        margin-bottom: 1rem;
+        padding: 0;
+        &:hover h3 {
+          color: $sain-amarelo;
+        }
+        h3 {
+          font-size: 1.3rem;
+          color: $sain-azul;
+          margin-bottom: 0;
+        }
+        span {
+          font-weight: 300;
+          font-size: 0.8rem;
+          color: black;
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,8 @@
 
 @section('css')
     <link rel="stylesheet" type="text/css" href="{!! asset('vendor/slick/slick.css') !!}"/>
-    <link rel="stylesheet" type="text/css" href="{!! asset('/vendor/slick/slick-theme.css') !!}"/>
+    <link rel="stylesheet" type="text/css" href="{!! asset('vendor/slick/slick-theme.css') !!}"/>
+    <link rel="stylesheet" type="text/css" href="{!! asset('css/home.css') !!}">
 @endsection
 
 <?php $carrosselTooOld = $daysSinceLastCarrossel >= 14 ?>

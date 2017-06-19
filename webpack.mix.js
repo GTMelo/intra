@@ -16,7 +16,8 @@ mix.js([
             'node_modules/bootstrap/dist/js/bootstrap.js',  
         'resources/assets/js/app.js'
     ], 'public/js/app.js')
-    .sass('resources/assets/sass/home.scss', 'public/css/home.css')
+    // .sass('resources/assets/sass/home.scss', 'public/css/home.css')
+    .sass('resources/assets/sass/artigos.scss', 'public/css/artigos.css')
     .options({
         processCssUrls: false
     });

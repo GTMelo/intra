@@ -42,7 +42,7 @@ class ArtigoController extends Controller
         $artigo = new Artigo();
         $artigo->autor_id = 1; //TODO autor_id = usuario pertencente à session
         $artigo->artigo_tipo_id = ArtigoTipo::tipo('noticia')->first()->id;
-        $artigo->unidade_id = 1; // TODO unidade of usuario da sessão
+        $artigo->unidade_id = request('unidade');
         $artigo->titulo = request('titulo');
         $artigo->tldr = request('tldr');
         $artigo->ativo = request('ativo');

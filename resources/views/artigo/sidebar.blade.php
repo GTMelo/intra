@@ -1,16 +1,25 @@
-<section>
-    <h1>SAIN</h1>
-    <span>Secretaria de Assuntos Internacionais</span>
-    <p>A sain cuida de...</p>
+<section id="bloco_unidade">
+    <div>
+        <h1>{{ $artigo->unidade->sigla }}</h1>
+        <span>{{ $artigo->unidade->descricao }}</span>
+    </div>
+    <div>
+        <p>{{ $artigo->unidade->tldr }}</p>
+    </div>
     <div id="sidebar_botoes">
-        <nav>Contatos</nav>
-        <nav>Legislação</nav>
-        <nav>Atribuições</nav>
-        <nav>Processos</nav>
+        <nav><a href="">Contatos</a></nav>
+        <nav><a href="">Endereços</a></nav> {{-- TODO listar endereços da área, incluindo salas e baias, numa planta baixa do andar.--}}
+        <nav><a href="">Atribuições</a></nav>
+        <nav><a href="">Legislação</a></nav>
     </div>
 </section>
-<section>
-    {{ $artigo->unidade }}
+<section id="bloco_destaques">
+    <h1>Destaques</h1>
+    @foreach($artigo->unidade->colecao()->objetos(true) as $objeto)
+        <nav>
+            <a href="{{ $objeto->url() }}">{{ $objeto->descricao }}</a>
+        </nav>
+    @endforeach
 </section>
 
 {{--<div class="unidade_tag">--}}

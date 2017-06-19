@@ -11,8 +11,8 @@
             </div>
             <div id="endereco_sainregionais">
                 <p>SAIN ASA SUL</p>
-                <p>SAS Quadra 3 Bloco O</p>
-                <p>10º Andar</p>
+                <p>SAS Quadra 3</p>
+                <p>Bloco O - 10º Andar</p>
                 <p>Ed. Órgãos Regionais/MF</p>
                 <p>Brasília/DF - 70079-900</p>
                 <p>(61) 3412-4014/4077</p>

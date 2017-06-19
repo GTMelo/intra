@@ -1,3 +1,15 @@
+// Bootstrap
+//@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "partials/typography";
+@import "partials/color";
+@import "partials/mixins";
+@import "blocks/header";
+@import "blocks/footer";
+
+// Debug tools. TODO remove on deploy
+@import "partials/debug";
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

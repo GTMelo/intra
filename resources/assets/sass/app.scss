@@ -8,6 +8,8 @@
 // Bootstrap
 //@import "node_modules/bootstrap/scss/bootstrap.scss";
 
+@import "partials/debug";
+
 // Colors
 @import "partials/color";
 
@@ -202,41 +204,6 @@ main {
 @import "blocks/footer";
 
 // Noticias
-
-.dbg {
-  & * *:hover {
-    border: 2px solid #89A81E
-  }
-;
-  & * * *:hover {
-    border: 2px solid #F34607
-  }
-;
-  & * * * *:hover {
-    border: 2px solid #5984C3
-  }
-;
-  & * * * * *:hover {
-    border: 2px solid #CD1821
-  }
-;
-  & * * * * * *:hover {
-    border: 2px dotted #89A81E
-  }
-;
-  & * * * * * * *:hover {
-    border: 2px dotted #F34607
-  }
-;
-  & * * * * * * * *:hover {
-    border: 2px dotted #5984C3
-  }
-;
-  & * * * * * * * * *:hover {
-    border: 2px dotted #CD1821
-  }
-;
-}
 
 #body_noticia {
   display: flex;

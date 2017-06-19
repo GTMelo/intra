@@ -1,0 +1,159 @@
+#page_header {
+  display: flex;
+  background-color: $sain-azul;
+  padding: 0px 10px;
+  height: 50px;
+  * {
+    display: flex;
+    align-items: center;
+    fill: white;
+    color: white;
+  }
+  & > * {
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  span {
+    float: right;
+    margin-left: 8px;
+    font-size: 1.4rem;
+  }
+
+  #brand {
+    span {
+      font-family: $font_heading;
+    }
+  }
+
+  #header_menu {
+    nav {
+      padding: 0 5px;
+      height: 100%;
+      margin-right: 10px;
+      a {
+        height: 100%;
+      }
+      span {
+        font-size: 1rem;
+      }
+      &:hover {
+        background-color: $sain-azul-light;
+      }
+      &:before {
+      }
+      &:after {
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .dropdown {
+    display: flex;
+    position: relative;
+    &:hover {
+      display: flex;
+      background-color: $sain-azul !important;
+    }
+  }
+
+  .dropdown-content {
+    padding: 0 !important;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: left;
+    min-width: 100%;
+    height: auto !important;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color: $sain-azul-light !important;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: calc(50% - 6px);
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-color: transparent transparent $sain-azul-light transparent;
+      border-width: 0 10px 12px 10px;
+    }
+    &:hover {
+      display: flex;
+      background-color: $sain-azul-light !important;
+    }
+    a {
+      padding: 0 !important;
+      width: 100%;
+      padding: 4px 8px 4px 8px !important;
+      &:hover {
+        background-color: $sain-azul-lightest;
+      }
+    }
+  }
+
+  // TODO NO NO NO NO UGLY UGLY AH!
+  .wider {
+    width: 120% !important;
+  }
+
+  .dropbtn {
+    margin-left: 0;
+  }
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  #header_search {
+    * {
+      border: 0;
+    }
+    input[type="search"] {
+      border-radius: 5px 0 0 5px;
+      padding: 3px 5px;
+      color: black;
+      height: 32px;
+    }
+    input[type="submit"] {
+      height: 32px;
+      //width: 30px;
+      border-radius: 0 5px 5px 0;
+      background-color: $sain-azul-light;
+      background-position: left 50% top 50%;
+      background-repeat: no-repeat;
+      //background-image: url(""); TODO adicionar ícone de pesquisa
+      &:hover {
+        background-color: $sain-azul-lightest;
+      }
+    }
+  }
+
+  #header_user {
+    div {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    #header_user_data {
+      margin-right: 5px;
+      span:first-child {
+        font-family: $font_heading;
+      }
+      span:last-child {
+        font-family: $font-base;
+        font-size: 0.6rem;
+      }
+    }
+    span {
+      font-size: 1rem;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+}

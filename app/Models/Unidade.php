@@ -23,6 +23,8 @@ class Unidade extends Model
     }
 
     public function colecao(){
+//        dd('unidade_sidebar_' . $this->id);
+//        dd(ObjetoColecao::ofIdentifier('unidade_sidebar_' . $this->id));
         return ObjetoColecao::ofIdentifier('unidade_sidebar_' . $this->id);
     }
 

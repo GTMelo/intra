@@ -1,0 +1,37 @@
+footer {
+  background-color: $sain-azul-light;
+  color: white;
+  padding: 1rem 0;
+  #footer_container {
+    & > * {
+      flex: 1;
+    }
+    #footer_elementos {
+      display: flex;
+      margin-bottom: 0.5rem;
+      & > * {
+        flex: 1;
+      }
+      div {
+        p {
+          margin-bottom: 0;
+          &:first-child {
+            font-weight: bold;
+          }
+        }
+      }
+      #footer_botoes {
+        align-items: center;
+      }
+    }
+    #copyright {
+      display: flex;
+      justify-content: center;
+      span {
+        font-size: 0.7rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+}

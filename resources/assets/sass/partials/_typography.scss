@@ -1,48 +1,48 @@
 @font-face {
   font-family: OpenSansLocal;
-  src: url('../public/font/opensans/OpenSans-Regular.ttf');
+  src: url('../fonts/OpenSans-Regular.ttf');
 }
 
 @font-face {
   font-family: OpenSansLocal;
-  src: url('../public/font/opensans/OpenSans-Italic.ttf');
+  src: url('../fonts/OpenSans-Italic.ttf');
   font-style: italic;
 }
 
 @font-face {
   font-family: OpenSansLocal;
-  src: url('../public/font/opensans/OpenSans-Bold.ttf');
+  src: url('../fonts/OpenSans-Bold.ttf');
   font-weight: bold;
 }
 
 @font-face {
   font-family: OpenSansLocal;
-  src: url('../public/font/opensans/OpenSans-BoldItalic.ttf');
+  src: url('../fonts/OpenSans-BoldItalic.ttf');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: OpenSansLocal;
-  src: url('../public/font/opensans/OpenSans-Light.ttf');
+  src: url('../fonts/OpenSans-Light.ttf');
   font-weight: 300;
 }
 
 @font-face {
   font-family: OpenSansLocal;
-  src: url('../public/font/opensans/OpenSans-LightItalic.ttf');
+  src: url('../fonts/OpenSans-LightItalic.ttf');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: FjallaoneLocal;
-  src: url('../public/font/fjallaone/FjallaOne-Regular.ttf');
+  src: url('../fonts/FjallaOne-Regular.ttf');
 }
 
 @font-face {
   font-family: AverageRegularLocal;
-  src: url('../public/font/average/Average-Regular.ttf');
+  src: url('../fonts/Average-Regular.ttf');
 }
 
 $font_heading: 'FjallaoneLocal';

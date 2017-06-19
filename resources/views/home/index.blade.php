@@ -64,7 +64,7 @@
                         <div class="area_noticias_article_content">
                             <a href="{{$artigo->url()}}">
                                 <div>
-                                    <img src="{!! asset('icon/' . $artigo->artigo_tipo->internal_code . '.png') !!}">
+                                    <img src="{!! asset('icons/' . $artigo->artigo_tipo->internal_code . '.png') !!}">
                                 </div>
                                 <div>
                                     <h2>{{$artigo->titulo}}</h2>
@@ -93,19 +93,17 @@
                 <h1>Páginas em Destaque</h1>
                 <div id="area_paginas">
                     @foreach($paginasEspeciais as $pagina)
-                        <div>
+                        <article>
                             <a href="{{ $pagina->url() }}">
                                 <h3>{{ $pagina->descricao }}</h3>
                                 <span>{{ $pagina->tldr }}</span>
                             </a>
-                        </div>
+                        </article>
                     @endforeach
                 </div>
             </section>
         </section>
     </main>
-
-
 @endsection
 
 @section('scripts')
@@ -114,7 +112,6 @@
     @if($carrosselTooOld)
         <script>
             $(document).ready(function () {
-
                 $("#carrossel_shrink").click(function () {
                     $("#carrossel_shrink").fadeOut(200);
                     setTimeout(function () {

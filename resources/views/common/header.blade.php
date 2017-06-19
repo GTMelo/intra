@@ -48,7 +48,7 @@
             <span>DILID/SAIN</span>
         </div>
         <div id="header_user_avatar">
-            <img class="avatar" src="{!! asset('image/avatar-default.png') !!}"/>
+            <img class="avatar" src="{!! asset('images/avatar-default.png') !!}"/>
         </div>
     </div>
 

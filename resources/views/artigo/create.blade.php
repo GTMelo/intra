@@ -8,12 +8,19 @@
 
 @section('content')
     <main class="container">
+
+        @include('common.errors.errors')
+
         <h1>Publicar um novo artigo</h1>
         <form id="novo_artigo" method="post" action="/artigos">
+
             {{ csrf_field() }}
+
             <fieldset>
 
-                <input type="submit" value="Salvar" class="btn btn-primary">
+                <div class="form-group">
+                    <input type="submit" value="Salvar" class="btn btn-primary">
+                </div>
 
             </fieldset>
 
@@ -25,13 +32,13 @@
 
                 <div class="form-group">
                     <label for="titulo">Título</label>
-                    <input id="titulo" name="titulo" type="text" class="form-control"
+                    <input required id="titulo" name="titulo" type="text" class="form-control"
                            placeholder="Digite o título do artigo">
                 </div>
 
                 <div class="form-group">
                     <label for="tldr">Resumo</label>
-                    <input id="tldr" name="tldr" type="text" class="form-control"
+                    <input required id="tldr" name="tldr" type="text" class="form-control"
                            placeholder="Digite um breve resumo para o artigo (até 140 caracteres)">
                 </div>
 
@@ -43,7 +50,7 @@
 
                 <div class="form-group">
                     <label for="unidade">Unidade</label>
-                    <select id="unidade" name="unidade" class="form-control">
+                    <select required id="unidade" name="unidade" class="form-control">
                         @foreach(\App\Models\Unidade::all() as $unidade)
                             <option value="{{ $unidade->id }}">{{ $unidade->sigla }}</option>
                         @endforeach
@@ -56,8 +63,7 @@
 
                 <legend>Conteúdo</legend>
 
-                <input type="hidden" name="contents" value="">
-
+                <input type="hidden" name="conteudo" value="">
                 <div id="artigo_body">
                     <div id="summernote"></div>
                 </div>
@@ -127,7 +133,7 @@
                 height: 550,
                 callbacks: {
                     onKeyup: function () {
-                        $("input[name=contents]").val($('#summernote').summernote('code'));
+                        $("input[name=conteudo]").val($('#summernote').summernote('code'));
                     }
                 }
             });

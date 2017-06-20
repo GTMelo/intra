@@ -33,11 +33,19 @@ class ArtigoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
+        $this->validate(request(), [
+            'titulo' => 'required',
+            'unidade' => 'required',
+            'tldr' => 'required',
+            'ativo' => 'required',
+            'published_at' => 'required',
+            'conteudo' => 'required',
+        ]);
 
         $artigo = new Artigo();
         $artigo->autor_id = 1; //TODO autor_id = usuario pertencente à session
@@ -46,23 +54,22 @@ class ArtigoController extends Controller
         $artigo->titulo = request('titulo');
         $artigo->tldr = request('tldr');
         $artigo->ativo = request('ativo');
-        $artigo->published_at = Carbon::createFromFormat('d/m/Y H:i',request('published_at'));
+        $artigo->published_at = Carbon::createFromFormat('d/m/Y H:i', request('published_at'));
 
         $artigo->save();
 
         $contents = new ArtigoContent();
         $contents->artigo_id = $artigo->id;
-        $contents->conteudo = request('contents');
+        $contents->conteudo = request('conteudo');
 
         $contents->save();
-
 
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show(Artigo $artigo)
@@ -74,7 +81,7 @@ class ArtigoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -85,8 +92,8 @@ class ArtigoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -97,7 +104,7 @@ class ArtigoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

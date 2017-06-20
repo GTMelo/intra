@@ -157,4 +157,46 @@
       border-radius: 50%;
     }
   }
+
+  #header_login {
+    position: relative;
+    color: black;
+    #login_form {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem 1rem;
+      background-color: $sain-azul;
+      z-index: 1;
+      width: 200px;
+      a{
+        font-size: 0.8rem;
+        &:hover{
+          background-color: $sain-amarelo;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        input {
+          margin-bottom: 0.5rem;
+          color: black;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+        input[type="submit"]{
+          color:white;
+          width: 100%;
+          padding: 3px 5px;
+          background-color: $sain-azul-light;
+          border: 0;
+          font-size: 1.1rem;
+          &:hover {
+            background-color: $sain-azul-lightest;
+          }
+        }
+      }
+    }
+  }
 }

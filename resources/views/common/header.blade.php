@@ -49,6 +49,15 @@
             <a href="/login">
                 <nav>Login</nav>
             </a>
+            <div id="login_form">
+                <form method="post" action="/login">
+                    {{ csrf_field() }}
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="password" name="pass" placeholder="Senha">
+                    <input type="submit" name="login" value="Entrar">
+                    <a href="/registrar">Novo usuário</a>
+                </form>
+            </div>
         </div>
     @endif
 

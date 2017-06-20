@@ -237,6 +237,61 @@
   border-radius: 50%;
 }
 
+#page_header #header_login {
+  position: relative;
+  color: black;
+}
+
+#page_header #header_login #login_form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  background-color: #0C3455;
+  z-index: 1;
+  width: 200px;
+}
+
+#page_header #header_login #login_form a {
+  font-size: 0.8rem;
+}
+
+#page_header #header_login #login_form a:hover {
+  background-color: #F2BE1A;
+}
+
+#page_header #header_login #login_form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#page_header #header_login #login_form form input {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+#page_header #header_login #login_form form input:last-child {
+  margin-bottom: 0;
+}
+
+#page_header #header_login #login_form form input[type="submit"] {
+  color: white;
+  width: 100%;
+  padding: 3px 5px;
+  background-color: #155d98;
+  border: 0;
+  font-size: 1.1rem;
+}
+
+#page_header #header_login #login_form form input[type="submit"]:hover {
+  background-color: #1f86db;
+}
+
 footer {
   background-color: #155d98;
   color: white;

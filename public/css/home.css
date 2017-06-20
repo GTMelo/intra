@@ -217,13 +217,14 @@
   margin-right: 5px;
 }
 
-#page_header #header_user #header_user_data span:first-child {
-  font-family: "FjallaoneLocal";
-}
-
-#page_header #header_user #header_user_data span:last-child {
+#page_header #header_user #header_user_data span {
   font-family: "OpenSansLocal";
   font-size: 0.6rem;
+}
+
+#page_header #header_user #header_user_data span:first-child {
+  font-family: "FjallaoneLocal";
+  font-size: 1rem;
 }
 
 #page_header #header_user span {
@@ -263,6 +264,7 @@ footer #footer_container #footer_elementos > * {
 
 footer #footer_container #footer_elementos div p {
   margin-bottom: 0;
+  text-align: center;
 }
 
 footer #footer_container #footer_elementos div p:first-child {
@@ -365,7 +367,7 @@ main {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 #area_carrossel h1 {

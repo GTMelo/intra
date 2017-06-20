@@ -42,14 +42,33 @@
             <input type="submit" value="Pesquisar"/> {{--TODO trocar pra ícone--}}
         </form>
     </div>
-    <div id="header_user">
-        <div id="header_user_data">
-            <span>Gustavo Ericson</span>
-            <span>DILID/SAIN</span>
+
+    {{-- TODO false if is in session --}}
+    @if(true)
+        <div id="header_login">
+            <a href="/login">
+                <nav>Login</nav>
+            </a>
         </div>
-        <div id="header_user_avatar">
-            <img class="avatar" src="{!! asset('images/avatar-default.png') !!}"/>
+    @endif
+
+    {{-- TODO true if is in session --}}
+    @if(false)
+        <div id="header_user">
+            <div id="header_user_data">
+                <span>Gustavo Ericson</span>
+                <span>DILID/SAIN</span>
+            </div>
+            <div id="header_user_avatar">
+                <img class="avatar" src="{!! asset('images/avatar-default.png') !!}"/>
+            </div>
+            {{--<div style="align-items: center;">--}}
+            {{--<img src="http://intrasain.local:8000/images/avatar-default.png" style="width: 120px;height: 120px;align-self: center;">--}}
+            {{--<p style="margin: 0;">Gustavo Ericson de Melo Alexandre</p>--}}
+            {{--<p style="margin: 0;">SAIN/CGAB/DILID/NTIC</p>--}}
+            {{--<p style="margin: 0;">Preferências | sair</p>--}}
+            {{--</div>--}}
         </div>
-    </div>
+    @endif
 
 </header>

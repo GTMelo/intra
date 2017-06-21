@@ -18,8 +18,8 @@ class CreateUnidadesTable extends Migration
             $table->integer('unidade_superior_id')->unsigned()->nullable();
             $table->string('sigla', 10);
             $table->string('descricao');
-            $table->string('tldr');
-            $table->boolean('ativo');
+            $table->text('tldr')->nullable();
+            $table->boolean('ativo')->default(true);
             $table->timestamps();
             $table->softDeletes();
         });

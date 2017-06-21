@@ -268,6 +268,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 #page_header #header_login #login_form form input {
@@ -423,6 +424,32 @@ main {
 
 .hidden {
   display: none;
+}
+
+.formteste form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formteste form input[type=text], .formteste form input[type=password] {
+  border: 0;
+  border-radius: 0;
+}
+
+.formteste form input[type="submit"] {
+  border: 0;
+  background-color: #155d98;
+  color: white;
+  padding: 3px 5px;
+}
+
+.formteste form input[type="submit"]:hover {
+  background-color: #1f86db;
 }
 
 #area_carrossel h1 {

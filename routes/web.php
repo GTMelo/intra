@@ -14,7 +14,8 @@
 Route::get('/', 'HomeController@index');
 Route::get('/teste', 'TesteController@index');
 
-Route::get('/registrar', 'RegistrationController@create');
+Route::get('/registrar', 'RegistrationsController@create');
+Route::post('/registrar', 'RegistrationsController@store');
 Route::get('/login', 'SessionsController@create');
 
 Route::get('/artigos', 'ArtigoController@index');

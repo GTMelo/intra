@@ -3,13 +3,22 @@
 namespace App\Models;
 
 use App\Models\Scopes\AtivoScope;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Usuario extends Model
+class Usuario extends Authenticatable
 {
+    use Notifiable;
+
     protected $hidden = [
-        'password', 'remember_token',
+        'remember_token', 'password',
     ];
+
+    protected $fillable = [
+        'nome_completo', 'nome_curto', 'cpf', 'password',
+    ];
+
+
 
     protected static function boot()
     {

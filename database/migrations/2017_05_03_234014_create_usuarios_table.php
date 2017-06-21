@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateUsuariosTable extends Migration
 {
@@ -19,14 +19,11 @@ class CreateUsuariosTable extends Migration
             $table->string('nome_completo');
             $table->string('nome_curto');
             $table->string('password');
-            $table->rememberToken();
-            $table->boolean('ativo');
+            $table->rememberToken()->nullable();
+            $table->boolean('ativo')->default(false);
             $table->timestamps();
             $table->timestamp('last_access')->nullable();
             $table->softDeletes();
-
-
-
         });
     }
 

@@ -15,17 +15,17 @@ class CreateUsuariosRHTable extends Migration
     {
         Schema::create('usuarios_rh', function (Blueprint $table) {
             $table->integer('usuario_id')->unsigned();
-            $table->integer('cargo_id');
+            $table->integer('cargo_id')->nullable();
             $table->integer('escolaridade_id')->unsigned()->nullable();
             $table->integer('unidade_id')->unsigned()->nullable();
-            $table->string('siape', 10);
-            $table->date('data_nascimento');
-            $table->string('sexo', 1);
+            $table->string('siape', 10)->nullable();
+            $table->date('data_nascimento')->nullable();
+            $table->string('sexo', 1)->nullable();
         });
 
         Schema::table('usuarios_rh', function (Blueprint $table) {
             $table->primary('usuario_id');
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('usuario_id')->references('id')->on('users');
         });
 
     }

@@ -27,7 +27,7 @@ class CreateArtigosTable extends Migration
         });
 
         Schema::table('artigos', function($table) {
-            $table->foreign('autor_id')->references('id')->on('usuarios')->onDelete('set null');
+            $table->foreign('autor_id')->references('id')->on('users')->onDelete('set null');
             $table->foreign('artigo_tipo_id')->references('id')->on('artigo_tipos')->onDelete('set null');
             $table->foreign('unidade_id')->references('id')->on('unidades')->onDelete('set null');
         });

@@ -15,7 +15,7 @@ class EmailTableSeeder extends Seeder
         \App\Models\Email::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        $people = \App\Models\Usuario::all()->pluck('nome_curto');
+        $people = \App\Models\User::all()->pluck('nome_curto');
 
         foreach ($people as $person){
             \App\Models\Email::create([

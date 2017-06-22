@@ -33,3 +33,7 @@ Route::get('/unidade/{unidade}/apagar', 'UnidadeController@delete');
 
 Route::get('/usuario', 'UsuarioController@index');
 Route::get('/usuario/{usuario}', 'UsuarioController@show');
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');

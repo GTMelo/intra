@@ -17,7 +17,7 @@ class UsuarioRHTableSeeder extends Seeder
 
         (new Faker\Generator)->seed(123);
 
-        $numUsers = \App\Models\Usuario::withoutGlobalScopes()->count();
+        $numUsers = \App\Models\User::withoutGlobalScopes()->count();
 
         factory(App\Models\UsuarioRH::class, $numUsers)->create();
     }

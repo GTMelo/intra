@@ -22,7 +22,7 @@ class Artigo extends Model implements UrlInterface
 
     public function autor()
     {
-        return $this->belongsTo(Usuario::class, 'autor_id');
+        return $this->belongsTo(User::class, 'autor_id');
     }
 
     public function contents() {

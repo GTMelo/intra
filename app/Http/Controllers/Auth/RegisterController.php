@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
+use App\Models\User;
+use App\Models\UsuarioRH;
+use Carbon\Carbon;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
@@ -27,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -48,8 +50,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'cpf' => 'required|string|max:11',
+            'nome_completo' => 'required|string|max:191',
+            'nome_curto' => 'required|string|max:191',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -62,10 +65,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
+        $user = User::create([
+            'cpf' => $data['cpf'],
+            'nome_completo' => $data['nome_completo'],
+            'nome_curto' => $data['nome_curto'],
+            'last_access' => Carbon::now(),
             'password' => bcrypt($data['password']),
+            'ativo' => true,
         ]);
+
+        $usuarioRH = UsuarioRH::create([
+            'usuario_id' => $user->id,
+            'siape' => $data['siape'],
+            'escolaridade_id' => $data['escolaridade'],
+            'data_nascimento' => Carbon::createFromFormat('d/m/Y', $data['data_nascimento']),
+            'sexo' => $data['sexo']
+        ]);
+
+        return $user;
     }
 }

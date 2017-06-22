@@ -14,12 +14,20 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Models\User::class, function (Faker\Generator $faker) {
     static $password;
 
+    $brFaker = new Faker\Generator();
+    $brFaker->addProvider(new Faker\Provider\pt_BR\Person($brFaker));
+    $firstName = $faker->firstName;
+    $lastName = $faker->lastName;
+
     return [
-        'name' => $faker->name,
+        'cpf' => $brFaker->cpf(false),
+        'nome_completo' => $firstName . ' ' . $faker->lastName . ' ' . $lastName,
+        'nome_curto' => $firstName . ' ' . $lastName,
         'email' => $faker->unique()->safeEmail,
+        'ativo' => true,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
     ];
@@ -27,7 +35,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Models\Artigo::class, function (Faker\Generator $faker) {
 
-    $maxUser = \App\Models\Usuario::all()->count();
+    $maxUser = \App\Models\User::all()->count();
     $maxTipoArt = \App\Models\ArtigoTipo::all()->count();
     $maxUnidade = \App\Models\Unidade::all()->count();
     $today = new \Carbon\Carbon();
@@ -43,22 +51,22 @@ $factory->define(App\Models\Artigo::class, function (Faker\Generator $faker) {
 
 });
 
-$factory->define(App\Models\Usuario::class, function (Faker\Generator $faker){
-
-    $brFaker = new Faker\Generator();
-    $brFaker->addProvider(new Faker\Provider\pt_BR\Person($brFaker));
-    $firstName = $faker->firstName;
-    $lastName = $faker->lastName;
-
-    return [
-        'cpf' => $brFaker->cpf(false),
-        'nome_completo' => $firstName . ' ' . $faker->lastName . ' ' . $lastName,
-        'nome_curto' => $firstName . ' ' . $lastName,
-        'password' => bcrypt($faker->password),
-        'remember_token' => str_random(10),
-        'ativo' => $faker->boolean(60),
-    ];
-});
+//$factory->define(App\Models\Usuario::class, function (Faker\Generator $faker){
+//
+//    $brFaker = new Faker\Generator();
+//    $brFaker->addProvider(new Faker\Provider\pt_BR\Person($brFaker));
+//    $firstName = $faker->firstName;
+//    $lastName = $faker->lastName;
+//
+//    return [
+//        'cpf' => $brFaker->cpf(false),
+//        'nome_completo' => $firstName . ' ' . $faker->lastName . ' ' . $lastName,
+//        'nome_curto' => $firstName . ' ' . $lastName,
+//        'password' => bcrypt($faker->password),
+//        'remember_token' => str_random(10),
+//        'ativo' => $faker->boolean(60),
+//    ];
+//});
 
 $factory->define(\App\Models\Objeto::class, function (Faker\Generator $faker) {
 
@@ -91,7 +99,7 @@ $factory->define(\App\Models\CarrosselItem::class, function (\Faker\Generator $f
 
 $factory->define(\App\Models\UsuarioRH::class, function (\Faker\Generator $faker) {
 
-    $maxUsuarios = \App\Models\Usuario::withoutGlobalScopes()->count();
+    $maxUsuarios = \App\Models\User::withoutGlobalScopes()->count();
     $maxCargos = \App\Models\Cargo::withoutGlobalScopes()->count();
     $maxEscolaridades = \App\Models\Escolaridade::all()->count();
     $maxUnidades = \App\Models\Unidade::withoutGlobalScopes()->count();

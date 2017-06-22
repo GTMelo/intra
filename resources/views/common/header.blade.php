@@ -44,7 +44,7 @@
     </div>
 
     {{-- TODO false if is in session --}}
-    @if(true)
+    @if(!Auth::check())
         <div id="header_login">
             <a href="/login">
                 <nav>Login</nav>
@@ -62,10 +62,10 @@
     @endif
 
     {{-- TODO true if is in session --}}
-    @if(false)
+    @if(Auth::check())
         <div id="header_user">
             <div id="header_user_data">
-                <span>Gustavo Ericson</span>
+                <span></span>
                 <span>DILID/SAIN</span>
             </div>
             <div id="header_user_avatar">

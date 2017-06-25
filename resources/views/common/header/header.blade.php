@@ -43,41 +43,6 @@
         </form>
     </div>
 
-    {{-- TODO false if is in session --}}
-    @if(!Auth::check())
-        <div id="header_login">
-            <a href="/login">
-                <nav>Login</nav>
-            </a>
-            <div id="login_form">
-                <form method="post" action="/login">
-                    {{ csrf_field() }}
-                    <input type="text" name="cpf" placeholder="CPF">
-                    <input type="password" name="pass" placeholder="Senha">
-                    <input type="submit" name="login" value="Entrar">
-                    <a href="/registrar">Novo usuário</a>
-                </form>
-            </div>
-        </div>
-    @endif
-
-    {{-- TODO true if is in session --}}
-    @if(Auth::check())
-        <div id="header_user">
-            <div id="header_user_data">
-                <span></span>
-                <span>DILID/SAIN</span>
-            </div>
-            <div id="header_user_avatar">
-                <img class="avatar" src="{!! asset('images/avatar-default.png') !!}"/>
-            </div>
-            {{--<div style="align-items: center;">--}}
-            {{--<img src="http://intrasain.local:8000/images/avatar-default.png" style="width: 120px;height: 120px;align-self: center;">--}}
-            {{--<p style="margin: 0;">Gustavo Ericson de Melo Alexandre</p>--}}
-            {{--<p style="margin: 0;">SAIN/CGAB/DILID/NTIC</p>--}}
-            {{--<p style="margin: 0;">Preferências | sair</p>--}}
-            {{--</div>--}}
-        </div>
-    @endif
+    @include('common.header.login')
 
 </header>

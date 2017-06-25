@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 'password', 'nome_completo', 'nome_curto', 'cpf',
+        'cpf', 'password'
     ];
 
     /**
@@ -30,15 +30,9 @@ class User extends Authenticatable
 
     protected $dates = ['last_access'];
 
-    protected static function boot()
-    {
-        self::addGlobalScope(new AtivoScope());
-        parent::boot();
-    }
-
     public function rh()
     {
-        return $this->hasOne(UsuarioRH::class, 'usuario_id', 'id');
+        return $this->hasOne(UsuarioRH::class, 'user_id', 'id');
     }
 
 }

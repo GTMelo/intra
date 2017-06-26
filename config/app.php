@@ -164,6 +164,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         GrahamCampbell\Markdown\MarkdownServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Kodeine\Acl\AclServiceProvider::class,
+
 
         /*
          * Package Service Providers...

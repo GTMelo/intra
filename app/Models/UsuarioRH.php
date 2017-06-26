@@ -8,14 +8,14 @@ use Illuminate\Support\Collection;
 class UsuarioRH extends Model
 {
     protected $table = 'usuarios_rh';
-    protected $primaryKey = 'usuario_id';
+    protected $primaryKey = 'user_id';
     public $incrementing = false;
     public $timestamps = false;
     protected $dates = ['data_nascimento'];
     protected $with = ['cargo', 'unidade'];
 
     protected $fillable = [
-        'usuario_id', 'cargo_id', 'escolaridade_id', 'siape', 'data_nascimento', 'sexo'
+        'user_id', 'nome_completo', 'nome_curto', 'cargo_id', 'escolaridade_id', 'siape', 'data_nascimento', 'sexo'
     ];
 
     protected static function boot()

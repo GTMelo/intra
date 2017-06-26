@@ -19,17 +19,11 @@ $factory->define(App\Models\User::class, function (Faker\Generator $faker) {
 
     $brFaker = new Faker\Generator();
     $brFaker->addProvider(new Faker\Provider\pt_BR\Person($brFaker));
-    $firstName = $faker->firstName;
-    $lastName = $faker->lastName;
 
     return [
         'cpf' => $brFaker->cpf(false),
-        'nome_completo' => $firstName . ' ' . $faker->lastName . ' ' . $lastName,
-        'nome_curto' => $firstName . ' ' . $lastName,
-        'email' => $faker->unique()->safeEmail,
-        'ativo' => true,
         'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+        'remember_token' => null
     ];
 });
 
@@ -99,6 +93,12 @@ $factory->define(\App\Models\CarrosselItem::class, function (\Faker\Generator $f
 
 $factory->define(\App\Models\UsuarioRH::class, function (\Faker\Generator $faker) {
 
+    $brFaker = new Faker\Generator();
+    $brFaker->addProvider(new Faker\Provider\pt_BR\Person($brFaker));
+
+    $firstName = $faker->firstName;
+    $lastName = $faker->lastName;
+
     $maxUsuarios = \App\Models\User::withoutGlobalScopes()->count();
     $maxCargos = \App\Models\Cargo::withoutGlobalScopes()->count();
     $maxEscolaridades = \App\Models\Escolaridade::all()->count();
@@ -113,7 +113,9 @@ $factory->define(\App\Models\UsuarioRH::class, function (\Faker\Generator $faker
     $date->addYears($randomYears);
 
     return [
-        'usuario_id' => $faker->unique()->numberBetween(1, $maxUsuarios),
+        'nome_completo' => $firstName . ' ' . $faker->lastName . ' ' . $lastName,
+        'nome_curto' => $firstName . ' ' . $lastName,
+        'user_id' => $faker->unique()->numberBetween(1, $maxUsuarios),
         'cargo_id' => $faker->numberBetween(1, $maxCargos),
         'escolaridade_id' => $faker->numberBetween(1, $maxEscolaridades),
         'unidade_id' => $faker->numberBetween(1, $maxUnidades),

@@ -14,18 +14,21 @@ class CreateUsuariosRHTable extends Migration
     public function up()
     {
         Schema::create('usuarios_rh', function (Blueprint $table) {
-            $table->integer('usuario_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->string('nome_completo')->nullable();
+            $table->string('nome_curto')->nullable();
             $table->integer('cargo_id')->nullable();
             $table->integer('escolaridade_id')->unsigned()->nullable();
             $table->integer('unidade_id')->unsigned()->nullable();
+            $table->integer('email_id')->nullable();
             $table->string('siape', 10)->nullable();
             $table->date('data_nascimento')->nullable();
             $table->string('sexo', 1)->nullable();
         });
 
         Schema::table('usuarios_rh', function (Blueprint $table) {
-            $table->primary('usuario_id');
-            $table->foreign('usuario_id')->references('id')->on('users');
+            $table->primary('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
 
     }

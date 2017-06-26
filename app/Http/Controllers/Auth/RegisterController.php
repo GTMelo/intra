@@ -67,15 +67,14 @@ class RegisterController extends Controller
     {
         $user = User::create([
             'cpf' => $data['cpf'],
-            'nome_completo' => $data['nome_completo'],
-            'nome_curto' => $data['nome_curto'],
             'last_access' => Carbon::now(),
             'password' => bcrypt($data['password']),
-            'ativo' => true,
         ]);
 
-        $usuarioRH = UsuarioRH::create([
-            'usuario_id' => $user->id,
+        $rh = UsuarioRH::create([
+            'user_id' => $user->id,
+            'nome_completo' => $data['nome_completo'],
+            'nome_curto' => $data['nome_curto'],
             'siape' => $data['siape'],
             'escolaridade_id' => $data['escolaridade'],
             'data_nascimento' => Carbon::createFromFormat('d/m/Y', $data['data_nascimento']),

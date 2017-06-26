@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Scopes\AtivoScope;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -16,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 'password', 'nome_completo', 'nome_curto', 'cpf',
+        'cpf', 'password'
     ];
 
     /**
@@ -30,15 +29,14 @@ class User extends Authenticatable
 
     protected $dates = ['last_access'];
 
-    protected static function boot()
-    {
-        self::addGlobalScope(new AtivoScope());
-        parent::boot();
-    }
-
     public function rh()
     {
-        return $this->hasOne(UsuarioRH::class, 'usuario_id', 'id');
+        return $this->hasOne(UsuarioRH::class, 'user_id', 'id');
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'role_user');
     }
 
 }

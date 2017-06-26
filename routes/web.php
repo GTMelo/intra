@@ -14,9 +14,10 @@
 Route::get('/', 'HomeController@index');
 Route::get('/teste', 'TesteController@index');
 
-Route::get('/registrar', 'RegistrationsController@create');
-Route::post('/registrar', 'RegistrationsController@store');
-Route::get('/login', 'SessionsController@create');
+// Registration Routes...
+$this->get('/registrar', 'Auth\RegisterController@showRegistrationForm')->name('register');
+$this->post('/registrar', 'Auth\RegisterController@register');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/artigos', 'ArtigoController@index');
 Route::get('/artigos/novo', 'ArtigoController@create');
@@ -36,4 +37,4 @@ Route::get('/usuario/{usuario}', 'UsuarioController@show');
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');

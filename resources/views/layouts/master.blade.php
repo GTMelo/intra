@@ -11,7 +11,7 @@
 
 <body>
 
-@include('common.header')
+@include('common.header.header')
 
 {{--@section('navigation')--}}
     {{--<nav class="container">--}}

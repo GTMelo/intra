@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="stylesheet" type="text/css" href="{!! asset('vendor/bootstrap-4.0.0-alpha6/css/bootstrap.css') !!}">
     <link rel="stylesheet" type="text/css" href="{!! asset('css/app.css') !!}">
-    {{--<script src="{!! asset('vendor/livejs/live.js') !!}"></script> --}}{{-- TODO remove on deploy --}}
     @yield('css')
 </head>
 

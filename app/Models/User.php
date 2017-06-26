@@ -34,6 +34,10 @@ class User extends Authenticatable
         return $this->hasOne(UsuarioRH::class, 'user_id', 'id');
     }
 
+    public function nome(){
+        return $this->rh->nome_curto;
+    }
+
     public function roles()
     {
         return $this->belongsToMany(Role::class, 'role_user');

@@ -18,8 +18,8 @@
 @if(Auth::check())
     <div id="header_user">
         <div id="header_user_data">
-            <span>{{ $user->rh->nome_curto }}</span>
-            <span>DILID/SAIN <a href="/logout">Sair</a></span>
+            <span>{{ Auth::user()->rh->nome_curto }}</span>
+            <span>DILID/SAIN &nbsp<a href="/logout">Sair</a></span>
         </div>
         <div id="header_user_avatar">
             <img class="avatar" src="{!! asset('images/avatar-default.png') !!}"/>

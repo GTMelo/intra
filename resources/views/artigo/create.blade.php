@@ -15,6 +15,7 @@
         <form id="novo_artigo" method="post" action="/artigos">
 
             {{ csrf_field() }}
+            <input type="hidden" name="autor_id" value="{!! Auth::id() !!}">
 
             <fieldset>
 

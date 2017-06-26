@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 
 class ArtigoController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -48,7 +49,7 @@ class ArtigoController extends Controller
         ]);
 
         $artigo = new Artigo();
-        $artigo->autor_id = 1; //TODO autor_id = usuario pertencente à session
+        $artigo->autor_id = request('autor_id');
         $artigo->artigo_tipo_id = ArtigoTipo::tipo('noticia')->first()->id;
         $artigo->unidade_id = request('unidade');
         $artigo->titulo = request('titulo');

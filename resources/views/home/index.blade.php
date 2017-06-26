@@ -83,7 +83,7 @@
                 <div id="lista_pessoas">
                     @foreach($pessoas as $pessoa)
                         <article class="@if($pessoa->data_nascimento->isBirthday()) aniversariante_dia @endif">
-                            <span>{{$pessoa->usuario->nome_curto }}</span>
+                            <span>{{$pessoa->nome_curto }}</span>
                             <span>{{$pessoa->data_nascimento->format('d/m')}}</span>
                         </article>
                     @endforeach

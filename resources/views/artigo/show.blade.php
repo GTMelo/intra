@@ -8,7 +8,7 @@
                     <h1>{{ $artigo->titulo }}</h1>
                     <div id="article_metadata">
                         <span>Publicado em: {{ $artigo->created_at->format('d/m/Y H:i')}}</span>
-                        <span>Por: {{ $artigo->autor->nome_completo }}</span>
+                        <span>Por: {{ $artigo->autor->nome() }}</span>
                     </div>
                 </header>
                 <article>

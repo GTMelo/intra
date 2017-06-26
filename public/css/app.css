@@ -243,6 +243,7 @@
 }
 
 #page_header #header_login #login_form {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -434,6 +435,10 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.formteste form input {
+  padding: 0.2rem 0.4rem;
 }
 
 .formteste form input[type=text], .formteste form input[type=password] {

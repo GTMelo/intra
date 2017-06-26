@@ -9,6 +9,9 @@
 
 @section('content')
     <main class="home_main">
+
+        @include('common.errors.errors')
+
         <section id="area_carrossel" class="area_carrossel">
             @if($carrosselTooOld)
                 <div id="carrossel_shrink" class="container carrossel_shrink" data-toggle="tooltip"
@@ -138,6 +141,14 @@
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#loginbtn").click(function () {
+                $("#login_form").slideDown();
+            });
         });
     </script>
 @endsection

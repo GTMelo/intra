@@ -143,12 +143,4 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
-
-    <script>
-        $(document).ready(function () {
-            $("#loginbtn").click(function () {
-                $("#login_form").slideDown();
-            });
-        });
-    </script>
 @endsection

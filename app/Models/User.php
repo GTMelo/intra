@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Scopes\AtivoScope;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -33,6 +32,11 @@ class User extends Authenticatable
     public function rh()
     {
         return $this->hasOne(UsuarioRH::class, 'user_id', 'id');
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'role_user');
     }
 
 }

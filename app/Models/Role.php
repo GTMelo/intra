@@ -3,17 +3,21 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Kodeine\Acl\Traits\HasPermission;
 
 class Role extends Model
 {
+    use HasPermission;
 
-    protected $fillable = ['codigo', 'label', 'rank'];
+    protected $fillable = ['name', 'slug', 'description'];
 
-    public $timestamps = false;
+    public function getRouteKeyName() {
+        return 'slug';
+    }
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'role_user');
+        return $this->belongsToMany(User::class, 'role_user')->withTimestamps();
     }
 
     public function grant($user)
@@ -24,5 +28,89 @@ class Role extends Model
     public function revoke($user)
     {
         return $this->users()->detach($user);
+    }
+
+    /**
+     * List all permissions
+     *
+     * @return mixed
+     */
+    public function getPermissions()
+    {
+        return \Cache::remember(
+            'acl.getPermissionsInheritedById_'.$this->id,
+            config('acl.cacheMinutes'),
+            function () {
+                return $this->getPermissionsInherited();
+            }
+        );
+    }
+
+    /**
+     * Checks if the role has the given permission.
+     *
+     * @param string $permission
+     * @param string $operator
+     * @param array  $mergePermissions
+     * @return bool
+     */
+    public function can($permission, $operator = null, $mergePermissions = [])
+    {
+        $operator = is_null($operator) ? $this->parseOperator($permission) : $operator;
+
+        $permission = $this->hasDelimiterToArray($permission);
+        $permissions = $this->getPermissions() + $mergePermissions;
+
+        // make permissions to dot notation.
+        // create.user, delete.admin etc.
+        $permissions = $this->toDotPermissions($permissions);
+
+        // validate permissions array
+        if ( is_array($permission) ) {
+
+            if ( ! in_array($operator, ['and', 'or']) ) {
+                $e = 'Invalid operator, available operators are "and", "or".';
+                throw new \InvalidArgumentException($e);
+            }
+
+            $call = 'canWith' . ucwords($operator);
+
+            return $this->$call($permission, $permissions);
+        }
+
+        // validate single permission
+        return isset($permissions[$permission]) && $permissions[$permission] == true;
+    }
+
+    /**
+     * @param $permission
+     * @param $permissions
+     * @return bool
+     */
+    protected function canWithAnd($permission, $permissions)
+    {
+        foreach ($permission as $check) {
+            if ( ! in_array($check, $permissions) || ! isset($permissions[$check]) || $permissions[$check] != true ) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * @param $permission
+     * @param $permissions
+     * @return bool
+     */
+    protected function canWithOr($permission, $permissions)
+    {
+        foreach ($permission as $check) {
+            if ( in_array($check, $permissions) && isset($permissions[$check]) && $permissions[$check] == true ) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

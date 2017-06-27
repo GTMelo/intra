@@ -12,13 +12,15 @@ class PermissionTableSeeder extends Seeder
     public function run()
     {
         \App\Models\Permission::create([
-            'codigo' => 'test-permission-root',
-            'label' => 'Teste de permissão que só o root admin tem acesso'
+            'name' => 'Publicação de Artigo',
+            'slug' => 'can-publish-artigo',
+            'description' => 'Pode publicar artigos'
         ]);
 
         \App\Models\Permission::create([
-            'codigo' => 'test-permission-userAndAbove',
-            'label' => 'Teste de permissão que todos menos o usuário não confirmado tem acesso'
+            'name' => 'Publicação de Artigos Global',
+            'slug' => 'can-publish-artigo-global',
+            'description' => 'Pode publicar artigos em qualquer unidade registrada'
         ]);
     }
 }

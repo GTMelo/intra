@@ -17,28 +17,31 @@ class RoleTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         \App\Models\Role::create([
-            'codigo' => 'admin-root',
-            'label' => 'Administrador Root',
-            'rank' => 0
+            'name' => 'Owner Admin',
+            'slug' => 'admin-owner',
+            'description' => 'Admin principal do sistema'
         ]);
 
         \App\Models\Role::create([
-            'codigo' => 'admin',
-            'label' => 'Administrador',
-            'rank' => 1
+            'name' => 'Administrador',
+            'slug' => 'admin',
+            'description' => 'Admistrador do Sistema'
         ]);
 
         \App\Models\Role::create([
-            'codigo' => 'user',
-            'label' => 'Usuário',
-            'rank' => 2
+            'name' => 'Usuário',
+            'slug' => 'user',
+            'description' => 'Usuário básico'
         ]);
 
         \App\Models\Role::create([
-            'codigo' => 'user-unconfirmed',
-            'label' => 'Usuário sem confirmação',
-            'rank' => 3
+            'name' => 'Usuário Não Confirmado',
+            'slug' => 'user-guest',
+            'description' => 'Usuário ainda não confirmado'
         ]);
+
+
+
 
     }
 }

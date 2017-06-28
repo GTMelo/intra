@@ -39,10 +39,10 @@ class User extends Authenticatable
         return $this->rh->nome_curto;
     }
 
-    public function roles()
-    {
-        return $this->belongsToMany(Role::class, 'role_user');
-    }
+//    public function roles()
+//    {
+//        return $this->belongsToMany(Role::class, 'role_user')->withTimestamps();
+//    }
 
 
 

@@ -114,3 +114,4 @@ class Role extends Model
         return false;
     }
 }
+

@@ -22,3 +22,11 @@
     background: $bgColor;
   }
 }
+
+@mixin transitionEaseInOut($element: color, $duration: 1s){
+  -webkit-transition: $color $duration;
+  -moz-transition:    $color $duration;
+  -ms-transition:     $color $duration;
+  -o-transition:      $color $duration;
+  transition:         $color $duration;
+}

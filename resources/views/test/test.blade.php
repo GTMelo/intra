@@ -1,11 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML5 Test Page</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('content')
 <div id="top" class="page" role="document">
     <header role="banner">
         <h1>HTML5 Test Page</h1>
@@ -411,5 +406,4 @@
         <p>Made by <a href="http://twitter.com/cbracco">@cbracco</a>. Code on <a href="http://github.com/cbracco/html5-test-page">GitHub</a>.</p>
     </footer>
 </div>
-</body>
-</html>
+@endsection

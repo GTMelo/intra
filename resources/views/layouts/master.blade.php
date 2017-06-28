@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="stylesheet" type="text/css" href="{!! asset('vendor/bootstrap-4.0.0-alpha6/css/bootstrap.css') !!}">
+    {{--<link rel="stylesheet" type="text/css" href="{!! asset('vendor/bootstrap-4.0.0-alpha6/css/bootstrap.css') !!}">--}}
     <link rel="stylesheet" type="text/css" href="{!! asset('css/app.css') !!}">
     @yield('css')
 </head>
@@ -11,14 +11,6 @@
 <body>
 
 @include('common.header.header')
-
-{{--@section('navigation')--}}
-    {{--<nav class="container">--}}
-        {{--@include('common.breadcrumb')--}}
-    {{--</nav>--}}
-{{--@endsection--}}
-
-{{--@yield('navigation')--}}
 
 @yield('content')
 

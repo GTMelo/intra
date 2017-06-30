@@ -23,10 +23,10 @@
   }
 }
 
-@mixin transitionEaseInOut($element: color, $duration: 1s){
-  -webkit-transition: $color $duration;
-  -moz-transition:    $color $duration;
-  -ms-transition:     $color $duration;
-  -o-transition:      $color $duration;
-  transition:         $color $duration;
+@mixin transitionEaseInOut($element: 'color', $duration: '1s') {
+  -webkit-transition: $element $duration;
+  -moz-transition: $element $duration;
+  -ms-transition: $element $duration;
+  -o-transition: $element $duration;
+  transition: $element $duration;
 }

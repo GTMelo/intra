@@ -18,6 +18,10 @@ body{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+  *::selection {
+    background: #0C3455;
+    color: white;
+  }
 }
 
 main{
@@ -27,11 +31,48 @@ main{
 a {
   text-decoration: none;
   color: $sain-azul-light;
-  @include transitionEaseInOut(color, 1s);
+  transition: color 0.2s;
   &:hover, &:focus {
     text-decoration: none;
     color: $sain-amarelo;
   }
+}
+
+hr {
+  border: 1px solid black;
+  height: 1px;
+}
+
+figure {
+  text-align: center;
+  margin: 1rem;
+  figcaption {
+    font-weight: 300;
+    font-size: 0.7rem;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+table {
+  tr {
+    &:nth-child(2n) {
+      background-color: $cinza;
+    }
+  }
+  th, td {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  th {
+    background-color: darken($cinza, 5%);
+  }
+}
+
+mark {
+  background-color: $sain-amarelo;
+  padding: 0 5px;
 }
 
 //}

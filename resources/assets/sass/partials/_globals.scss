@@ -25,7 +25,14 @@ body{
 }
 
 main{
+  @extend .d-flex, .flex-column;
+  flex: 1;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
+section {
+  @extend .flex-row, .container;
 }
 
 a {
@@ -39,8 +46,7 @@ a {
 }
 
 hr {
-  border: 1px solid black;
-  height: 1px;
+  border: 1px solid $cinza-dark;
 }
 
 figure {
@@ -56,6 +62,9 @@ figure {
 }
 
 table {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   tr {
     &:nth-child(2n) {
       background-color: $cinza;
@@ -73,6 +82,15 @@ table {
 mark {
   background-color: $sain-amarelo;
   padding: 0 5px;
+}
+
+iframe{
+  border: 1px solid $gray-dark;
+}
+
+audio, video{
+  width: 100%;
+  height: auto;
 }
 
 //}

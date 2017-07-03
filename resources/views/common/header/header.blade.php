@@ -1,5 +1,5 @@
 <header id="page_header" class="" role="document-header">
-    <div id="brand">
+    <div id="header_brand">
         <a href="/">
             <svg class="d-inline-block align-top" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="54" height="41"
                  viewBox="0 0 241 181">

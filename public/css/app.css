@@ -6308,7 +6308,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   display: table-cell !important;
 }
 
-.d-flex, header[role="document-header"], header[role="document-header"] > div, header[role="document-header"] nav, header[role="document-header"] #header_menu, main, form fieldset .formulario-checkbox {
+.d-flex, header[role="document-header"], header[role="document-header"] > div, header[role="document-header"] nav, main, form fieldset .formulario-checkbox {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -9367,7 +9367,7 @@ h5, h6 {
 }
 
 h1 {
-  font-family: "FjallaoneLocal";
+  font-family: "FjallaoneLocal", "arial black", "sans-serif";
   font-size: 2.2624rem;
   line-height: 4.5rem;
   margin-top: 0.15rem;
@@ -9509,6 +9509,15 @@ header[role="document-header"] {
   height: 60px;
 }
 
+header[role="document-header"] * {
+  color: white;
+  fill: white;
+}
+
+header[role="document-header"] *:hover {
+  transition: background-color 0.2s;
+}
+
 header[role="document-header"] svg {
   margin-right: 0.5rem;
 }
@@ -9517,15 +9526,11 @@ header[role="document-header"] > div {
   height: 100%;
 }
 
-header[role="document-header"] * {
-  color: white;
-  fill: white;
-}
-
 header[role="document-header"] nav {
-  transition: background-color 0.2s;
   height: 100%;
   padding: 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
 header[role="document-header"] nav:hover {
@@ -9538,6 +9543,37 @@ header[role="document-header"] a {
 
 header[role="document-header"] .dropdown-content {
   display: none !important;
+}
+
+header[role="document-header"] #header_brand:hover {
+  background-color: #155d98;
+}
+
+header[role="document-header"] #header_brand span {
+  font-family: "FjallaoneLocal", "arial black", "sans-serif";
+}
+
+header[role="document-header"] #header_search * {
+  border: 0;
+  height: 33px;
+  font: normal 300 0.8rem "OpenSansLocal";
+}
+
+header[role="document-header"] #header_search input[type="search"] {
+  width: 9rem;
+  border-radius: 5px 0 0 5px;
+  padding: 3px 0.5rem;
+  color: black;
+}
+
+header[role="document-header"] #header_search input[type="submit"] {
+  border-radius: 0 5px 5px 0;
+  background: #155d98 no-repeat left 50% top 50%;
+  margin-left: -5px;
+}
+
+header[role="document-header"] #header_search input[type="submit"]:hover {
+  background-color: #1f86db;
 }
 
 footer {
@@ -9686,7 +9722,7 @@ mark {
 }
 
 iframe {
-  border: 1px solid #292b2c;
+  border: 1px solid #a9a8a8;
   width: 100%;
 }
 

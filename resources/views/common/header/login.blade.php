@@ -1,8 +1,8 @@
 @if(!Auth::check())
     <div id="header_login">
-        <a id="loginbtn" href="#">
-            <nav>Login</nav>
-        </a>
+        <nav>
+            <a id="loginbtn" href="#">Login</a>
+        </nav>
         <div id="login_form" class="hidden">
             <form method="POST" action="/login">
                 {{ csrf_field() }}

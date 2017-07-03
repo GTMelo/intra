@@ -2,11 +2,11 @@
 @import "partials/typography";
 @import "partials/color";
 @import "partials/mixins";
-//@import "blocks/header";
-//@import "blocks/footer";
-
+@import "partials/feedback";
+@import "blocks/header";
+@import "blocks/footer";
 // Debug tools. TODO remove on deploy
-@import "partials/debug";
+//@import "partials/debug";
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -14,17 +14,18 @@
   font-family: $font-base;
 }
 
-body{
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex: 1;
   *::selection {
     background: #0C3455;
     color: white;
   }
 }
 
-main{
+main {
   @extend .d-flex, .flex-column;
   flex: 1;
   margin-top: 1rem;
@@ -38,7 +39,7 @@ section {
 a {
   text-decoration: none;
   color: $sain-azul-light;
-  transition: color 0.2s;
+  @include transitionEaseInOut();
   &:hover, &:focus {
     text-decoration: none;
     color: $sain-amarelo;
@@ -84,37 +85,15 @@ mark {
   padding: 0 5px;
 }
 
-iframe{
+iframe {
   border: 1px solid $gray-dark;
+  width: 100%;
 }
 
-audio, video{
+audio, video {
   width: 100%;
   height: auto;
 }
-
-//}
-//
-//h1 {
-//  font-size: 2rem;
-//  font-family: $font_heading;
-//  border-bottom: 1px solid $cinza-dark;
-//  padding-bottom: 0.5rem;
-//  line-height: 2.3rem;
-//}
-//
-//body {
-//  display: flex;
-//  min-height: 100vh;
-//  flex-direction: column;
-//}
-//
-//main {
-//  flex: 1;
-//  margin-top: 1rem;
-//  margin-bottom: 1rem;
-//
-//}
 
 .hidden {
   display: none;

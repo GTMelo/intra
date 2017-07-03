@@ -170,7 +170,7 @@ code {
 }
 
 strong, b, em, u, s, del, ins, cite, mark {
-  font-family: $font_body;
+  font-family: inherit;
 }
 small{
   font-weight: 300;

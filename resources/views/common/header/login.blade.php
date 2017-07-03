@@ -3,7 +3,7 @@
         <a id="loginbtn" href="#">
             <nav>Login</nav>
         </a>
-        <div id="login_form">
+        <div id="login_form" class="hidden">
             <form method="POST" action="/login">
                 {{ csrf_field() }}
                 <input type="text" name="cpf" placeholder="CPF">

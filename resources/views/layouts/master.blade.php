@@ -23,12 +23,12 @@
 <script>
     $(document).ready(function () {
         $("#loginbtn").click(function () {
-            $("#login_form").slideDown();
+            $("#login_wrap").slideDown();
         });
     });
 
     $(document).mouseup(function (e) {
-        var container = $("#login_form");
+        var container = $("#login_wrap");
         if (!container.is(e.target) && container.has(e.target).length === 0) {
             container.slideUp();
         }

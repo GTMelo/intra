@@ -6,7 +6,7 @@ header[role="document-header"] {
   * {
     color: white;
     fill: white;
-    &:hover{
+    &:hover {
       @include transitionEaseInOut(background-color);
     }
   }
@@ -33,37 +33,60 @@ header[role="document-header"] {
   .dropdown-content {
     display: none !important;
   }
-  #header_brand{
-    &:hover{
+  #header_brand {
+    &:hover {
       background-color: $sain-azul-light;
     }
-    span{
+    span {
       font-family: $font_heading;
     }
   }
-    #header_search {
-      * {
-        border: 0;
-        height: 33px;
-        font: normal 300 0.8rem $font-base;
+  #header_search {
+    * {
+      border: 0;
+      border-radius: 0;
+      font: normal 300 0.8rem $font-base;
+    }
+    form{
+      display: flex;
+    }
+    input[type="search"] {
+      border-radius: 0;
+      width: 9rem;
+      //padding: 3px calc(32px + 0.5rem) 3px 0.5rem;
+      color: black;
+    }
+    input[type="submit"] {
+      background: $sain-azul-light url("../icons/search.png") no-repeat left 50% top 50%;
+      &:hover {
+        background-color: $sain-azul-lightest;
       }
-      input[type="search"] {
-        width: 9rem;
-        border-radius: 5px 0 0 5px;
-        padding: 3px 0.5rem;
-        color: black;
-      }
-      input[type="submit"] {
-        border-radius: 0 5px 5px 0;
-        background: $sain-azul-light no-repeat left 50% top 50%;
-        margin-left: -5px;
-        //width: 30px;
-        //background-image: url(""); // TODO adicionar ícone de pesquisa
-        &:hover {
-          background-color: $sain-azul-lightest;
+    }
+  }
+  #header_login{
+    #login_wrap{
+      background-color: red;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      form{
+        @extend .d-flex, .flex-column;
+        input{
+          color: black;
+        }
+        input[type="submit"]{
+          @extend .btn;
+        }
+        & > *{
+          margin-bottom: 0.5rem;
+          &:last-child{
+            margin-bottom: 0;
+          }
         }
       }
     }
+  }
 }
 
 //header[role="document-header"]{

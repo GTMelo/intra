@@ -17,7 +17,7 @@
     <div id="header_menu">
         {{--<nav><a href="/">Página Principal</a></nav>--}}
         <nav><a href="/legislacao">Legislação</a></nav>
-        <nav class="dropdown">
+        <nav class="has-dropdown">
             <span class="dropdown-button">Áreas da SAIN</span>
             <nav class="dropdown-content">
                 <a href="/areas/sain">SAIN</a>
@@ -25,16 +25,18 @@
                 <a href="/areas/dilid">DILID</a>
             </nav>
         </nav>
-        <nav class="dropdown">
+        <nav class="has-dropdown">
             <span class="dropdown-button">SAIN na Internet</span>
             <nav class="dropdown-content wider">
-                <a href="http://sain.fazenda.gov.br">Portal Institucional</a>
-                <a href="http://pcn.fazenda.gov.br">Portal PCN</a>
-                <a href="https://webmail.fazenda.gov.br">Webmail Exchange</a>
-                <a href="https://expresso.fazenda.gov.br">Webmail Expresso</a>
+                <ul>
+                    <li><a href="http://sain.fazenda.gov.br">Portal Institucional</a></li>
+                    <li><a href="http://pcn.fazenda.gov.br">Portal PCN</a></li>
+                    <li><a href="https://webmail.fazenda.gov.br">Webmail Exchange</a></li>
+                    <li><a href="https://expresso.fazenda.gov.br">Webmail Expresso</a></li>
+                </ul>
             </nav>
         </nav>
-        <nav class="dropdown">Ferramentas</nav>
+        <nav class="has-dropdown">Ferramentas</nav>
     </div>
     <div id="header_search">
         <form method="get" id="header_search_form" action="/pesquisa">

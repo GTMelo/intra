@@ -61,7 +61,7 @@
                     <p>This doesn't mean anything, really. Just that it happened</p>
                 </div>
 
-                <div class="alert alert-dismissible note-success" role="alert">
+                <div class="alert alert-dismissible note-success fade show" role="alert">
                     <button type="button" class="close" data-dismiss="alert">
                         <span aria-hidden="true">&times;</span>
                     </button>

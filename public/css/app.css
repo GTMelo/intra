@@ -9595,10 +9595,6 @@ header[role="document-header"] a {
   color: white;
 }
 
-header[role="document-header"] .dropdown-content {
-  display: none !important;
-}
-
 header[role="document-header"] #header_brand:hover {
   background-color: #155d98;
 }
@@ -9918,4 +9914,35 @@ form small {
   background-color: #faf2cc;
   border-color: #f8ecb5;
   background: repeating-linear-gradient(45deg, #faf2cc, #faf2cc 10px, #f8ecb5 10px, #f8ecb5 20px);
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown .dropdown-content {
+  display: none !important;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left !important;
+      -ms-flex-align: left !important;
+          align-items: left !important;
+  z-index: 1;
+  height: auto !important;
+  top: 60px;
+  left: 0;
+  background-color: #155d98;
+}
+
+.has-dropdown .dropdown-content ul {
+  list-style: none;
+}
+
+.has-dropdown:hover .dropdown-content {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }

@@ -65,18 +65,25 @@ header[role="document-header"] {
   }
   #header_login{
     #login_wrap{
-      background-color: red;
+      z-index: 1;
+      background-color: $sain-azul;
+      height: 240px;
       position: absolute;
       top: 0;
       right: 0;
       padding: 0.5rem;
       form{
         @extend .d-flex, .flex-column;
-        input{
+        input[type="text"], input[type="password"] {
           color: black;
         }
         input[type="submit"]{
           @extend .btn;
+        }
+        a {
+          text-align: center;
+          font-size: 0.8rem;
+          font-weight: 300;
         }
         & > *{
           margin-bottom: 0.5rem;

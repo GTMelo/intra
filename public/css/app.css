@@ -2155,7 +2155,7 @@ pre code {
   border: 0;
 }
 
-.form-control, form fieldset div input, form fieldset div select {
+.form-control, form input, form select {
   display: block;
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -2170,47 +2170,47 @@ pre code {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
-.form-control::-ms-expand, form fieldset div input::-ms-expand, form fieldset div select::-ms-expand {
+.form-control::-ms-expand, form input::-ms-expand, form select::-ms-expand {
   background-color: transparent;
   border: 0;
 }
 
-.form-control:focus, form fieldset div input:focus, form fieldset div select:focus {
+.form-control:focus, form input:focus, form select:focus {
   color: #464a4c;
   background-color: #fff;
   border-color: #5cb3fd;
   outline: none;
 }
 
-.form-control::-webkit-input-placeholder, form fieldset div input::-webkit-input-placeholder, form fieldset div select::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, form input::-webkit-input-placeholder, form select::-webkit-input-placeholder {
   color: #636c72;
   opacity: 1;
 }
 
-.form-control:-ms-input-placeholder, form fieldset div input:-ms-input-placeholder, form fieldset div select:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, form input:-ms-input-placeholder, form select:-ms-input-placeholder {
   color: #636c72;
   opacity: 1;
 }
 
-.form-control::placeholder, form fieldset div input::placeholder, form fieldset div select::placeholder {
+.form-control::placeholder, form input::placeholder, form select::placeholder {
   color: #636c72;
   opacity: 1;
 }
 
-.form-control:disabled, form fieldset div input:disabled, form fieldset div select:disabled, .form-control[readonly], form fieldset div input[readonly], form fieldset div select[readonly] {
+.form-control:disabled, form input:disabled, form select:disabled, .form-control[readonly], form input[readonly], form select[readonly] {
   background-color: #eceeef;
   opacity: 1;
 }
 
-.form-control:disabled, form fieldset div input:disabled, form fieldset div select:disabled {
+.form-control:disabled, form input:disabled, form select:disabled {
   cursor: not-allowed;
 }
 
-select.form-control:not([size]):not([multiple]), form fieldset div select:not([size]):not([multiple]) {
+select.form-control:not([size]):not([multiple]), form select:not([size]):not([multiple]) {
   height: calc(2.25rem + 2px);
 }
 
-select.form-control:focus::-ms-value, form fieldset div select:focus::-ms-value {
+select.form-control:focus::-ms-value, form select:focus::-ms-value {
   color: #464a4c;
   background-color: #fff;
 }
@@ -2254,70 +2254,74 @@ select.form-control:focus::-ms-value, form fieldset div select:focus::-ms-value 
   border-width: 1px 0;
 }
 
-.form-control-static.form-control-sm, .input-group-sm > .form-control-static.form-control, form fieldset div .input-group-sm > input.form-control-static, form fieldset div .input-group-sm > select.form-control-static,
+.form-control-static.form-control-sm, .input-group-sm > .form-control-static.form-control, form .input-group-sm > input.form-control-static, form .input-group-sm > select.form-control-static,
 .input-group-sm > .form-control-static.input-group-addon,
-.input-group-sm > .input-group-btn > .form-control-static.btn, form fieldset div
-.input-group-sm > .input-group-btn > input.form-control-static[type="submit"], form fieldset div
-.input-group-sm > .input-group-btn > input.form-control-static[type="button"], form fieldset div
-.input-group-sm > .input-group-btn > input.form-control-static[type="reset"], form fieldset div
-.input-group-sm > .input-group-btn > button.form-control-static, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, form fieldset div .input-group-lg > input.form-control-static, form fieldset div .input-group-lg > select.form-control-static,
+.input-group-sm > .input-group-btn > .form-control-static.btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-sm > .input-group-btn > input.form-control-static[type="submit"], form
+.input-group-sm > .input-group-btn > input.form-control-static[type="submit"], form
+.input-group-sm > .input-group-btn > input.form-control-static[type="button"], form
+.input-group-sm > .input-group-btn > input.form-control-static[type="reset"], form
+.input-group-sm > .input-group-btn > button.form-control-static, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, form .input-group-lg > input.form-control-static, form .input-group-lg > select.form-control-static,
 .input-group-lg > .form-control-static.input-group-addon,
-.input-group-lg > .input-group-btn > .form-control-static.btn, form fieldset div
-.input-group-lg > .input-group-btn > input.form-control-static[type="submit"], form fieldset div
-.input-group-lg > .input-group-btn > input.form-control-static[type="button"], form fieldset div
-.input-group-lg > .input-group-btn > input.form-control-static[type="reset"], form fieldset div
+.input-group-lg > .input-group-btn > .form-control-static.btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-lg > .input-group-btn > input.form-control-static[type="submit"], form
+.input-group-lg > .input-group-btn > input.form-control-static[type="submit"], form
+.input-group-lg > .input-group-btn > input.form-control-static[type="button"], form
+.input-group-lg > .input-group-btn > input.form-control-static[type="reset"], form
 .input-group-lg > .input-group-btn > button.form-control-static {
   padding-right: 0;
   padding-left: 0;
 }
 
-.form-control-sm, .input-group-sm > .form-control, form fieldset div .input-group-sm > input, form fieldset div .input-group-sm > select,
+.form-control-sm, .input-group-sm > .form-control, form .input-group-sm > input, form .input-group-sm > select,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn, form fieldset div
-.input-group-sm > .input-group-btn > input[type="submit"], form fieldset div
-.input-group-sm > .input-group-btn > input[type="button"], form fieldset div
-.input-group-sm > .input-group-btn > input[type="reset"], form fieldset div
-.input-group-sm > .input-group-btn > button[type="submit"], form fieldset div
-.input-group-sm > .input-group-btn > button[type="button"], form fieldset div
-.input-group-sm > .input-group-btn > button[type="reset"], form fieldset div
+.input-group-sm > .input-group-btn > .btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-sm > .input-group-btn > input[type="submit"], form
+.input-group-sm > .input-group-btn > input[type="submit"], form
+.input-group-sm > .input-group-btn > input[type="button"], form
+.input-group-sm > .input-group-btn > input[type="reset"], form
+.input-group-sm > .input-group-btn > button[type="submit"], form
+.input-group-sm > .input-group-btn > button[type="button"], form
+.input-group-sm > .input-group-btn > button[type="reset"], form
 .input-group-sm > .input-group-btn > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
 
-select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), form fieldset div .input-group-sm > select:not([size]):not([multiple]),
+select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), form .input-group-sm > select:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]) {
   height: 1.8125rem;
 }
 
-.form-control-lg, .input-group-lg > .form-control, form fieldset div .input-group-lg > input, form fieldset div .input-group-lg > select,
+.form-control-lg, .input-group-lg > .form-control, form .input-group-lg > input, form .input-group-lg > select,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn, form fieldset div
-.input-group-lg > .input-group-btn > input[type="submit"], form fieldset div
-.input-group-lg > .input-group-btn > input[type="button"], form fieldset div
-.input-group-lg > .input-group-btn > input[type="reset"], form fieldset div
-.input-group-lg > .input-group-btn > button[type="submit"], form fieldset div
-.input-group-lg > .input-group-btn > button[type="button"], form fieldset div
-.input-group-lg > .input-group-btn > button[type="reset"], form fieldset div
+.input-group-lg > .input-group-btn > .btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-lg > .input-group-btn > input[type="submit"], form
+.input-group-lg > .input-group-btn > input[type="submit"], form
+.input-group-lg > .input-group-btn > input[type="button"], form
+.input-group-lg > .input-group-btn > input[type="reset"], form
+.input-group-lg > .input-group-btn > button[type="submit"], form
+.input-group-lg > .input-group-btn > button[type="button"], form
+.input-group-lg > .input-group-btn > button[type="reset"], form
 .input-group-lg > .input-group-btn > button {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), form fieldset div .input-group-lg > select:not([size]):not([multiple]),
+select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), form .input-group-lg > select:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
   height: 3.16666667rem;
 }
 
-.form-group, form fieldset, form fieldset div {
+.form-group, form fieldset, form div {
   margin-bottom: 1rem;
 }
 
-.form-text, form fieldset div small {
+.form-text, form small {
   display: block;
   margin-top: 0.25rem;
 }
@@ -2382,7 +2386,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: #5cb85c;
 }
 
-.has-success .form-control, .has-success form fieldset div input, form fieldset div .has-success input, .has-success form fieldset div select, form fieldset div .has-success select {
+.has-success .form-control, .has-success form input, form .has-success input, .has-success form select, form .has-success select {
   border-color: #5cb85c;
 }
 
@@ -2404,7 +2408,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: #f0ad4e;
 }
 
-.has-warning .form-control, .has-warning form fieldset div input, form fieldset div .has-warning input, .has-warning form fieldset div select, form fieldset div .has-warning select {
+.has-warning .form-control, .has-warning form input, form .has-warning input, .has-warning form select, form .has-warning select {
   border-color: #f0ad4e;
 }
 
@@ -2426,7 +2430,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   color: #d9534f;
 }
 
-.has-danger .form-control, .has-danger form fieldset div input, form fieldset div .has-danger input, .has-danger form fieldset div select, form fieldset div .has-danger select {
+.has-danger .form-control, .has-danger form input, form .has-danger input, .has-danger form select, form .has-danger select {
   border-color: #d9534f;
 }
 
@@ -2470,7 +2474,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
             justify-content: center;
     margin-bottom: 0;
   }
-  .form-inline .form-group, .form-inline form fieldset, form .form-inline fieldset, .form-inline form fieldset div, form fieldset .form-inline div {
+  .form-inline .form-group, .form-inline form fieldset, form .form-inline fieldset, .form-inline form div, form .form-inline div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2486,7 +2490,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
             align-items: center;
     margin-bottom: 0;
   }
-  .form-inline .form-control, .form-inline form fieldset div input, form fieldset div .form-inline input, .form-inline form fieldset div select, form fieldset div .form-inline select {
+  .form-inline .form-control, .form-inline form input, form .form-inline input, .form-inline form select, form .form-inline select {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -2547,7 +2551,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   }
 }
 
-.btn, form fieldset div input[type="submit"], form fieldset div input[type="button"], form fieldset div input[type="reset"], form fieldset div button[type="submit"], form fieldset div button[type="button"], form fieldset div button[type="reset"], form fieldset div button {
+.btn, header[role="document-header"] #header_login #login_wrap form input[type="submit"], form input[type="submit"], form input[type="button"], form input[type="reset"], form button[type="submit"], form button[type="button"], form button[type="reset"], form button {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -2565,21 +2569,21 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   transition: all 0.2s ease-in-out;
 }
 
-.btn:focus, form fieldset div input[type="submit"]:focus, form fieldset div input[type="button"]:focus, form fieldset div input[type="reset"]:focus, form fieldset div button:focus, .btn:hover, form fieldset div input[type="submit"]:hover, form fieldset div input[type="button"]:hover, form fieldset div input[type="reset"]:hover, form fieldset div button:hover {
+.btn:focus, header[role="document-header"] #header_login #login_wrap form input[type="submit"]:focus, form input[type="submit"]:focus, form input[type="button"]:focus, form input[type="reset"]:focus, form button:focus, .btn:hover, header[role="document-header"] #header_login #login_wrap form input[type="submit"]:hover, form input[type="submit"]:hover, form input[type="button"]:hover, form input[type="reset"]:hover, form button:hover {
   text-decoration: none;
 }
 
-.btn:focus, form fieldset div input[type="submit"]:focus, form fieldset div input[type="button"]:focus, form fieldset div input[type="reset"]:focus, form fieldset div button:focus, .btn.focus, form fieldset div input.focus[type="submit"], form fieldset div input.focus[type="button"], form fieldset div input.focus[type="reset"], form fieldset div button.focus {
+.btn:focus, header[role="document-header"] #header_login #login_wrap form input[type="submit"]:focus, form input[type="submit"]:focus, form input[type="button"]:focus, form input[type="reset"]:focus, form button:focus, .btn.focus, header[role="document-header"] #header_login #login_wrap form input.focus[type="submit"], form input.focus[type="submit"], form input.focus[type="button"], form input.focus[type="reset"], form button.focus {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
 }
 
-.btn.disabled, form fieldset div input.disabled[type="submit"], form fieldset div input.disabled[type="button"], form fieldset div input.disabled[type="reset"], form fieldset div button.disabled, .btn:disabled, form fieldset div input[type="submit"]:disabled, form fieldset div input[type="button"]:disabled, form fieldset div input[type="reset"]:disabled, form fieldset div button:disabled {
+.btn.disabled, header[role="document-header"] #header_login #login_wrap form input.disabled[type="submit"], form input.disabled[type="submit"], form input.disabled[type="button"], form input.disabled[type="reset"], form button.disabled, .btn:disabled, header[role="document-header"] #header_login #login_wrap form input[type="submit"]:disabled, form input[type="submit"]:disabled, form input[type="button"]:disabled, form input[type="reset"]:disabled, form button:disabled {
   cursor: not-allowed;
   opacity: .65;
 }
 
-.btn:active, form fieldset div input[type="submit"]:active, form fieldset div input[type="button"]:active, form fieldset div input[type="reset"]:active, form fieldset div button:active, .btn.active, form fieldset div input.active[type="submit"], form fieldset div input.active[type="button"], form fieldset div input.active[type="reset"], form fieldset div button.active {
+.btn:active, header[role="document-header"] #header_login #login_wrap form input[type="submit"]:active, form input[type="submit"]:active, form input[type="button"]:active, form input[type="reset"]:active, form button:active, .btn.active, header[role="document-header"] #header_login #login_wrap form input.active[type="submit"], form input.active[type="submit"], form input.active[type="button"], form input.active[type="reset"], form button.active {
   background-image: none;
 }
 
@@ -2588,30 +2592,30 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 
-.btn-primary, form fieldset div input[type="submit"], form fieldset div button[type="submit"] {
+.btn-primary, form input[type="submit"], form button[type="submit"] {
   color: #fff;
   background-color: #0275d8;
   border-color: #0275d8;
 }
 
-.btn-primary:hover, form fieldset div input[type="submit"]:hover, form fieldset div button[type="submit"]:hover {
+.btn-primary:hover, form input[type="submit"]:hover, form button[type="submit"]:hover {
   color: #fff;
   background-color: #025aa5;
   border-color: #01549b;
 }
 
-.btn-primary:focus, form fieldset div input[type="submit"]:focus, form fieldset div button[type="submit"]:focus, .btn-primary.focus, form fieldset div input.focus[type="submit"], form fieldset div button.focus[type="submit"] {
+.btn-primary:focus, form input[type="submit"]:focus, form button[type="submit"]:focus, .btn-primary.focus, form input.focus[type="submit"], form button.focus[type="submit"] {
   box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
 }
 
-.btn-primary.disabled, form fieldset div input.disabled[type="submit"], form fieldset div button.disabled[type="submit"], .btn-primary:disabled, form fieldset div input[type="submit"]:disabled, form fieldset div button[type="submit"]:disabled {
+.btn-primary.disabled, form input.disabled[type="submit"], form button.disabled[type="submit"], .btn-primary:disabled, form input[type="submit"]:disabled, form button[type="submit"]:disabled {
   background-color: #0275d8;
   border-color: #0275d8;
 }
 
-.btn-primary:active, form fieldset div input[type="submit"]:active, form fieldset div button[type="submit"]:active, .btn-primary.active, form fieldset div input.active[type="submit"], form fieldset div button.active[type="submit"],
-.show > .btn-primary.dropdown-toggle, form fieldset div
-.show > input.dropdown-toggle[type="submit"], form fieldset div
+.btn-primary:active, form input[type="submit"]:active, form button[type="submit"]:active, .btn-primary.active, form input.active[type="submit"], form button.active[type="submit"],
+.show > .btn-primary.dropdown-toggle, form
+.show > input.dropdown-toggle[type="submit"], form
 .show > button.dropdown-toggle[type="submit"] {
   color: #fff;
   background-color: #025aa5;
@@ -2619,30 +2623,30 @@ fieldset[disabled] a.btn {
   border-color: #01549b;
 }
 
-.btn-secondary, form fieldset div input[type="button"], form fieldset div button[type="button"] {
+.btn-secondary, form input[type="button"], form button[type="button"] {
   color: #292b2c;
   background-color: #fff;
   border-color: #ccc;
 }
 
-.btn-secondary:hover, form fieldset div input[type="button"]:hover, form fieldset div button[type="button"]:hover {
+.btn-secondary:hover, form input[type="button"]:hover, form button[type="button"]:hover {
   color: #292b2c;
   background-color: #e6e5e5;
   border-color: #adadad;
 }
 
-.btn-secondary:focus, form fieldset div input[type="button"]:focus, form fieldset div button[type="button"]:focus, .btn-secondary.focus, form fieldset div input.focus[type="button"], form fieldset div button.focus[type="button"] {
+.btn-secondary:focus, form input[type="button"]:focus, form button[type="button"]:focus, .btn-secondary.focus, form input.focus[type="button"], form button.focus[type="button"] {
   box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
 }
 
-.btn-secondary.disabled, form fieldset div input.disabled[type="button"], form fieldset div button.disabled[type="button"], .btn-secondary:disabled, form fieldset div input[type="button"]:disabled, form fieldset div button[type="button"]:disabled {
+.btn-secondary.disabled, form input.disabled[type="button"], form button.disabled[type="button"], .btn-secondary:disabled, form input[type="button"]:disabled, form button[type="button"]:disabled {
   background-color: #fff;
   border-color: #ccc;
 }
 
-.btn-secondary:active, form fieldset div input[type="button"]:active, form fieldset div button[type="button"]:active, .btn-secondary.active, form fieldset div input.active[type="button"], form fieldset div button.active[type="button"],
-.show > .btn-secondary.dropdown-toggle, form fieldset div
-.show > input.dropdown-toggle[type="button"], form fieldset div
+.btn-secondary:active, form input[type="button"]:active, form button[type="button"]:active, .btn-secondary.active, form input.active[type="button"], form button.active[type="button"],
+.show > .btn-secondary.dropdown-toggle, form
+.show > input.dropdown-toggle[type="button"], form
 .show > button.dropdown-toggle[type="button"] {
   color: #292b2c;
   background-color: #e6e5e5;
@@ -2708,30 +2712,30 @@ fieldset[disabled] a.btn {
   border-color: #419641;
 }
 
-.btn-warning, form fieldset div input[type="reset"], form fieldset div button[type="reset"] {
+.btn-warning, form input[type="reset"], form button[type="reset"] {
   color: #fff;
   background-color: #f0ad4e;
   border-color: #f0ad4e;
 }
 
-.btn-warning:hover, form fieldset div input[type="reset"]:hover, form fieldset div button[type="reset"]:hover {
+.btn-warning:hover, form input[type="reset"]:hover, form button[type="reset"]:hover {
   color: #fff;
   background-color: #ec971f;
   border-color: #eb9316;
 }
 
-.btn-warning:focus, form fieldset div input[type="reset"]:focus, form fieldset div button[type="reset"]:focus, .btn-warning.focus, form fieldset div input.focus[type="reset"], form fieldset div button.focus[type="reset"] {
+.btn-warning:focus, form input[type="reset"]:focus, form button[type="reset"]:focus, .btn-warning.focus, form input.focus[type="reset"], form button.focus[type="reset"] {
   box-shadow: 0 0 0 2px rgba(240, 173, 78, 0.5);
 }
 
-.btn-warning.disabled, form fieldset div input.disabled[type="reset"], form fieldset div button.disabled[type="reset"], .btn-warning:disabled, form fieldset div input[type="reset"]:disabled, form fieldset div button[type="reset"]:disabled {
+.btn-warning.disabled, form input.disabled[type="reset"], form button.disabled[type="reset"], .btn-warning:disabled, form input[type="reset"]:disabled, form button[type="reset"]:disabled {
   background-color: #f0ad4e;
   border-color: #f0ad4e;
 }
 
-.btn-warning:active, form fieldset div input[type="reset"]:active, form fieldset div button[type="reset"]:active, .btn-warning.active, form fieldset div input.active[type="reset"], form fieldset div button.active[type="reset"],
-.show > .btn-warning.dropdown-toggle, form fieldset div
-.show > input.dropdown-toggle[type="reset"], form fieldset div
+.btn-warning:active, form input[type="reset"]:active, form button[type="reset"]:active, .btn-warning.active, form input.active[type="reset"], form button.active[type="reset"],
+.show > .btn-warning.dropdown-toggle, form
+.show > input.dropdown-toggle[type="reset"], form
 .show > button.dropdown-toggle[type="reset"] {
   color: #fff;
   background-color: #ec971f;
@@ -2974,13 +2978,13 @@ fieldset[disabled] a.btn {
   text-decoration: none;
 }
 
-.btn-lg, .btn-group-lg > .btn, form fieldset div .btn-group-lg > input[type="submit"], form fieldset div .btn-group-lg > input[type="button"], form fieldset div .btn-group-lg > input[type="reset"], form fieldset div .btn-group-lg > button[type="submit"], form fieldset div .btn-group-lg > button[type="button"], form fieldset div .btn-group-lg > button[type="reset"], form fieldset div .btn-group-lg > button {
+.btn-lg, .btn-group-lg > .btn, header[role="document-header"] #header_login #login_wrap form .btn-group-lg > input[type="submit"], form .btn-group-lg > input[type="submit"], form .btn-group-lg > input[type="button"], form .btn-group-lg > input[type="reset"], form .btn-group-lg > button[type="submit"], form .btn-group-lg > button[type="button"], form .btn-group-lg > button[type="reset"], form .btn-group-lg > button {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, form fieldset div .btn-group-sm > input[type="submit"], form fieldset div .btn-group-sm > input[type="button"], form fieldset div .btn-group-sm > input[type="reset"], form fieldset div .btn-group-sm > button[type="submit"], form fieldset div .btn-group-sm > button[type="button"], form fieldset div .btn-group-sm > button[type="reset"], form fieldset div .btn-group-sm > button {
+.btn-sm, .btn-group-sm > .btn, header[role="document-header"] #header_login #login_wrap form .btn-group-sm > input[type="submit"], form .btn-group-sm > input[type="submit"], form .btn-group-sm > input[type="button"], form .btn-group-sm > input[type="reset"], form .btn-group-sm > button[type="submit"], form .btn-group-sm > button[type="button"], form .btn-group-sm > button[type="reset"], form .btn-group-sm > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -3168,14 +3172,15 @@ tbody.collapse.show {
   vertical-align: middle;
 }
 
-.btn-group > .btn, form fieldset div .btn-group > input[type="submit"], form fieldset div .btn-group > input[type="button"], form fieldset div .btn-group > input[type="reset"], form fieldset div .btn-group > button[type="submit"], form fieldset div .btn-group > button[type="button"], form fieldset div .btn-group > button[type="reset"], form fieldset div .btn-group > button,
-.btn-group-vertical > .btn, form fieldset div
-.btn-group-vertical > input[type="submit"], form fieldset div
-.btn-group-vertical > input[type="button"], form fieldset div
-.btn-group-vertical > input[type="reset"], form fieldset div
-.btn-group-vertical > button[type="submit"], form fieldset div
-.btn-group-vertical > button[type="button"], form fieldset div
-.btn-group-vertical > button[type="reset"], form fieldset div
+.btn-group > .btn, header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"], form .btn-group > input[type="submit"], form .btn-group > input[type="button"], form .btn-group > input[type="reset"], form .btn-group > button[type="submit"], form .btn-group > button[type="button"], form .btn-group > button[type="reset"], form .btn-group > button,
+.btn-group-vertical > .btn, header[role="document-header"] #header_login #login_wrap form
+.btn-group-vertical > input[type="submit"], form
+.btn-group-vertical > input[type="submit"], form
+.btn-group-vertical > input[type="button"], form
+.btn-group-vertical > input[type="reset"], form
+.btn-group-vertical > button[type="submit"], form
+.btn-group-vertical > button[type="button"], form
+.btn-group-vertical > button[type="reset"], form
 .btn-group-vertical > button {
   position: relative;
   -webkit-box-flex: 0;
@@ -3183,234 +3188,268 @@ tbody.collapse.show {
           flex: 0 1 auto;
 }
 
-.btn-group > .btn:hover, form fieldset div .btn-group > input[type="submit"]:hover, form fieldset div .btn-group > input[type="button"]:hover, form fieldset div .btn-group > input[type="reset"]:hover, form fieldset div .btn-group > button[type="submit"]:hover, form fieldset div .btn-group > button[type="button"]:hover, form fieldset div .btn-group > button[type="reset"]:hover, form fieldset div .btn-group > button:hover,
-.btn-group-vertical > .btn:hover, form fieldset div
-.btn-group-vertical > input[type="submit"]:hover, form fieldset div
-.btn-group-vertical > input[type="button"]:hover, form fieldset div
-.btn-group-vertical > input[type="reset"]:hover, form fieldset div
-.btn-group-vertical > button[type="submit"]:hover, form fieldset div
-.btn-group-vertical > button[type="button"]:hover, form fieldset div
-.btn-group-vertical > button[type="reset"]:hover, form fieldset div
+.btn-group > .btn:hover, header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:hover, form .btn-group > input[type="submit"]:hover, form .btn-group > input[type="button"]:hover, form .btn-group > input[type="reset"]:hover, form .btn-group > button[type="submit"]:hover, form .btn-group > button[type="button"]:hover, form .btn-group > button[type="reset"]:hover, form .btn-group > button:hover,
+.btn-group-vertical > .btn:hover, header[role="document-header"] #header_login #login_wrap form
+.btn-group-vertical > input[type="submit"]:hover, form
+.btn-group-vertical > input[type="submit"]:hover, form
+.btn-group-vertical > input[type="button"]:hover, form
+.btn-group-vertical > input[type="reset"]:hover, form
+.btn-group-vertical > button[type="submit"]:hover, form
+.btn-group-vertical > button[type="button"]:hover, form
+.btn-group-vertical > button[type="reset"]:hover, form
 .btn-group-vertical > button:hover {
   z-index: 2;
 }
 
-.btn-group > .btn:focus, form fieldset div .btn-group > input[type="submit"]:focus, form fieldset div .btn-group > input[type="button"]:focus, form fieldset div .btn-group > input[type="reset"]:focus, form fieldset div .btn-group > button[type="submit"]:focus, form fieldset div .btn-group > button[type="button"]:focus, form fieldset div .btn-group > button[type="reset"]:focus, form fieldset div .btn-group > button:focus, .btn-group > .btn:active, form fieldset div .btn-group > input[type="submit"]:active, form fieldset div .btn-group > input[type="button"]:active, form fieldset div .btn-group > input[type="reset"]:active, form fieldset div .btn-group > button[type="submit"]:active, form fieldset div .btn-group > button[type="button"]:active, form fieldset div .btn-group > button[type="reset"]:active, form fieldset div .btn-group > button:active, .btn-group > .btn.active, form fieldset div .btn-group > input.active[type="submit"], form fieldset div .btn-group > input.active[type="button"], form fieldset div .btn-group > input.active[type="reset"], form fieldset div .btn-group > button.active[type="submit"], form fieldset div .btn-group > button.active[type="button"], form fieldset div .btn-group > button.active[type="reset"], form fieldset div .btn-group > button.active,
-.btn-group-vertical > .btn:focus, form fieldset div
-.btn-group-vertical > input[type="submit"]:focus, form fieldset div
-.btn-group-vertical > input[type="button"]:focus, form fieldset div
-.btn-group-vertical > input[type="reset"]:focus, form fieldset div
-.btn-group-vertical > button[type="submit"]:focus, form fieldset div
-.btn-group-vertical > button[type="button"]:focus, form fieldset div
-.btn-group-vertical > button[type="reset"]:focus, form fieldset div
+.btn-group > .btn:focus, header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:focus, form .btn-group > input[type="submit"]:focus, form .btn-group > input[type="button"]:focus, form .btn-group > input[type="reset"]:focus, form .btn-group > button[type="submit"]:focus, form .btn-group > button[type="button"]:focus, form .btn-group > button[type="reset"]:focus, form .btn-group > button:focus, .btn-group > .btn:active, header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:active, form .btn-group > input[type="submit"]:active, form .btn-group > input[type="button"]:active, form .btn-group > input[type="reset"]:active, form .btn-group > button[type="submit"]:active, form .btn-group > button[type="button"]:active, form .btn-group > button[type="reset"]:active, form .btn-group > button:active, .btn-group > .btn.active, header[role="document-header"] #header_login #login_wrap form .btn-group > input.active[type="submit"], form .btn-group > input.active[type="submit"], form .btn-group > input.active[type="button"], form .btn-group > input.active[type="reset"], form .btn-group > button.active[type="submit"], form .btn-group > button.active[type="button"], form .btn-group > button.active[type="reset"], form .btn-group > button.active,
+.btn-group-vertical > .btn:focus, header[role="document-header"] #header_login #login_wrap form
+.btn-group-vertical > input[type="submit"]:focus, form
+.btn-group-vertical > input[type="submit"]:focus, form
+.btn-group-vertical > input[type="button"]:focus, form
+.btn-group-vertical > input[type="reset"]:focus, form
+.btn-group-vertical > button[type="submit"]:focus, form
+.btn-group-vertical > button[type="button"]:focus, form
+.btn-group-vertical > button[type="reset"]:focus, form
 .btn-group-vertical > button:focus,
-.btn-group-vertical > .btn:active, form fieldset div
-.btn-group-vertical > input[type="submit"]:active, form fieldset div
-.btn-group-vertical > input[type="button"]:active, form fieldset div
-.btn-group-vertical > input[type="reset"]:active, form fieldset div
-.btn-group-vertical > button[type="submit"]:active, form fieldset div
-.btn-group-vertical > button[type="button"]:active, form fieldset div
-.btn-group-vertical > button[type="reset"]:active, form fieldset div
+.btn-group-vertical > .btn:active, header[role="document-header"] #header_login #login_wrap form
+.btn-group-vertical > input[type="submit"]:active, form
+.btn-group-vertical > input[type="submit"]:active, form
+.btn-group-vertical > input[type="button"]:active, form
+.btn-group-vertical > input[type="reset"]:active, form
+.btn-group-vertical > button[type="submit"]:active, form
+.btn-group-vertical > button[type="button"]:active, form
+.btn-group-vertical > button[type="reset"]:active, form
 .btn-group-vertical > button:active,
-.btn-group-vertical > .btn.active, form fieldset div
-.btn-group-vertical > input.active[type="submit"], form fieldset div
-.btn-group-vertical > input.active[type="button"], form fieldset div
-.btn-group-vertical > input.active[type="reset"], form fieldset div
-.btn-group-vertical > button.active[type="submit"], form fieldset div
-.btn-group-vertical > button.active[type="button"], form fieldset div
-.btn-group-vertical > button.active[type="reset"], form fieldset div
+.btn-group-vertical > .btn.active, header[role="document-header"] #header_login #login_wrap form
+.btn-group-vertical > input.active[type="submit"], form
+.btn-group-vertical > input.active[type="submit"], form
+.btn-group-vertical > input.active[type="button"], form
+.btn-group-vertical > input.active[type="reset"], form
+.btn-group-vertical > button.active[type="submit"], form
+.btn-group-vertical > button.active[type="button"], form
+.btn-group-vertical > button.active[type="reset"], form
 .btn-group-vertical > button.active {
   z-index: 2;
 }
 
-.btn-group .btn + .btn, .btn-group form fieldset div input[type="submit"] + .btn, form fieldset div .btn-group input[type="submit"] + .btn, .btn-group form fieldset div input[type="button"] + .btn, form fieldset div .btn-group input[type="button"] + .btn, .btn-group form fieldset div input[type="reset"] + .btn, form fieldset div .btn-group input[type="reset"] + .btn, .btn-group form fieldset div button[type="submit"] + .btn, form fieldset div .btn-group button[type="submit"] + .btn, .btn-group form fieldset div button[type="button"] + .btn, form fieldset div .btn-group button[type="button"] + .btn, .btn-group form fieldset div button[type="reset"] + .btn, form fieldset div .btn-group button[type="reset"] + .btn, .btn-group form fieldset div button + .btn, form fieldset div .btn-group button + .btn, .btn-group form fieldset div .btn + input[type="submit"], form fieldset div .btn-group .btn + input[type="submit"], .btn-group form fieldset div input[type="submit"] + input[type="submit"], form fieldset div .btn-group input[type="submit"] + input[type="submit"], .btn-group form fieldset div input[type="button"] + input[type="submit"], form fieldset div .btn-group input[type="button"] + input[type="submit"], .btn-group form fieldset div input[type="reset"] + input[type="submit"], form fieldset div .btn-group input[type="reset"] + input[type="submit"], .btn-group form fieldset div button[type="submit"] + input[type="submit"], form fieldset div .btn-group button[type="submit"] + input[type="submit"], .btn-group form fieldset div button[type="button"] + input[type="submit"], form fieldset div .btn-group button[type="button"] + input[type="submit"], .btn-group form fieldset div button[type="reset"] + input[type="submit"], form fieldset div .btn-group button[type="reset"] + input[type="submit"], .btn-group form fieldset div button + input[type="submit"], form fieldset div .btn-group button + input[type="submit"], .btn-group form fieldset div .btn + input[type="button"], form fieldset div .btn-group .btn + input[type="button"], .btn-group form fieldset div input[type="submit"] + input[type="button"], form fieldset div .btn-group input[type="submit"] + input[type="button"], .btn-group form fieldset div input[type="button"] + input[type="button"], form fieldset div .btn-group input[type="button"] + input[type="button"], .btn-group form fieldset div input[type="reset"] + input[type="button"], form fieldset div .btn-group input[type="reset"] + input[type="button"], .btn-group form fieldset div button[type="submit"] + input[type="button"], form fieldset div .btn-group button[type="submit"] + input[type="button"], .btn-group form fieldset div button[type="button"] + input[type="button"], form fieldset div .btn-group button[type="button"] + input[type="button"], .btn-group form fieldset div button[type="reset"] + input[type="button"], form fieldset div .btn-group button[type="reset"] + input[type="button"], .btn-group form fieldset div button + input[type="button"], form fieldset div .btn-group button + input[type="button"], .btn-group form fieldset div .btn + input[type="reset"], form fieldset div .btn-group .btn + input[type="reset"], .btn-group form fieldset div input[type="submit"] + input[type="reset"], form fieldset div .btn-group input[type="submit"] + input[type="reset"], .btn-group form fieldset div input[type="button"] + input[type="reset"], form fieldset div .btn-group input[type="button"] + input[type="reset"], .btn-group form fieldset div input[type="reset"] + input[type="reset"], form fieldset div .btn-group input[type="reset"] + input[type="reset"], .btn-group form fieldset div button[type="submit"] + input[type="reset"], form fieldset div .btn-group button[type="submit"] + input[type="reset"], .btn-group form fieldset div button[type="button"] + input[type="reset"], form fieldset div .btn-group button[type="button"] + input[type="reset"], .btn-group form fieldset div button[type="reset"] + input[type="reset"], form fieldset div .btn-group button[type="reset"] + input[type="reset"], .btn-group form fieldset div button + input[type="reset"], form fieldset div .btn-group button + input[type="reset"], .btn-group form fieldset div .btn + button[type="submit"], form fieldset div .btn-group .btn + button[type="submit"], .btn-group form fieldset div input[type="submit"] + button[type="submit"], form fieldset div .btn-group input[type="submit"] + button[type="submit"], .btn-group form fieldset div input[type="button"] + button[type="submit"], form fieldset div .btn-group input[type="button"] + button[type="submit"], .btn-group form fieldset div input[type="reset"] + button[type="submit"], form fieldset div .btn-group input[type="reset"] + button[type="submit"], .btn-group form fieldset div button[type="submit"] + button[type="submit"], form fieldset div .btn-group button[type="submit"] + button[type="submit"], .btn-group form fieldset div button[type="button"] + button[type="submit"], form fieldset div .btn-group button[type="button"] + button[type="submit"], .btn-group form fieldset div button[type="reset"] + button[type="submit"], form fieldset div .btn-group button[type="reset"] + button[type="submit"], .btn-group form fieldset div button + button[type="submit"], form fieldset div .btn-group button + button[type="submit"], .btn-group form fieldset div .btn + button[type="button"], form fieldset div .btn-group .btn + button[type="button"], .btn-group form fieldset div input[type="submit"] + button[type="button"], form fieldset div .btn-group input[type="submit"] + button[type="button"], .btn-group form fieldset div input[type="button"] + button[type="button"], form fieldset div .btn-group input[type="button"] + button[type="button"], .btn-group form fieldset div input[type="reset"] + button[type="button"], form fieldset div .btn-group input[type="reset"] + button[type="button"], .btn-group form fieldset div button[type="submit"] + button[type="button"], form fieldset div .btn-group button[type="submit"] + button[type="button"], .btn-group form fieldset div button[type="button"] + button[type="button"], form fieldset div .btn-group button[type="button"] + button[type="button"], .btn-group form fieldset div button[type="reset"] + button[type="button"], form fieldset div .btn-group button[type="reset"] + button[type="button"], .btn-group form fieldset div button + button[type="button"], form fieldset div .btn-group button + button[type="button"], .btn-group form fieldset div .btn + button[type="reset"], form fieldset div .btn-group .btn + button[type="reset"], .btn-group form fieldset div input[type="submit"] + button[type="reset"], form fieldset div .btn-group input[type="submit"] + button[type="reset"], .btn-group form fieldset div input[type="button"] + button[type="reset"], form fieldset div .btn-group input[type="button"] + button[type="reset"], .btn-group form fieldset div input[type="reset"] + button[type="reset"], form fieldset div .btn-group input[type="reset"] + button[type="reset"], .btn-group form fieldset div button[type="submit"] + button[type="reset"], form fieldset div .btn-group button[type="submit"] + button[type="reset"], .btn-group form fieldset div button[type="button"] + button[type="reset"], form fieldset div .btn-group button[type="button"] + button[type="reset"], .btn-group form fieldset div button[type="reset"] + button[type="reset"], form fieldset div .btn-group button[type="reset"] + button[type="reset"], .btn-group form fieldset div button + button[type="reset"], form fieldset div .btn-group button + button[type="reset"], .btn-group form fieldset div .btn + button, form fieldset div .btn-group .btn + button, .btn-group form fieldset div input[type="submit"] + button, form fieldset div .btn-group input[type="submit"] + button, .btn-group form fieldset div input[type="button"] + button, form fieldset div .btn-group input[type="button"] + button, .btn-group form fieldset div input[type="reset"] + button, form fieldset div .btn-group input[type="reset"] + button, .btn-group form fieldset div button[type="submit"] + button, form fieldset div .btn-group button[type="submit"] + button, .btn-group form fieldset div button[type="button"] + button, form fieldset div .btn-group button[type="button"] + button, .btn-group form fieldset div button[type="reset"] + button, form fieldset div .btn-group button[type="reset"] + button, .btn-group form fieldset div button + button, form fieldset div .btn-group button + button,
+.btn-group .btn + .btn, .btn-group header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .btn, header[role="document-header"] #header_login #login_wrap form .btn-group input[type="submit"] + .btn, .btn-group form input[type="submit"] + .btn, form .btn-group input[type="submit"] + .btn, .btn-group form input[type="button"] + .btn, form .btn-group input[type="button"] + .btn, .btn-group form input[type="reset"] + .btn, form .btn-group input[type="reset"] + .btn, .btn-group form button[type="submit"] + .btn, form .btn-group button[type="submit"] + .btn, .btn-group form button[type="button"] + .btn, form .btn-group button[type="button"] + .btn, .btn-group form button[type="reset"] + .btn, form .btn-group button[type="reset"] + .btn, .btn-group form button + .btn, form .btn-group button + .btn, .btn-group header[role="document-header"] #header_login #login_wrap form .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap .btn-group form input[type="submit"] + input[type="submit"], .btn-group header[role="document-header"] #header_login #login_wrap form input[type="button"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap .btn-group form input[type="button"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group input[type="button"] + input[type="submit"], .btn-group header[role="document-header"] #header_login #login_wrap form input[type="reset"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap .btn-group form input[type="reset"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group input[type="reset"] + input[type="submit"], .btn-group header[role="document-header"] #header_login #login_wrap form button + input[type="submit"], header[role="document-header"] #header_login #login_wrap .btn-group form button + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group button + input[type="submit"], .btn-group form .btn + input[type="submit"], form .btn-group .btn + input[type="submit"], .btn-group header[role="document-header"] #header_login #login_wrap form input[type="submit"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group input[type="submit"] + input[type="submit"], .btn-group form input[type="submit"] + input[type="submit"], form .btn-group input[type="submit"] + input[type="submit"], .btn-group form input[type="button"] + input[type="submit"], form .btn-group input[type="button"] + input[type="submit"], .btn-group form input[type="reset"] + input[type="submit"], form .btn-group input[type="reset"] + input[type="submit"], .btn-group form button[type="submit"] + input[type="submit"], form .btn-group button[type="submit"] + input[type="submit"], .btn-group form button[type="button"] + input[type="submit"], form .btn-group button[type="button"] + input[type="submit"], .btn-group form button[type="reset"] + input[type="submit"], form .btn-group button[type="reset"] + input[type="submit"], .btn-group form button + input[type="submit"], form .btn-group button + input[type="submit"], .btn-group form .btn + input[type="button"], form .btn-group .btn + input[type="button"], .btn-group header[role="document-header"] #header_login #login_wrap form input[type="submit"] + input[type="button"], header[role="document-header"] #header_login #login_wrap form .btn-group input[type="submit"] + input[type="button"], .btn-group form input[type="submit"] + input[type="button"], form .btn-group input[type="submit"] + input[type="button"], .btn-group form input[type="button"] + input[type="button"], form .btn-group input[type="button"] + input[type="button"], .btn-group form input[type="reset"] + input[type="button"], form .btn-group input[type="reset"] + input[type="button"], .btn-group form button[type="submit"] + input[type="button"], form .btn-group button[type="submit"] + input[type="button"], .btn-group form button[type="button"] + input[type="button"], form .btn-group button[type="button"] + input[type="button"], .btn-group form button[type="reset"] + input[type="button"], form .btn-group button[type="reset"] + input[type="button"], .btn-group form button + input[type="button"], form .btn-group button + input[type="button"], .btn-group form .btn + input[type="reset"], form .btn-group .btn + input[type="reset"], .btn-group header[role="document-header"] #header_login #login_wrap form input[type="submit"] + input[type="reset"], header[role="document-header"] #header_login #login_wrap form .btn-group input[type="submit"] + input[type="reset"], .btn-group form input[type="submit"] + input[type="reset"], form .btn-group input[type="submit"] + input[type="reset"], .btn-group form input[type="button"] + input[type="reset"], form .btn-group input[type="button"] + input[type="reset"], .btn-group form input[type="reset"] + input[type="reset"], form .btn-group input[type="reset"] + input[type="reset"], .btn-group form button[type="submit"] + input[type="reset"], form .btn-group button[type="submit"] + input[type="reset"], .btn-group form button[type="button"] + input[type="reset"], form .btn-group button[type="button"] + input[type="reset"], .btn-group form button[type="reset"] + input[type="reset"], form .btn-group button[type="reset"] + input[type="reset"], .btn-group form button + input[type="reset"], form .btn-group button + input[type="reset"], .btn-group form .btn + button[type="submit"], form .btn-group .btn + button[type="submit"], .btn-group form input[type="submit"] + button[type="submit"], form .btn-group input[type="submit"] + button[type="submit"], .btn-group form input[type="button"] + button[type="submit"], form .btn-group input[type="button"] + button[type="submit"], .btn-group form input[type="reset"] + button[type="submit"], form .btn-group input[type="reset"] + button[type="submit"], .btn-group form button[type="submit"] + button[type="submit"], form .btn-group button[type="submit"] + button[type="submit"], .btn-group form button[type="button"] + button[type="submit"], form .btn-group button[type="button"] + button[type="submit"], .btn-group form button[type="reset"] + button[type="submit"], form .btn-group button[type="reset"] + button[type="submit"], .btn-group form button + button[type="submit"], form .btn-group button + button[type="submit"], .btn-group form .btn + button[type="button"], form .btn-group .btn + button[type="button"], .btn-group form input[type="submit"] + button[type="button"], form .btn-group input[type="submit"] + button[type="button"], .btn-group form input[type="button"] + button[type="button"], form .btn-group input[type="button"] + button[type="button"], .btn-group form input[type="reset"] + button[type="button"], form .btn-group input[type="reset"] + button[type="button"], .btn-group form button[type="submit"] + button[type="button"], form .btn-group button[type="submit"] + button[type="button"], .btn-group form button[type="button"] + button[type="button"], form .btn-group button[type="button"] + button[type="button"], .btn-group form button[type="reset"] + button[type="button"], form .btn-group button[type="reset"] + button[type="button"], .btn-group form button + button[type="button"], form .btn-group button + button[type="button"], .btn-group form .btn + button[type="reset"], form .btn-group .btn + button[type="reset"], .btn-group form input[type="submit"] + button[type="reset"], form .btn-group input[type="submit"] + button[type="reset"], .btn-group form input[type="button"] + button[type="reset"], form .btn-group input[type="button"] + button[type="reset"], .btn-group form input[type="reset"] + button[type="reset"], form .btn-group input[type="reset"] + button[type="reset"], .btn-group form button[type="submit"] + button[type="reset"], form .btn-group button[type="submit"] + button[type="reset"], .btn-group form button[type="button"] + button[type="reset"], form .btn-group button[type="button"] + button[type="reset"], .btn-group form button[type="reset"] + button[type="reset"], form .btn-group button[type="reset"] + button[type="reset"], .btn-group form button + button[type="reset"], form .btn-group button + button[type="reset"], .btn-group form .btn + button, form .btn-group .btn + button, .btn-group header[role="document-header"] #header_login #login_wrap form input[type="submit"] + button, header[role="document-header"] #header_login #login_wrap form .btn-group input[type="submit"] + button, .btn-group form input[type="submit"] + button, form .btn-group input[type="submit"] + button, .btn-group form input[type="button"] + button, form .btn-group input[type="button"] + button, .btn-group form input[type="reset"] + button, form .btn-group input[type="reset"] + button, .btn-group form button[type="submit"] + button, form .btn-group button[type="submit"] + button, .btn-group form button[type="button"] + button, form .btn-group button[type="button"] + button, .btn-group form button[type="reset"] + button, form .btn-group button[type="reset"] + button, .btn-group form button + button, form .btn-group button + button,
 .btn-group .btn + .btn-group,
-.btn-group form fieldset div input[type="submit"] + .btn-group, form fieldset div
+.btn-group header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .btn-group, header[role="document-header"] #header_login #login_wrap form
 .btn-group input[type="submit"] + .btn-group,
-.btn-group form fieldset div input[type="button"] + .btn-group, form fieldset div
+.btn-group form input[type="submit"] + .btn-group, form
+.btn-group input[type="submit"] + .btn-group,
+.btn-group form input[type="button"] + .btn-group, form
 .btn-group input[type="button"] + .btn-group,
-.btn-group form fieldset div input[type="reset"] + .btn-group, form fieldset div
+.btn-group form input[type="reset"] + .btn-group, form
 .btn-group input[type="reset"] + .btn-group,
-.btn-group form fieldset div button[type="submit"] + .btn-group, form fieldset div
+.btn-group form button[type="submit"] + .btn-group, form
 .btn-group button[type="submit"] + .btn-group,
-.btn-group form fieldset div button[type="button"] + .btn-group, form fieldset div
+.btn-group form button[type="button"] + .btn-group, form
 .btn-group button[type="button"] + .btn-group,
-.btn-group form fieldset div button[type="reset"] + .btn-group, form fieldset div
+.btn-group form button[type="reset"] + .btn-group, form
 .btn-group button[type="reset"] + .btn-group,
-.btn-group form fieldset div button + .btn-group, form fieldset div
+.btn-group form button + .btn-group, form
 .btn-group button + .btn-group,
 .btn-group .btn-group + .btn,
-.btn-group form fieldset div .btn-group + input[type="submit"], form fieldset div
+.btn-group header[role="document-header"] #header_login #login_wrap form .btn-group + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
 .btn-group .btn-group + input[type="submit"],
-.btn-group form fieldset div .btn-group + input[type="button"], form fieldset div
+.btn-group form .btn-group + input[type="submit"], form
+.btn-group .btn-group + input[type="submit"],
+.btn-group form .btn-group + input[type="button"], form
 .btn-group .btn-group + input[type="button"],
-.btn-group form fieldset div .btn-group + input[type="reset"], form fieldset div
+.btn-group form .btn-group + input[type="reset"], form
 .btn-group .btn-group + input[type="reset"],
-.btn-group form fieldset div .btn-group + button[type="submit"], form fieldset div
+.btn-group form .btn-group + button[type="submit"], form
 .btn-group .btn-group + button[type="submit"],
-.btn-group form fieldset div .btn-group + button[type="button"], form fieldset div
+.btn-group form .btn-group + button[type="button"], form
 .btn-group .btn-group + button[type="button"],
-.btn-group form fieldset div .btn-group + button[type="reset"], form fieldset div
+.btn-group form .btn-group + button[type="reset"], form
 .btn-group .btn-group + button[type="reset"],
-.btn-group form fieldset div .btn-group + button, form fieldset div
+.btn-group form .btn-group + button, form
 .btn-group .btn-group + button,
 .btn-group .btn-group + .btn-group,
 .btn-group-vertical .btn + .btn,
-.btn-group-vertical form fieldset div input[type="submit"] + .btn, form fieldset div
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .btn, header[role="document-header"] #header_login #login_wrap form
 .btn-group-vertical input[type="submit"] + .btn,
-.btn-group-vertical form fieldset div input[type="button"] + .btn, form fieldset div
+.btn-group-vertical form input[type="submit"] + .btn, form
+.btn-group-vertical input[type="submit"] + .btn,
+.btn-group-vertical form input[type="button"] + .btn, form
 .btn-group-vertical input[type="button"] + .btn,
-.btn-group-vertical form fieldset div input[type="reset"] + .btn, form fieldset div
+.btn-group-vertical form input[type="reset"] + .btn, form
 .btn-group-vertical input[type="reset"] + .btn,
-.btn-group-vertical form fieldset div button[type="submit"] + .btn, form fieldset div
+.btn-group-vertical form button[type="submit"] + .btn, form
 .btn-group-vertical button[type="submit"] + .btn,
-.btn-group-vertical form fieldset div button[type="button"] + .btn, form fieldset div
+.btn-group-vertical form button[type="button"] + .btn, form
 .btn-group-vertical button[type="button"] + .btn,
-.btn-group-vertical form fieldset div button[type="reset"] + .btn, form fieldset div
+.btn-group-vertical form button[type="reset"] + .btn, form
 .btn-group-vertical button[type="reset"] + .btn,
-.btn-group-vertical form fieldset div button + .btn, form fieldset div
+.btn-group-vertical form button + .btn, form
 .btn-group-vertical button + .btn,
-.btn-group-vertical form fieldset div .btn + input[type="submit"], form fieldset div
-.btn-group-vertical .btn + input[type="submit"],
-.btn-group-vertical form fieldset div input[type="submit"] + input[type="submit"], form fieldset div
-.btn-group-vertical input[type="submit"] + input[type="submit"],
-.btn-group-vertical form fieldset div input[type="button"] + input[type="submit"], form fieldset div
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
+.btn-group-vertical .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap
+.btn-group-vertical form input[type="submit"] + input[type="submit"],
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="button"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap
+.btn-group-vertical form input[type="button"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
 .btn-group-vertical input[type="button"] + input[type="submit"],
-.btn-group-vertical form fieldset div input[type="reset"] + input[type="submit"], form fieldset div
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="reset"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap
+.btn-group-vertical form input[type="reset"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
 .btn-group-vertical input[type="reset"] + input[type="submit"],
-.btn-group-vertical form fieldset div button[type="submit"] + input[type="submit"], form fieldset div
-.btn-group-vertical button[type="submit"] + input[type="submit"],
-.btn-group-vertical form fieldset div button[type="button"] + input[type="submit"], form fieldset div
-.btn-group-vertical button[type="button"] + input[type="submit"],
-.btn-group-vertical form fieldset div button[type="reset"] + input[type="submit"], form fieldset div
-.btn-group-vertical button[type="reset"] + input[type="submit"],
-.btn-group-vertical form fieldset div button + input[type="submit"], form fieldset div
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form button + input[type="submit"], header[role="document-header"] #header_login #login_wrap
+.btn-group-vertical form button + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
 .btn-group-vertical button + input[type="submit"],
-.btn-group-vertical form fieldset div .btn + input[type="button"], form fieldset div
+.btn-group-vertical form .btn + input[type="submit"], form
+.btn-group-vertical .btn + input[type="submit"],
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
+.btn-group-vertical input[type="submit"] + input[type="submit"],
+.btn-group-vertical form input[type="submit"] + input[type="submit"], form
+.btn-group-vertical input[type="submit"] + input[type="submit"],
+.btn-group-vertical form input[type="button"] + input[type="submit"], form
+.btn-group-vertical input[type="button"] + input[type="submit"],
+.btn-group-vertical form input[type="reset"] + input[type="submit"], form
+.btn-group-vertical input[type="reset"] + input[type="submit"],
+.btn-group-vertical form button[type="submit"] + input[type="submit"], form
+.btn-group-vertical button[type="submit"] + input[type="submit"],
+.btn-group-vertical form button[type="button"] + input[type="submit"], form
+.btn-group-vertical button[type="button"] + input[type="submit"],
+.btn-group-vertical form button[type="reset"] + input[type="submit"], form
+.btn-group-vertical button[type="reset"] + input[type="submit"],
+.btn-group-vertical form button + input[type="submit"], form
+.btn-group-vertical button + input[type="submit"],
+.btn-group-vertical form .btn + input[type="button"], form
 .btn-group-vertical .btn + input[type="button"],
-.btn-group-vertical form fieldset div input[type="submit"] + input[type="button"], form fieldset div
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"] + input[type="button"], header[role="document-header"] #header_login #login_wrap form
 .btn-group-vertical input[type="submit"] + input[type="button"],
-.btn-group-vertical form fieldset div input[type="button"] + input[type="button"], form fieldset div
+.btn-group-vertical form input[type="submit"] + input[type="button"], form
+.btn-group-vertical input[type="submit"] + input[type="button"],
+.btn-group-vertical form input[type="button"] + input[type="button"], form
 .btn-group-vertical input[type="button"] + input[type="button"],
-.btn-group-vertical form fieldset div input[type="reset"] + input[type="button"], form fieldset div
+.btn-group-vertical form input[type="reset"] + input[type="button"], form
 .btn-group-vertical input[type="reset"] + input[type="button"],
-.btn-group-vertical form fieldset div button[type="submit"] + input[type="button"], form fieldset div
+.btn-group-vertical form button[type="submit"] + input[type="button"], form
 .btn-group-vertical button[type="submit"] + input[type="button"],
-.btn-group-vertical form fieldset div button[type="button"] + input[type="button"], form fieldset div
+.btn-group-vertical form button[type="button"] + input[type="button"], form
 .btn-group-vertical button[type="button"] + input[type="button"],
-.btn-group-vertical form fieldset div button[type="reset"] + input[type="button"], form fieldset div
+.btn-group-vertical form button[type="reset"] + input[type="button"], form
 .btn-group-vertical button[type="reset"] + input[type="button"],
-.btn-group-vertical form fieldset div button + input[type="button"], form fieldset div
+.btn-group-vertical form button + input[type="button"], form
 .btn-group-vertical button + input[type="button"],
-.btn-group-vertical form fieldset div .btn + input[type="reset"], form fieldset div
+.btn-group-vertical form .btn + input[type="reset"], form
 .btn-group-vertical .btn + input[type="reset"],
-.btn-group-vertical form fieldset div input[type="submit"] + input[type="reset"], form fieldset div
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"] + input[type="reset"], header[role="document-header"] #header_login #login_wrap form
 .btn-group-vertical input[type="submit"] + input[type="reset"],
-.btn-group-vertical form fieldset div input[type="button"] + input[type="reset"], form fieldset div
+.btn-group-vertical form input[type="submit"] + input[type="reset"], form
+.btn-group-vertical input[type="submit"] + input[type="reset"],
+.btn-group-vertical form input[type="button"] + input[type="reset"], form
 .btn-group-vertical input[type="button"] + input[type="reset"],
-.btn-group-vertical form fieldset div input[type="reset"] + input[type="reset"], form fieldset div
+.btn-group-vertical form input[type="reset"] + input[type="reset"], form
 .btn-group-vertical input[type="reset"] + input[type="reset"],
-.btn-group-vertical form fieldset div button[type="submit"] + input[type="reset"], form fieldset div
+.btn-group-vertical form button[type="submit"] + input[type="reset"], form
 .btn-group-vertical button[type="submit"] + input[type="reset"],
-.btn-group-vertical form fieldset div button[type="button"] + input[type="reset"], form fieldset div
+.btn-group-vertical form button[type="button"] + input[type="reset"], form
 .btn-group-vertical button[type="button"] + input[type="reset"],
-.btn-group-vertical form fieldset div button[type="reset"] + input[type="reset"], form fieldset div
+.btn-group-vertical form button[type="reset"] + input[type="reset"], form
 .btn-group-vertical button[type="reset"] + input[type="reset"],
-.btn-group-vertical form fieldset div button + input[type="reset"], form fieldset div
+.btn-group-vertical form button + input[type="reset"], form
 .btn-group-vertical button + input[type="reset"],
-.btn-group-vertical form fieldset div .btn + button[type="submit"], form fieldset div
+.btn-group-vertical form .btn + button[type="submit"], form
 .btn-group-vertical .btn + button[type="submit"],
-.btn-group-vertical form fieldset div input[type="submit"] + button[type="submit"], form fieldset div
+.btn-group-vertical form input[type="submit"] + button[type="submit"], form
 .btn-group-vertical input[type="submit"] + button[type="submit"],
-.btn-group-vertical form fieldset div input[type="button"] + button[type="submit"], form fieldset div
+.btn-group-vertical form input[type="button"] + button[type="submit"], form
 .btn-group-vertical input[type="button"] + button[type="submit"],
-.btn-group-vertical form fieldset div input[type="reset"] + button[type="submit"], form fieldset div
+.btn-group-vertical form input[type="reset"] + button[type="submit"], form
 .btn-group-vertical input[type="reset"] + button[type="submit"],
-.btn-group-vertical form fieldset div button[type="submit"] + button[type="submit"], form fieldset div
+.btn-group-vertical form button[type="submit"] + button[type="submit"], form
 .btn-group-vertical button[type="submit"] + button[type="submit"],
-.btn-group-vertical form fieldset div button[type="button"] + button[type="submit"], form fieldset div
+.btn-group-vertical form button[type="button"] + button[type="submit"], form
 .btn-group-vertical button[type="button"] + button[type="submit"],
-.btn-group-vertical form fieldset div button[type="reset"] + button[type="submit"], form fieldset div
+.btn-group-vertical form button[type="reset"] + button[type="submit"], form
 .btn-group-vertical button[type="reset"] + button[type="submit"],
-.btn-group-vertical form fieldset div button + button[type="submit"], form fieldset div
+.btn-group-vertical form button + button[type="submit"], form
 .btn-group-vertical button + button[type="submit"],
-.btn-group-vertical form fieldset div .btn + button[type="button"], form fieldset div
+.btn-group-vertical form .btn + button[type="button"], form
 .btn-group-vertical .btn + button[type="button"],
-.btn-group-vertical form fieldset div input[type="submit"] + button[type="button"], form fieldset div
+.btn-group-vertical form input[type="submit"] + button[type="button"], form
 .btn-group-vertical input[type="submit"] + button[type="button"],
-.btn-group-vertical form fieldset div input[type="button"] + button[type="button"], form fieldset div
+.btn-group-vertical form input[type="button"] + button[type="button"], form
 .btn-group-vertical input[type="button"] + button[type="button"],
-.btn-group-vertical form fieldset div input[type="reset"] + button[type="button"], form fieldset div
+.btn-group-vertical form input[type="reset"] + button[type="button"], form
 .btn-group-vertical input[type="reset"] + button[type="button"],
-.btn-group-vertical form fieldset div button[type="submit"] + button[type="button"], form fieldset div
+.btn-group-vertical form button[type="submit"] + button[type="button"], form
 .btn-group-vertical button[type="submit"] + button[type="button"],
-.btn-group-vertical form fieldset div button[type="button"] + button[type="button"], form fieldset div
+.btn-group-vertical form button[type="button"] + button[type="button"], form
 .btn-group-vertical button[type="button"] + button[type="button"],
-.btn-group-vertical form fieldset div button[type="reset"] + button[type="button"], form fieldset div
+.btn-group-vertical form button[type="reset"] + button[type="button"], form
 .btn-group-vertical button[type="reset"] + button[type="button"],
-.btn-group-vertical form fieldset div button + button[type="button"], form fieldset div
+.btn-group-vertical form button + button[type="button"], form
 .btn-group-vertical button + button[type="button"],
-.btn-group-vertical form fieldset div .btn + button[type="reset"], form fieldset div
+.btn-group-vertical form .btn + button[type="reset"], form
 .btn-group-vertical .btn + button[type="reset"],
-.btn-group-vertical form fieldset div input[type="submit"] + button[type="reset"], form fieldset div
+.btn-group-vertical form input[type="submit"] + button[type="reset"], form
 .btn-group-vertical input[type="submit"] + button[type="reset"],
-.btn-group-vertical form fieldset div input[type="button"] + button[type="reset"], form fieldset div
+.btn-group-vertical form input[type="button"] + button[type="reset"], form
 .btn-group-vertical input[type="button"] + button[type="reset"],
-.btn-group-vertical form fieldset div input[type="reset"] + button[type="reset"], form fieldset div
+.btn-group-vertical form input[type="reset"] + button[type="reset"], form
 .btn-group-vertical input[type="reset"] + button[type="reset"],
-.btn-group-vertical form fieldset div button[type="submit"] + button[type="reset"], form fieldset div
+.btn-group-vertical form button[type="submit"] + button[type="reset"], form
 .btn-group-vertical button[type="submit"] + button[type="reset"],
-.btn-group-vertical form fieldset div button[type="button"] + button[type="reset"], form fieldset div
+.btn-group-vertical form button[type="button"] + button[type="reset"], form
 .btn-group-vertical button[type="button"] + button[type="reset"],
-.btn-group-vertical form fieldset div button[type="reset"] + button[type="reset"], form fieldset div
+.btn-group-vertical form button[type="reset"] + button[type="reset"], form
 .btn-group-vertical button[type="reset"] + button[type="reset"],
-.btn-group-vertical form fieldset div button + button[type="reset"], form fieldset div
+.btn-group-vertical form button + button[type="reset"], form
 .btn-group-vertical button + button[type="reset"],
-.btn-group-vertical form fieldset div .btn + button, form fieldset div
+.btn-group-vertical form .btn + button, form
 .btn-group-vertical .btn + button,
-.btn-group-vertical form fieldset div input[type="submit"] + button, form fieldset div
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"] + button, header[role="document-header"] #header_login #login_wrap form
 .btn-group-vertical input[type="submit"] + button,
-.btn-group-vertical form fieldset div input[type="button"] + button, form fieldset div
+.btn-group-vertical form input[type="submit"] + button, form
+.btn-group-vertical input[type="submit"] + button,
+.btn-group-vertical form input[type="button"] + button, form
 .btn-group-vertical input[type="button"] + button,
-.btn-group-vertical form fieldset div input[type="reset"] + button, form fieldset div
+.btn-group-vertical form input[type="reset"] + button, form
 .btn-group-vertical input[type="reset"] + button,
-.btn-group-vertical form fieldset div button[type="submit"] + button, form fieldset div
+.btn-group-vertical form button[type="submit"] + button, form
 .btn-group-vertical button[type="submit"] + button,
-.btn-group-vertical form fieldset div button[type="button"] + button, form fieldset div
+.btn-group-vertical form button[type="button"] + button, form
 .btn-group-vertical button[type="button"] + button,
-.btn-group-vertical form fieldset div button[type="reset"] + button, form fieldset div
+.btn-group-vertical form button[type="reset"] + button, form
 .btn-group-vertical button[type="reset"] + button,
-.btn-group-vertical form fieldset div button + button, form fieldset div
+.btn-group-vertical form button + button, form
 .btn-group-vertical button + button,
 .btn-group-vertical .btn + .btn-group,
-.btn-group-vertical form fieldset div input[type="submit"] + .btn-group, form fieldset div
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .btn-group, header[role="document-header"] #header_login #login_wrap form
 .btn-group-vertical input[type="submit"] + .btn-group,
-.btn-group-vertical form fieldset div input[type="button"] + .btn-group, form fieldset div
+.btn-group-vertical form input[type="submit"] + .btn-group, form
+.btn-group-vertical input[type="submit"] + .btn-group,
+.btn-group-vertical form input[type="button"] + .btn-group, form
 .btn-group-vertical input[type="button"] + .btn-group,
-.btn-group-vertical form fieldset div input[type="reset"] + .btn-group, form fieldset div
+.btn-group-vertical form input[type="reset"] + .btn-group, form
 .btn-group-vertical input[type="reset"] + .btn-group,
-.btn-group-vertical form fieldset div button[type="submit"] + .btn-group, form fieldset div
+.btn-group-vertical form button[type="submit"] + .btn-group, form
 .btn-group-vertical button[type="submit"] + .btn-group,
-.btn-group-vertical form fieldset div button[type="button"] + .btn-group, form fieldset div
+.btn-group-vertical form button[type="button"] + .btn-group, form
 .btn-group-vertical button[type="button"] + .btn-group,
-.btn-group-vertical form fieldset div button[type="reset"] + .btn-group, form fieldset div
+.btn-group-vertical form button[type="reset"] + .btn-group, form
 .btn-group-vertical button[type="reset"] + .btn-group,
-.btn-group-vertical form fieldset div button + .btn-group, form fieldset div
+.btn-group-vertical form button + .btn-group, form
 .btn-group-vertical button + .btn-group,
 .btn-group-vertical .btn-group + .btn,
-.btn-group-vertical form fieldset div .btn-group + input[type="submit"], form fieldset div
+.btn-group-vertical header[role="document-header"] #header_login #login_wrap form .btn-group + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
 .btn-group-vertical .btn-group + input[type="submit"],
-.btn-group-vertical form fieldset div .btn-group + input[type="button"], form fieldset div
+.btn-group-vertical form .btn-group + input[type="submit"], form
+.btn-group-vertical .btn-group + input[type="submit"],
+.btn-group-vertical form .btn-group + input[type="button"], form
 .btn-group-vertical .btn-group + input[type="button"],
-.btn-group-vertical form fieldset div .btn-group + input[type="reset"], form fieldset div
+.btn-group-vertical form .btn-group + input[type="reset"], form
 .btn-group-vertical .btn-group + input[type="reset"],
-.btn-group-vertical form fieldset div .btn-group + button[type="submit"], form fieldset div
+.btn-group-vertical form .btn-group + button[type="submit"], form
 .btn-group-vertical .btn-group + button[type="submit"],
-.btn-group-vertical form fieldset div .btn-group + button[type="button"], form fieldset div
+.btn-group-vertical form .btn-group + button[type="button"], form
 .btn-group-vertical .btn-group + button[type="button"],
-.btn-group-vertical form fieldset div .btn-group + button[type="reset"], form fieldset div
+.btn-group-vertical form .btn-group + button[type="reset"], form
 .btn-group-vertical .btn-group + button[type="reset"],
-.btn-group-vertical form fieldset div .btn-group + button, form fieldset div
+.btn-group-vertical form .btn-group + button, form
 .btn-group-vertical .btn-group + button,
 .btn-group-vertical .btn-group + .btn-group {
   margin-left: -1px;
@@ -3429,20 +3468,20 @@ tbody.collapse.show {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > input[type="button"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > input[type="reset"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > button[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > button[type="button"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > button[type="reset"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form .btn-group > input[type="button"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form .btn-group > input[type="reset"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form .btn-group > button[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form .btn-group > button[type="button"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form .btn-group > button[type="reset"]:not(:first-child):not(:last-child):not(.dropdown-toggle), form .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
-.btn-group > .btn:first-child, form fieldset div .btn-group > input[type="submit"]:first-child, form fieldset div .btn-group > input[type="button"]:first-child, form fieldset div .btn-group > input[type="reset"]:first-child, form fieldset div .btn-group > button[type="submit"]:first-child, form fieldset div .btn-group > button[type="button"]:first-child, form fieldset div .btn-group > button[type="reset"]:first-child, form fieldset div .btn-group > button:first-child {
+.btn-group > .btn:first-child, header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:first-child, form .btn-group > input[type="submit"]:first-child, form .btn-group > input[type="button"]:first-child, form .btn-group > input[type="reset"]:first-child, form .btn-group > button[type="submit"]:first-child, form .btn-group > button[type="button"]:first-child, form .btn-group > button[type="reset"]:first-child, form .btn-group > button:first-child {
   margin-left: 0;
 }
 
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > input[type="button"]:first-child:not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > input[type="reset"]:first-child:not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > button[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > button[type="button"]:first-child:not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > button[type="reset"]:first-child:not(:last-child):not(.dropdown-toggle), form fieldset div .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), form .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), form .btn-group > input[type="button"]:first-child:not(:last-child):not(.dropdown-toggle), form .btn-group > input[type="reset"]:first-child:not(:last-child):not(.dropdown-toggle), form .btn-group > button[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), form .btn-group > button[type="button"]:first-child:not(:last-child):not(.dropdown-toggle), form .btn-group > button[type="reset"]:first-child:not(:last-child):not(.dropdown-toggle), form .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn:last-child:not(:first-child), form fieldset div .btn-group > input[type="submit"]:last-child:not(:first-child), form fieldset div .btn-group > input[type="button"]:last-child:not(:first-child), form fieldset div .btn-group > input[type="reset"]:last-child:not(:first-child), form fieldset div .btn-group > button[type="submit"]:last-child:not(:first-child), form fieldset div .btn-group > button[type="button"]:last-child:not(:first-child), form fieldset div .btn-group > button[type="reset"]:last-child:not(:first-child), form fieldset div .btn-group > button:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:last-child:not(:first-child), form .btn-group > input[type="submit"]:last-child:not(:first-child), form .btn-group > input[type="button"]:last-child:not(:first-child), form .btn-group > input[type="reset"]:last-child:not(:first-child), form .btn-group > button[type="submit"]:last-child:not(:first-child), form .btn-group > button[type="button"]:last-child:not(:first-child), form .btn-group > button[type="reset"]:last-child:not(:first-child), form .btn-group > button:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -3452,17 +3491,17 @@ tbody.collapse.show {
   float: left;
 }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, form fieldset div .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], form fieldset div .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="button"], form fieldset div .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="reset"], form fieldset div .btn-group > .btn-group:not(:first-child):not(:last-child) > button[type="submit"], form fieldset div .btn-group > .btn-group:not(:first-child):not(:last-child) > button[type="button"], form fieldset div .btn-group > .btn-group:not(:first-child):not(:last-child) > button[type="reset"], form fieldset div .btn-group > .btn-group:not(:first-child):not(:last-child) > button {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, header[role="document-header"] #header_login #login_wrap form .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], form .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], form .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="button"], form .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="reset"], form .btn-group > .btn-group:not(:first-child):not(:last-child) > button[type="submit"], form .btn-group > .btn-group:not(:first-child):not(:last-child) > button[type="button"], form .btn-group > .btn-group:not(:first-child):not(:last-child) > button[type="reset"], form .btn-group > .btn-group:not(:first-child):not(:last-child) > button {
   border-radius: 0;
 }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, form fieldset div .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, form fieldset div .btn-group > .btn-group:first-child:not(:last-child) > input[type="button"]:last-child, form fieldset div .btn-group > .btn-group:first-child:not(:last-child) > input[type="reset"]:last-child, form fieldset div .btn-group > .btn-group:first-child:not(:last-child) > button[type="submit"]:last-child, form fieldset div .btn-group > .btn-group:first-child:not(:last-child) > button[type="button"]:last-child, form fieldset div .btn-group > .btn-group:first-child:not(:last-child) > button[type="reset"]:last-child, form fieldset div .btn-group > .btn-group:first-child:not(:last-child) > button:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, header[role="document-header"] #header_login #login_wrap form .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, form .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, form .btn-group > .btn-group:first-child:not(:last-child) > input[type="button"]:last-child, form .btn-group > .btn-group:first-child:not(:last-child) > input[type="reset"]:last-child, form .btn-group > .btn-group:first-child:not(:last-child) > button[type="submit"]:last-child, form .btn-group > .btn-group:first-child:not(:last-child) > button[type="button"]:last-child, form .btn-group > .btn-group:first-child:not(:last-child) > button[type="reset"]:last-child, form .btn-group > .btn-group:first-child:not(:last-child) > button:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, form fieldset div .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, form fieldset div .btn-group > .btn-group:last-child:not(:first-child) > input[type="button"]:first-child, form fieldset div .btn-group > .btn-group:last-child:not(:first-child) > input[type="reset"]:first-child, form fieldset div .btn-group > .btn-group:last-child:not(:first-child) > button[type="submit"]:first-child, form fieldset div .btn-group > .btn-group:last-child:not(:first-child) > button[type="button"]:first-child, form fieldset div .btn-group > .btn-group:last-child:not(:first-child) > button[type="reset"]:first-child, form fieldset div .btn-group > .btn-group:last-child:not(:first-child) > button:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, header[role="document-header"] #header_login #login_wrap form .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, form .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, form .btn-group > .btn-group:last-child:not(:first-child) > input[type="button"]:first-child, form .btn-group > .btn-group:last-child:not(:first-child) > input[type="reset"]:first-child, form .btn-group > .btn-group:last-child:not(:first-child) > button[type="submit"]:first-child, form .btn-group > .btn-group:last-child:not(:first-child) > button[type="button"]:first-child, form .btn-group > .btn-group:last-child:not(:first-child) > button[type="reset"]:first-child, form .btn-group > .btn-group:last-child:not(:first-child) > button:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -3472,21 +3511,21 @@ tbody.collapse.show {
   outline: 0;
 }
 
-.btn + .dropdown-toggle-split, form fieldset div input[type="submit"] + .dropdown-toggle-split, form fieldset div input[type="button"] + .dropdown-toggle-split, form fieldset div input[type="reset"] + .dropdown-toggle-split, form fieldset div button[type="submit"] + .dropdown-toggle-split, form fieldset div button[type="button"] + .dropdown-toggle-split, form fieldset div button[type="reset"] + .dropdown-toggle-split, form fieldset div button + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .dropdown-toggle-split, form input[type="submit"] + .dropdown-toggle-split, form input[type="button"] + .dropdown-toggle-split, form input[type="reset"] + .dropdown-toggle-split, form button[type="submit"] + .dropdown-toggle-split, form button[type="button"] + .dropdown-toggle-split, form button[type="reset"] + .dropdown-toggle-split, form button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
 
-.btn + .dropdown-toggle-split::after, form fieldset div input[type="submit"] + .dropdown-toggle-split::after, form fieldset div input[type="button"] + .dropdown-toggle-split::after, form fieldset div input[type="reset"] + .dropdown-toggle-split::after, form fieldset div button[type="submit"] + .dropdown-toggle-split::after, form fieldset div button[type="button"] + .dropdown-toggle-split::after, form fieldset div button[type="reset"] + .dropdown-toggle-split::after, form fieldset div button + .dropdown-toggle-split::after {
+.btn + .dropdown-toggle-split::after, header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .dropdown-toggle-split::after, form input[type="submit"] + .dropdown-toggle-split::after, form input[type="button"] + .dropdown-toggle-split::after, form input[type="reset"] + .dropdown-toggle-split::after, form button[type="submit"] + .dropdown-toggle-split::after, form button[type="button"] + .dropdown-toggle-split::after, form button[type="reset"] + .dropdown-toggle-split::after, form button + .dropdown-toggle-split::after {
   margin-left: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, form fieldset div .btn-group-sm > input[type="submit"] + .dropdown-toggle-split, form fieldset div .btn-group-sm > input[type="button"] + .dropdown-toggle-split, form fieldset div .btn-group-sm > input[type="reset"] + .dropdown-toggle-split, form fieldset div .btn-group-sm > button + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, header[role="document-header"] #header_login #login_wrap form .btn-group-sm > input[type="submit"] + .dropdown-toggle-split, form .btn-group-sm > input[type="submit"] + .dropdown-toggle-split, form .btn-group-sm > input[type="button"] + .dropdown-toggle-split, form .btn-group-sm > input[type="reset"] + .dropdown-toggle-split, form .btn-group-sm > button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, form fieldset div .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, form fieldset div .btn-group-lg > input[type="button"] + .dropdown-toggle-split, form fieldset div .btn-group-lg > input[type="reset"] + .dropdown-toggle-split, form fieldset div .btn-group-lg > button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, header[role="document-header"] #header_login #login_wrap form .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, form .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, form .btn-group-lg > input[type="button"] + .dropdown-toggle-split, form .btn-group-lg > input[type="reset"] + .dropdown-toggle-split, form .btn-group-lg > button + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
@@ -3507,86 +3546,91 @@ tbody.collapse.show {
           justify-content: center;
 }
 
-.btn-group-vertical .btn, .btn-group-vertical form fieldset div input[type="submit"], form fieldset div .btn-group-vertical input[type="submit"], .btn-group-vertical form fieldset div input[type="button"], form fieldset div .btn-group-vertical input[type="button"], .btn-group-vertical form fieldset div input[type="reset"], form fieldset div .btn-group-vertical input[type="reset"], .btn-group-vertical form fieldset div button[type="submit"], form fieldset div .btn-group-vertical button[type="submit"], .btn-group-vertical form fieldset div button[type="button"], form fieldset div .btn-group-vertical button[type="button"], .btn-group-vertical form fieldset div button[type="reset"], form fieldset div .btn-group-vertical button[type="reset"], .btn-group-vertical form fieldset div button, form fieldset div .btn-group-vertical button,
+.btn-group-vertical .btn, .btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group-vertical input[type="submit"], .btn-group-vertical form input[type="submit"], form .btn-group-vertical input[type="submit"], .btn-group-vertical form input[type="button"], form .btn-group-vertical input[type="button"], .btn-group-vertical form input[type="reset"], form .btn-group-vertical input[type="reset"], .btn-group-vertical form button[type="submit"], form .btn-group-vertical button[type="submit"], .btn-group-vertical form button[type="button"], form .btn-group-vertical button[type="button"], .btn-group-vertical form button[type="reset"], form .btn-group-vertical button[type="reset"], .btn-group-vertical form button, form .btn-group-vertical button,
 .btn-group-vertical .btn-group {
   width: 100%;
 }
 
-.btn-group-vertical > .btn + .btn, form fieldset div .btn-group-vertical > input[type="submit"] + .btn, form fieldset div .btn-group-vertical > input[type="button"] + .btn, form fieldset div .btn-group-vertical > input[type="reset"] + .btn, form fieldset div .btn-group-vertical > button[type="submit"] + .btn, form fieldset div .btn-group-vertical > button[type="button"] + .btn, form fieldset div .btn-group-vertical > button[type="reset"] + .btn, form fieldset div .btn-group-vertical > button + .btn, form fieldset div .btn-group-vertical > .btn + input[type="submit"], form fieldset div .btn-group-vertical > input[type="submit"] + input[type="submit"], form fieldset div .btn-group-vertical > input[type="button"] + input[type="submit"], form fieldset div .btn-group-vertical > input[type="reset"] + input[type="submit"], form fieldset div .btn-group-vertical > button[type="submit"] + input[type="submit"], form fieldset div .btn-group-vertical > button[type="button"] + input[type="submit"], form fieldset div .btn-group-vertical > button[type="reset"] + input[type="submit"], form fieldset div .btn-group-vertical > button + input[type="submit"], form fieldset div .btn-group-vertical > .btn + input[type="button"], form fieldset div .btn-group-vertical > input[type="submit"] + input[type="button"], form fieldset div .btn-group-vertical > input[type="button"] + input[type="button"], form fieldset div .btn-group-vertical > input[type="reset"] + input[type="button"], form fieldset div .btn-group-vertical > button[type="submit"] + input[type="button"], form fieldset div .btn-group-vertical > button[type="button"] + input[type="button"], form fieldset div .btn-group-vertical > button[type="reset"] + input[type="button"], form fieldset div .btn-group-vertical > button + input[type="button"], form fieldset div .btn-group-vertical > .btn + input[type="reset"], form fieldset div .btn-group-vertical > input[type="submit"] + input[type="reset"], form fieldset div .btn-group-vertical > input[type="button"] + input[type="reset"], form fieldset div .btn-group-vertical > input[type="reset"] + input[type="reset"], form fieldset div .btn-group-vertical > button[type="submit"] + input[type="reset"], form fieldset div .btn-group-vertical > button[type="button"] + input[type="reset"], form fieldset div .btn-group-vertical > button[type="reset"] + input[type="reset"], form fieldset div .btn-group-vertical > button + input[type="reset"], form fieldset div .btn-group-vertical > .btn + button[type="submit"], form fieldset div .btn-group-vertical > input[type="submit"] + button[type="submit"], form fieldset div .btn-group-vertical > input[type="button"] + button[type="submit"], form fieldset div .btn-group-vertical > input[type="reset"] + button[type="submit"], form fieldset div .btn-group-vertical > button[type="submit"] + button[type="submit"], form fieldset div .btn-group-vertical > button[type="button"] + button[type="submit"], form fieldset div .btn-group-vertical > button[type="reset"] + button[type="submit"], form fieldset div .btn-group-vertical > button + button[type="submit"], form fieldset div .btn-group-vertical > .btn + button[type="button"], form fieldset div .btn-group-vertical > input[type="submit"] + button[type="button"], form fieldset div .btn-group-vertical > input[type="button"] + button[type="button"], form fieldset div .btn-group-vertical > input[type="reset"] + button[type="button"], form fieldset div .btn-group-vertical > button[type="submit"] + button[type="button"], form fieldset div .btn-group-vertical > button[type="button"] + button[type="button"], form fieldset div .btn-group-vertical > button[type="reset"] + button[type="button"], form fieldset div .btn-group-vertical > button + button[type="button"], form fieldset div .btn-group-vertical > .btn + button[type="reset"], form fieldset div .btn-group-vertical > input[type="submit"] + button[type="reset"], form fieldset div .btn-group-vertical > input[type="button"] + button[type="reset"], form fieldset div .btn-group-vertical > input[type="reset"] + button[type="reset"], form fieldset div .btn-group-vertical > button[type="submit"] + button[type="reset"], form fieldset div .btn-group-vertical > button[type="button"] + button[type="reset"], form fieldset div .btn-group-vertical > button[type="reset"] + button[type="reset"], form fieldset div .btn-group-vertical > button + button[type="reset"], form fieldset div .btn-group-vertical > .btn + button, form fieldset div .btn-group-vertical > input[type="submit"] + button, form fieldset div .btn-group-vertical > input[type="button"] + button, form fieldset div .btn-group-vertical > input[type="reset"] + button, form fieldset div .btn-group-vertical > button[type="submit"] + button, form fieldset div .btn-group-vertical > button[type="button"] + button, form fieldset div .btn-group-vertical > button[type="reset"] + button, form fieldset div .btn-group-vertical > button + button,
-.btn-group-vertical > .btn + .btn-group, form fieldset div
-.btn-group-vertical > input[type="submit"] + .btn-group, form fieldset div
-.btn-group-vertical > input[type="button"] + .btn-group, form fieldset div
-.btn-group-vertical > input[type="reset"] + .btn-group, form fieldset div
-.btn-group-vertical > button[type="submit"] + .btn-group, form fieldset div
-.btn-group-vertical > button[type="button"] + .btn-group, form fieldset div
-.btn-group-vertical > button[type="reset"] + .btn-group, form fieldset div
+.btn-group-vertical > .btn + .btn, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"] + .btn, form .btn-group-vertical > input[type="submit"] + .btn, form .btn-group-vertical > input[type="button"] + .btn, form .btn-group-vertical > input[type="reset"] + .btn, form .btn-group-vertical > button[type="submit"] + .btn, form .btn-group-vertical > button[type="button"] + .btn, form .btn-group-vertical > button[type="reset"] + .btn, form .btn-group-vertical > button + .btn, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="button"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="reset"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > button + input[type="submit"], form .btn-group-vertical > .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"] + input[type="submit"], form .btn-group-vertical > input[type="submit"] + input[type="submit"], form .btn-group-vertical > input[type="button"] + input[type="submit"], form .btn-group-vertical > input[type="reset"] + input[type="submit"], form .btn-group-vertical > button[type="submit"] + input[type="submit"], form .btn-group-vertical > button[type="button"] + input[type="submit"], form .btn-group-vertical > button[type="reset"] + input[type="submit"], form .btn-group-vertical > button + input[type="submit"], form .btn-group-vertical > .btn + input[type="button"], header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"] + input[type="button"], form .btn-group-vertical > input[type="submit"] + input[type="button"], form .btn-group-vertical > input[type="button"] + input[type="button"], form .btn-group-vertical > input[type="reset"] + input[type="button"], form .btn-group-vertical > button[type="submit"] + input[type="button"], form .btn-group-vertical > button[type="button"] + input[type="button"], form .btn-group-vertical > button[type="reset"] + input[type="button"], form .btn-group-vertical > button + input[type="button"], form .btn-group-vertical > .btn + input[type="reset"], header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"] + input[type="reset"], form .btn-group-vertical > input[type="submit"] + input[type="reset"], form .btn-group-vertical > input[type="button"] + input[type="reset"], form .btn-group-vertical > input[type="reset"] + input[type="reset"], form .btn-group-vertical > button[type="submit"] + input[type="reset"], form .btn-group-vertical > button[type="button"] + input[type="reset"], form .btn-group-vertical > button[type="reset"] + input[type="reset"], form .btn-group-vertical > button + input[type="reset"], form .btn-group-vertical > .btn + button[type="submit"], form .btn-group-vertical > input[type="submit"] + button[type="submit"], form .btn-group-vertical > input[type="button"] + button[type="submit"], form .btn-group-vertical > input[type="reset"] + button[type="submit"], form .btn-group-vertical > button[type="submit"] + button[type="submit"], form .btn-group-vertical > button[type="button"] + button[type="submit"], form .btn-group-vertical > button[type="reset"] + button[type="submit"], form .btn-group-vertical > button + button[type="submit"], form .btn-group-vertical > .btn + button[type="button"], form .btn-group-vertical > input[type="submit"] + button[type="button"], form .btn-group-vertical > input[type="button"] + button[type="button"], form .btn-group-vertical > input[type="reset"] + button[type="button"], form .btn-group-vertical > button[type="submit"] + button[type="button"], form .btn-group-vertical > button[type="button"] + button[type="button"], form .btn-group-vertical > button[type="reset"] + button[type="button"], form .btn-group-vertical > button + button[type="button"], form .btn-group-vertical > .btn + button[type="reset"], form .btn-group-vertical > input[type="submit"] + button[type="reset"], form .btn-group-vertical > input[type="button"] + button[type="reset"], form .btn-group-vertical > input[type="reset"] + button[type="reset"], form .btn-group-vertical > button[type="submit"] + button[type="reset"], form .btn-group-vertical > button[type="button"] + button[type="reset"], form .btn-group-vertical > button[type="reset"] + button[type="reset"], form .btn-group-vertical > button + button[type="reset"], form .btn-group-vertical > .btn + button, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"] + button, form .btn-group-vertical > input[type="submit"] + button, form .btn-group-vertical > input[type="button"] + button, form .btn-group-vertical > input[type="reset"] + button, form .btn-group-vertical > button[type="submit"] + button, form .btn-group-vertical > button[type="button"] + button, form .btn-group-vertical > button[type="reset"] + button, form .btn-group-vertical > button + button,
+.btn-group-vertical > .btn + .btn-group, header[role="document-header"] #header_login #login_wrap form
+.btn-group-vertical > input[type="submit"] + .btn-group, form
+.btn-group-vertical > input[type="submit"] + .btn-group, form
+.btn-group-vertical > input[type="button"] + .btn-group, form
+.btn-group-vertical > input[type="reset"] + .btn-group, form
+.btn-group-vertical > button[type="submit"] + .btn-group, form
+.btn-group-vertical > button[type="button"] + .btn-group, form
+.btn-group-vertical > button[type="reset"] + .btn-group, form
 .btn-group-vertical > button + .btn-group,
-.btn-group-vertical > .btn-group + .btn, form fieldset div
-.btn-group-vertical > .btn-group + input[type="submit"], form fieldset div
-.btn-group-vertical > .btn-group + input[type="button"], form fieldset div
-.btn-group-vertical > .btn-group + input[type="reset"], form fieldset div
-.btn-group-vertical > .btn-group + button[type="submit"], form fieldset div
-.btn-group-vertical > .btn-group + button[type="button"], form fieldset div
-.btn-group-vertical > .btn-group + button[type="reset"], form fieldset div
+.btn-group-vertical > .btn-group + .btn, header[role="document-header"] #header_login #login_wrap form
+.btn-group-vertical > .btn-group + input[type="submit"], form
+.btn-group-vertical > .btn-group + input[type="submit"], form
+.btn-group-vertical > .btn-group + input[type="button"], form
+.btn-group-vertical > .btn-group + input[type="reset"], form
+.btn-group-vertical > .btn-group + button[type="submit"], form
+.btn-group-vertical > .btn-group + button[type="button"], form
+.btn-group-vertical > .btn-group + button[type="reset"], form
 .btn-group-vertical > .btn-group + button,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
 }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), form fieldset div .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child), form fieldset div .btn-group-vertical > input[type="button"]:not(:first-child):not(:last-child), form fieldset div .btn-group-vertical > input[type="reset"]:not(:first-child):not(:last-child), form fieldset div .btn-group-vertical > button[type="submit"]:not(:first-child):not(:last-child), form fieldset div .btn-group-vertical > button[type="button"]:not(:first-child):not(:last-child), form fieldset div .btn-group-vertical > button[type="reset"]:not(:first-child):not(:last-child), form fieldset div .btn-group-vertical > button:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child), form .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child), form .btn-group-vertical > input[type="button"]:not(:first-child):not(:last-child), form .btn-group-vertical > input[type="reset"]:not(:first-child):not(:last-child), form .btn-group-vertical > button[type="submit"]:not(:first-child):not(:last-child), form .btn-group-vertical > button[type="button"]:not(:first-child):not(:last-child), form .btn-group-vertical > button[type="reset"]:not(:first-child):not(:last-child), form .btn-group-vertical > button:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), form fieldset div .btn-group-vertical > input[type="submit"]:first-child:not(:last-child), form fieldset div .btn-group-vertical > input[type="button"]:first-child:not(:last-child), form fieldset div .btn-group-vertical > input[type="reset"]:first-child:not(:last-child), form fieldset div .btn-group-vertical > button[type="submit"]:first-child:not(:last-child), form fieldset div .btn-group-vertical > button[type="button"]:first-child:not(:last-child), form fieldset div .btn-group-vertical > button[type="reset"]:first-child:not(:last-child), form fieldset div .btn-group-vertical > button:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"]:first-child:not(:last-child), form .btn-group-vertical > input[type="submit"]:first-child:not(:last-child), form .btn-group-vertical > input[type="button"]:first-child:not(:last-child), form .btn-group-vertical > input[type="reset"]:first-child:not(:last-child), form .btn-group-vertical > button[type="submit"]:first-child:not(:last-child), form .btn-group-vertical > button[type="button"]:first-child:not(:last-child), form .btn-group-vertical > button[type="reset"]:first-child:not(:last-child), form .btn-group-vertical > button:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), form fieldset div .btn-group-vertical > input[type="submit"]:last-child:not(:first-child), form fieldset div .btn-group-vertical > input[type="button"]:last-child:not(:first-child), form fieldset div .btn-group-vertical > input[type="reset"]:last-child:not(:first-child), form fieldset div .btn-group-vertical > button[type="submit"]:last-child:not(:first-child), form fieldset div .btn-group-vertical > button[type="button"]:last-child:not(:first-child), form fieldset div .btn-group-vertical > button[type="reset"]:last-child:not(:first-child), form fieldset div .btn-group-vertical > button:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"]:last-child:not(:first-child), form .btn-group-vertical > input[type="submit"]:last-child:not(:first-child), form .btn-group-vertical > input[type="button"]:last-child:not(:first-child), form .btn-group-vertical > input[type="reset"]:last-child:not(:first-child), form .btn-group-vertical > button[type="submit"]:last-child:not(:first-child), form .btn-group-vertical > button[type="button"]:last-child:not(:first-child), form .btn-group-vertical > button[type="reset"]:last-child:not(:first-child), form .btn-group-vertical > button:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, form fieldset div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], form fieldset div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="button"], form fieldset div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="reset"], form fieldset div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button[type="submit"], form fieldset div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button[type="button"], form fieldset div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button[type="reset"], form fieldset div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="button"], form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="reset"], form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button[type="submit"], form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button[type="button"], form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button[type="reset"], form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button {
   border-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, form fieldset div .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, form fieldset div .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="button"]:last-child, form fieldset div .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="reset"]:last-child, form fieldset div .btn-group-vertical > .btn-group:first-child:not(:last-child) > button[type="submit"]:last-child, form fieldset div .btn-group-vertical > .btn-group:first-child:not(:last-child) > button[type="button"]:last-child, form fieldset div .btn-group-vertical > .btn-group:first-child:not(:last-child) > button[type="reset"]:last-child, form fieldset div .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, form .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, form .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="button"]:last-child, form .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="reset"]:last-child, form .btn-group-vertical > .btn-group:first-child:not(:last-child) > button[type="submit"]:last-child, form .btn-group-vertical > .btn-group:first-child:not(:last-child) > button[type="button"]:last-child, form .btn-group-vertical > .btn-group:first-child:not(:last-child) > button[type="reset"]:last-child, form .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, form fieldset div .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, form fieldset div .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="button"]:first-child, form fieldset div .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="reset"]:first-child, form fieldset div .btn-group-vertical > .btn-group:last-child:not(:first-child) > button[type="submit"]:first-child, form fieldset div .btn-group-vertical > .btn-group:last-child:not(:first-child) > button[type="button"]:first-child, form fieldset div .btn-group-vertical > .btn-group:last-child:not(:first-child) > button[type="reset"]:first-child, form fieldset div .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, form .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, form .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="button"]:first-child, form .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="reset"]:first-child, form .btn-group-vertical > .btn-group:last-child:not(:first-child) > button[type="submit"]:first-child, form .btn-group-vertical > .btn-group:last-child:not(:first-child) > button[type="button"]:first-child, form .btn-group-vertical > .btn-group:last-child:not(:first-child) > button[type="reset"]:first-child, form .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-[data-toggle="buttons"] > .btn input[type="radio"], form fieldset div [data-toggle="buttons"] > input[type="submit"] input[type="radio"], form fieldset div [data-toggle="buttons"] > input[type="button"] input[type="radio"], form fieldset div [data-toggle="buttons"] > input[type="reset"] input[type="radio"], form fieldset div [data-toggle="buttons"] > button[type="submit"] input[type="radio"], form fieldset div [data-toggle="buttons"] > button[type="button"] input[type="radio"], form fieldset div [data-toggle="buttons"] > button[type="reset"] input[type="radio"], form fieldset div [data-toggle="buttons"] > button input[type="radio"],
-[data-toggle="buttons"] > .btn input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > input[type="submit"] input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > input[type="button"] input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > input[type="reset"] input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > button[type="submit"] input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > button[type="button"] input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > button[type="reset"] input[type="checkbox"], form fieldset div
+[data-toggle="buttons"] > .btn input[type="radio"], header[role="document-header"] #header_login #login_wrap form [data-toggle="buttons"] > input[type="submit"] input[type="radio"], form [data-toggle="buttons"] > input[type="submit"] input[type="radio"], form [data-toggle="buttons"] > input[type="button"] input[type="radio"], form [data-toggle="buttons"] > input[type="reset"] input[type="radio"], form [data-toggle="buttons"] > button[type="submit"] input[type="radio"], form [data-toggle="buttons"] > button[type="button"] input[type="radio"], form [data-toggle="buttons"] > button[type="reset"] input[type="radio"], form [data-toggle="buttons"] > button input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="checkbox"], header[role="document-header"] #header_login #login_wrap form
+[data-toggle="buttons"] > input[type="submit"] input[type="checkbox"], form
+[data-toggle="buttons"] > input[type="submit"] input[type="checkbox"], form
+[data-toggle="buttons"] > input[type="button"] input[type="checkbox"], form
+[data-toggle="buttons"] > input[type="reset"] input[type="checkbox"], form
+[data-toggle="buttons"] > button[type="submit"] input[type="checkbox"], form
+[data-toggle="buttons"] > button[type="button"] input[type="checkbox"], form
+[data-toggle="buttons"] > button[type="reset"] input[type="checkbox"], form
 [data-toggle="buttons"] > button input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="radio"], form fieldset div
-[data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"], form fieldset div
-[data-toggle="buttons"] > .btn-group > input[type="button"] input[type="radio"], form fieldset div
-[data-toggle="buttons"] > .btn-group > input[type="reset"] input[type="radio"], form fieldset div
-[data-toggle="buttons"] > .btn-group > button[type="submit"] input[type="radio"], form fieldset div
-[data-toggle="buttons"] > .btn-group > button[type="button"] input[type="radio"], form fieldset div
-[data-toggle="buttons"] > .btn-group > button[type="reset"] input[type="radio"], form fieldset div
+[data-toggle="buttons"] > .btn-group > .btn input[type="radio"], header[role="document-header"] #header_login #login_wrap form
+[data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"], form
+[data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"], form
+[data-toggle="buttons"] > .btn-group > input[type="button"] input[type="radio"], form
+[data-toggle="buttons"] > .btn-group > input[type="reset"] input[type="radio"], form
+[data-toggle="buttons"] > .btn-group > button[type="submit"] input[type="radio"], form
+[data-toggle="buttons"] > .btn-group > button[type="button"] input[type="radio"], form
+[data-toggle="buttons"] > .btn-group > button[type="reset"] input[type="radio"], form
 [data-toggle="buttons"] > .btn-group > button input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > .btn-group > input[type="button"] input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > .btn-group > input[type="reset"] input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > .btn-group > button[type="submit"] input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > .btn-group > button[type="button"] input[type="checkbox"], form fieldset div
-[data-toggle="buttons"] > .btn-group > button[type="reset"] input[type="checkbox"], form fieldset div
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], header[role="document-header"] #header_login #login_wrap form
+[data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"], form
+[data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"], form
+[data-toggle="buttons"] > .btn-group > input[type="button"] input[type="checkbox"], form
+[data-toggle="buttons"] > .btn-group > input[type="reset"] input[type="checkbox"], form
+[data-toggle="buttons"] > .btn-group > button[type="submit"] input[type="checkbox"], form
+[data-toggle="buttons"] > .btn-group > button[type="button"] input[type="checkbox"], form
+[data-toggle="buttons"] > .btn-group > button[type="reset"] input[type="checkbox"], form
 [data-toggle="buttons"] > .btn-group > button input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -3601,7 +3645,7 @@ tbody.collapse.show {
   width: 100%;
 }
 
-.input-group .form-control, .input-group form fieldset div input, form fieldset div .input-group input, .input-group form fieldset div select, form fieldset div .input-group select {
+.input-group .form-control, .input-group form input, form .input-group input, .input-group form select, form .input-group select {
   position: relative;
   z-index: 2;
   -webkit-box-flex: 1;
@@ -3611,16 +3655,16 @@ tbody.collapse.show {
   margin-bottom: 0;
 }
 
-.input-group .form-control:focus, .input-group form fieldset div input:focus, form fieldset div .input-group input:focus, .input-group form fieldset div select:focus, form fieldset div .input-group select:focus, .input-group .form-control:active, .input-group form fieldset div input:active, form fieldset div .input-group input:active, .input-group form fieldset div select:active, form fieldset div .input-group select:active, .input-group .form-control:hover, .input-group form fieldset div input:hover, form fieldset div .input-group input:hover, .input-group form fieldset div select:hover, form fieldset div .input-group select:hover {
+.input-group .form-control:focus, .input-group form input:focus, form .input-group input:focus, .input-group form select:focus, form .input-group select:focus, .input-group .form-control:active, .input-group form input:active, form .input-group input:active, .input-group form select:active, form .input-group select:active, .input-group .form-control:hover, .input-group form input:hover, form .input-group input:hover, .input-group form select:hover, form .input-group select:hover {
   z-index: 3;
 }
 
 .input-group-addon,
 .input-group-btn,
 .input-group .form-control,
-.input-group form fieldset div input, form fieldset div
+.input-group form input, form
 .input-group input,
-.input-group form fieldset div select, form fieldset div
+.input-group form select, form
 .input-group select {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3637,9 +3681,9 @@ tbody.collapse.show {
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
 .input-group .form-control:not(:first-child):not(:last-child),
-.input-group form fieldset div input:not(:first-child):not(:last-child), form fieldset div
+.input-group form input:not(:first-child):not(:last-child), form
 .input-group input:not(:first-child):not(:last-child),
-.input-group form fieldset div select:not(:first-child):not(:last-child), form fieldset div
+.input-group form select:not(:first-child):not(:last-child), form
 .input-group select:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
@@ -3663,24 +3707,26 @@ tbody.collapse.show {
   border-radius: 0.25rem;
 }
 
-.input-group-addon.form-control-sm, form fieldset div .input-group-sm > input.input-group-addon, form fieldset div .input-group-sm > select.input-group-addon,
+.input-group-addon.form-control-sm, form .input-group-sm > input.input-group-addon, form .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .input-group-addon.btn, form fieldset div
-.input-group-sm > .input-group-btn > input.input-group-addon[type="submit"], form fieldset div
-.input-group-sm > .input-group-btn > input.input-group-addon[type="button"], form fieldset div
-.input-group-sm > .input-group-btn > input.input-group-addon[type="reset"], form fieldset div
+.input-group-sm > .input-group-btn > .input-group-addon.btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-sm > .input-group-btn > input.input-group-addon[type="submit"], form
+.input-group-sm > .input-group-btn > input.input-group-addon[type="submit"], form
+.input-group-sm > .input-group-btn > input.input-group-addon[type="button"], form
+.input-group-sm > .input-group-btn > input.input-group-addon[type="reset"], form
 .input-group-sm > .input-group-btn > button.input-group-addon {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
 
-.input-group-addon.form-control-lg, form fieldset div .input-group-lg > input.input-group-addon, form fieldset div .input-group-lg > select.input-group-addon,
+.input-group-addon.form-control-lg, form .input-group-lg > input.input-group-addon, form .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .input-group-addon.btn, form fieldset div
-.input-group-lg > .input-group-btn > input.input-group-addon[type="submit"], form fieldset div
-.input-group-lg > .input-group-btn > input.input-group-addon[type="button"], form fieldset div
-.input-group-lg > .input-group-btn > input.input-group-addon[type="reset"], form fieldset div
+.input-group-lg > .input-group-btn > .input-group-addon.btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-lg > .input-group-btn > input.input-group-addon[type="submit"], form
+.input-group-lg > .input-group-btn > input.input-group-addon[type="submit"], form
+.input-group-lg > .input-group-btn > input.input-group-addon[type="button"], form
+.input-group-lg > .input-group-btn > input.input-group-addon[type="reset"], form
 .input-group-lg > .input-group-btn > button.input-group-addon {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
@@ -3692,40 +3738,44 @@ tbody.collapse.show {
   margin-top: 0;
 }
 
-.input-group .form-control:not(:last-child), .input-group form fieldset div input:not(:last-child), form fieldset div .input-group input:not(:last-child), .input-group form fieldset div select:not(:last-child), form fieldset div .input-group select:not(:last-child),
+.input-group .form-control:not(:last-child), .input-group form input:not(:last-child), form .input-group input:not(:last-child), .input-group form select:not(:last-child), form .input-group select:not(:last-child),
 .input-group-addon:not(:last-child),
-.input-group-btn:not(:last-child) > .btn, form fieldset div
-.input-group-btn:not(:last-child) > input[type="submit"], form fieldset div
-.input-group-btn:not(:last-child) > input[type="button"], form fieldset div
-.input-group-btn:not(:last-child) > input[type="reset"], form fieldset div
-.input-group-btn:not(:last-child) > button[type="submit"], form fieldset div
-.input-group-btn:not(:last-child) > button[type="button"], form fieldset div
-.input-group-btn:not(:last-child) > button[type="reset"], form fieldset div
+.input-group-btn:not(:last-child) > .btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-btn:not(:last-child) > input[type="submit"], form
+.input-group-btn:not(:last-child) > input[type="submit"], form
+.input-group-btn:not(:last-child) > input[type="button"], form
+.input-group-btn:not(:last-child) > input[type="reset"], form
+.input-group-btn:not(:last-child) > button[type="submit"], form
+.input-group-btn:not(:last-child) > button[type="button"], form
+.input-group-btn:not(:last-child) > button[type="reset"], form
 .input-group-btn:not(:last-child) > button,
-.input-group-btn:not(:last-child) > .btn-group > .btn, form fieldset div
-.input-group-btn:not(:last-child) > .btn-group > input[type="submit"], form fieldset div
-.input-group-btn:not(:last-child) > .btn-group > input[type="button"], form fieldset div
-.input-group-btn:not(:last-child) > .btn-group > input[type="reset"], form fieldset div
-.input-group-btn:not(:last-child) > .btn-group > button[type="submit"], form fieldset div
-.input-group-btn:not(:last-child) > .btn-group > button[type="button"], form fieldset div
-.input-group-btn:not(:last-child) > .btn-group > button[type="reset"], form fieldset div
+.input-group-btn:not(:last-child) > .btn-group > .btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-btn:not(:last-child) > .btn-group > input[type="submit"], form
+.input-group-btn:not(:last-child) > .btn-group > input[type="submit"], form
+.input-group-btn:not(:last-child) > .btn-group > input[type="button"], form
+.input-group-btn:not(:last-child) > .btn-group > input[type="reset"], form
+.input-group-btn:not(:last-child) > .btn-group > button[type="submit"], form
+.input-group-btn:not(:last-child) > .btn-group > button[type="button"], form
+.input-group-btn:not(:last-child) > .btn-group > button[type="reset"], form
 .input-group-btn:not(:last-child) > .btn-group > button,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
-.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle), form fieldset div
-.input-group-btn:not(:first-child) > input[type="submit"]:not(:last-child):not(.dropdown-toggle), form fieldset div
-.input-group-btn:not(:first-child) > input[type="button"]:not(:last-child):not(.dropdown-toggle), form fieldset div
-.input-group-btn:not(:first-child) > input[type="reset"]:not(:last-child):not(.dropdown-toggle), form fieldset div
-.input-group-btn:not(:first-child) > button[type="submit"]:not(:last-child):not(.dropdown-toggle), form fieldset div
-.input-group-btn:not(:first-child) > button[type="button"]:not(:last-child):not(.dropdown-toggle), form fieldset div
-.input-group-btn:not(:first-child) > button[type="reset"]:not(:last-child):not(.dropdown-toggle), form fieldset div
+.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle), header[role="document-header"] #header_login #login_wrap form
+.input-group-btn:not(:first-child) > input[type="submit"]:not(:last-child):not(.dropdown-toggle), form
+.input-group-btn:not(:first-child) > input[type="submit"]:not(:last-child):not(.dropdown-toggle), form
+.input-group-btn:not(:first-child) > input[type="button"]:not(:last-child):not(.dropdown-toggle), form
+.input-group-btn:not(:first-child) > input[type="reset"]:not(:last-child):not(.dropdown-toggle), form
+.input-group-btn:not(:first-child) > button[type="submit"]:not(:last-child):not(.dropdown-toggle), form
+.input-group-btn:not(:first-child) > button[type="button"]:not(:last-child):not(.dropdown-toggle), form
+.input-group-btn:not(:first-child) > button[type="reset"]:not(:last-child):not(.dropdown-toggle), form
 .input-group-btn:not(:first-child) > button:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn, form fieldset div
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="submit"], form fieldset div
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="button"], form fieldset div
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="reset"], form fieldset div
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button[type="submit"], form fieldset div
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button[type="button"], form fieldset div
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button[type="reset"], form fieldset div
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="submit"], form
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="submit"], form
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="button"], form
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="reset"], form
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button[type="submit"], form
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button[type="button"], form
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button[type="reset"], form
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -3735,46 +3785,50 @@ tbody.collapse.show {
   border-right: 0;
 }
 
-.input-group .form-control:not(:first-child), .input-group form fieldset div input:not(:first-child), form fieldset div .input-group input:not(:first-child), .input-group form fieldset div select:not(:first-child), form fieldset div .input-group select:not(:first-child),
+.input-group .form-control:not(:first-child), .input-group form input:not(:first-child), form .input-group input:not(:first-child), .input-group form select:not(:first-child), form .input-group select:not(:first-child),
 .input-group-addon:not(:first-child),
-.input-group-btn:not(:first-child) > .btn, form fieldset div
-.input-group-btn:not(:first-child) > input[type="submit"], form fieldset div
-.input-group-btn:not(:first-child) > input[type="button"], form fieldset div
-.input-group-btn:not(:first-child) > input[type="reset"], form fieldset div
-.input-group-btn:not(:first-child) > button[type="submit"], form fieldset div
-.input-group-btn:not(:first-child) > button[type="button"], form fieldset div
-.input-group-btn:not(:first-child) > button[type="reset"], form fieldset div
+.input-group-btn:not(:first-child) > .btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-btn:not(:first-child) > input[type="submit"], form
+.input-group-btn:not(:first-child) > input[type="submit"], form
+.input-group-btn:not(:first-child) > input[type="button"], form
+.input-group-btn:not(:first-child) > input[type="reset"], form
+.input-group-btn:not(:first-child) > button[type="submit"], form
+.input-group-btn:not(:first-child) > button[type="button"], form
+.input-group-btn:not(:first-child) > button[type="reset"], form
 .input-group-btn:not(:first-child) > button,
-.input-group-btn:not(:first-child) > .btn-group > .btn, form fieldset div
-.input-group-btn:not(:first-child) > .btn-group > input[type="submit"], form fieldset div
-.input-group-btn:not(:first-child) > .btn-group > input[type="button"], form fieldset div
-.input-group-btn:not(:first-child) > .btn-group > input[type="reset"], form fieldset div
-.input-group-btn:not(:first-child) > .btn-group > button[type="submit"], form fieldset div
-.input-group-btn:not(:first-child) > .btn-group > button[type="button"], form fieldset div
-.input-group-btn:not(:first-child) > .btn-group > button[type="reset"], form fieldset div
+.input-group-btn:not(:first-child) > .btn-group > .btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-btn:not(:first-child) > .btn-group > input[type="submit"], form
+.input-group-btn:not(:first-child) > .btn-group > input[type="submit"], form
+.input-group-btn:not(:first-child) > .btn-group > input[type="button"], form
+.input-group-btn:not(:first-child) > .btn-group > input[type="reset"], form
+.input-group-btn:not(:first-child) > .btn-group > button[type="submit"], form
+.input-group-btn:not(:first-child) > .btn-group > button[type="button"], form
+.input-group-btn:not(:first-child) > .btn-group > button[type="reset"], form
 .input-group-btn:not(:first-child) > .btn-group > button,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
-.input-group-btn:not(:last-child) > .btn:not(:first-child), form fieldset div
-.input-group-btn:not(:last-child) > input[type="submit"]:not(:first-child), form fieldset div
-.input-group-btn:not(:last-child) > input[type="button"]:not(:first-child), form fieldset div
-.input-group-btn:not(:last-child) > input[type="reset"]:not(:first-child), form fieldset div
-.input-group-btn:not(:last-child) > button[type="submit"]:not(:first-child), form fieldset div
-.input-group-btn:not(:last-child) > button[type="button"]:not(:first-child), form fieldset div
-.input-group-btn:not(:last-child) > button[type="reset"]:not(:first-child), form fieldset div
+.input-group-btn:not(:last-child) > .btn:not(:first-child), header[role="document-header"] #header_login #login_wrap form
+.input-group-btn:not(:last-child) > input[type="submit"]:not(:first-child), form
+.input-group-btn:not(:last-child) > input[type="submit"]:not(:first-child), form
+.input-group-btn:not(:last-child) > input[type="button"]:not(:first-child), form
+.input-group-btn:not(:last-child) > input[type="reset"]:not(:first-child), form
+.input-group-btn:not(:last-child) > button[type="submit"]:not(:first-child), form
+.input-group-btn:not(:last-child) > button[type="button"]:not(:first-child), form
+.input-group-btn:not(:last-child) > button[type="reset"]:not(:first-child), form
 .input-group-btn:not(:last-child) > button:not(:first-child),
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, form fieldset div
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="submit"], form fieldset div
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="button"], form fieldset div
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="reset"], form fieldset div
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button[type="submit"], form fieldset div
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button[type="button"], form fieldset div
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button[type="reset"], form fieldset div
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, header[role="document-header"] #header_login #login_wrap form
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="submit"], form
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="submit"], form
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="button"], form
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="reset"], form
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button[type="submit"], form
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button[type="button"], form
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button[type="reset"], form
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-.form-control + .input-group-addon:not(:first-child), form fieldset div input + .input-group-addon:not(:first-child), form fieldset div select + .input-group-addon:not(:first-child) {
+.form-control + .input-group-addon:not(:first-child), form input + .input-group-addon:not(:first-child), form select + .input-group-addon:not(:first-child) {
   border-left: 0;
 }
 
@@ -3784,33 +3838,33 @@ tbody.collapse.show {
   white-space: nowrap;
 }
 
-.input-group-btn > .btn, form fieldset div .input-group-btn > input[type="submit"], form fieldset div .input-group-btn > input[type="button"], form fieldset div .input-group-btn > input[type="reset"], form fieldset div .input-group-btn > button[type="submit"], form fieldset div .input-group-btn > button[type="button"], form fieldset div .input-group-btn > button[type="reset"], form fieldset div .input-group-btn > button {
+.input-group-btn > .btn, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"], form .input-group-btn > input[type="submit"], form .input-group-btn > input[type="button"], form .input-group-btn > input[type="reset"], form .input-group-btn > button[type="submit"], form .input-group-btn > button[type="button"], form .input-group-btn > button[type="reset"], form .input-group-btn > button {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.input-group-btn > .btn + .btn, form fieldset div .input-group-btn > input[type="submit"] + .btn, form fieldset div .input-group-btn > input[type="button"] + .btn, form fieldset div .input-group-btn > input[type="reset"] + .btn, form fieldset div .input-group-btn > button[type="submit"] + .btn, form fieldset div .input-group-btn > button[type="button"] + .btn, form fieldset div .input-group-btn > button[type="reset"] + .btn, form fieldset div .input-group-btn > button + .btn, form fieldset div .input-group-btn > .btn + input[type="submit"], form fieldset div .input-group-btn > input[type="submit"] + input[type="submit"], form fieldset div .input-group-btn > input[type="button"] + input[type="submit"], form fieldset div .input-group-btn > input[type="reset"] + input[type="submit"], form fieldset div .input-group-btn > button[type="submit"] + input[type="submit"], form fieldset div .input-group-btn > button[type="button"] + input[type="submit"], form fieldset div .input-group-btn > button[type="reset"] + input[type="submit"], form fieldset div .input-group-btn > button + input[type="submit"], form fieldset div .input-group-btn > .btn + input[type="button"], form fieldset div .input-group-btn > input[type="submit"] + input[type="button"], form fieldset div .input-group-btn > input[type="button"] + input[type="button"], form fieldset div .input-group-btn > input[type="reset"] + input[type="button"], form fieldset div .input-group-btn > button[type="submit"] + input[type="button"], form fieldset div .input-group-btn > button[type="button"] + input[type="button"], form fieldset div .input-group-btn > button[type="reset"] + input[type="button"], form fieldset div .input-group-btn > button + input[type="button"], form fieldset div .input-group-btn > .btn + input[type="reset"], form fieldset div .input-group-btn > input[type="submit"] + input[type="reset"], form fieldset div .input-group-btn > input[type="button"] + input[type="reset"], form fieldset div .input-group-btn > input[type="reset"] + input[type="reset"], form fieldset div .input-group-btn > button[type="submit"] + input[type="reset"], form fieldset div .input-group-btn > button[type="button"] + input[type="reset"], form fieldset div .input-group-btn > button[type="reset"] + input[type="reset"], form fieldset div .input-group-btn > button + input[type="reset"], form fieldset div .input-group-btn > .btn + button[type="submit"], form fieldset div .input-group-btn > input[type="submit"] + button[type="submit"], form fieldset div .input-group-btn > input[type="button"] + button[type="submit"], form fieldset div .input-group-btn > input[type="reset"] + button[type="submit"], form fieldset div .input-group-btn > button[type="submit"] + button[type="submit"], form fieldset div .input-group-btn > button[type="button"] + button[type="submit"], form fieldset div .input-group-btn > button[type="reset"] + button[type="submit"], form fieldset div .input-group-btn > button + button[type="submit"], form fieldset div .input-group-btn > .btn + button[type="button"], form fieldset div .input-group-btn > input[type="submit"] + button[type="button"], form fieldset div .input-group-btn > input[type="button"] + button[type="button"], form fieldset div .input-group-btn > input[type="reset"] + button[type="button"], form fieldset div .input-group-btn > button[type="submit"] + button[type="button"], form fieldset div .input-group-btn > button[type="button"] + button[type="button"], form fieldset div .input-group-btn > button[type="reset"] + button[type="button"], form fieldset div .input-group-btn > button + button[type="button"], form fieldset div .input-group-btn > .btn + button[type="reset"], form fieldset div .input-group-btn > input[type="submit"] + button[type="reset"], form fieldset div .input-group-btn > input[type="button"] + button[type="reset"], form fieldset div .input-group-btn > input[type="reset"] + button[type="reset"], form fieldset div .input-group-btn > button[type="submit"] + button[type="reset"], form fieldset div .input-group-btn > button[type="button"] + button[type="reset"], form fieldset div .input-group-btn > button[type="reset"] + button[type="reset"], form fieldset div .input-group-btn > button + button[type="reset"], form fieldset div .input-group-btn > .btn + button, form fieldset div .input-group-btn > input[type="submit"] + button, form fieldset div .input-group-btn > input[type="button"] + button, form fieldset div .input-group-btn > input[type="reset"] + button, form fieldset div .input-group-btn > button[type="submit"] + button, form fieldset div .input-group-btn > button[type="button"] + button, form fieldset div .input-group-btn > button[type="reset"] + button, form fieldset div .input-group-btn > button + button {
+.input-group-btn > .btn + .btn, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"] + .btn, form .input-group-btn > input[type="submit"] + .btn, form .input-group-btn > input[type="button"] + .btn, form .input-group-btn > input[type="reset"] + .btn, form .input-group-btn > button[type="submit"] + .btn, form .input-group-btn > button[type="button"] + .btn, form .input-group-btn > button[type="reset"] + .btn, form .input-group-btn > button + .btn, header[role="document-header"] #header_login #login_wrap form .input-group-btn > .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="button"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="reset"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .input-group-btn > button + input[type="submit"], form .input-group-btn > .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"] + input[type="submit"], form .input-group-btn > input[type="submit"] + input[type="submit"], form .input-group-btn > input[type="button"] + input[type="submit"], form .input-group-btn > input[type="reset"] + input[type="submit"], form .input-group-btn > button[type="submit"] + input[type="submit"], form .input-group-btn > button[type="button"] + input[type="submit"], form .input-group-btn > button[type="reset"] + input[type="submit"], form .input-group-btn > button + input[type="submit"], form .input-group-btn > .btn + input[type="button"], header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"] + input[type="button"], form .input-group-btn > input[type="submit"] + input[type="button"], form .input-group-btn > input[type="button"] + input[type="button"], form .input-group-btn > input[type="reset"] + input[type="button"], form .input-group-btn > button[type="submit"] + input[type="button"], form .input-group-btn > button[type="button"] + input[type="button"], form .input-group-btn > button[type="reset"] + input[type="button"], form .input-group-btn > button + input[type="button"], form .input-group-btn > .btn + input[type="reset"], header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"] + input[type="reset"], form .input-group-btn > input[type="submit"] + input[type="reset"], form .input-group-btn > input[type="button"] + input[type="reset"], form .input-group-btn > input[type="reset"] + input[type="reset"], form .input-group-btn > button[type="submit"] + input[type="reset"], form .input-group-btn > button[type="button"] + input[type="reset"], form .input-group-btn > button[type="reset"] + input[type="reset"], form .input-group-btn > button + input[type="reset"], form .input-group-btn > .btn + button[type="submit"], form .input-group-btn > input[type="submit"] + button[type="submit"], form .input-group-btn > input[type="button"] + button[type="submit"], form .input-group-btn > input[type="reset"] + button[type="submit"], form .input-group-btn > button[type="submit"] + button[type="submit"], form .input-group-btn > button[type="button"] + button[type="submit"], form .input-group-btn > button[type="reset"] + button[type="submit"], form .input-group-btn > button + button[type="submit"], form .input-group-btn > .btn + button[type="button"], form .input-group-btn > input[type="submit"] + button[type="button"], form .input-group-btn > input[type="button"] + button[type="button"], form .input-group-btn > input[type="reset"] + button[type="button"], form .input-group-btn > button[type="submit"] + button[type="button"], form .input-group-btn > button[type="button"] + button[type="button"], form .input-group-btn > button[type="reset"] + button[type="button"], form .input-group-btn > button + button[type="button"], form .input-group-btn > .btn + button[type="reset"], form .input-group-btn > input[type="submit"] + button[type="reset"], form .input-group-btn > input[type="button"] + button[type="reset"], form .input-group-btn > input[type="reset"] + button[type="reset"], form .input-group-btn > button[type="submit"] + button[type="reset"], form .input-group-btn > button[type="button"] + button[type="reset"], form .input-group-btn > button[type="reset"] + button[type="reset"], form .input-group-btn > button + button[type="reset"], form .input-group-btn > .btn + button, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"] + button, form .input-group-btn > input[type="submit"] + button, form .input-group-btn > input[type="button"] + button, form .input-group-btn > input[type="reset"] + button, form .input-group-btn > button[type="submit"] + button, form .input-group-btn > button[type="button"] + button, form .input-group-btn > button[type="reset"] + button, form .input-group-btn > button + button {
   margin-left: -1px;
 }
 
-.input-group-btn > .btn:focus, form fieldset div .input-group-btn > input[type="submit"]:focus, form fieldset div .input-group-btn > input[type="button"]:focus, form fieldset div .input-group-btn > input[type="reset"]:focus, form fieldset div .input-group-btn > button[type="submit"]:focus, form fieldset div .input-group-btn > button[type="button"]:focus, form fieldset div .input-group-btn > button[type="reset"]:focus, form fieldset div .input-group-btn > button:focus, .input-group-btn > .btn:active, form fieldset div .input-group-btn > input[type="submit"]:active, form fieldset div .input-group-btn > input[type="button"]:active, form fieldset div .input-group-btn > input[type="reset"]:active, form fieldset div .input-group-btn > button[type="submit"]:active, form fieldset div .input-group-btn > button[type="button"]:active, form fieldset div .input-group-btn > button[type="reset"]:active, form fieldset div .input-group-btn > button:active, .input-group-btn > .btn:hover, form fieldset div .input-group-btn > input[type="submit"]:hover, form fieldset div .input-group-btn > input[type="button"]:hover, form fieldset div .input-group-btn > input[type="reset"]:hover, form fieldset div .input-group-btn > button[type="submit"]:hover, form fieldset div .input-group-btn > button[type="button"]:hover, form fieldset div .input-group-btn > button[type="reset"]:hover, form fieldset div .input-group-btn > button:hover {
+.input-group-btn > .btn:focus, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"]:focus, form .input-group-btn > input[type="submit"]:focus, form .input-group-btn > input[type="button"]:focus, form .input-group-btn > input[type="reset"]:focus, form .input-group-btn > button[type="submit"]:focus, form .input-group-btn > button[type="button"]:focus, form .input-group-btn > button[type="reset"]:focus, form .input-group-btn > button:focus, .input-group-btn > .btn:active, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"]:active, form .input-group-btn > input[type="submit"]:active, form .input-group-btn > input[type="button"]:active, form .input-group-btn > input[type="reset"]:active, form .input-group-btn > button[type="submit"]:active, form .input-group-btn > button[type="button"]:active, form .input-group-btn > button[type="reset"]:active, form .input-group-btn > button:active, .input-group-btn > .btn:hover, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"]:hover, form .input-group-btn > input[type="submit"]:hover, form .input-group-btn > input[type="button"]:hover, form .input-group-btn > input[type="reset"]:hover, form .input-group-btn > button[type="submit"]:hover, form .input-group-btn > button[type="button"]:hover, form .input-group-btn > button[type="reset"]:hover, form .input-group-btn > button:hover {
   z-index: 3;
 }
 
-.input-group-btn:not(:last-child) > .btn, form fieldset div .input-group-btn:not(:last-child) > input[type="submit"], form fieldset div .input-group-btn:not(:last-child) > input[type="button"], form fieldset div .input-group-btn:not(:last-child) > input[type="reset"], form fieldset div .input-group-btn:not(:last-child) > button[type="submit"], form fieldset div .input-group-btn:not(:last-child) > button[type="button"], form fieldset div .input-group-btn:not(:last-child) > button[type="reset"], form fieldset div .input-group-btn:not(:last-child) > button,
+.input-group-btn:not(:last-child) > .btn, header[role="document-header"] #header_login #login_wrap form .input-group-btn:not(:last-child) > input[type="submit"], form .input-group-btn:not(:last-child) > input[type="submit"], form .input-group-btn:not(:last-child) > input[type="button"], form .input-group-btn:not(:last-child) > input[type="reset"], form .input-group-btn:not(:last-child) > button[type="submit"], form .input-group-btn:not(:last-child) > button[type="button"], form .input-group-btn:not(:last-child) > button[type="reset"], form .input-group-btn:not(:last-child) > button,
 .input-group-btn:not(:last-child) > .btn-group {
   margin-right: -1px;
 }
 
-.input-group-btn:not(:first-child) > .btn, form fieldset div .input-group-btn:not(:first-child) > input[type="submit"], form fieldset div .input-group-btn:not(:first-child) > input[type="button"], form fieldset div .input-group-btn:not(:first-child) > input[type="reset"], form fieldset div .input-group-btn:not(:first-child) > button[type="submit"], form fieldset div .input-group-btn:not(:first-child) > button[type="button"], form fieldset div .input-group-btn:not(:first-child) > button[type="reset"], form fieldset div .input-group-btn:not(:first-child) > button,
+.input-group-btn:not(:first-child) > .btn, header[role="document-header"] #header_login #login_wrap form .input-group-btn:not(:first-child) > input[type="submit"], form .input-group-btn:not(:first-child) > input[type="submit"], form .input-group-btn:not(:first-child) > input[type="button"], form .input-group-btn:not(:first-child) > input[type="reset"], form .input-group-btn:not(:first-child) > button[type="submit"], form .input-group-btn:not(:first-child) > button[type="button"], form .input-group-btn:not(:first-child) > button[type="reset"], form .input-group-btn:not(:first-child) > button,
 .input-group-btn:not(:first-child) > .btn-group {
   z-index: 2;
   margin-left: -1px;
 }
 
-.input-group-btn:not(:first-child) > .btn:focus, form fieldset div .input-group-btn:not(:first-child) > input[type="submit"]:focus, form fieldset div .input-group-btn:not(:first-child) > input[type="button"]:focus, form fieldset div .input-group-btn:not(:first-child) > input[type="reset"]:focus, form fieldset div .input-group-btn:not(:first-child) > button[type="submit"]:focus, form fieldset div .input-group-btn:not(:first-child) > button[type="button"]:focus, form fieldset div .input-group-btn:not(:first-child) > button[type="reset"]:focus, form fieldset div .input-group-btn:not(:first-child) > button:focus, .input-group-btn:not(:first-child) > .btn:active, form fieldset div .input-group-btn:not(:first-child) > input[type="submit"]:active, form fieldset div .input-group-btn:not(:first-child) > input[type="button"]:active, form fieldset div .input-group-btn:not(:first-child) > input[type="reset"]:active, form fieldset div .input-group-btn:not(:first-child) > button[type="submit"]:active, form fieldset div .input-group-btn:not(:first-child) > button[type="button"]:active, form fieldset div .input-group-btn:not(:first-child) > button[type="reset"]:active, form fieldset div .input-group-btn:not(:first-child) > button:active, .input-group-btn:not(:first-child) > .btn:hover, form fieldset div .input-group-btn:not(:first-child) > input[type="submit"]:hover, form fieldset div .input-group-btn:not(:first-child) > input[type="button"]:hover, form fieldset div .input-group-btn:not(:first-child) > input[type="reset"]:hover, form fieldset div .input-group-btn:not(:first-child) > button[type="submit"]:hover, form fieldset div .input-group-btn:not(:first-child) > button[type="button"]:hover, form fieldset div .input-group-btn:not(:first-child) > button[type="reset"]:hover, form fieldset div .input-group-btn:not(:first-child) > button:hover,
+.input-group-btn:not(:first-child) > .btn:focus, header[role="document-header"] #header_login #login_wrap form .input-group-btn:not(:first-child) > input[type="submit"]:focus, form .input-group-btn:not(:first-child) > input[type="submit"]:focus, form .input-group-btn:not(:first-child) > input[type="button"]:focus, form .input-group-btn:not(:first-child) > input[type="reset"]:focus, form .input-group-btn:not(:first-child) > button[type="submit"]:focus, form .input-group-btn:not(:first-child) > button[type="button"]:focus, form .input-group-btn:not(:first-child) > button[type="reset"]:focus, form .input-group-btn:not(:first-child) > button:focus, .input-group-btn:not(:first-child) > .btn:active, header[role="document-header"] #header_login #login_wrap form .input-group-btn:not(:first-child) > input[type="submit"]:active, form .input-group-btn:not(:first-child) > input[type="submit"]:active, form .input-group-btn:not(:first-child) > input[type="button"]:active, form .input-group-btn:not(:first-child) > input[type="reset"]:active, form .input-group-btn:not(:first-child) > button[type="submit"]:active, form .input-group-btn:not(:first-child) > button[type="button"]:active, form .input-group-btn:not(:first-child) > button[type="reset"]:active, form .input-group-btn:not(:first-child) > button:active, .input-group-btn:not(:first-child) > .btn:hover, header[role="document-header"] #header_login #login_wrap form .input-group-btn:not(:first-child) > input[type="submit"]:hover, form .input-group-btn:not(:first-child) > input[type="submit"]:hover, form .input-group-btn:not(:first-child) > input[type="button"]:hover, form .input-group-btn:not(:first-child) > input[type="reset"]:hover, form .input-group-btn:not(:first-child) > button[type="submit"]:hover, form .input-group-btn:not(:first-child) > button[type="button"]:hover, form .input-group-btn:not(:first-child) > button[type="reset"]:hover, form .input-group-btn:not(:first-child) > button:hover,
 .input-group-btn:not(:first-child) > .btn-group:focus,
 .input-group-btn:not(:first-child) > .btn-group:active,
 .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -5005,7 +5059,7 @@ tbody.collapse.show {
   display: none;
 }
 
-.btn .badge, form fieldset div input[type="submit"] .badge, form fieldset div input[type="button"] .badge, form fieldset div input[type="reset"] .badge, form fieldset div button[type="submit"] .badge, form fieldset div button[type="button"] .badge, form fieldset div button[type="reset"] .badge, form fieldset div button .badge {
+.btn .badge, header[role="document-header"] #header_login #login_wrap form input[type="submit"] .badge, form input[type="submit"] .badge, form input[type="button"] .badge, form input[type="reset"] .badge, form button[type="submit"] .badge, form button[type="button"] .badge, form button[type="reset"] .badge, form button .badge {
   position: relative;
   top: -1px;
 }
@@ -6308,7 +6362,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   display: table-cell !important;
 }
 
-.d-flex, header[role="document-header"], header[role="document-header"] > div, header[role="document-header"] nav, main, form fieldset .formulario-checkbox {
+.d-flex, header[role="document-header"], header[role="document-header"] > div, header[role="document-header"] nav, header[role="document-header"] #header_login #login_wrap form, main, form .formulario-checkbox {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -6462,14 +6516,14 @@ a.bg-inverse:focus, a.bg-inverse:hover {
           order: 0;
 }
 
-.flex-row, header[role="document-header"], section, form fieldset div {
+.flex-row, header[role="document-header"], section, form div {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: row !important;
           flex-direction: row !important;
 }
 
-.flex-column, main, form fieldset .formulario-checkbox {
+.flex-column, header[role="document-header"] #header_login #login_wrap form, main, form .formulario-checkbox {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: column !important;
@@ -9555,25 +9609,56 @@ header[role="document-header"] #header_brand span {
 
 header[role="document-header"] #header_search * {
   border: 0;
-  height: 33px;
+  border-radius: 0;
   font: normal 300 0.8rem "OpenSansLocal";
 }
 
+header[role="document-header"] #header_search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 header[role="document-header"] #header_search input[type="search"] {
+  border-radius: 0;
   width: 9rem;
-  border-radius: 5px 0 0 5px;
-  padding: 3px 0.5rem;
   color: black;
 }
 
 header[role="document-header"] #header_search input[type="submit"] {
-  border-radius: 0 5px 5px 0;
-  background: #155d98 no-repeat left 50% top 50%;
-  margin-left: -5px;
+  background: #155d98 url("../icons/search.png") no-repeat left 50% top 50%;
 }
 
 header[role="document-header"] #header_search input[type="submit"]:hover {
   background-color: #1f86db;
+}
+
+header[role="document-header"] #header_login #login_wrap {
+  z-index: 1;
+  background-color: #0C3455;
+  height: 240px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+}
+
+header[role="document-header"] #header_login #login_wrap form input[type="text"], header[role="document-header"] #header_login #login_wrap form input[type="password"] {
+  color: black;
+}
+
+header[role="document-header"] #header_login #login_wrap form a {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+header[role="document-header"] #header_login #login_wrap form > * {
+  margin-bottom: 0.5rem;
+}
+
+header[role="document-header"] #header_login #login_wrap form > *:last-child {
+  margin-bottom: 0;
 }
 
 footer {
@@ -9735,32 +9820,7 @@ audio, video {
   display: none;
 }
 
-form fieldset div label {
-  margin-bottom: .3rem;
-}
-
-form fieldset div input[type="submit"], form fieldset div input[type="button"], form fieldset div input[type="reset"], form fieldset div button[type="submit"], form fieldset div button[type="button"], form fieldset div button[type="reset"] {
-  width: auto;
-}
-
-form fieldset div input[disabled], form fieldset div button[disabled] {
-  background-color: #a9a8a8 !important;
-  border: 1px solid #5c5c5c !important;
-}
-
-form fieldset div optgroup {
-  background-color: #f5f5f5;
-}
-
-form fieldset div optgroup option {
-  background-color: white;
-}
-
-form fieldset div small {
-  color: #1f86db;
-}
-
-form fieldset .formulario-checkbox {
+form .formulario-checkbox {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -9769,8 +9829,33 @@ form fieldset .formulario-checkbox {
   list-style: none;
 }
 
-form fieldset .formulario-checkbox input[type="radio"], form fieldset .formulario-checkbox input[type="checkbox"] {
+form .formulario-checkbox input[type="radio"], form .formulario-checkbox input[type="checkbox"] {
   margin-right: 0.5rem;
+}
+
+form label {
+  margin-bottom: .3rem;
+}
+
+form input[type="submit"], form input[type="button"], form input[type="reset"], form button[type="submit"], form button[type="button"], form button[type="reset"] {
+  width: auto;
+}
+
+form input[disabled], form button[disabled] {
+  background-color: #a9a8a8 !important;
+  border: 1px solid #5c5c5c !important;
+}
+
+form optgroup {
+  background-color: #f5f5f5;
+}
+
+form optgroup option {
+  background-color: white;
+}
+
+form small {
+  color: #1f86db;
 }
 
 .note, .note-primary, .note-danger, .note-error, .note-info, .note-success, .note-warning {

@@ -14,8 +14,9 @@ footer {
       }
       div {
         p {
-          margin-bottom: 0;
+          margin: 0;
           text-align: center;
+          font-family: $font-base !important;
           &:first-child {
             font-weight: bold;
           }
@@ -34,5 +35,4 @@ footer {
       }
     }
   }
-
 }

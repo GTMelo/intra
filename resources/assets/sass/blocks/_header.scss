@@ -91,6 +91,24 @@ header[role="document-header"] {
       }
     }
   }
+  #header_user{
+    @extend .d-flex, .flex-row;
+    img{
+      width: 40px;
+      border-radius: 50%;
+    }
+    #header_user_data{
+      @extend .d-flex, .flex-column;
+      align-items: right;
+      margin-right: 0.5rem;
+    }
+    #user_nome{
+      font: 0.8rem $font-heading;
+    }
+    #user_data{
+      font: normal 300 0.6rem $font-base;
+    }
+  }
 }
 
 //header[role="document-header"]{

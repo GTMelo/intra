@@ -6362,7 +6362,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   display: table-cell !important;
 }
 
-.d-flex, header[role="document-header"], header[role="document-header"] > div, header[role="document-header"] nav, header[role="document-header"] #header_login #login_wrap form, main, form .formulario-checkbox {
+.d-flex, header[role="document-header"], header[role="document-header"] > div, header[role="document-header"] nav, header[role="document-header"] #header_login #login_wrap form, header[role="document-header"] #header_user, header[role="document-header"] #header_user #header_user_data, main, form .formulario-checkbox {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -6516,14 +6516,14 @@ a.bg-inverse:focus, a.bg-inverse:hover {
           order: 0;
 }
 
-.flex-row, header[role="document-header"], section, form div {
+.flex-row, header[role="document-header"], header[role="document-header"] #header_user, section, form div {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: row !important;
           flex-direction: row !important;
 }
 
-.flex-column, header[role="document-header"] #header_login #login_wrap form, main, form .formulario-checkbox {
+.flex-column, header[role="document-header"] #header_login #login_wrap form, header[role="document-header"] #header_user #header_user_data, main, form .formulario-checkbox {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: column !important;
@@ -9657,6 +9657,26 @@ header[role="document-header"] #header_login #login_wrap form > *:last-child {
   margin-bottom: 0;
 }
 
+header[role="document-header"] #header_user img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+header[role="document-header"] #header_user #header_user_data {
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  margin-right: 0.5rem;
+}
+
+header[role="document-header"] #header_user #user_nome {
+  font: 0.8rem "FjallaoneLocal", "arial black", "sans-serif";
+}
+
+header[role="document-header"] #header_user #user_data {
+  font: normal 300 0.6rem "OpenSansLocal";
+}
+
 footer {
   background-color: #155d98;
   color: white;
@@ -9683,8 +9703,9 @@ footer #footer_container #footer_elementos > * {
 }
 
 footer #footer_container #footer_elementos div p {
-  margin-bottom: 0;
+  margin: 0;
   text-align: center;
+  font-family: "OpenSansLocal" !important;
 }
 
 footer #footer_container #footer_elementos div p:first-child {
@@ -9917,10 +9938,12 @@ form small {
 }
 
 .has-dropdown {
+  cursor: default;
   position: relative;
 }
 
 .has-dropdown .dropdown-content {
+  z-index: 1;
   display: none !important;
   position: absolute;
   -webkit-box-orient: vertical;
@@ -9930,15 +9953,41 @@ form small {
   -webkit-box-align: left !important;
       -ms-flex-align: left !important;
           align-items: left !important;
-  z-index: 1;
   height: auto !important;
   top: 60px;
-  left: 0;
+  left: 0px;
+  width: 100%;
+  padding: 0;
   background-color: #155d98;
 }
 
 .has-dropdown .dropdown-content ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  width: 100%;
+}
+
+.has-dropdown .dropdown-content ul li {
+  padding: 0 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.has-dropdown .dropdown-content ul li:hover {
+  cursor: hand;
+  background-color: #1f86db;
+}
+
+.has-dropdown .dropdown-content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.has-dropdown .dpd-small {
+  width: 120px !important;
+}
+
+.has-dropdown .dpd-large {
+  width: 225px !important;
 }
 
 .has-dropdown:hover .dropdown-content {

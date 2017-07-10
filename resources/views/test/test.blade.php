@@ -3,6 +3,29 @@
 @section('content')
     <main>
 
+        <div class="container">
+
+            <div class="form-item">
+                <div class="form-item-label">
+                    <label>Label</label>
+                </div>
+                <div class="form-item-content">
+                    <div class="form-item-content-main"><input type="text"></div>
+                    <div class="form-item-content-tip"><small>Small text</small></div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="form-item-label">
+                    <label>Label</label>
+                </div>
+                <div class="form-item-content">
+                    <div class="form-item-content-main"><input type="text"></div>
+                    <div class="form-item-content-tip"><small>Small text</small></div>
+                </div>
+            </div>
+
+        </div>
+
         <div id="top" class="page" role="document">
             <header role="banner">
                 <h1>HTML5 Test Page</h1>

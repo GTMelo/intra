@@ -42,7 +42,7 @@ a {
   @include transitionEaseInOut();
   &:hover, &:focus {
     text-decoration: none;
-    color: $sain-amarelo;
+    color: $link-hover-color;
   }
 }
 

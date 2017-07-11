@@ -2,36 +2,32 @@
 
 @section('content')
     <main>
-
         <div class="container">
 
-            <div class="form-item">
-                <div class="form-item-label">
-                    <label>Label</label>
-                </div>
-                <div class="form-item-content">
-                    <div class="form-item-content-main"><input type="text"></div>
-                    <div class="form-item-content-tip"><small>Small text</small></div>
-                </div>
-            </div>
-            <div class="form-item">
-                <div class="form-item-label">
-                    <label>Label</label>
-                </div>
-                <div class="form-item-content">
-                    <div class="form-item-content-main"><input type="text"></div>
-                    <div class="form-item-content-tip"><small>Small text</small></div>
-                </div>
-            </div>
+            @component('component.form.text-input') Nome Completo
+            @slot('placeholder') Nome Completo @endslot
+            @slot('help') Digite o nome completo @endslot
+            @slot('id') nome_completo @endslot
+            @endcomponent
+
+            @component('component.form.text-input') Nome Curto
+            @slot('placeholder') Nome curto @endslot
+            @slot('id') nome_curto @endslot
+            @slot('help') O nome curto é gerado automaticamente utilizando seus primeiro e último nomes. Altere caso
+            deseje utilizar outro nome. @endslot
+            @endcomponent
+
+            @component('component.form.password-input') Senha
+            @slot('confirm')@endslot
+            @slot('placeholder') Digite a senha @endslot
+            @endcomponent
+
+                @component('component.form.date-input') Thing
+                @endcomponent
 
         </div>
 
         <div id="top" class="page" role="document">
-            <header role="banner">
-                <h1>HTML5 Test Page</h1>
-                <p>This is a test page filled with common HTML elements to be used to provide visual feedback whilst
-                    building CSS systems and frameworks.</p>
-            </header>
             <nav role="navigation">
                 <ul>
                     <li>

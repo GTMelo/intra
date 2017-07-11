@@ -35,6 +35,17 @@
     });
 </script>
 
+<script>
+    if($('#nome_completo').length){
+        $('#nome_completo').keyup(function () {
+            var nome = $('#nome_completo').val().split(' ');
+            var nome1 = nome.slice(0, 1);
+            var nome2 = nome.slice(-1);
+            $("#nome_curto").val(nome1 + ' ' + nome2);
+        });
+    }
+</script>
+
 @yield('scripts')
 
 </body>

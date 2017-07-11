@@ -56,7 +56,7 @@
 .form-item{
   @extend .d-flex, .flex-row;
   background: $cinza;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   font: normal 0.9rem $font-base;
   //font-size: 0.8rem;
   * {
@@ -67,7 +67,8 @@
   input{
     flex: 1;
     font-family: inherit;
-    padding: 2px 0.5rem;
+    //padding: 2px 0.5rem;
+    padding: 0.3rem 0.5rem;
     border: 1px solid $cinza-dark;
   }
   small{
@@ -75,18 +76,28 @@
     text-align: justify;
   }
   .form-item-label{
-    @extend .justify-content-end, .align-items-start;
+    @extend .align-items-start;
     font-weight: bold;
     width: 10rem;
     margin-right: 0.5rem;
     color: $cinza-darkest;
     label{
-      padding-top: 3px; // ajusta label para input
-      text-align: right;
+      padding-top: calc(0.3rem + 1px); // ajusta label para input
     }
   }
   .form-item-content{
     @extend .d-flex, .flex-column;
     flex: 1;
+  }
+  .form-complementary{
+    margin-left: 0.5rem;
+  }
+}
+
+.form-feedback-error{
+  @extend .note-error;
+  border: 0;
+  label, small{
+    color: white !important;
   }
 }

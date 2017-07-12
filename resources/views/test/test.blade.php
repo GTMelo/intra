@@ -22,8 +22,20 @@
             @slot('placeholder') Digite a senha @endslot
             @endcomponent
 
-                @component('component.form.date-input') Thing
-                @endcomponent
+            @component('component.form.date-input') Thing @endcomponent
+
+            @component('component.form.select-input',[
+                'options' => [
+                ['value of thing', 1],
+                ['value of thing', 2],
+                ['value of thing', 3],
+                ['value of thing', 4, true],
+                ['value of thing', 5],
+                ],
+            ]) Select Example
+            @slot('name') select_example @endslot
+            @endcomponent
+
 
         </div>
 

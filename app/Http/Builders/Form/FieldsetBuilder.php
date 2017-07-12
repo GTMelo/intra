@@ -9,6 +9,8 @@
 namespace App\Http\Builders\Form;
 
 
+use Illuminate\Support\Collection;
+
 class FieldsetBuilder
 {
 
@@ -17,12 +19,20 @@ class FieldsetBuilder
     public $fields;
     public $legend;
 
-    public function __construct($data)
+    public static function build($data)
     {
-        $this->id = $data['id'];
-        $this->classes = $data['classes'];
-        $this->legend = $data['legend'];
-        $this->fields = $data['fields'];
+        $fieldset = new FieldsetBuilder();
+        $fieldset->fields = new Collection();
+
+        $fieldset->id = $data['id'];
+        $fieldset->classes = $data['classes'];
+        $fieldset->legend = $data['legend'];
+
+        foreach($data->inputs as $input){
+            $fieldset->fields->push();
+        }
+
+        return $fieldset;
     }
 
 

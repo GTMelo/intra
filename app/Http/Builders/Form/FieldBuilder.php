@@ -14,9 +14,9 @@ use App\Http\Builders\Form\Field\TextField;
 class FieldBuilder
 {
     public static function build($data){
-        switch($data['type']){
+        switch ($data->inputSelector->inputSelector) {
             case 'text':
-                TextField::build($data);
+                return TextField::build($data);
             default:
                 return false; // TODO Exception aqui
 

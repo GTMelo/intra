@@ -16,20 +16,20 @@ class FieldsetBuilder
 
     public $id;
     public $classes;
-    public $fields;
     public $legend;
+    public $fields;
 
     public static function build($data)
     {
         $fieldset = new FieldsetBuilder();
         $fieldset->fields = new Collection();
 
-        $fieldset->id = $data['id'];
-        $fieldset->classes = $data['classes'];
-        $fieldset->legend = $data['legend'];
+        $fieldset->id = $data->id;
+        $fieldset->classes = $data->classes;
+        $fieldset->legend = $data->legend;
 
         foreach($data->inputs as $input){
-            $fieldset->fields->push();
+            $fieldset->fields->push(FieldBuilder::build($input));
         }
 
         return $fieldset;

@@ -23,12 +23,12 @@ class TextField extends Field
 
         $input = new TextField();
 
-        $input->id      = $data['id'];
-        $input->label   = $data['label'];
-        $input->name    = $data['name'];
-        $input->tip     = $data['tip'];
-        $input->classes = $data['classes'];
-        $input->placeholder = $data['placeholder'];
+        $input->id = $data->id;
+        $input->label = $data->label;
+        $input->name = $data->name;
+        $input->tip = $data->tip;
+        $input->classes = $data->classes;
+        $input->placeholder = $data->inputSelector->placeholder;
 
         return $input;
     }

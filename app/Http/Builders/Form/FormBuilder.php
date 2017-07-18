@@ -21,7 +21,9 @@ class FormBuilder
 
     public static function build($jsonString){
 
-        $json = collect($jsonString);
+        $json = json_decode($jsonString);
+        $json = collect($json);
+
         $form = new FormBuilder();
         $form->fieldsets = new Collection();
 
@@ -36,65 +38,5 @@ class FormBuilder
 
         return $form;
     }
-
-    public function test()
-    {
-        return '
-        
-          {
-          "id" : 1,
-          "method" : "POST",
-          "action" : "action",
-          "fieldsets" : {
-            "legend" : "thing",
-            "inputs" : {
-              "input1" : {
-                "name" : "namehere",
-                "label" : "labelhere",
-                "classes": "classhere",
-                "tip" : "tip here and stuff",
-                "type" : {
-                  "type" : "text",
-                  "placeholder" : "placeholder here"
-                }
-              },
-              "input2" : {
-                "name" : "password",
-                "label" : "Senha",
-                "classes": "passwordstuff",
-                "tip" : "Digite a senha",
-                "type" : {
-                  "type" : "password",
-                  "placeholder" : "Digite a senha"
-                }
-              },
-              "input3" : {
-                "name" : "Select",
-                "label" : "Exemplo de Select",
-                "classes": "",
-                "tip" : "",
-                "type" : {
-                  "type" : "select",
-                  "options" : [
-                    {
-                      "label" : "Do the Thing",
-                      "value" : "doit",
-                      "selected" : false
-                    },
-                    {
-                      "label" : "Default Thing",
-                      "value" : "defthing",
-                      "selected" : true
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-        
-        ';
-    }
-
 
 }

@@ -1,0 +1,37 @@
+{
+  "id": 1,
+  "method": "POST",
+  "action": "action",
+  "classes": "example class stuff",
+  "fieldsets": [
+    {
+      "id": "fieldset_1",
+      "classes": "exampleOfFieldSetClasses",
+      "legend": "Example of Legend",
+      "inputs": [
+        {
+          "id": "field_1",
+          "name": "namehere",
+          "label": "labelhere",
+          "classes": "classhere",
+          "tip": "tip here and stuff",
+          "inputSelector": {
+            "inputSelector": "text",
+            "placeholder": "placeholder here"
+          }
+        },
+        {
+          "id": "field_2",
+          "name": "namehere",
+          "label": "labelhere 2",
+          "classes": "classhere",
+          "tip": "tip here and stuff",
+          "inputSelector": {
+            "inputSelector": "text",
+            "placeholder": "placeholder here"
+          }
+        }
+      ]
+    }
+  ]
+}

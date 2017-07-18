@@ -1,5 +1,10 @@
 const { mix } = require('laravel-mix');
 
+const path = require('path');
+const glob = require('glob');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management

@@ -28,5 +28,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CarrosselItemTableSeeder::class);
         $this->call(UsuarioRHTableSeeder::class);
         $this->call(TelefoneTableSeeder::class);
+        $this->call(FormTableSeeder::class);
     }
 }

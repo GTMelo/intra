@@ -1,51 +1,70 @@
 {
-  "id" : 1,
-  "method" : "POST",
-  "action" : "action",
-  "fieldsets" : {
-    "legend" : "thing",
-    "inputs" : {
-      "input1" : {
-        "name" : "namehere",
-        "label" : "labelhere",
-        "classes": "classhere",
-        "tip" : "tip here and stuff",
-        "type" : {
-          "type" : "text",
-          "placeholder" : "placeholder here"
+  "id": 1,
+  "method": "POST",
+  "action": "action",
+  "classes": "example class stuff",
+  "fieldsets": [
+    {
+      "id": "fieldset_1",
+      "classes": "exampleOfFieldSetClasses",
+      "legend": "Example of Legend",
+      "inputs": [
+        {
+          "id": "field_1",
+          "name": "namehere",
+          "label": "labelhere",
+          "classes": "classhere",
+          "tip": "tip here and stuff",
+          "type": {
+            "type": "text",
+            "placeholder": "placeholder here"
+          }
+        },
+        {
+          "id": "field_2",
+          "name": "namehere",
+          "label": "labelhere",
+          "classes": "classhere",
+          "tip": "tip here and stuff",
+          "type": {
+            "type": "text",
+            "placeholder": "placeholder here"
+          }
+        },
+        {
+          "id": "field_3",
+          "name": "password",
+          "label": "Senha",
+          "classes": "passwordstuff",
+          "tip": "Digite a senha",
+          "type": {
+            "type": "password",
+            "placeholder": "Digite a senha"
+          }
+        },
+        {
+          "id": "field_4",
+          "name": "Select",
+          "label": "Exemplo de Select",
+          "classes": "",
+          "tip": "",
+          "type": {
+            "type": "select",
+            "options": [
+              {
+                "label": "Do the Thing",
+                "value": "doit",
+                "selected": false
+              },
+              {
+                "label": "Default Thing",
+                "value": "defthing",
+                "selected": true
+              }
+            ]
+          }
         }
-      },
-      "input2" : {
-        "name" : "password",
-        "label" : "Senha",
-        "classes": "passwordstuff",
-        "tip" : "Digite a senha",
-        "type" : {
-          "type" : "password",
-          "placeholder" : "Digite a senha"
-        }
-      },
-      "input3" : {
-        "name" : "Select",
-        "label" : "Exemplo de Select",
-        "classes": "",
-        "tip" : "",
-        "type" : {
-          "type" : "select",
-          "options" : [
-            {
-              "label" : "Do the Thing",
-              "value" : "doit",
-              "selected" : false
-            },
-            {
-              "label" : "Default Thing",
-              "value" : "defthing",
-              "selected" : true
-            }
-          ]
-        }
-      }
+      ]
     }
-  }
+  ]
 }

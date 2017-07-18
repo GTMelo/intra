@@ -1,10 +1,11 @@
 // Imports
-@import "partials/typography";
-@import "partials/color";
-@import "partials/mixins";
-@import "partials/feedback";
-@import "blocks/header";
-@import "blocks/footer";
+@import "common/typography";
+@import "common/colors";
+@import "utility/mixins";
+@import "common/feedback";
+@import "header/header";
+@import "footer/footer";
+
 // Debug tools. TODO remove on deploy
 //@import "partials/debug";
 

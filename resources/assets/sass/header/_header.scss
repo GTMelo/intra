@@ -7,7 +7,7 @@ header[role="document-header"] {
     color: white;
     fill: white;
     &:hover {
-      @include transitionEaseInOut(background-color);
+      @include transitionSmooth(background-color);
     }
   }
   svg {
@@ -38,6 +38,9 @@ header[role="document-header"] {
       font-family: $font_heading;
     }
   }
+  #header_menu {
+    display: inline;
+  }
   #header_search {
     * {
       border: 0;
@@ -52,6 +55,7 @@ header[role="document-header"] {
       width: 9rem;
       //padding: 3px calc(32px + 0.5rem) 3px 0.5rem;
       color: black;
+      margin: 0;
     }
     input[type="submit"] {
       background: $sain-azul-light url("../icons/search.png") no-repeat left 50% top 50%;

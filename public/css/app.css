@@ -4816,17 +4816,17 @@ a.badge:focus, a.badge:hover {
   color: #2b542c;
 }
 
-.alert-info, .note, .note-primary, .note-danger, .note-error, .note-info, .note-success, .note-warning {
+.alert-info, .note, .note-primary, .note-danger, .note-error, .form-feedback-error, .note-info, .note-success, .note-warning {
   background-color: #d9edf7;
   border-color: #bcdff1;
   color: #31708f;
 }
 
-.alert-info hr, .note hr, .note-primary hr, .note-danger hr, .note-error hr, .note-info hr, .note-success hr, .note-warning hr {
+.alert-info hr, .note hr, .note-primary hr, .note-danger hr, .note-error hr, .form-feedback-error hr, .note-info hr, .note-success hr, .note-warning hr {
   border-top-color: #a6d5ec;
 }
 
-.alert-info .alert-link, .note .alert-link, .note-primary .alert-link, .note-danger .alert-link, .note-error .alert-link, .note-info .alert-link, .note-success .alert-link, .note-warning .alert-link {
+.alert-info .alert-link, .note .alert-link, .note-primary .alert-link, .note-danger .alert-link, .note-error .alert-link, .form-feedback-error .alert-link, .note-info .alert-link, .note-success .alert-link, .note-warning .alert-link {
   color: #245269;
 }
 
@@ -6197,7 +6197,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
           justify-content: flex-start !important;
 }
 
-.justify-content-end, .form-item .form-item-label {
+.justify-content-end {
   -webkit-box-pack: end !important;
       -ms-flex-pack: end !important;
           justify-content: flex-end !important;
@@ -9127,7 +9127,7 @@ sub {
   margin-top: 0;
 }
 
-.note, .note-primary, .note-danger, .note-error, .note-info, .note-success, .note-warning {
+.note, .note-primary, .note-danger, .note-error, .form-feedback-error, .note-info, .note-success, .note-warning {
   border-bottom: 3px solid;
   color: black;
   background-color: #f5f5f5;
@@ -9135,13 +9135,13 @@ sub {
   background: repeating-linear-gradient(45deg, #f5f5f5, #f5f5f5 10px, #e8e8e8 10px, #e8e8e8 20px);
 }
 
-.note ul, .note-primary ul, .note-danger ul, .note-error ul, .note-info ul, .note-success ul, .note-warning ul {
+.note ul, .note-primary ul, .note-danger ul, .note-error ul, .form-feedback-error ul, .note-info ul, .note-success ul, .note-warning ul {
   margin-top: 0;
   margin-bottom: 0;
   list-style: none;
 }
 
-.note p, .note-primary p, .note-danger p, .note-error p, .note-info p, .note-success p, .note-warning p {
+.note p, .note-primary p, .note-danger p, .note-error p, .form-feedback-error p, .note-info p, .note-success p, .note-warning p {
   font-family: "OpenSansLocal" !important;
   padding: 0;
   text-indent: 0;
@@ -9149,9 +9149,9 @@ sub {
 
 .note-primary {
   color: white;
-  background-color: #1f86db;
-  border-color: #1c78c5;
-  background: repeating-linear-gradient(45deg, #1f86db, #1f86db 10px, #1c78c5 10px, #1c78c5 20px);
+    background-color: #0275d8;
+    border-color: #0267bf;
+    background: repeating-linear-gradient(45deg, #0275d8, #0275d8 10px, #0267bf 10px, #0267bf 20px);
 }
 
 .note-info {
@@ -9163,23 +9163,23 @@ sub {
 
 .note-danger {
   color: black;
-  background-color: #eb9b54;
-  border-color: #e88e3d;
-  background: repeating-linear-gradient(45deg, #eb9b54, #eb9b54 10px, #e88e3d 10px, #e88e3d 20px);
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    background: repeating-linear-gradient(45deg, #f0ad4e, #f0ad4e 10px, #eea236 10px, #eea236 20px);
 }
 
-.note-error {
+.note-error, .form-feedback-error {
   color: black;
-  background-color: #ff6376;
-  border-color: #ff4a60;
-  background: repeating-linear-gradient(45deg, #ff6376, #ff6376 10px, #ff4a60 10px, #ff4a60 20px);
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    background: repeating-linear-gradient(45deg, #d9534f, #d9534f 10px, #d43f3a 10px, #d43f3a 20px);
 }
 
 .note-success {
   color: white;
-  background-color: #2b542c;
-  border-color: #224323;
-  background: repeating-linear-gradient(45deg, #2b542c, #2b542c 10px, #224323 10px, #224323 20px);
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    background: repeating-linear-gradient(45deg, #5cb85c, #5cb85c 10px, #4cae4c 10px, #4cae4c 20px);
 }
 
 .note-warning {
@@ -9235,6 +9235,10 @@ header[role="document-header"] #header_brand span {
   font-family: "FjallaoneLocal", "arial black", "sans-serif";
 }
 
+header[role="document-header"] #header_menu {
+    display: inline;
+}
+
 header[role="document-header"] #header_search * {
   border: 0;
   border-radius: 0;
@@ -9251,6 +9255,7 @@ header[role="document-header"] #header_search input[type="search"] {
   border-radius: 0;
   width: 9rem;
   color: black;
+    margin: 0;
 }
 
 header[role="document-header"] #header_search input[type="submit"] {
@@ -9503,7 +9508,7 @@ audio, video {
 
 .form-item {
   background: #f5f5f5;
-  padding: 0.5rem;
+    padding: 0.5rem 1rem;
   font: normal 0.9rem "OpenSansLocal";
 }
 
@@ -9512,18 +9517,22 @@ audio, video {
   padding: 0;
 }
 
-.form-item input {
+.form-item small {
+    margin-left: calc(0.5rem + 1px);
+    text-align: justify;
+}
+
+.form-item input, .form-item select {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   font-family: inherit;
-  padding: 2px 0.5rem;
+    padding: 0.3rem 0.5rem;
   border: 1px solid #a9a8a8;
 }
 
-.form-item small {
-  margin-left: calc(0.5rem + 1px);
-  text-align: justify;
+.form-item select option {
+    padding-left: 0.5rem;
 }
 
 .form-item .form-item-label {
@@ -9534,8 +9543,7 @@ audio, video {
 }
 
 .form-item .form-item-label label {
-  padding-top: 3px;
-  text-align: right;
+    padding-top: calc(0.3rem + 1px);
 }
 
 .form-item .form-item-content {
@@ -9544,7 +9552,19 @@ audio, video {
           flex: 1;
 }
 
-.note, .note-primary, .note-danger, .note-error, .note-info, .note-success, .note-warning {
+.form-item .form-complementary {
+    margin-left: 0.5rem;
+}
+
+.form-feedback-error {
+    border: 0;
+}
+
+.form-feedback-error label, .form-feedback-error small {
+    color: white !important;
+}
+
+.note, .note-primary, .note-danger, .note-error, .form-feedback-error, .note-info, .note-success, .note-warning {
   border-bottom: 3px solid;
   color: black;
   background-color: #f5f5f5;
@@ -9552,13 +9572,13 @@ audio, video {
   background: repeating-linear-gradient(45deg, #f5f5f5, #f5f5f5 10px, #e8e8e8 10px, #e8e8e8 20px);
 }
 
-.note ul, .note-primary ul, .note-danger ul, .note-error ul, .note-info ul, .note-success ul, .note-warning ul {
+.note ul, .note-primary ul, .note-danger ul, .note-error ul, .form-feedback-error ul, .note-info ul, .note-success ul, .note-warning ul {
   margin-top: 0;
   margin-bottom: 0;
   list-style: none;
 }
 
-.note p, .note-primary p, .note-danger p, .note-error p, .note-info p, .note-success p, .note-warning p {
+.note p, .note-primary p, .note-danger p, .note-error p, .form-feedback-error p, .note-info p, .note-success p, .note-warning p {
   font-family: "OpenSansLocal" !important;
   padding: 0;
   text-indent: 0;
@@ -9566,9 +9586,9 @@ audio, video {
 
 .note-primary {
   color: white;
-  background-color: #1f86db;
-  border-color: #1c78c5;
-  background: repeating-linear-gradient(45deg, #1f86db, #1f86db 10px, #1c78c5 10px, #1c78c5 20px);
+    background-color: #0275d8;
+    border-color: #0267bf;
+    background: repeating-linear-gradient(45deg, #0275d8, #0275d8 10px, #0267bf 10px, #0267bf 20px);
 }
 
 .note-info {
@@ -9580,23 +9600,23 @@ audio, video {
 
 .note-danger {
   color: black;
-  background-color: #eb9b54;
-  border-color: #e88e3d;
-  background: repeating-linear-gradient(45deg, #eb9b54, #eb9b54 10px, #e88e3d 10px, #e88e3d 20px);
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    background: repeating-linear-gradient(45deg, #f0ad4e, #f0ad4e 10px, #eea236 10px, #eea236 20px);
 }
 
-.note-error {
+.note-error, .form-feedback-error {
   color: black;
-  background-color: #ff6376;
-  border-color: #ff4a60;
-  background: repeating-linear-gradient(45deg, #ff6376, #ff6376 10px, #ff4a60 10px, #ff4a60 20px);
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    background: repeating-linear-gradient(45deg, #d9534f, #d9534f 10px, #d43f3a 10px, #d43f3a 20px);
 }
 
 .note-success {
   color: white;
-  background-color: #2b542c;
-  border-color: #224323;
-  background: repeating-linear-gradient(45deg, #2b542c, #2b542c 10px, #224323 10px, #224323 20px);
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    background: repeating-linear-gradient(45deg, #5cb85c, #5cb85c 10px, #4cae4c 10px, #4cae4c 20px);
 }
 
 .note-warning {

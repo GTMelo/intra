@@ -8,28 +8,67 @@
       "id": "fieldset_1",
       "classes": "exampleOfFieldSetClasses",
       "legend": "Example of Legend",
-      "inputs": [
+      "fields": [
         {
+          "type": "text",
           "id": "field_1",
           "name": "namehere",
           "label": "labelhere",
           "classes": "classhere",
           "tip": "tip here and stuff",
-          "inputSelector": {
-            "inputSelector": "text",
-            "placeholder": "placeholder here"
-          }
+          "placeholder": "example of placeholder"
         },
         {
+          "type": "text",
           "id": "field_2",
-          "name": "namehere",
-          "label": "labelhere 2",
+          "name": "namehere2",
+          "label": "labelhere 2 adf",
           "classes": "classhere",
-          "tip": "tip here and stuff",
-          "inputSelector": {
-            "inputSelector": "text",
-            "placeholder": "placeholder here"
-          }
+          "tip": "tip 2 here 2 and 2 stuff",
+          "placeholder": "example 2 of placeholder 2",
+          "confirm": true
+        },
+        {
+          "type": "password",
+          "id": "field_password",
+          "name": "field_password",
+          "label": "Exemplo de senha",
+          "classes": "classhere",
+          "tip": "tip 2 here 2 and 2 stuff",
+          "placeholder": "Digita uma senha aí",
+          "confirm": true
+        },
+        {
+          "type": "date",
+          "id": "field_date",
+          "name": "field_date",
+          "label": "Exemplo de Date",
+          "classes": "classhere",
+          "tip": "Date thing",
+          "placeholder": "Escolha data"
+        },
+        {
+          "type": "select",
+          "id": "field_select",
+          "name": "select",
+          "label": "Exemplo de select",
+          "classes": "classhere",
+          "tip": "Escolha 1",
+          "options": [
+            {
+              "label": "select 1",
+              "value": "value_select_1",
+              "selected": true
+            },
+            {
+              "label": "select 2",
+              "value": "value_select_2"
+            },
+            {
+              "label": "select 3",
+              "value": "value_select_3"
+            }
+          ]
         }
       ]
     }

@@ -1,21 +1,24 @@
 <div class="form-item">
     <div class="form-item-label">
-        <label>{{ $slot }}</label>
+        <label>{{ $field->label }}</label>
     </div>
     <div class="form-item-content">
         <div class="form-item-content-main">
-            <select @if(isset($name))name="{{ $name }}" @endif @if(isset($id))id="{{ $id }}"
-                    @endif @if(isset($classes))class="{{ $classes }}"@endif>
-                @if(isset($options))
-                    @foreach($options as $option)
-                        <option value="{{ $option[1] }}" @if(isset($option[2])) selected="selected" @endif>{{ $option[0] }}</option>
+            <select
+                    @if(isset($field->name))name="{{ $field->name }}" @endif
+            @if(isset($field->id))id="{{ $field->id }}" @endif
+                    @if(isset($field->classes))class="{{ $field->classes }}"@endif>
+                @if(isset($field->options))
+                    @foreach($field->options as $option)
+                        <option value="{{ $option->value }}"
+                                @if(isset($option->selected)) selected="selected" @endif>{{ $option->label }}</option>
                     @endforeach
                 @endif
             </select>
         </div>
-        @if(isset($help))
+        @if(isset($field->tip))
             <div class="form-item-content-tip">
-                <small>{{ $help }}</small>
+                <small>{{ $field->tip }}</small>
             </div>
         @endif
     </div>

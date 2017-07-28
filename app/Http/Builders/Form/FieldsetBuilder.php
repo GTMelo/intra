@@ -28,7 +28,7 @@ class FieldsetBuilder
         $fieldset->classes = $data->classes;
         $fieldset->legend = $data->legend;
 
-        foreach($data->inputs as $input){
+        foreach ($data->fields as $input) {
             $fieldset->fields->push(FieldBuilder::build($input));
         }
 

@@ -8,15 +8,28 @@
 
 namespace App\Http\Builders\Form;
 
-
-use App\Http\Builders\Form\Field\TextField;
+use App\Http\Builders\Form\Field\Field;
 
 class FieldBuilder
 {
     public static function build($data){
-        switch ($data->inputSelector->inputSelector) {
+        switch ($data->type) {
             case 'text':
-                return TextField::build($data);
+                return Field::text($data);
+            case 'password':
+                return Field::password($data);
+            case 'date':
+                return Field::date($data);
+            case 'select':
+                return Field::select($data);
+            case 'checkbox':
+                return Field::checkbox($data);
+            case 'radio':
+                return Field::radio($data);
+            case 'textarea':
+                return Field::textArea($data);
+            case 'button':
+                return Field::button($data);
             default:
                 return false; // TODO Exception aqui
 

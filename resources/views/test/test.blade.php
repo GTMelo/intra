@@ -2,42 +2,47 @@
 
 @section('content')
     <main>
+
         <div class="container">
-
-            @component('component.form.text-input') Nome Completo
-            @slot('placeholder') Nome Completo @endslot
-            @slot('help') Digite o nome completo @endslot
-            @slot('id') nome_completo @endslot
-            @endcomponent
-
-            @component('component.form.text-input') Nome Curto
-            @slot('placeholder') Nome curto @endslot
-            @slot('id') nome_curto @endslot
-            @slot('help') O nome curto é gerado automaticamente utilizando seus primeiro e último nomes. Altere caso
-            deseje utilizar outro nome. @endslot
-            @endcomponent
-
-            @component('component.form.password-input') Senha
-            @slot('confirm')@endslot
-            @slot('placeholder') Digite a senha @endslot
-            @endcomponent
-
-            @component('component.form.date-input') Thing @endcomponent
-
-            @component('component.form.select-input',[
-                'options' => [
-                ['value of thing', 1],
-                ['value of thing', 2],
-                ['value of thing', 3],
-                ['value of thing', 4, true],
-                ['value of thing', 5],
-                ],
-            ]) Select Example
-            @slot('name') select_example @endslot
-            @endcomponent
-
-
+            {!! $form->show() !!}
         </div>
+
+        {{--<div class="container">--}}
+
+        {{--@component('component.form.text-input') Nome Completo--}}
+        {{--@slot('placeholder') Nome Completo @endslot--}}
+        {{--@slot('help') Digite o nome completo @endslot--}}
+        {{--@slot('id') nome_completo @endslot--}}
+        {{--@endcomponent--}}
+
+        {{--@component('component.form.text-input') Nome Curto--}}
+        {{--@slot('placeholder') Nome curto @endslot--}}
+        {{--@slot('id') nome_curto @endslot--}}
+        {{--@slot('help') O nome curto é gerado automaticamente utilizando seus primeiro e último nomes. Altere caso--}}
+        {{--deseje utilizar outro nome. @endslot--}}
+        {{--@endcomponent--}}
+
+        {{--@component('component.form.password-input') Senha--}}
+        {{--@slot('confirm')@endslot--}}
+        {{--@slot('placeholder') Digite a senha @endslot--}}
+        {{--@endcomponent--}}
+
+        {{--@component('component.form.date-input') Thing @endcomponent--}}
+
+        {{--@component('component.form.select-input',[--}}
+        {{--'options' => [--}}
+        {{--['value of thing', 1],--}}
+        {{--['value of thing', 2],--}}
+        {{--['value of thing', 3],--}}
+        {{--['value of thing', 4, true],--}}
+        {{--['value of thing', 5],--}}
+        {{--],--}}
+        {{--]) Select Example--}}
+        {{--@slot('name') select_example @endslot--}}
+        {{--@endcomponent--}}
+
+
+        {{--</div>--}}
 
         <div id="top" class="page" role="document">
             <nav role="navigation">

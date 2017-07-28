@@ -1,27 +1,27 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: 02364114110
- * Date: 12/07/2017
- * Time: 15:48
+ * User: Gustavo
+ * Date: 24/07/2017
+ * Time: 17:56
  */
 
 namespace App\Http\Builders\Form\Field;
 
 
-class TextField extends Field
+class PasswordField extends Field
 {
     public $placeholder, $value;
 
     private function __construct()
     {
-        $this->type = "text";
+        $this->type = "password";
     }
 
     public static function build($data)
     {
 
-        $input = new TextField();
+        $input = new PasswordField();
 
         parent::preBuild($input, $data);
 

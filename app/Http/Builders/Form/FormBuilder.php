@@ -39,4 +39,9 @@ class FormBuilder
         return $form;
     }
 
+    public function show()
+    {
+        return \View::make('component.form.form', ['form' => $this]);
+    }
+
 }

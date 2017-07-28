@@ -1,27 +1,27 @@
 <div class="form-item">
     <div class="form-item-label">
-        <label>{{ $slot }}</label>
+        <label>{{ $field->label}}</label>
     </div>
     <div class="form-item-content">
         <div class="form-item-content-main">
             <input type="password"
-                   name="password"
-                   @if(isset($id))id="{{ $id }}" @endif
-                   @if(isset($placeholder))placeholder="{{ $placeholder }}" @endif
-                   @if(isset($classes))class="{{ $classes }}" @endif
+                   @if(isset($field->name))name="{{ $field->name }}" @endif
+                   @if(isset($field->id))id="{{ $field->id }}" @endif
+                   @if(isset($field->placeholder))placeholder="{{ $field->placeholder }}" @endif
+                   @if(isset($field->classes))class="{{ $field->classes }}" @endif
             >
-            @if(isset($confirm))
+            @if(isset($field->confirm))
                 <input type="password"
-                       name="password-confirmation"
-                       placeholder="Digite a senha novamente"
-                       class="form-complementary"
+                       name="{{ $field->name . '_confirmation' }}"
+                       id="{{ $field->id . '_confirmation' }}"
+                       placeholder="Repita o campo"
+                       class="{{ $field->classes }}"
                 >
             @endif
-
         </div>
-        @if(isset($help))
+        @if(isset($field->tip))
             <div class="form-item-content-tip">
-                <small>{{ $help }}</small>
+                <small>{{ $field->tip }}</small>
             </div>
         @endif
     </div>

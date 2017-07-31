@@ -32,7 +32,6 @@ class FieldBuilder
                 return Field::button($data);
             default:
                 return false; // TODO Exception aqui
-
         }
     }
 

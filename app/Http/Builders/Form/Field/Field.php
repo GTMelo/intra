@@ -8,22 +8,21 @@
 
 namespace App\Http\Builders\Form\Field;
 
-
 class Field
 {
     public $type, $id, $label, $name, $classes, $tip, $confirm;
-    public $placeholder, $options;
+    public $placeholder, $options, $rows;
 
     public static function build($data)
     {
         $field = new Field();
 
         $field->type = $data->type;
-        $field->id = $data->id;
-        $field->label = $data->label;
         $field->name = $data->name;
-        $field->classes = $data->classes;
-        $field->tip = $data->tip;
+        if(isset($data->id)) $field->id = $data->id;
+        if(isset($data->label))$field->label = $data->label;
+        if(isset($data->classes)) $field->classes = $data->classes;
+        if(isset($data->tip)) $field->tip = $data->tip;
 
         return $field;
     }
@@ -59,18 +58,21 @@ class Field
     public static function checkbox($data)
     {
         $field = self::build($data);
+        $field->options = $data->options;
         return $field;
     }
 
     public static function radio($data)
     {
         $field = self::build($data);
+        $field->options = $data->options;
         return $field;
     }
 
     public static function textarea($data)
     {
         $field = self::build($data);
+        if(isset($data->rows)) $field->rows = $data->rows;
         return $field;
     }
 

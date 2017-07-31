@@ -10,5 +10,8 @@ class Form extends Model
 
     protected $guarded = ['id'];
 
+    public static function slug($slug){
+        return self::where('slug', $slug)->first();
+    }
 
 }

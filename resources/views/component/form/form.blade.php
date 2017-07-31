@@ -1,7 +1,7 @@
 <form id="{{ $form->id }}" method="{{ $form->method }}" action="{{ $form->action }}">
     {{ csrf_field() }}
 
-        {{ dd($form->fieldsets) }}
+        {{--{{ dd($form->fieldsets) }}--}}
 
     @foreach($form->fieldsets as $fieldset)
                 <fieldset class="{{ $fieldset->classes }}">

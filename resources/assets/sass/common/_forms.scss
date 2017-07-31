@@ -68,7 +68,7 @@
     margin-left: calc(0.5rem + 1px);
     text-align: justify;
   }
-  input, select {
+  input, select, textarea {
     flex: 1;
     font-family: inherit;
     //padding: 2px 0.5rem;
@@ -97,7 +97,32 @@
   .form-complementary {
     margin-left: 0.5rem;
   }
+  button{
+    border: 0;
+    padding: 0.3rem 0.5rem;
+    background-color: $sain-azul;
+    color: white;
+    &:hover{
+      background-color: $sain-azul-light;
+    }
+    &:active{
+      background-color: $link-hover-color;
+    }
+  }
+}
 
+.form-checkbox{
+  .form-item-content-main{
+    flex-direction: column;
+  }
+  input{
+    flex: 0;
+    margin-right: 0.5rem;
+  }
+}
+
+.form-button{
+  justify-content: center;
 }
 
 .form-feedback-error {
@@ -106,5 +131,4 @@
   label, small {
     color: white !important;
   }
-
 }

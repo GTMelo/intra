@@ -6,114 +6,156 @@ header[role="document-header"] {
   * {
     color: white;
     fill: white;
-    &:hover {
-      @include transitionSmooth(background-color);
-    }
-  }
-  svg {
-    margin-right: 0.5rem;
   }
   & > div {
     @extend .d-flex, .align-items-center;
+    padding: 0 0.5rem;
     height: 100%;
   }
+}
+
+#header_brand {
+  @include smoothBackgroundHover($sain-azul-light);
+  svg {
+    margin-right: 0.5rem;
+  }
+  &:hover { // TODO decidir se mantém ou não
+    #a1, #a4 {
+      fill: $white;
+    }
+    #a2, #a3 {
+      fill: $white;
+    }
+  }
+}
+
+#header_menu {
   nav {
     @extend .d-flex, .align-items-center;
+    @include smoothBackgroundHover($sain-azul-light);
     height: 100%;
     padding: 0 0.5rem;
     font-size: 0.8rem;
     font-weight: 300;
-    &:hover {
-      background-color: $sain-azul-light;
-    }
-  }
-  a {
-    color: white;
-  }
-  #header_brand {
-    &:hover {
-      background-color: $sain-azul-light;
-    }
-    span {
-      font-family: $font_heading;
-    }
-  }
-  #header_menu {
-    display: inline;
-  }
-  #header_search {
-    * {
-      border: 0;
-      border-radius: 0;
-      font: normal 300 0.8rem $font-base;
-    }
-    form{
-      display: flex;
-    }
-    input[type="search"] {
-      border-radius: 0;
-      width: 9rem;
-      //padding: 3px calc(32px + 0.5rem) 3px 0.5rem;
-      color: black;
-      margin: 0;
-    }
-    input[type="submit"] {
-      background: $sain-azul-light url("../icons/search.png") no-repeat left 50% top 50%;
-      &:hover {
-        background-color: $sain-azul-lightest;
-      }
-    }
-  }
-  #header_login{
-    #login_wrap{
-      z-index: 1;
-      background-color: $sain-azul;
-      height: 240px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 0.5rem;
-      form{
-        @extend .d-flex, .flex-column;
-        input[type="text"], input[type="password"] {
-          color: black;
-        }
-        input[type="submit"]{
-          @extend .btn;
-        }
-        a {
-          text-align: center;
-          font-size: 0.8rem;
-          font-weight: 300;
-        }
-        & > *{
-          margin-bottom: 0.5rem;
-          &:last-child{
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-  #header_user{
-    @extend .d-flex, .flex-row;
-    img{
-      width: 40px;
-      border-radius: 50%;
-    }
-    #header_user_data{
-      @extend .d-flex, .flex-column;
-      align-items: right;
-      margin-right: 0.5rem;
-    }
-    #user_nome{
-      font: 0.8rem $font-heading;
-    }
-    #user_data{
-      font: normal 300 0.6rem $font-base;
-    }
   }
 }
+
+//header[role="document-header"] {
+//  @extend .d-flex, .flex-row, .justify-content-between, .align-items-center;
+//  padding: 0 1rem;
+//  background-color: $sain-azul;
+//  height: 60px;
+//  * {
+//    color: white;
+//    fill: white;
+//    &:hover {
+//      @include transitionSmooth(background-color);
+//    }
+//  }
+//  svg {
+//    margin-right: 0.5rem;
+//  }
+//  & > div {
+//    @extend .d-flex, .align-items-center;
+//    height: 100%;
+//  }
+//  nav {
+//    @extend .d-flex, .align-items-center;
+//    height: 100%;
+//    padding: 0 0.5rem;
+//    font-size: 0.8rem;
+//    font-weight: 300;
+//    &:hover {
+//      background-color: $sain-azul-light;
+//    }
+//  }
+//  a {
+//    color: white;
+//  }
+//  #header_brand {
+//    &:hover {
+//      background-color: $sain-azul-light;
+//    }
+//    span {
+//      font-family: $font_heading;
+//    }
+//  }
+//  #header_menu {
+//    display: inline;
+//  }
+//  #header_search {
+//    * {
+//      border: 0;
+//      border-radius: 0;
+//      font: normal 300 0.8rem $font-base;
+//    }
+//    form{
+//      display: flex;
+//    }
+//    input[type="search"] {
+//      border-radius: 0;
+//      width: 9rem;
+//      //padding: 3px calc(32px + 0.5rem) 3px 0.5rem;
+//      color: black;
+//      margin: 0;
+//    }
+//    input[type="submit"] {
+//      background: $sain-azul-light url("../icons/search.png") no-repeat left 50% top 50%;
+//      &:hover {
+//        background-color: $sain-azul-lightest;
+//      }
+//    }
+//  }
+//  #header_login{
+//    #login_wrap{
+//      z-index: 1;
+//      background-color: $sain-azul;
+//      height: 240px;
+//      position: absolute;
+//      top: 0;
+//      right: 0;
+//      padding: 0.5rem;
+//      //form{
+//      //  @extend .d-flex, .flex-column;
+//      //  input[type="text"], input[type="password"] {
+//      //    color: black;
+//      //  }
+//      //  input[type="submit"]{
+//      //    @extend .btn;
+//      //  }
+//      //  a {
+//      //    text-align: center;
+//      //    font-size: 0.8rem;
+//      //    font-weight: 300;
+//      //  }
+//      //  & > *{
+//      //    margin-bottom: 0.5rem;
+//      //    &:last-child{
+//      //      margin-bottom: 0;
+//      //    }
+//      //  }
+//      //}
+//    }
+//  }
+//  #header_user{
+//    @extend .d-flex, .flex-row;
+//    img{
+//      width: 40px;
+//      border-radius: 50%;
+//    }
+//    #header_user_data{
+//      @extend .d-flex, .flex-column;
+//      align-items: right;
+//      margin-right: 0.5rem;
+//    }
+//    #user_nome{
+//      font: 0.8rem $font-heading;
+//    }
+//    #user_data{
+//      font: normal 300 0.6rem $font-base;
+//    }
+//  }
+//}
 
 //header[role="document-header"]{
 //  display: flex;

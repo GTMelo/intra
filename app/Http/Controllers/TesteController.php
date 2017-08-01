@@ -9,9 +9,7 @@ class TesteController extends Controller
 {
     function index(){
 
-        $form = FormBuilder::build(Form::first()->json);
-
-        return view('test.test', compact('form'));
+        return view('test.test');
 
     }
 

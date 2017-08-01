@@ -4,13 +4,7 @@
             <a id="loginbtn" href="#">Login</a>
         </nav>
         <div id="login_wrap" class="hidden">
-            <form id="login_form" method="POST" action="/login">
-                {{ csrf_field() }}
-                <input type="text" name="cpf" placeholder="CPF">
-                <input type="password" name="password" placeholder="Senha">
-                <input type="submit" name="login" value="Entrar">
-                <a href="/registrar">Novo usuário</a>
-            </form>
+            @include('form.login-form')
         </div>
     </div>
 @endif

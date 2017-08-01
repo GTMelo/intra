@@ -1,7 +1,9 @@
 <div class="form-item">
-    <div class="form-item-label">
-        <label>{{ $field->label }}</label>
-    </div>
+    @if(isset($field->label))
+        <div class="form-item-label">
+                <label>{{ $field->label }}</label>
+        </div>
+    @endif
     <div class="form-item-content">
         <div class="form-item-content-main">
             <select
@@ -12,7 +14,7 @@
                 @if(isset($field->options))
                     @foreach($field->options as $option)
                         <option value="{{ $option->value }}"
-                            @if(isset($option->selected)) selected="selected" @endif>{{ $option->label }}
+                                @if(isset($option->selected)) selected="selected" @endif> @if(isset($option->label)){{ $option->label }}@endif
                         </option>
                     @endforeach
                 @endif

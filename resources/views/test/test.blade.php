@@ -3,9 +3,7 @@
 @section('content')
     <main>
 
-        <div class="container">
-            {!! $form->show() !!}
-        </div>
+        @include('form.login-form', [])
 
         {{--<div class="container">--}}
 

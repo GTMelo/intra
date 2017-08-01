@@ -2256,19 +2256,16 @@ select.form-control:focus::-ms-value {
 
 .form-control-static.form-control-sm, .input-group-sm > .form-control-static.form-control,
 .input-group-sm > .form-control-static.input-group-addon,
-.input-group-sm > .input-group-btn > .form-control-static.btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-sm > .input-group-btn > input.form-control-static[type="submit"], .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control,
+.input-group-sm > .input-group-btn > .form-control-static.btn, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control,
 .input-group-lg > .form-control-static.input-group-addon,
-.input-group-lg > .input-group-btn > .form-control-static.btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-lg > .input-group-btn > input.form-control-static[type="submit"] {
+.input-group-lg > .input-group-btn > .form-control-static.btn {
   padding-right: 0;
   padding-left: 0;
 }
 
 .form-control-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-sm > .input-group-btn > input[type="submit"] {
+.input-group-sm > .input-group-btn > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -2282,8 +2279,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 
 .form-control-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-lg > .input-group-btn > input[type="submit"] {
+.input-group-lg > .input-group-btn > .btn {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
@@ -2529,7 +2525,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   }
 }
 
-.btn, header[role="document-header"] #header_login #login_wrap form input[type="submit"] {
+.btn {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -2547,21 +2543,21 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   transition: all 0.2s ease-in-out;
 }
 
-.btn:focus, header[role="document-header"] #header_login #login_wrap form input[type="submit"]:focus, .btn:hover, header[role="document-header"] #header_login #login_wrap form input[type="submit"]:hover {
+.btn:focus, .btn:hover {
   text-decoration: none;
 }
 
-.btn:focus, header[role="document-header"] #header_login #login_wrap form input[type="submit"]:focus, .btn.focus, header[role="document-header"] #header_login #login_wrap form input.focus[type="submit"] {
+.btn:focus, .btn.focus {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
 }
 
-.btn.disabled, header[role="document-header"] #header_login #login_wrap form input.disabled[type="submit"], .btn:disabled, header[role="document-header"] #header_login #login_wrap form input[type="submit"]:disabled {
+.btn.disabled, .btn:disabled {
   cursor: not-allowed;
   opacity: .65;
 }
 
-.btn:active, header[role="document-header"] #header_login #login_wrap form input[type="submit"]:active, .btn.active, header[role="document-header"] #header_login #login_wrap form input.active[type="submit"] {
+.btn:active, .btn.active {
   background-image: none;
 }
 
@@ -2950,13 +2946,13 @@ fieldset[disabled] a.btn {
   text-decoration: none;
 }
 
-.btn-lg, .btn-group-lg > .btn, header[role="document-header"] #header_login #login_wrap form .btn-group-lg > input[type="submit"] {
+.btn-lg, .btn-group-lg > .btn {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, header[role="document-header"] #header_login #login_wrap form .btn-group-sm > input[type="submit"] {
+.btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -3144,52 +3140,33 @@ tbody.collapse.show {
   vertical-align: middle;
 }
 
-.btn-group > .btn, header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"],
-.btn-group-vertical > .btn, header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical > input[type="submit"] {
+.btn-group > .btn,
+.btn-group-vertical > .btn {
   position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
 }
 
-.btn-group > .btn:hover, header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:hover,
-.btn-group-vertical > .btn:hover, header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical > input[type="submit"]:hover {
+.btn-group > .btn:hover,
+.btn-group-vertical > .btn:hover {
   z-index: 2;
 }
 
-.btn-group > .btn:focus, header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:focus, .btn-group > .btn:active, header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:active, .btn-group > .btn.active, header[role="document-header"] #header_login #login_wrap form .btn-group > input.active[type="submit"],
-.btn-group-vertical > .btn:focus, header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical > input[type="submit"]:focus,
-.btn-group-vertical > .btn:active, header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical > input[type="submit"]:active,
-.btn-group-vertical > .btn.active, header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical > input.active[type="submit"] {
+.btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+.btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn.active {
   z-index: 2;
 }
 
-.btn-group .btn + .btn, .btn-group header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .btn, header[role="document-header"] #header_login #login_wrap form .btn-group input[type="submit"] + .btn, .btn-group header[role="document-header"] #header_login #login_wrap form .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group .btn + input[type="submit"], .btn-group header[role="document-header"] #header_login #login_wrap form input[type="submit"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group input[type="submit"] + input[type="submit"],
+.btn-group .btn + .btn,
 .btn-group .btn + .btn-group,
-.btn-group header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .btn-group, header[role="document-header"] #header_login #login_wrap form
-.btn-group input[type="submit"] + .btn-group,
 .btn-group .btn-group + .btn,
-.btn-group header[role="document-header"] #header_login #login_wrap form .btn-group + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
-.btn-group .btn-group + input[type="submit"],
 .btn-group .btn-group + .btn-group,
 .btn-group-vertical .btn + .btn,
-.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .btn, header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical input[type="submit"] + .btn,
-.btn-group-vertical header[role="document-header"] #header_login #login_wrap form .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical .btn + input[type="submit"],
-.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"] + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical input[type="submit"] + input[type="submit"],
 .btn-group-vertical .btn + .btn-group,
-.btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .btn-group, header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical input[type="submit"] + .btn-group,
 .btn-group-vertical .btn-group + .btn,
-.btn-group-vertical header[role="document-header"] #header_login #login_wrap form .btn-group + input[type="submit"], header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical .btn-group + input[type="submit"],
 .btn-group-vertical .btn-group + .btn-group {
   margin-left: -1px;
 }
@@ -3207,20 +3184,20 @@ tbody.collapse.show {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
-.btn-group > .btn:first-child, header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:first-child {
+.btn-group > .btn:first-child {
   margin-left: 0;
 }
 
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn:last-child:not(:first-child), header[role="document-header"] #header_login #login_wrap form .btn-group > input[type="submit"]:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -3230,17 +3207,17 @@ tbody.collapse.show {
   float: left;
 }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, header[role="document-header"] #header_login #login_wrap form .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"] {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, header[role="document-header"] #header_login #login_wrap form .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, header[role="document-header"] #header_login #login_wrap form .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -3250,21 +3227,21 @@ tbody.collapse.show {
   outline: 0;
 }
 
-.btn + .dropdown-toggle-split, header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
 
-.btn + .dropdown-toggle-split::after, header[role="document-header"] #header_login #login_wrap form input[type="submit"] + .dropdown-toggle-split::after {
+.btn + .dropdown-toggle-split::after {
   margin-left: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, header[role="document-header"] #header_login #login_wrap form .btn-group-sm > input[type="submit"] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, header[role="document-header"] #header_login #login_wrap form .btn-group-lg > input[type="submit"] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
@@ -3285,57 +3262,52 @@ tbody.collapse.show {
           justify-content: center;
 }
 
-.btn-group-vertical .btn, .btn-group-vertical header[role="document-header"] #header_login #login_wrap form input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group-vertical input[type="submit"],
+.btn-group-vertical .btn,
 .btn-group-vertical .btn-group {
   width: 100%;
 }
 
-.btn-group-vertical > .btn + .btn, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"] + .btn, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"] + input[type="submit"],
-.btn-group-vertical > .btn + .btn-group, header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical > input[type="submit"] + .btn-group,
-.btn-group-vertical > .btn-group + .btn, header[role="document-header"] #header_login #login_wrap form
-.btn-group-vertical > .btn-group + input[type="submit"],
+.btn-group-vertical > .btn + .btn,
+.btn-group-vertical > .btn + .btn-group,
+.btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
 }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"]:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > input[type="submit"]:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"] {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, header[role="document-header"] #header_login #login_wrap form .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-[data-toggle="buttons"] > .btn input[type="radio"], header[role="document-header"] #header_login #login_wrap form [data-toggle="buttons"] > input[type="submit"] input[type="radio"],
-[data-toggle="buttons"] > .btn input[type="checkbox"], header[role="document-header"] #header_login #login_wrap form
-[data-toggle="buttons"] > input[type="submit"] input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="radio"], header[role="document-header"] #header_login #login_wrap form
-[data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], header[role="document-header"] #header_login #login_wrap form
-[data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"] {
+[data-toggle="buttons"] > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -3405,8 +3377,7 @@ tbody.collapse.show {
 
 .input-group-addon.form-control-sm,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .input-group-addon.btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-sm > .input-group-btn > input.input-group-addon[type="submit"] {
+.input-group-sm > .input-group-btn > .input-group-addon.btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -3414,8 +3385,7 @@ tbody.collapse.show {
 
 .input-group-addon.form-control-lg,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .input-group-addon.btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-lg > .input-group-btn > input.input-group-addon[type="submit"] {
+.input-group-lg > .input-group-btn > .input-group-addon.btn {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
@@ -3428,15 +3398,11 @@ tbody.collapse.show {
 
 .input-group .form-control:not(:last-child),
 .input-group-addon:not(:last-child),
-.input-group-btn:not(:last-child) > .btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-btn:not(:last-child) > input[type="submit"],
-.input-group-btn:not(:last-child) > .btn-group > .btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-btn:not(:last-child) > .btn-group > input[type="submit"],
+.input-group-btn:not(:last-child) > .btn,
+.input-group-btn:not(:last-child) > .btn-group > .btn,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
-.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle), header[role="document-header"] #header_login #login_wrap form
-.input-group-btn:not(:first-child) > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="submit"] {
+.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -3447,15 +3413,11 @@ tbody.collapse.show {
 
 .input-group .form-control:not(:first-child),
 .input-group-addon:not(:first-child),
-.input-group-btn:not(:first-child) > .btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-btn:not(:first-child) > input[type="submit"],
-.input-group-btn:not(:first-child) > .btn-group > .btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-btn:not(:first-child) > .btn-group > input[type="submit"],
+.input-group-btn:not(:first-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-group > .btn,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
-.input-group-btn:not(:last-child) > .btn:not(:first-child), header[role="document-header"] #header_login #login_wrap form
-.input-group-btn:not(:last-child) > input[type="submit"]:not(:first-child),
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, header[role="document-header"] #header_login #login_wrap form
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="submit"] {
+.input-group-btn:not(:last-child) > .btn:not(:first-child),
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -3470,33 +3432,33 @@ tbody.collapse.show {
   white-space: nowrap;
 }
 
-.input-group-btn > .btn, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"] {
+.input-group-btn > .btn {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.input-group-btn > .btn + .btn, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"] + .btn, header[role="document-header"] #header_login #login_wrap form .input-group-btn > .btn + input[type="submit"], header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"] + input[type="submit"] {
+.input-group-btn > .btn + .btn {
   margin-left: -1px;
 }
 
-.input-group-btn > .btn:focus, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"]:focus, .input-group-btn > .btn:active, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"]:active, .input-group-btn > .btn:hover, header[role="document-header"] #header_login #login_wrap form .input-group-btn > input[type="submit"]:hover {
+.input-group-btn > .btn:focus, .input-group-btn > .btn:active, .input-group-btn > .btn:hover {
   z-index: 3;
 }
 
-.input-group-btn:not(:last-child) > .btn, header[role="document-header"] #header_login #login_wrap form .input-group-btn:not(:last-child) > input[type="submit"],
+.input-group-btn:not(:last-child) > .btn,
 .input-group-btn:not(:last-child) > .btn-group {
   margin-right: -1px;
 }
 
-.input-group-btn:not(:first-child) > .btn, header[role="document-header"] #header_login #login_wrap form .input-group-btn:not(:first-child) > input[type="submit"],
+.input-group-btn:not(:first-child) > .btn,
 .input-group-btn:not(:first-child) > .btn-group {
   z-index: 2;
   margin-left: -1px;
 }
 
-.input-group-btn:not(:first-child) > .btn:focus, header[role="document-header"] #header_login #login_wrap form .input-group-btn:not(:first-child) > input[type="submit"]:focus, .input-group-btn:not(:first-child) > .btn:active, header[role="document-header"] #header_login #login_wrap form .input-group-btn:not(:first-child) > input[type="submit"]:active, .input-group-btn:not(:first-child) > .btn:hover, header[role="document-header"] #header_login #login_wrap form .input-group-btn:not(:first-child) > input[type="submit"]:hover,
+.input-group-btn:not(:first-child) > .btn:focus, .input-group-btn:not(:first-child) > .btn:active, .input-group-btn:not(:first-child) > .btn:hover,
 .input-group-btn:not(:first-child) > .btn-group:focus,
 .input-group-btn:not(:first-child) > .btn-group:active,
 .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -4691,7 +4653,7 @@ tbody.collapse.show {
   display: none;
 }
 
-.btn .badge, header[role="document-header"] #header_login #login_wrap form input[type="submit"] .badge {
+.btn .badge {
   position: relative;
   top: -1px;
 }
@@ -5994,7 +5956,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   display: table-cell !important;
 }
 
-.d-flex, header[role="document-header"], header[role="document-header"] > div, header[role="document-header"] nav, header[role="document-header"] #header_login #login_wrap form, header[role="document-header"] #header_user, header[role="document-header"] #header_user #header_user_data, main, .form-item, .form-item *, .form-item .form-item-content {
+.d-flex, header[role="document-header"], header[role="document-header"] > div, #header_menu nav, main, .form-item, .form-item *, .form-item .form-item-content {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -6148,14 +6110,14 @@ a.bg-inverse:focus, a.bg-inverse:hover {
           order: 0;
 }
 
-.flex-row, header[role="document-header"], header[role="document-header"] #header_user, section, .form-item {
+.flex-row, header[role="document-header"], section, .form-item {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: row !important;
           flex-direction: row !important;
 }
 
-.flex-column, header[role="document-header"] #header_login #login_wrap form, header[role="document-header"] #header_user #header_user_data, main, .form-item .form-item-content {
+.flex-column, main, .form-item .form-item-content {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: column !important;
@@ -6232,7 +6194,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
           align-items: flex-end !important;
 }
 
-.align-items-center, header[role="document-header"], header[role="document-header"] > div, header[role="document-header"] nav {
+.align-items-center, header[role="document-header"], header[role="document-header"] > div, #header_menu nav {
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
@@ -9200,118 +9162,38 @@ header[role="document-header"] * {
   fill: white;
 }
 
-header[role="document-header"] *:hover {
-  transition: background-color 0.2s;
-}
-
-header[role="document-header"] svg {
-  margin-right: 0.5rem;
-}
-
 header[role="document-header"] > div {
+  padding: 0 0.5rem;
   height: 100%;
 }
 
-header[role="document-header"] nav {
+#header_brand:hover {
+  background-color: #155d98;
+  transition: background-color 0.2s;
+}
+
+#header_brand svg {
+  margin-right: 0.5rem;
+}
+
+#header_brand:hover #a1, #header_brand:hover #a4 {
+  fill: #fff;
+}
+
+#header_brand:hover #a2, #header_brand:hover #a3 {
+  fill: #fff;
+}
+
+#header_menu nav {
   height: 100%;
   padding: 0 0.5rem;
   font-size: 0.8rem;
   font-weight: 300;
 }
 
-header[role="document-header"] nav:hover {
+#header_menu nav:hover {
   background-color: #155d98;
-}
-
-header[role="document-header"] a {
-  color: white;
-}
-
-header[role="document-header"] #header_brand:hover {
-  background-color: #155d98;
-}
-
-header[role="document-header"] #header_brand span {
-  font-family: "FjallaoneLocal", "arial black", "sans-serif";
-}
-
-header[role="document-header"] #header_menu {
-  display: inline;
-}
-
-header[role="document-header"] #header_search * {
-  border: 0;
-  border-radius: 0;
-  font: normal 300 0.8rem "OpenSansLocal";
-}
-
-header[role="document-header"] #header_search form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header[role="document-header"] #header_search input[type="search"] {
-  border-radius: 0;
-  width: 9rem;
-  color: black;
-  margin: 0;
-}
-
-header[role="document-header"] #header_search input[type="submit"] {
-  background: #155d98 url("../icons/search.png") no-repeat left 50% top 50%;
-}
-
-header[role="document-header"] #header_search input[type="submit"]:hover {
-  background-color: #1f86db;
-}
-
-header[role="document-header"] #header_login #login_wrap {
-  z-index: 1;
-  background-color: #0C3455;
-  height: 240px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.5rem;
-}
-
-header[role="document-header"] #header_login #login_wrap form input[type="text"], header[role="document-header"] #header_login #login_wrap form input[type="password"] {
-  color: black;
-}
-
-header[role="document-header"] #header_login #login_wrap form a {
-  text-align: center;
-  font-size: 0.8rem;
-  font-weight: 300;
-}
-
-header[role="document-header"] #header_login #login_wrap form > * {
-  margin-bottom: 0.5rem;
-}
-
-header[role="document-header"] #header_login #login_wrap form > *:last-child {
-  margin-bottom: 0;
-}
-
-header[role="document-header"] #header_user img {
-  width: 40px;
-  border-radius: 50%;
-}
-
-header[role="document-header"] #header_user #header_user_data {
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
-  margin-right: 0.5rem;
-}
-
-header[role="document-header"] #header_user #user_nome {
-  font: 0.8rem "FjallaoneLocal", "arial black", "sans-serif";
-}
-
-header[role="document-header"] #header_user #user_data {
-  font: normal 300 0.6rem "OpenSansLocal";
+  transition: background-color 0.2s;
 }
 
 footer {
@@ -9507,7 +9389,6 @@ audio, video {
 }
 
 .form-item {
-  background: #f5f5f5;
   padding: 0.5rem 1rem;
   font: normal 0.9rem "OpenSansLocal";
 }

@@ -24,9 +24,9 @@ class FieldsetBuilder
         $fieldset = new FieldsetBuilder();
         $fieldset->fields = new Collection();
 
-        $fieldset->id = $data->id;
-        $fieldset->classes = $data->classes;
-        $fieldset->legend = $data->legend;
+        if(isset($data->id))$fieldset->id = $data->id;
+        if(isset($data->classes))$fieldset->classes = $data->classes;
+        if(isset($data->legend))$fieldset->legend = $data->legend;
 
         foreach ($data->fields as $input) {
             $fieldset->fields->push(FieldBuilder::build($input));

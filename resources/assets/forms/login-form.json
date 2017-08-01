@@ -1,0 +1,26 @@
+{
+  "id": "login-form",
+  "method": "POST",
+  "action": "/login",
+  "fieldsets": [
+    {
+      "id": "login-data",
+      "fields": [
+        {
+          "type": "text",
+          "name": "cpf",
+          "placeholder": "CPF"
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "placeholder": "Senha"
+        },
+        {
+          "type": "button",
+          "label": "Entrar"
+        }
+      ]
+    }
+  ]
+}

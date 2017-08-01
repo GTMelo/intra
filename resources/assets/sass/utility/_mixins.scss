@@ -25,3 +25,10 @@
                   darken($color, $stripeIntensity) $startOver
   );
 }
+
+@mixin smoothBackgroundHover($cor){
+  &:hover {
+    background-color: $cor;
+    @include transitionSmooth(background-color);
+  }
+}

@@ -18,6 +18,7 @@ class FormTableSeeder extends Seeder
 
         $files = [
             'example-stuff',
+            'login-form'
         ];
 
         foreach ($files as $file) {

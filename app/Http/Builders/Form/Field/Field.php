@@ -18,7 +18,7 @@ class Field
         $field = new Field();
 
         $field->type = $data->type;
-        $field->name = $data->name;
+        if(isset($data->name))$field->name = $data->name;
         if(isset($data->id)) $field->id = $data->id;
         if(isset($data->label))$field->label = $data->label;
         if(isset($data->classes)) $field->classes = $data->classes;

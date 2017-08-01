@@ -1,0 +1,20 @@
+<form method="POST" action="someAction">
+    <fieldset>
+        <legend></legend>
+        <input>
+        <input>
+        <input>
+    </fieldset>
+    <fieldset>
+        <legend></legend>
+        <input>
+        <input>
+        <input>
+    </fieldset>
+    <fieldset>
+        <legend></legend>
+        <input>
+        <input>
+        <input>
+    </fieldset>
+</form>

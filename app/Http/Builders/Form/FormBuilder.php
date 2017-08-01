@@ -9,6 +9,7 @@
 namespace App\Http\Builders\Form;
 
 
+use App\Models\Form;
 use Illuminate\Support\Collection;
 
 class FormBuilder
@@ -27,10 +28,10 @@ class FormBuilder
         $form = new FormBuilder();
         $form->fieldsets = new Collection();
 
-        $form->id = $json['id'];
-        $form->method = $json['method'];
-        $form->action = $json['action'];
-        $form->classes = $json['classes'];
+        if(isset($json['id']))$form->id = $json['id'];
+        if(isset($json['method']))$form->method = $json['method'];
+        if(isset($json['action']))$form->action = $json['action'];
+        if(isset($json['classes']))$form->classes = $json['classes'];
 
         foreach($json->get('fieldsets') as $fieldset){
             $form->fieldsets->push(FieldsetBuilder::build($fieldset));

@@ -21,10 +21,10 @@ header[role="document-header"] {
   }
   &:hover { // TODO decidir se mantém ou não
     #a1, #a4 {
-      fill: white;
+      fill: $white;
     }
     #a2, #a3 {
-      fill: white;
+      fill: $white;
     }
   }
 }
@@ -33,22 +33,14 @@ header[role="document-header"] {
   nav {
     @extend .d-flex, .align-items-center;
     @include smoothBackgroundHover($sain-azul-light);
-    margin-right: 0.5rem;
-    padding: 0 0.5rem;
     height: 100%;
+    padding: 0 0.5rem;
     font-size: 0.8rem;
     font-weight: 300;
-    &:hover{ background-color: $sain-azul-light; }
-    &:last-child{ margin-right: 0; }
-    & > div{
-      @extend .d-flex, .align-items-center;
-      height: 100%;
-    }
-    ul{
-      background-color: $sain-azul;
-      li:hover {
-        background-color: $sain-azul-light;
-      }
+  }
+  a {
+    &:hover{
+      color: white;
     }
   }
 }

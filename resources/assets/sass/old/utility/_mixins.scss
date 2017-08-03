@@ -1,0 +1,34 @@
+@mixin transitionSmooth($element: color, $duration: 0.2) {
+  -webkit-transition: #{$element} #{$duration}s;
+  -moz-transition: #{$element} #{$duration}s;
+  -ms-transition: #{$element} #{$duration}s;
+  -o-transition: #{$element} #{$duration}s;
+  transition: #{$element} #{$duration}s;
+}
+
+@mixin matchingBgBorderColor($color) {
+  background-color: $color;
+  border-color: darken($color, 5%);
+}
+
+@mixin paintNotification($color, $text: black) {
+  color: $text;
+  @include matchingBgBorderColor($color);
+}
+
+@mixin stripedBackground($color: $cinza, $stripeIntensity: 5%, $angle: 45, $stripeSize: 10px, $startOver: $stripeSize * 2) {
+  background: repeating-linear-gradient(
+                  #{$angle}deg,
+                  $color,
+                  $color $stripeSize,
+                  darken($color, $stripeIntensity) $stripeSize,
+                  darken($color, $stripeIntensity) $startOver
+  );
+}
+
+@mixin smoothBackgroundHover($cor){
+  &:hover {
+    background-color: $cor;
+    @include transitionSmooth(background-color);
+  }
+}

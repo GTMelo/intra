@@ -1,11 +1,18 @@
 @import "node_modules/bootstrap/scss/bootstrap";
-@import "common/globals";
-@import "utility/debug";
 
-//Gerais
-@import "common/forms";
-@import "common/feedback";
-@import "actions/dropdown";
+@import "core/globals";
+@import "reusable/dropdown";
+
+@import "header/_header";
+@import "footer/_footer";
+
+//@import "old/common/globals";
+//@import "old/utility/debug";
+//
+////Gerais
+//@import "old/common/forms";
+//@import "old/common/feedback";
+//@import "old/action/dropdown";
 
 // Home
 //@import "blocks/carrossel";

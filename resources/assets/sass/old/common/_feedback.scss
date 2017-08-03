@@ -1,0 +1,50 @@
+.note {
+  @extend .alert-info;
+  border-bottom: 3px solid;
+  @include paintNotification($cinza);
+  @include stripedBackground();
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  p {
+    font-family: $font-base !important;
+    padding: 0;
+    text-indent: 0;
+  }
+}
+
+.note-primary, .note-danger, .note-error, .note-info, .note-success, .note-warning {
+  @extend .note;
+}
+
+.note-primary {
+  @include paintNotification($color-primary, white);
+  @include stripedBackground($color-primary);
+}
+
+.note-info {
+  @include paintNotification($color-info);
+  @include stripedBackground($color-info)
+}
+
+.note-danger {
+  @include paintNotification($color-danger);
+  @include stripedBackground($color-danger)
+}
+
+.note-error {
+  @include paintNotification($color-error);
+  @include stripedBackground($color-error);
+}
+
+.note-success {
+  @include paintNotification($color-success, white);
+  @include stripedBackground($color-success);
+}
+
+.note-warning {
+  @include paintNotification($color-warning);
+  @include stripedBackground($color-warning);
+}

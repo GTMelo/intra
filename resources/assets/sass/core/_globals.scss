@@ -1,0 +1,100 @@
+// Imports
+
+@import "colors";
+@import "typography";
+@import "debug";
+@import "mixins";
+
+// Debug tools. TODO remove on deploy
+//@import "partials/debug";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-base;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex: 1;
+  *::selection {
+    background: #0C3455;
+    color: white;
+  }
+}
+
+main {
+  @extend .d-flex, .flex-column;
+  flex: 1;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  @extend .flex-row, .container;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: $sain-azul-light;
+  @include transitionSmooth();
+  &:hover, &:focus {
+    text-decoration: none;
+    color: $link-hover-color;
+  }
+}
+
+hr {
+  border: 1px solid $cinza-dark;
+}
+
+figure {
+  text-align: center;
+  margin: 1rem;
+  figcaption {
+    font-weight: 300;
+    font-size: 0.7rem;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  tr {
+    &:nth-child(2n) {
+      background-color: $cinza;
+    }
+  }
+  th, td {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  th {
+    background-color: darken($cinza, 5%);
+  }
+}
+
+mark {
+  background-color: $sain-amarelo;
+  padding: 0 5px;
+}
+
+iframe {
+  border: 1px solid $cinza-dark;
+  width: 100%;
+}
+
+audio, video {
+  width: 100%;
+  height: auto;
+}

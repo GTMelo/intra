@@ -1,9 +1,9 @@
 @if(!Auth::check())
     <div id="header_login">
         <nav>
-            <a id="loginbtn" href="#">Login</a>
+            <a id="login_trigger" href="#">Login</a>
         </nav>
-        <div id="login_wrap" class="hidden">
+        <div id="login_content" class="hidden">
             @include('form.login-form')
         </div>
     </div>

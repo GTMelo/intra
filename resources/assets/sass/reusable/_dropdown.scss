@@ -2,12 +2,18 @@
   position: relative;
   cursor: default;
   .dropdown-trigger:hover .dropdown-content{
-    display: flex;
+    //display: flex;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
 .dropdown-content{
-  @extend .hidden;
+  //@extend .hidden;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear;
   position: absolute;
   top: 60px;
   left: 0;
@@ -22,7 +28,7 @@
     li{
       @include smoothBackgroundHover($sain-azul-light);
       white-space: nowrap;
-      padding: 0 0.5rem;
+      padding: 0.1rem 0.5rem;
     }
   }
 }

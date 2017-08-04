@@ -22,13 +22,13 @@
 <script src="{!! asset('vendor/bootstrap-4.0.0-alpha6/js/bootstrap.min.js') !!}"></script>
 <script>
     $(document).ready(function () {
-        $("#loginbtn").click(function () {
-            $("#login_wrap").slideDown();
+        $("#login_trigger").click(function () {
+            $("#login_content").slideDown();
         });
     });
 
     $(document).mouseup(function (e) {
-        var container = $("#login_wrap");
+        var container = $("#login_content");
         if (!container.is(e.target) && container.has(e.target).length === 0) {
             container.slideUp();
         }

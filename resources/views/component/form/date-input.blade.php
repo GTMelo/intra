@@ -1,16 +1,16 @@
 <div class="form-item">
-    @if(isset($field->label))
+    @if(isset($label))
         <div class="form-item-label">
-            <label>{{ $field->label }}</label>
+            <label>{{ $label }}</label>
         </div>
     @endif
     <div class="form-item-content">
         <div class="form-item-content-main">
-            <input type="datetime-local" class="datepicker" @if(isset($field->placeholder)) placeholder="{{ $field->placeholder }}" @endif>
+            <input type="datetime-local" class="datepicker" @if(isset($placeholder)) placeholder="{{ $placeholder }}" @endif>
         </div>
-        @if(isset($field->tip))
+        @if(isset($help))
             <div class="form-item-content-tip">
-                <small>{{ $field->tip }}</small>
+                <small>{{ $help }}</small>
             </div>
         @endif
     </div>

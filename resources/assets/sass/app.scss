@@ -2,9 +2,17 @@
 
 @import "core/globals";
 @import "reusable/dropdown";
+@import "reusable/forms";
+@import "reusable/feedback";
 
 @import "header/_header";
 @import "footer/_footer";
+
+// home
+@import "home/carrossel";
+
+//artigos
+@import "document/document";
 
 //@import "old/common/globals";
 //@import "old/utility/debug";

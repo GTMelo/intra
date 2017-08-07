@@ -79,7 +79,7 @@ header[role="document-header"] {
   }
   input[type="submit"] {
     background: $sain-azul-light url("../icons/search.png") no-repeat left 50% top 50%;
-    width: 30px;
+    width: 40px;
     @include transitionSmooth(background-color, 0.1s);
     &:hover {
       background-color: $sain-azul-lightest;
@@ -91,10 +91,62 @@ header[role="document-header"] {
 }
 
 #header_login{
-  background-color: $sain-azul-light;
-  #login_trigger{
+  background-color: $sain-azul;
+  @include transitionSmooth(background-color);
+  &:hover{
+    background-color: $sain-azul-light;
   }
+  nav{
+    @extend .d-flex, .align-items-center;
+    height: 100%;
+  }
+  #login_content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $sain-azul;
+    padding: 0.5rem;
+    .form-item{
+      margin: 0;
+      padding: 0;
+      margin-bottom: 0.5rem;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    input{
+      border: 0;
+      border-radius: 0;
+      padding: 3px calc(32px + 0.5rem) 3px 0.5rem;
+      height: 40px;
+      color: black;
+      margin: 0;
+    }
+    button{
+      @extend .form-button;
+      background-color: $sain-azul-light;
+      flex: 1;
+      @include transitionSmooth(background-color, 0.1s);
+      &:hover{
+        background-color: $sain-azul-lightest;
+      }
+      &:active{
+        background-color: $color-emphasis;
+      }
+    }
+    #login-newuser{
+      @extend .d-flex, .justify-content-center;
+    }
+    a{
+      &:hover{
+        color: $color-emphasis;
+      }
+    }
+  }
+
 }
+
+
 
 //#header_login {
 //  #login_wrap {

@@ -1,4 +1,4 @@
-<footer>
+<footer role="document-footer">
     <div id="footer_container">
         <div id="footer_elementos">
             <div id="endereco_sainsede">

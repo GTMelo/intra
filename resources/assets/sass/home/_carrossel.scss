@@ -1,0 +1,35 @@
+#area_carrossel {
+  @extend .d-flex, .justify-content-center;
+  padding: 0;
+  width: 100%;
+  background-color: $cinza;
+}
+
+#carrossel-items{
+  article{
+    @extend .d-flex, .align-items-stretch;
+    padding: 0.5rem;
+  }
+}
+
+.carrossel-content{
+  @extend .d-flex, .flex-column;
+  margin-left: 0.5rem;
+}
+
+.carrossel-content-header{
+  margin: 0.5rem 0;
+  h1{
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+
+.carrossel-content-tldr{
+  flex: 1;
+}
+
+.carrossel-content-button{
+  @extend .d-flex, .justify-content-center;
+
+}

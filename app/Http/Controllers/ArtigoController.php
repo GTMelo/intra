@@ -18,7 +18,7 @@ class ArtigoController extends Controller
      */
     public function index()
     {
-        return wryyyy();
+        return wryyyy(); // TODO lista de todos os artigos. Pode aceitar um argumento pra restringir por área (e aproveitar para todas as áreas)
     }
 
     /**

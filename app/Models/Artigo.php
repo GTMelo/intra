@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Interfaces\UrlInterface;
 use App\Models\Scopes\AtivoScope;
+use App\Models\Scopes\PublishedAtNowScope;
 use Illuminate\Database\Eloquent\Model;
 
 class Artigo extends Model implements UrlInterface
@@ -41,7 +42,7 @@ class Artigo extends Model implements UrlInterface
 
     public function scopeTipo($query, $tipo)
     {
-        return Artigo::where('artigo_tipo_id', $tipo);
+        return self::where('artigo_tipo_id', $tipo);
     }
 
     public function url()

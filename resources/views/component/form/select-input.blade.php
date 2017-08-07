@@ -1,28 +1,28 @@
 <div class="form-item">
-    @if(isset($field->label))
+    @if(isset($label))
         <div class="form-item-label">
-                <label>{{ $field->label }}</label>
+                <label>{{ $label }}</label>
         </div>
     @endif
     <div class="form-item-content">
         <div class="form-item-content-main">
             <select
-                @if(isset($field->name))name="{{ $field->name }}" @endif
-                @if(isset($field->id))id="{{ $field->id }}" @endif
-                @if(isset($field->classes))class="{{ $field->classes }}"@endif
+                @if(isset($name))name="{{ $name }}" @endif
+                @if(isset($id))id="{{ $id }}" @endif
+                @if(isset($classes))class="{{ $classes }}"@endif
             >
-                @if(isset($field->options))
-                    @foreach($field->options as $option)
-                        <option value="{{ $option->value }}"
-                                @if(isset($option->selected)) selected="selected" @endif> @if(isset($option->label)){{ $option->label }}@endif
+                @if(isset($options))
+                    @foreach($options as $option)
+                        <option value="{{ $option['value'] }}"
+                                @if(isset($option['selected'])) selected="selected" @endif> @if(isset($option['label'])){{ $option['label'] }}@endif
                         </option>
                     @endforeach
                 @endif
             </select>
         </div>
-        @if(isset($field->tip))
+        @if(isset($help))
             <div class="form-item-content-tip">
-                <small>{{ $field->tip }}</small>
+                <small>{{ $help }}</small>
             </div>
         @endif
     </div>

@@ -11,5 +11,7 @@
     @include('component.form.submit-input', [
         'value' => 'Entrar'
     ])
-    <a href="/registrar">Novo usuário</a>
+    <div id="login-newuser">
+        <a href="/registrar">Novo usuário</a>
+    </div>
 </form>

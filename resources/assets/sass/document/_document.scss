@@ -1,0 +1,20 @@
+#document-header{
+  margin-bottom: 0.5rem;
+  background-color: red;
+}
+
+#document-body{
+  padding: 0;
+  display: flex;
+}
+
+#document-body-content{
+  flex: 1;
+  background: green;
+}
+
+#document-body-sidebar{
+  margin-left: 0.5rem;
+  flex: 0.4;
+  background: blue;
+}

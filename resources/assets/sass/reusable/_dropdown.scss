@@ -9,7 +9,7 @@
 }
 
 .dropdown-content{
-  //@extend .hidden;
+  z-index: 1;
   display: flex;
   visibility: hidden;
   opacity: 0;
